@@ -3,6 +3,7 @@ import express, { Express, NextFunction } from "express"
 import { createServer } from "http";
 import bootstrap from "./boot";
 import { initIO } from "../libs/scoket";
+import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
 
 
 export default async function application() { 
@@ -19,7 +20,7 @@ export default async function application() {
 
         initIO(app.server)
         
-       
+       await StartAllWhatsAppsSessions()
       }
     
     app.start = start;
