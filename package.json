@@ -1,0 +1,29 @@
+{
+  "name": "p1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/merge-deep": "^3.0.3",
+    "@wppconnect-team/wppconnect": "^1.35.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "merge-deep": "^3.0.3",
+    "socket.io": "^4.8.1",
+    "tsx": "^4.19.2"
+  }
+}
