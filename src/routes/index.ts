@@ -9,12 +9,12 @@ routes.get("/", (req, res)=> {
    
     res.json("routes in modules")
 })
-routes.get("/session", (req,res)=> {
+routes.get("/session", async (req,res)=> {
     const a = {
         id: 34343,
         type: "whatsapp"
     }
-    StartWhatsAppSession(a)
+    await StartWhatsAppSession(a)
     res.json("session")
 })
 

@@ -74,18 +74,59 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
             wbot.id = whatsapp.id;
             sessions.push(wbot);
         }
+        
         start(wbot)
         return wbot
     } catch (error) {
-        throw new Error("erro")
+        throw new Error(`erro  ${error}`)
     }
 
 }
 const start = async (client: Session) => {
    try {
     const isReady = await client.isConnected();
-    console.log('is', isReady)
-    wbotMessageListener(client);
+    // client.sendListMessage('553185683733@c.us',{
+    //     buttonText: 'Click here',
+    //     description: 'Choose one option',
+    //     sections: [
+    //       {
+    //         title: 'Section 1',
+    //         rows: [
+    //           {
+    //             rowId: 'my_custom_id',
+    //             title: 'Test 1',
+    //             description: 'Description 1',
+    //           },
+    //           {
+    //             rowId: '2',
+    //             title: 'Test 2',
+    //             description: 'Description 2',
+    //           },
+    //         ],
+    //       },
+    //     ],
+    //   }).then(result=> console.log(result))
+    client.sendText('553185683733@c.us', 'WPPConnect message with buttons', {
+        useTemplateButtons: true, // False for legacy
+        buttons: [
+          {
+            id: '1',
+            text: 'WPPConnect Site'
+          },
+          {
+            id: '2',
+            text: 'WPPConnect Site'
+          }
+         
+        ],
+        title: 'Title text' // Optional
+    
+        
+       
+     }).then(result=> console.log(result))
+    if(isReady)  {
+        wbotMessageListener(client);
+    }
    } catch (error) {
     console.log(error,"start")
    }

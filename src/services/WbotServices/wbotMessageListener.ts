@@ -1,5 +1,6 @@
-import { Message, Whatsapp } from "@wppconnect-team/wppconnect";
-import { HandleMessageEnviada } from "./Helpers/HandleMessage";
+import type{ IncomingCall, Message, Whatsapp } from "@wppconnect-team/wppconnect";
+import { HandleMessage } from "./Helpers/HandleMessage";
+
 
 interface Session extends Whatsapp {
     id: number;
@@ -17,22 +18,19 @@ interface ReactionMessage {
 export const wbotMessageListener = (wbot: Session): void => { 
    
     wbot.onAnyMessage(async(msg: Message)=> {
-        
-        if(!msg.fromMe) return
-        
-        
-        await HandleMessageEnviada(msg, wbot)
+        if (msg.chatId ==="status@broadcast") return
+        await HandleMessage(msg, wbot)
     })
-    wbot.onMessage((msg)=>{
-        console.log("Recebida")
-    })
+  
    
-    wbot.onIncomingCall(async (call)=> {
+    wbot.onIncomingCall(async (call: IncomingCall)=> {
         console.log(call)
+       
         await wbot.rejectCall(call.id)
     })
 
-    wbot.onReactionMessage(({id, msgId,orphan,orphanReason,reactionText,read,timestamp}:ReactionMessage)=> {
-        console.log(id, msgId,orphan,orphanReason,reactionText,read,timestamp)
+    wbot.onReactionMessage((reaction:ReactionMessage)=> {
+        
+       
     })
 }

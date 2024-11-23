@@ -13,6 +13,8 @@ export const StartWhatsAppSession = async (
     try {
         if (whatsapp.type === "whatsapp") {
             const wbot = await initWbot(whatsapp);
+
+          
             // wbotMonitor(wbot, whatsapp);
           }
     } catch (error) {
