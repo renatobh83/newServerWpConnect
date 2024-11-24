@@ -26,7 +26,10 @@ export const wbotMessageListener = (wbot: Session): void => {
     wbot.onIncomingCall(async (call: IncomingCall)=> {
         console.log(call)
        
-        await wbot.rejectCall(call.id)
+       const isRejact =  await wbot.rejectCall(call.id)
+       if(isRejact) {
+        wbot.sendText(call.peerJid, "Favor entrar em conato por mensagem")
+       }
     })
 
     wbot.onReactionMessage((reaction:ReactionMessage)=> {

@@ -17,8 +17,6 @@ return new Promise(async (resolve, reject)=>{
     if (!isValidMsg(msg)) {
       return;
     }
-  
-    console.log(msg)
     let msgContact: Contact
     let groupContact: Contact | undefined;
     if(msg.fromMe){
