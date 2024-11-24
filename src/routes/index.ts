@@ -1,15 +1,16 @@
-import { Router ,Response, Request} from "express";
+import { Router ,Response, Request, NextFunction} from "express";
 import { getWbot, initWbot } from "../libs/wbot";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
 import QRCode from 'qrcode'; 
+
 const routes = Router();
+import * as prometheusRegister from "../middleware/metrics";
 
-
-routes.get("/", (req, res)=> {
+routes.get("/", (_req, res)=> {
    
     res.json("routes in modules")
 })
-routes.get("/session", async (req,res)=> {
+routes.get("/session", async (_req,res)=> {
     const a = {
         id: 34343,
         type: "whatsapp"
@@ -18,7 +19,7 @@ routes.get("/session", async (req,res)=> {
     res.json("session")
 })
 
-routes.get("/qrCode", async(req: Request, res: Response): Promise<Response>=>{
+routes.get("/qrCode", async (req: Request, res: Response) =>{
   
     try {
         
@@ -44,24 +45,41 @@ routes.get("/qrCode", async(req: Request, res: Response): Promise<Response>=>{
 
         }
         else if (typeof req.client === 'undefined') {
-            return res.status(200).json({
+             res.status(200).json({
               status: null,
               message:
                 'Session not started. Please, use the /start-session route, for initialization your session',
             });
           } else {
-            return res.status(200).json({
+             res.status(200).json({
               status: req.client.status,
               message: 'QRCode is not available...',
             });
           }
 
     } catch (error) {
-        return res
+         res
         .status(500)
         .json({ status: 'error', message: 'Error retrieving QRCode', error: error });
     
     }
    
 })
+
+
+routes.get("/health", async (_request: Request, response:Response) => {
+  const healthcheck = {
+    uptime: process.uptime(),
+    message: 'OK',
+    timestamp: Date.now(),
+  };
+  try {
+    response.status(200).send(healthcheck);
+  } catch (e: any) {
+    healthcheck.message = e;
+     response.status(503).send();
+  }
+})
+
+routes.get('/metrics', prometheusRegister.metrics);
 export default routes;

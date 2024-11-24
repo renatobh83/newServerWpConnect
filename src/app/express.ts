@@ -7,6 +7,7 @@ import mergeDeep from "merge-deep";
 import config from "../confg/config";
 import { defaultLogger } from "@wppconnect-team/wppconnect";
 import { getIO } from "../libs/scoket";
+import { logger } from "../utils/logger";
 
 export default async function express(app: Application, serverOptions: Partial<ServerOptions>) {
 
@@ -36,4 +37,5 @@ export default async function express(app: Application, serverOptions: Partial<S
         req.io = getIO()
         next();
     })
+    logger.info("express already in server!");
 }

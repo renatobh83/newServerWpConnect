@@ -1,15 +1,39 @@
+import { Op } from "sequelize";
+import Whatsapp from "../../models/Whatsapp";
 import { StartWhatsAppSession } from "./StartWhatsAppSession";
 
 export const StartAllWhatsAppsSessions = async (): Promise<void> => {
-    const whatsapp =  [{
-        id: 34343,
-        type: "whatsapp"
-    }]
+  const whatsapps = await Whatsapp.findAll({
+    where: {
+      [Op.or]: [
+        {
+          [Op.and]: {
+            type: {
+              [Op.in]: ["instagram", "telegram", "waba", "messenger"],
+            },
+            status: {
+              [Op.notIn]: ["DISCONNECTED"],
+            },
+          },
+        },
+        {
+          [Op.and]: {
+            type: "whatsapp",
+          },
+          status: {
+            [Op.notIn]: ["DISCONNECTED", "qrcode"],
+            // "DISCONNECTED"
+          },
+        },
+      ],
+      isActive: true,
+    },
+  });
 
-    const whatsappSessions = whatsapp.filter((w) => w.type === "whatsapp");
+    const whatsappSessions = whatsapps.filter((w) => w.type === "whatsapp");
     if (whatsappSessions.length > 0) {
         // biome-ignore lint/complexity/noForEach: <explanation>
-        whatsappSessions.forEach((whatsapp) => {
+        whatsappSessions.forEach((whatsapp: Whatsapp) => {
           StartWhatsAppSession(whatsapp);
         });
       }
