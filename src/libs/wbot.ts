@@ -3,6 +3,7 @@ import config from "../config/config";
 import { WhatsAppServer } from "../types/WhatsAppServer";
 import { wbotMessageListener } from "../services/WbotServices/wbotMessageListener";
 import fs from 'node:fs'
+import path from "node:path"
 interface Session extends Whatsapp {
     id: number;
     // requestPairingCode(phoneNumber: string): Promise<string>;
@@ -45,58 +46,131 @@ const exportPhoneCode = (
     //   });
 }
 
+const filePath = ():string => { 
+    const pathAbs = path.join(__dirname, "..", "..", 'public')
+    const fullFilePath = path.join(pathAbs, "qrCode.png");
+    return fullFilePath
+}
+// export const initWbot = async (whatsapp: any): Promise<Session> => {
+//     let wbot: Session
+//     try {
+//         wbot = await create(
+//             Object.assign({},
+//                 {headless: true},
+//                 config.createOptions,
+//                  {  whatsappVersion:'2.3000.10184x',
+//                     session: `wbot-${whatsapp.id}`,
+//                     phoneNumber: whatsapp.wppUser ?? null,
+//                     catchLinkCode: (_code: string) => { 
+//                         // Metodo para codigo de pareamento
+//                     },
+//                     catchQR: (base64Qr: any,_asciiQR: any,  attempt: number, urlCode?: string) => {
+//                         let matches = base64Qr.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/)
+//                         let response: any = {};
+                  
+//                       if (matches.length !== 3) {
+//                         return new Error('Invalid input string');
+//                       }
+//                       response.type = matches[1];
+//                       response.data = Buffer.from(matches[2], 'base64') 
+
+//                       var imageBuffer = response;
+//                            fs.writeFile(filePath(),imageBuffer['data'],'binary',(err)=>console.log(err))
+//                     },
+//                     statusFind: (statusSession:string, session:string) => {
+//                         if (
+//                             statusSession === 'autocloseCalled' ||
+//                             statusSession === 'desconnectedMobile'
+//                           ) {
+//                             // Metodo para informar que foi desconectado
+//                           }
+//                     },
+//                     logQR: true
+//                 }
+//             )
+//         ) as unknown as Session
+
+//         const sessionIndex = sessions.findIndex((s) => s.id === whatsapp.id);
+//         if (sessionIndex === -1) {
+//             wbot.id = whatsapp.id;
+//             sessions.push(wbot);
+//         }
+        
+       
+//         start(wbot)
+//         return wbot
+//     } catch (error) {
+//         throw new Error(`erro  ${error}`)
+//     }
+
+// }
 export const initWbot = async (whatsapp: any): Promise<Session> => {
+    let wbot: Session;
 
     try {
-        const wbot = await create(
-
-            Object.assign({},
-                {headless: true},
+        // Criar uma nova sessão
+        wbot = (await create(
+            Object.assign(
+                {},
+                { headless: true },
                 config.createOptions,
-                 {  whatsappVersion:'2.3000.10184x',
+                {
+                    whatsappVersion: '2.3000.10184x',
                     session: `wbot-${whatsapp.id}`,
                     phoneNumber: whatsapp.wppUser ?? null,
-                    catchLinkCode: (_code: string) => { },
-                    catchQR: (_asciiQR: any, base64Qr: any, attempt: number, urlCode?: string) => {
-                        let matches = base64Qr.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/)
-       let response: any = {};
-      console.log(matches)
-      if (matches.length !== 3) {
-        return new Error('Invalid input string');
-      }
-      response.type = matches[1];
-      response.data = new Buffer.from(matches[2], 'base64') 
+                    catchLinkCode: (_code: string) => {
+                        // Método para código de pareamento
+                    },
+                    catchQR: (base64Qr: any, _asciiQR: any, attempt: number, urlCode?: string) => {
+                        const matches = base64Qr.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);
+                        if (!matches || matches.length !== 3) {
+                            throw new Error('Invalid input string');
+                        }
 
-      var imageBuffer = response;
-           fs.writeFile('qrCode.png',imageBuffer['data'],'binary',(err)=>console.log(err))
+                        const response = {
+                            type: matches[1],
+                            data: Buffer.from(matches[2], 'base64'),
+                        };
+
+                        const qrCodePath = path.join(__dirname, '..', '..', 'public', `qrCode-${whatsapp.id}.png`);
+                        fs.writeFile(qrCodePath, response.data, 'binary', (err) => {
+                            if (err) {
+                                console.error('Erro ao salvar QR Code:', err);
+                            } else {
+                                console.log('QR Code salvo com sucesso!');
+                            }
+                        });
                     },
-                    statusFind: (statusSession:string, session:string) => {
-                        console.log(statusSession)
+                    statusFind: (statusSession: string, session: string) => {
+                        if (statusSession === 'autocloseCalled' || statusSession === 'desconnectedMobile') {
+                            console.log(`Sessão desconectada: ${session}`);
+                        }
                     },
-                    
-                
-                    logQR: false
+                    logQR: true,
                 }
             )
-        ) as unknown as Session
+        )) as unknown as Session;
 
+        // Atualizar a lista de sessões
         const sessionIndex = sessions.findIndex((s) => s.id === whatsapp.id);
         if (sessionIndex === -1) {
             wbot.id = whatsapp.id;
             sessions.push(wbot);
+        } else {
+            sessions[sessionIndex] = wbot;
         }
-        start(wbot)
-        return wbot
-    } catch (error) {
-        throw new Error(`erro  ${error}`)
-    }
 
+        start(wbot);
+        return wbot;
+    } catch (error) {
+        throw new Error(`Erro ao inicializar a sessão: ${error}`);
+    }
 }
 const start = async (client: Session) => {
    try {
   
     const isReady = await client.isAuthenticated();
-    console.log(isReady)
+    
     // client.sendListMessage('553185683733@c.us',{
     //     buttonText: 'Click here',
     //     description: 'Choose one option',
@@ -143,6 +217,9 @@ const start = async (client: Session) => {
    
     if(isReady)  {
         wbotMessageListener(client);
+        fs.unlink(filePath(),()=>{
+            console.log("qrCode apagado")
+        })
     }
    } catch (error) {
     console.log(error,"start")

@@ -1,4 +1,4 @@
-import type{ IncomingCall, Message, Whatsapp } from "@wppconnect-team/wppconnect";
+import type{ Ack, IncomingCall, LiveLocation, Message, Whatsapp } from "@wppconnect-team/wppconnect";
 import { HandleMessage } from "./Helpers/HandleMessage";
 
 
@@ -33,7 +33,12 @@ export const wbotMessageListener = (wbot: Session): void => {
     })
 
     wbot.onReactionMessage((reaction:ReactionMessage)=> {
+    
+    })
+    wbot.onAck((ack: Ack)=> {
         
-       
+    })
+    wbot.onLiveLocation((liveLocationEvent: LiveLocation)=>{
+        
     })
 }
