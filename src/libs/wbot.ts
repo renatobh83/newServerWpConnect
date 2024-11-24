@@ -4,6 +4,7 @@ import { WhatsAppServer } from "../types/WhatsAppServer";
 import { wbotMessageListener } from "../services/WbotServices/wbotMessageListener";
 import fs from 'node:fs'
 import path from "node:path"
+import { getIO } from "./scoket";
 interface Session extends Whatsapp {
     id: number;
     // requestPairingCode(phoneNumber: string): Promise<string>;
@@ -46,7 +47,7 @@ const exportPhoneCode = (
     //   });
 }
 
-const filePath = ():string => { 
+const filePath = (whatsapp: string):string => { 
     const pathAbs = path.join(__dirname, "..", "..", 'public')
     const fullFilePath = path.join(pathAbs, "qrCode.png");
     return fullFilePath
@@ -106,9 +107,11 @@ const filePath = ():string => {
 // }
 export const initWbot = async (whatsapp: any): Promise<Session> => {
     let wbot: Session;
-
+    const qrCodePath = path.join(__dirname, '..', '..', 'public', `qrCode-${whatsapp.id}.png`);
     try {
         // Criar uma nova sessão
+        const io = getIO();
+        
         wbot = (await create(
             Object.assign(
                 {},
@@ -132,7 +135,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
                             data: Buffer.from(matches[2], 'base64'),
                         };
 
-                        const qrCodePath = path.join(__dirname, '..', '..', 'public', `qrCode-${whatsapp.id}.png`);
+                        
                         fs.writeFile(qrCodePath, response.data, 'binary', (err) => {
                             if (err) {
                                 console.error('Erro ao salvar QR Code:', err);
@@ -140,10 +143,50 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
                                 console.log('QR Code salvo com sucesso!');
                             }
                         });
+                        // io.emit(`${tenantId}:whatsappSession`, {
+                        //     action: "update",
+                        //     session: whatsapp,
+                        //   });
                     },
-                    statusFind: (statusSession: string, session: string) => {
+                    
+                    statusFind: async (statusSession: string, session: string) => {
+                        console.log(statusSession)
+                        if (statusSession === "isLogged") {
+                            console.log(`Sessão conectada: ${session}`);
+                            
+                        }
+                        if( statusSession === "qrReadFail" ){
+                            // logger.error(
+                            //     `Session: ${sessionName}-AUTHENTICATION FAILURE :: ${msg}`
+                            //   );
+                            //   if (whatsapp.retries > 1) {
+                            //     await whatsapp.update({
+                            //       retries: 0,
+                            //       session: "",
+                            //     });
+                            //   }
+                      
+                            //   const retry = whatsapp.retries;
+                            //   await whatsapp.update({
+                            //     status: "DISCONNECTED",
+                            //     retries: retry + 1,
+                            //   });
+                      
+                            //   io.emit(`${tenantId}:whatsappSession`, {
+                            //     action: "update",
+                            //     session: whatsapp,
+                            //   });
+                        }
                         if (statusSession === 'autocloseCalled' || statusSession === 'desconnectedMobile') {
                             console.log(`Sessão desconectada: ${session}`);
+                            
+                        }
+                        if(statusSession === "inChat") {
+                            if (fs.existsSync(qrCodePath)) {
+                                fs.unlink(qrCodePath, () => {
+                                    console.log(qrCodePath, "Apagado");
+                                });
+                            }
                         }
                     },
                     logQR: true,
@@ -161,6 +204,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
         }
 
         start(wbot);
+        await wbot.setOnlinePresence(true)
         return wbot;
     } catch (error) {
         throw new Error(`Erro ao inicializar a sessão: ${error}`);
@@ -216,10 +260,12 @@ const start = async (client: Session) => {
     //  }).then(result=> console.log(result))
    
     if(isReady)  {
+        console.log('isAuthenticated')
+        const wbotVersion = await client.getWAVersion()
+        // client.checkNumberStatus()
+        // console.log(await client.getProfilePicFromServer())
         wbotMessageListener(client);
-        fs.unlink(filePath(),()=>{
-            console.log("qrCode apagado")
-        })
+      
     }
    } catch (error) {
     console.log(error,"start")

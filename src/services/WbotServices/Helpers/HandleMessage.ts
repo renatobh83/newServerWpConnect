@@ -19,6 +19,8 @@ return new Promise(async (resolve, reject)=>{
     }
     let msgContact: Contact
     let groupContact: Contact | undefined;
+    const chat = await wbot.getChatById(msg.to)
+
     if(msg.fromMe){
       if (!msg.isMedia && msg.type !== "chat" && msg.type !== "vcard")
         return;
@@ -37,7 +39,9 @@ return new Promise(async (resolve, reject)=>{
           // groupContact = await VerifyContact(msgGroupContact, tenantId);
     } 
    
-   
+    const unreadMessages = msg.fromMe ? 0 : chat.unreadCount;
+
+
       // await VerifyMediaMessage(msg, msgContact)
     
     resolve()
