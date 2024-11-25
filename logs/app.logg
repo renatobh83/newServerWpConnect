@@ -14260,3 +14260,799 @@
   level: 'error',
   timestamp: '2024-11-25T19:15:16.324Z'
 }
+{
+  error: TypeError: bullmq_1.QueueScheduler is not a constructor
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:26:2
+      at Array.map (<anonymous>)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:19:36)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7560810679660572.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7560810679660572.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7560810679660572.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\lib\hook.js:63:13),
+  level: 'error',
+  message: 'uncaughtException: bullmq_1.QueueScheduler is not a constructor\n' +
+    'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:26:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:19:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  stack: 'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:26:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:19:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:29:47 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 2864,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 95961088,
+      heapTotal: 59699200,
+      heapUsed: 29292848,
+      external: 2446811,
+      arrayBuffers: 218809
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32372.843 },
+  trace: [
+    {
+      column: 2,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 26,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.map',
+      line: null,
+      method: 'map',
+      native: false
+    },
+    {
+      column: 36,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 19,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7560810679660572.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:29:47.363Z'
+}
+{
+  error: TypeError: bullmq_1.QueueScheduler is not a constructor
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:20:2
+      at Array.map (<anonymous>)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:13:36)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-40872968178959646.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-40872968178959646.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-40872968178959646.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\lib\hook.js:63:13),
+  level: 'error',
+  message: 'uncaughtException: bullmq_1.QueueScheduler is not a constructor\n' +
+    'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:20:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:13:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  stack: 'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:20:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:13:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:31:32 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 11320,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 91209728,
+      heapTotal: 56291328,
+      heapUsed: 37176376,
+      external: 2446784,
+      arrayBuffers: 210270
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32477.703 },
+  trace: [
+    {
+      column: 2,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 20,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.map',
+      line: null,
+      method: 'map',
+      native: false
+    },
+    {
+      column: 36,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-40872968178959646.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:31:32.219Z'
+}
+{
+  error: ReferenceError: host is not defined
+      at Object.retryStrategy (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:16:6)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ioredis\built\redis\event_handler.js:162:41)
+      at Object.onceWrapper (node:events:633:26)
+      at Socket.emit (node:events:518:28)
+      at TCP.<anonymous> (node:net:343:12),
+  level: 'error',
+  message: 'uncaughtException: host is not defined\n' +
+    'ReferenceError: host is not defined\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:16:6)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  stack: 'ReferenceError: host is not defined\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:16:6)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:36:05 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 16760,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 184049664,
+      heapTotal: 126963712,
+      heapUsed: 94122232,
+      external: 3657918,
+      arrayBuffers: 117497
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32750.953 },
+  trace: [
+    {
+      column: 6,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: 'Object.retryStrategy',
+      line: 16,
+      method: 'retryStrategy',
+      native: false
+    },
+    {
+      column: 41,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js',
+      function: null,
+      line: 162,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 633,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 518,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:net',
+      function: null,
+      line: 343,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:36:05.469Z'
+}
+{
+  error: ReferenceError: host is not defined
+      at Object.retryStrategy (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:16:6)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ioredis\built\redis\event_handler.js:162:41)
+      at Object.onceWrapper (node:events:633:26)
+      at Socket.emit (node:events:518:28)
+      at TCP.<anonymous> (node:net:343:12),
+  level: 'error',
+  message: 'uncaughtException: host is not defined\n' +
+    'ReferenceError: host is not defined\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:16:6)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  stack: 'ReferenceError: host is not defined\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:16:6)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:36:05 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 16760,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 184143872,
+      heapTotal: 126963712,
+      heapUsed: 94380248,
+      external: 3666174,
+      arrayBuffers: 125713
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32750.953 },
+  trace: [
+    {
+      column: 6,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: 'Object.retryStrategy',
+      line: 16,
+      method: 'retryStrategy',
+      native: false
+    },
+    {
+      column: 41,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js',
+      function: null,
+      line: 162,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 633,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 518,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:net',
+      function: null,
+      line: 343,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:36:05.472Z'
+}
+{
+  error: TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'
+      at DerivedLogger.log (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\winston\lib\winston\logger.js:214:20)
+      at Object.retryStrategy (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:15:12)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ioredis\built\redis\event_handler.js:162:41)
+      at Object.onceWrapper (node:events:633:26)
+      at Socket.emit (node:events:518:28)
+      at TCP.<anonymous> (node:net:343:12),
+  level: 'error',
+  message: "uncaughtException: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    "TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    '    at DerivedLogger.log (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js:214:20)\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:15:12)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  stack: "TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    '    at DerivedLogger.log (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js:214:20)\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:15:12)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:36:27 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 15668,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 184893440,
+      heapTotal: 126906368,
+      heapUsed: 94376248,
+      external: 3657921,
+      arrayBuffers: 117582
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32773.171 },
+  trace: [
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js',
+      function: 'DerivedLogger.log',
+      line: 214,
+      method: 'log',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: 'Object.retryStrategy',
+      line: 15,
+      method: 'retryStrategy',
+      native: false
+    },
+    {
+      column: 41,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js',
+      function: null,
+      line: 162,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 633,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 518,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:net',
+      function: null,
+      line: 343,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:36:27.677Z'
+}
+{
+  error: TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'
+      at DerivedLogger.log (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\winston\lib\winston\logger.js:214:20)
+      at Object.retryStrategy (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:15:12)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ioredis\built\redis\event_handler.js:162:41)
+      at Object.onceWrapper (node:events:633:26)
+      at Socket.emit (node:events:518:28)
+      at TCP.<anonymous> (node:net:343:12),
+  level: 'error',
+  message: "uncaughtException: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    "TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    '    at DerivedLogger.log (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js:214:20)\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:15:12)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  stack: "TypeError: Cannot create property 'Symbol(level)' on string 'Tentando reconectar ao Redis após 2000ms (tentativa 1)'\n" +
+    '    at DerivedLogger.log (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js:214:20)\n' +
+    '    at Object.retryStrategy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:15:12)\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js:162:41)\n' +
+    '    at Object.onceWrapper (node:events:633:26)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at TCP.<anonymous> (node:net:343:12)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:36:27 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 15668,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 185057280,
+      heapTotal: 126906368,
+      heapUsed: 94662208,
+      external: 3662181,
+      arrayBuffers: 121802
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 32773.171 },
+  trace: [
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\winston\\lib\\winston\\logger.js',
+      function: 'DerivedLogger.log',
+      line: 214,
+      method: 'log',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: 'Object.retryStrategy',
+      line: 15,
+      method: 'retryStrategy',
+      native: false
+    },
+    {
+      column: 41,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\redis\\event_handler.js',
+      function: null,
+      line: 162,
+      method: null,
+      native: false
+    },
+    {
+      column: 26,
+      file: 'node:events',
+      function: 'Object.onceWrapper',
+      line: 633,
+      method: 'onceWrapper',
+      native: false
+    },
+    {
+      column: 28,
+      file: 'node:events',
+      function: 'Socket.emit',
+      line: 518,
+      method: 'emit',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:net',
+      function: null,
+      line: 343,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:36:27.680Z'
+}
+{
+  error: TypeError: bullmq_1.QueueScheduler is not a constructor
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:20:2
+      at Array.map (<anonymous>)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:13:36)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-910367653810537.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-910367653810537.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-910367653810537.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\lib\hook.js:63:13),
+  level: 'error',
+  message: 'uncaughtException: bullmq_1.QueueScheduler is not a constructor\n' +
+    'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:20:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:13:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  stack: 'TypeError: bullmq_1.QueueScheduler is not a constructor\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:20:2\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:13:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)',
+  exception: true,
+  date: 'Mon Nov 25 2024 16:44:38 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 16764,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 87732224,
+      heapTotal: 59961344,
+      heapUsed: 29847144,
+      external: 2454097,
+      arrayBuffers: 195724
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 33264.046 },
+  trace: [
+    {
+      column: 2,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 20,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.map',
+      line: null,
+      method: 'map',
+      native: false
+    },
+    {
+      column: 36,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 13,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-910367653810537.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T19:44:38.557Z'
+}

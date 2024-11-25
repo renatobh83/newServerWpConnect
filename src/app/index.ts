@@ -16,10 +16,10 @@ export default async function application() {
 		const host = app.get("host") || "0.0.0.0";
 		app.server = httpServer.listen(PORT, host, async () => {
 			logger.info(`Web server listening at: http://${host}:${PORT}/`);
-			await StartAllWhatsAppsSessions();
 		});
 
 		initIO(app.server);
+		// await StartAllWhatsAppsSessions();
 	}
 	async function close() {
 		return new Promise<void>((resolve, reject) => {

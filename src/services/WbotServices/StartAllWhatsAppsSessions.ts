@@ -3,38 +3,39 @@ import Whatsapp from "../../models/whatsapp";
 import { StartWhatsAppSession } from "./StartWhatsAppSession";
 
 export const StartAllWhatsAppsSessions = async (): Promise<void> => {
-	const whatsapps = await Whatsapp.findAll({
-		where: {
-			[Op.or]: [
-				{
-					[Op.and]: {
-						type: {
-							[Op.in]: ["instagram", "telegram", "waba", "messenger"],
-						},
-						status: {
-							[Op.notIn]: ["DISCONNECTED"],
-						},
-					},
-				},
-				{
-					[Op.and]: {
-						type: "whatsapp",
-					},
-					status: {
-						[Op.notIn]: ["DISCONNECTED", "qrcode"],
-						// "DISCONNECTED"
-					},
-				},
-			],
-			isActive: true,
-		},
-	});
-
-	const whatsappSessions = whatsapps.filter((w) => w.type === "whatsapp");
-	if (whatsappSessions.length > 0) {
-		// biome-ignore lint/complexity/noForEach: <explanation>
-		whatsappSessions.forEach((whatsapp: Whatsapp) => {
-			StartWhatsAppSession(whatsapp);
-		});
-	}
+	// const whatsapps = await Whatsapp.findAll({
+	// 	where: {
+	// 		[Op.or]: [
+	// 			{
+	// 				[Op.and]: {
+	// 					type: {
+	// 						[Op.in]: ["instagram", "telegram", "waba", "messenger"],
+	// 					},
+	// 					status: {
+	// 						[Op.notIn]: ["DISCONNECTED"],
+	// 					},
+	// 				},
+	// 			},
+	// 			{
+	// 				[Op.and]: {
+	// 					type: "whatsapp",
+	// 				},
+	// 				status: {
+	// 					[Op.notIn]: ["DISCONNECTED", "qrcode"],
+	// 					// "DISCONNECTED"
+	// 				},
+	// 			},
+	// 		],
+	// 		isActive: true,
+	// 	},
+	// });
+	console.log("whatsapps");
+	// const whatsappSessions = whatsapps.filter((w) => w.type === "whatsapp");
+	// if (whatsappSessions.length > 0) {
+	// 	// biome-ignore lint/complexity/noForEach: <explanation>
+	// 	whatsappSessions.forEach((whatsapp: Whatsapp) => {
+	// 		// StartWhatsAppSession(whatsapp);
+	// 		console.log(whatsapp);
+	// 	});
+	// }
 };

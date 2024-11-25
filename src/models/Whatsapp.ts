@@ -25,6 +25,7 @@ import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
+
 @Table
 class Whatsapp extends Model<Whatsapp> {
 	@PrimaryKey
@@ -90,7 +91,6 @@ class Whatsapp extends Model<Whatsapp> {
 	@Default(null)
 	@AllowNull
 	@Column(DataType.JSONB)
-	// eslint-disable-next-line @typescript-eslint/ban-types
 	declare fbObject: object;
 
 	@Default("whatsapp")
@@ -121,7 +121,6 @@ class Whatsapp extends Model<Whatsapp> {
 	declare pairingCode: string;
 
 	@Column(DataType.JSONB)
-	// eslint-disable-next-line @typescript-eslint/ban-types
 	declare phone: object;
 
 	@HasMany(() => Ticket)

@@ -8,7 +8,6 @@ export default {
 
 	storage: multer.diskStorage({
 		destination: publicFolder,
-		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		filename(
 			req: any,
 			file: { mimetype?: any; originalname: any },

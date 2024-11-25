@@ -80,7 +80,7 @@ async function connectWithRetry() {
 
 		// Adicionar tarefas à fila após a conexão bem-sucedida
 		// QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
-		// QueueJobs.default.add("SendMessageSchenduled", {});
+		QueueJobs.default.add("SendMessageSchenduled", {});
 	} catch (error) {
 		handleSequelizeError(error); // Chama o handler para reconexão condicional
 	}
