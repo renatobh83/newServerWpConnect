@@ -1,29 +1,31 @@
-import { IncomingCall, Whatsapp } from "@wppconnect-team/wppconnect";
+import type { IncomingCall, Whatsapp } from "@wppconnect-team/wppconnect";
 
 interface Session extends Whatsapp {
-    id: number;
-  }
-  
-export const VerifyCall = async (call: IncomingCall, wbot: Session): Promise<void> => {
-    return new Promise(async(resolve, reject)=>{
-        try {
-            const messageDefault =
-            "As chamadas de voz e vídeo estão desabilitas para esse WhatsApp, favor enviar uma mensagem de texto.";
-          
-          let settings: any;
+	id: number;
+}
 
+export const VerifyCall = async (
+	call: IncomingCall,
+	wbot: Session,
+): Promise<void> => {
+	return new Promise(async (resolve, reject) => {
+		try {
+			const messageDefault =
+				"As chamadas de voz e vídeo estão desabilitas para esse WhatsApp, favor enviar uma mensagem de texto.";
 
-        //   const rejectCalls =
-        //   settings.find((s: {key: string}) => s.key === "rejectCalls")?.value === "enabled" ||
-        //   false;
+			let settings: any;
 
-          wbot.rejectCall(call.id)
+			//   const rejectCalls =
+			//   settings.find((s: {key: string}) => s.key === "rejectCalls")?.value === "enabled" ||
+			//   false;
 
-          if (!call.peerJid) return
+			wbot.rejectCall(call.id);
 
-          wbot.sendText(call.peerJid, messageDefault)
-        } catch (error) {
-            reject(error)
-        }
-    })
-  }
+			if (!call.peerJid) return;
+
+			wbot.sendText(call.peerJid, messageDefault);
+		} catch (error) {
+			reject(error);
+		}
+	});
+};

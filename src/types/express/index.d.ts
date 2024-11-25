@@ -1,21 +1,17 @@
-import { Whatsapp } from '@wppconnect-team/wppconnect';
-import { Socket } from 'socket.io';
-import { Logger } from 'winston';
+import type { Whatsapp } from "@wppconnect-team/wppconnect";
+import type { Logger } from "winston";
 
-import { ServerOptions } from '../ServerOptions';
-
-// to make the file a module and avoid the TypeScript error
-export {};
+import type { ServerOptions } from "../ServerOptions";
 
 declare global {
-  namespace Express {
-    export interface Request {
-      client: Whatsapp & { urlcode: string; status: string };
-      logger: Logger;
-      session: string;
-      token?: string;
-      io: Socket;
-      serverOptions: ServerOptions;
-    }
-  }
+	namespace Express {
+		export interface Request {
+			client: Whatsapp & { urlcode: string; status: string };
+			session: string;
+			token?: string;
+			serverOptions: ServerOptions;
+			user: { id: string; profile: string; tenantId: number };
+			APIAuth: { apiId: string; sessionId: number; tenantId: number };
+		}
+	}
 }

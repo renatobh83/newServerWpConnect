@@ -1,234 +1,220 @@
-import { Whatsapp, create } from "@wppconnect-team/wppconnect";
-import config from "../config/config";
-import { WhatsAppServer } from "../types/WhatsAppServer";
-import { wbotMessageListener } from "../services/WbotServices/wbotMessageListener";
-import fs from 'node:fs'
-import path, { resolve } from "node:path"
-import { getIO } from "./scoket";
-import { logger } from "../utils/logger";
+import fs from "node:fs";
+import path, { resolve } from "node:path";
+import { type Whatsapp, create } from "@wppconnect-team/wppconnect";
 import { SenderLayer } from "@wppconnect-team/wppconnect/dist/api/layers/sender.layer";
+import config from "../config/config";
+import { wbotMessageListener } from "../services/WbotServices/wbotMessageListener";
+import type { WhatsAppServer } from "../types/WhatsAppServer";
+import { logger } from "../utils/logger";
+import { getIO } from "./scoket";
 interface Session extends Whatsapp {
-    id: number;
-    // requestPairingCode(phoneNumber: string): Promise<string>;
+	id: number;
+	// requestPairingCode(phoneNumber: string): Promise<string>;
 }
 
 const sessions: Session[] = [];
 const exportPhoneCode = (
-    _req: any,
-    _phone: any,
-    _phoneCode: any,
-    _client: WhatsAppServer,
-    _res?: any
+	_req: any,
+	_phone: any,
+	_phoneCode: any,
+	_client: WhatsAppServer,
+	_res?: any,
 ) => {
-    // eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
-
-    // Object.assign(client, {
-    //   status: 'PHONECODE',
-    //   phoneCode: phoneCode,
-    //   phone: phone,
-    // });
-
-    // req.io.emit('phoneCode', {
-    //   data: phoneCode,
-    //   phone: phone,
-    //   session: client.session,
-    // });
-
-    // callWebHook(client, req, 'phoneCode', {
-    //   phoneCode: phoneCode,
-    //   phone: phone,
-    //   session: client.session,
-    // });
-
-    // if (res && !res._headerSent)
-    //   res.status(200).json({
-    //     status: 'phoneCode',
-    //     phone: phone,
-    //     phoneCode: phoneCode,
-    //     session: client.session,
-    //   });
-}
-export const initWbot = async (whatsapp: any): Promise<Session> => {
-    let wbot: Session;
-    const qrCodePath = path.join(__dirname, '..', '..', 'public', `qrCode-${whatsapp.id}.png`);
-    try {
-        // Criar uma nova sessão
-        const io = getIO();
-
-        wbot = (await create(
-            
-            Object.assign(
-                {},
-                { headless: false },
-                config.createOptions,
-                {
-                    //  logger: logger,
-                    whatsappVersion: '2.3000.10184x',
-                    session: `wbot-${whatsapp.id}`,
-                    phoneNumber: whatsapp.wppUser ?? null,
-                    catchLinkCode: (_code: string) => {
-                        // Método para código de pareamento
-                    },
-                    catchQR: (base64Qr: any, _asciiQR: any, attempt: number, urlCode?: string) => {
-                        const matches = base64Qr.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);
-                        if (!matches || matches.length !== 3) {
-                            throw new Error('Invalid input string');
-                        }
-
-                        const response = {
-                            type: matches[1],
-                            data: Buffer.from(matches[2], 'base64'),
-                        };
-
-
-                        fs.writeFile(qrCodePath, response.data, 'binary', (err) => {
-                            if (err) {
-                                console.error('Erro ao salvar QR Code:', err);
-                            } else {
-                                console.log('QR Code salvo com sucesso!');
-                            }
-                        });
-                        // io.emit(`${tenantId}:whatsappSession`, {
-                        //     action: "update",
-                        //     session: whatsapp,
-                        //   });
-                    },
-
-                    statusFind: async (statusSession: string, session: string) => {
-                        console.log(statusSession)
-                        if (statusSession === "isLogged") {
-                            console.log(`Sessão conectada: ${session}`);
-
-                        }
-                        if (statusSession === "qrReadFail") {
-                            // logger.error(
-                            //     `Session: ${sessionName}-AUTHENTICATION FAILURE :: ${msg}`
-                            //   );
-                            //   if (whatsapp.retries > 1) {
-                            //     await whatsapp.update({
-                            //       retries: 0,
-                            //       session: "",
-                            //     });
-                            //   }
-
-                            //   const retry = whatsapp.retries;
-                            //   await whatsapp.update({
-                            //     status: "DISCONNECTED",
-                            //     retries: retry + 1,
-                            //   });
-
-                            //   io.emit(`${tenantId}:whatsappSession`, {
-                            //     action: "update",
-                            //     session: whatsapp,
-                            //   });
-                        }
-                        if (statusSession === 'autocloseCalled' || statusSession === 'desconnectedMobile') {
-                            console.log(`Sessão desconectada: ${session}`);
-
-                        }
-                        if (statusSession === "inChat") {
-                            if (fs.existsSync(qrCodePath)) {
-                                fs.unlink(qrCodePath, () => {
-                                    console.log(qrCodePath, "Apagado");
-                                });
-                            }
-                        }
-                    },
-                    logQR: true,
-                }
-            )
-        )) as unknown as Session;
-
-        // Atualizar a lista de sessões
-        const sessionIndex = sessions.findIndex((s) => s.id === whatsapp.id);
-        if (sessionIndex === -1) {
-            wbot.id = whatsapp.id;
-            sessions.push(wbot);
-        } else {
-            sessions[sessionIndex] = wbot;
-        }
-
-        start(wbot);
-        await wbot.setOnlinePresence(true)
-        return wbot;
-    } catch (error) {
-        throw new Error(`Erro ao inicializar a sessão: ${error}`);
-    }
-}
-const start = async (client: Session) => {
-    try {
-
-        const isReady = await client.isAuthenticated();
-
-        // client.sendListMessage('553185683733@c.us',{
-        //     buttonText: 'Click here',
-        //     description: 'Choose one option',
-        //     sections: [
-        //       {
-        //         title: 'Section 1',
-        //         rows: [
-        //           {
-        //             rowId: 'my_custom_id',
-        //             title: 'Test 1',
-        //             description: 'Description 1',
-        //           },
-        //           {
-        //             rowId: '2',
-        //             title: 'Test 2',
-        //             description: 'Description 2',
-        //           },
-        //         ],
-        //       },
-        //     ],
-        //   }).then(result=> console.log(result))
-        //   listResponse: {
-        //     listType: 1,
-        //     title: 'Test 1',
-        //     description: 'Description 1',
-        //     singleSelectReply: { selectedRowId: 'my_custom_id' }
-        //   },
-        // client.sendText('553185683733@c.us', 'WPPConnect message with buttons', {
-        //     useTemplateButtons: true, // False for legacy
-        //     buttons: [
-        //       {
-        //         id: '1',
-        //         text: 'WPPConnect Site'
-        //       },
-        //       {
-        //         id: '2',
-        //         text: 'WPPConnect Site'
-        //       },
-        //       {
-        //         id: '3',
-        //         text: 'WPPConnect Site'
-        //       }
-
-        //     ],
-        //     title: 'Title text' // Optional
-        //  }).then(result=> console.log(result))
-
-        if (isReady) {
-            console.log('isAuthenticated')
-            const wbotVersion = await client.getWAVersion()
-            // client.checkNumberStatus()
-            // console.log(await client.getProfilePicFromServer())
-            wbotMessageListener(client);
-
-        }
-    } catch (error) {
-        console.log(error, "start")
-    }
-}
-export const getWbot = (whatsappId: number): Session => {
-    const sessionIndex = sessions.findIndex((s) => s.id === Number(whatsappId));
-    if (sessionIndex === -1) {
-        throw new Error("ERR_WAPP_NOT_INITIALIZED");
-    }
-
-    return sessions[sessionIndex];
+	// eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
+	// Object.assign(client, {
+	//   status: 'PHONECODE',
+	//   phoneCode: phoneCode,
+	//   phone: phone,
+	// });
+	// req.io.emit('phoneCode', {
+	//   data: phoneCode,
+	//   phone: phone,
+	//   session: client.session,
+	// });
+	// callWebHook(client, req, 'phoneCode', {
+	//   phoneCode: phoneCode,
+	//   phone: phone,
+	//   session: client.session,
+	// });
+	// if (res && !res._headerSent)
+	//   res.status(200).json({
+	//     status: 'phoneCode',
+	//     phone: phone,
+	//     phoneCode: phoneCode,
+	//     session: client.session,
+	//   });
 };
+export const initWbot = async (whatsapp: any): Promise<Session> => {
+	let wbot: Session;
+	const qrCodePath = path.join(
+		__dirname,
+		"..",
+		"..",
+		"public",
+		`qrCode-${whatsapp.id}.png`,
+	);
+	try {
+		// Criar uma nova sessão
+		const io = getIO();
 
+		wbot = (await create(
+			Object.assign({}, { headless: false }, config.createOptions, {
+				//  logger: logger,
+				whatsappVersion: "2.3000.10184x",
+				session: `wbot-${whatsapp.id}`,
+				phoneNumber: whatsapp.wppUser ?? null,
+				catchLinkCode: (_code: string) => {
+					// Método para código de pareamento
+				},
+				catchQR: (
+					base64Qr: any,
+					_asciiQR: any,
+					attempt: number,
+					urlCode?: string,
+				) => {
+					const matches = base64Qr.match(/^data:([A-Za-z-+/]+);base64,(.+)$/);
+					if (!matches || matches.length !== 3) {
+						throw new Error("Invalid input string");
+					}
 
+					const response = {
+						type: matches[1],
+						data: Buffer.from(matches[2], "base64"),
+					};
+
+					fs.writeFile(qrCodePath, response.data, "binary", (err) => {
+						if (err) {
+							console.error("Erro ao salvar QR Code:", err);
+						} else {
+						}
+					});
+					// io.emit(`${tenantId}:whatsappSession`, {
+					//     action: "update",
+					//     session: whatsapp,
+					//   });
+				},
+
+				statusFind: async (statusSession: string, session: string) => {
+					if (statusSession === "isLogged") {
+					}
+					if (statusSession === "qrReadFail") {
+						// logger.error(
+						//     `Session: ${sessionName}-AUTHENTICATION FAILURE :: ${msg}`
+						//   );
+						//   if (whatsapp.retries > 1) {
+						//     await whatsapp.update({
+						//       retries: 0,
+						//       session: "",
+						//     });
+						//   }
+						//   const retry = whatsapp.retries;
+						//   await whatsapp.update({
+						//     status: "DISCONNECTED",
+						//     retries: retry + 1,
+						//   });
+						//   io.emit(`${tenantId}:whatsappSession`, {
+						//     action: "update",
+						//     session: whatsapp,
+						//   });
+					}
+					if (
+						statusSession === "autocloseCalled" ||
+						statusSession === "desconnectedMobile"
+					) {
+					}
+					if (statusSession === "inChat") {
+						if (fs.existsSync(qrCodePath)) {
+							fs.unlink(qrCodePath, () => {});
+						}
+					}
+				},
+				logQR: true,
+			}),
+		)) as unknown as Session;
+
+		// Atualizar a lista de sessões
+		const sessionIndex = sessions.findIndex((s) => s.id === whatsapp.id);
+		if (sessionIndex === -1) {
+			wbot.id = whatsapp.id;
+			sessions.push(wbot);
+		} else {
+			sessions[sessionIndex] = wbot;
+		}
+
+		start(wbot);
+		await wbot.setOnlinePresence(true);
+		return wbot;
+	} catch (error) {
+		throw new Error(`Erro ao inicializar a sessão: ${error}`);
+	}
+};
+const start = async (client: Session) => {
+	try {
+		const isReady = await client.isAuthenticated();
+
+		// client.sendListMessage('553185683733@c.us',{
+		//     buttonText: 'Click here',
+		//     description: 'Choose one option',
+		//     sections: [
+		//       {
+		//         title: 'Section 1',
+		//         rows: [
+		//           {
+		//             rowId: 'my_custom_id',
+		//             title: 'Test 1',
+		//             description: 'Description 1',
+		//           },
+		//           {
+		//             rowId: '2',
+		//             title: 'Test 2',
+		//             description: 'Description 2',
+		//           },
+		//         ],
+		//       },
+		//     ],
+		//   }).then(result=> console.log(result))
+		//   listResponse: {
+		//     listType: 1,
+		//     title: 'Test 1',
+		//     description: 'Description 1',
+		//     singleSelectReply: { selectedRowId: 'my_custom_id' }
+		//   },
+		// client.sendText('553185683733@c.us', 'WPPConnect message with buttons', {
+		//     useTemplateButtons: true, // False for legacy
+		//     buttons: [
+		//       {
+		//         id: '1',
+		//         text: 'WPPConnect Site'
+		//       },
+		//       {
+		//         id: '2',
+		//         text: 'WPPConnect Site'
+		//       },
+		//       {
+		//         id: '3',
+		//         text: 'WPPConnect Site'
+		//       }
+
+		//     ],
+		//     title: 'Title text' // Optional
+		//  }).then(result=> console.log(result))
+
+		if (isReady) {
+			const wbotVersion = await client.getWAVersion();
+			// client.checkNumberStatus()
+			// console.log(await client.getProfilePicFromServer())
+			wbotMessageListener(client);
+		}
+	} catch (error) {}
+};
+export const getWbot = (whatsappId: number): Session => {
+	const sessionIndex = sessions.findIndex((s) => s.id === Number(whatsappId));
+	if (sessionIndex === -1) {
+		throw new Error("ERR_WAPP_NOT_INITIALIZED");
+	}
+
+	return sessions[sessionIndex];
+};
 
 // {
 //     id: {
@@ -344,7 +330,6 @@ export const getWbot = (whatsappId: number): Session => {
 //     senderOrRecipientAccountTypeHosted: false,
 //     placeholderCreatedWhenAccountIsHosted: false
 //   }
-  
 
 // SenderLayer
 // {

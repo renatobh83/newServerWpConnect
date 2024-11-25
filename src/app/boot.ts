@@ -1,8 +1,13 @@
-import { Application } from "express";
+import type { Application } from "express";
+import config from "../config/config";
+import waitForPostgresConnection from "./awaitPostgresConnection";
+import database from "./database";
 import express from "./express";
 import modules from "./modules";
-import config from '../config/config';
+
 export default async function bootstrap(app: Application): Promise<void> {
-  await express(app, config);
-  await modules(app)
+	await waitForPostgresConnection();
+	await database(app);
+	await express(app, config);
+	await modules(app);
 }

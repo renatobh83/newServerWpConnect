@@ -1,0 +1,150 @@
+{
+  error: Error: Specified type of property 'id'
+              cannot be automatically resolved to a sequelize data type. Please
+              define the data type manually
+      at getSequelizeTypeByDesignType (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\model\shared\model-service.js:64:11)
+      at annotate (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\model\column\column.js:32:77)
+      at Column (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\model\column\column.js:14:9)
+      at __decorateClass (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\AutoReplyLogs.ts:2:1229)
+      at Contact (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\AutoReplyLogs.ts:21:10)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\AutoReplyLogs.ts:63:16)
+      at Module._compile (node:internal/modules/cjs/loader:1546:14)
+      at Object.transformer (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\tsx\dist\register-DCnOAxY2.cjs:2:1186)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: "uncaughtException: Specified type of property 'id'\n" +
+    '            cannot be automatically resolved to a sequelize data type. Please\n' +
+    '            define the data type manually\n' +
+    "Error: Specified type of property 'id'\n" +
+    '            cannot be automatically resolved to a sequelize data type. Please\n' +
+    '            define the data type manually\n' +
+    '    at getSequelizeTypeByDesignType (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\shared\\model-service.js:64:11)\n' +
+    '    at annotate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js:32:77)\n' +
+    '    at Column (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js:14:9)\n' +
+    '    at __decorateClass (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:2:1229)\n' +
+    '    at Contact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:21:10)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:63:16)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Object.transformer (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\tsx\\dist\\register-DCnOAxY2.cjs:2:1186)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: "Error: Specified type of property 'id'\n" +
+    '            cannot be automatically resolved to a sequelize data type. Please\n' +
+    '            define the data type manually\n' +
+    '    at getSequelizeTypeByDesignType (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\shared\\model-service.js:64:11)\n' +
+    '    at annotate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js:32:77)\n' +
+    '    at Column (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js:14:9)\n' +
+    '    at __decorateClass (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:2:1229)\n' +
+    '    at Contact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:21:10)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts:63:16)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Object.transformer (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\tsx\\dist\\register-DCnOAxY2.cjs:2:1186)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Mon Nov 25 2024 09:38:08 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 2928,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 161136640,
+      heapTotal: 81399808,
+      heapUsed: 56244088,
+      external: 7154529,
+      arrayBuffers: 1308632
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7674.171 },
+  trace: [
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\shared\\model-service.js',
+      function: 'getSequelizeTypeByDesignType',
+      line: 64,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js',
+      function: 'annotate',
+      line: 32,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\model\\column\\column.js',
+      function: 'Column',
+      line: 14,
+      method: null,
+      native: false
+    },
+    {
+      column: 1229,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts',
+      function: '__decorateClass',
+      line: 2,
+      method: null,
+      native: false
+    },
+    {
+      column: 10,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts',
+      function: 'Contact',
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\AutoReplyLogs.ts',
+      function: null,
+      line: 63,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1546,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 1186,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\tsx\\dist\\register-DCnOAxY2.cjs',
+      function: 'Object.transformer',
+      line: 2,
+      method: 'transformer',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T12:38:08.493Z'
+}

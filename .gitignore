@@ -1,4 +1,5 @@
 node_modules
-src/config/config.ts
 tokens
 .DS_Store
+.env
+.dist

@@ -1,6 +1,6 @@
-import { Whatsapp } from '@wppconnect-team/wppconnect';
+import type { Whatsapp } from "@wppconnect-team/wppconnect";
 
 export interface WhatsAppServer extends Whatsapp {
-  urlcode: string;
-  status: string;
+	urlcode: string;
+	status: string;
 }

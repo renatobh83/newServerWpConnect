@@ -1,7 +1,7 @@
-import __init from "./app"
+import "reflect-metadata";
+import __init from "./app";
 
-__init().then((app: any)=>{
-    app.start();
-
-
-})
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+__init().then((app: any) => {
+	app.start();
+});
