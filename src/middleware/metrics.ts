@@ -1,6 +1,6 @@
-import Prometheus from "prom-client";
-import type { Request, Response } from "express";
 import { parse, parseISO } from "date-fns";
+import type { Request, Response } from "express";
+import Prometheus from "prom-client";
 
 const register = new Prometheus.Registry();
 

@@ -1,17 +1,17 @@
 import {
-	Table,
+	AutoIncrement,
+	BelongsTo,
 	Column,
 	CreatedAt,
-	UpdatedAt,
+	DataType,
+	ForeignKey,
 	Model,
 	PrimaryKey,
-	ForeignKey,
-	BelongsTo,
-	AutoIncrement,
-	DataType,
+	Table,
+	UpdatedAt,
 } from "sequelize-typescript";
-import User from "./User";
 import Queue from "./Queue";
+import User from "./User";
 
 @Table({ freezeTableName: true, tableName: "UsersQueues" })
 class UsersQueues extends Model<UsersQueues> {
