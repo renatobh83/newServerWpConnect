@@ -25,7 +25,6 @@ import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
-
 @Table
 class Whatsapp extends Model<Whatsapp> {
 	@PrimaryKey
@@ -35,67 +34,67 @@ class Whatsapp extends Model<Whatsapp> {
 
 	@AllowNull(false)
 	@Unique
-	@Column(DataType.STRING) // Alterado para STRING para texto de comprimento variável
+	@Column(DataType.STRING)
 	declare name: string;
 
-	@Column(DataType.STRING) // Alterado para STRING
-	session: string;
+	@Column(DataType.STRING)
+	declare session: string; // Removido o campo público e usado apenas a anotação do Sequelize
 
-	@Column(DataType.STRING) // Alterado para STRING
-	qrcode: string;
+	@Column(DataType.STRING)
+	declare qrcode: string;
 
-	@Column(DataType.STRING) // Alterado para STRING
-	status: string;
+	@Column(DataType.STRING)
+	declare status: string;
 
-	@Column(DataType.INTEGER) // Alterado para INTEGER
-	battery: number;
+	@Column(DataType.INTEGER)
+	declare battery: number;
 
-	@Column(DataType.BOOLEAN) // Alterado para BOOLEAN
-	plugged: boolean;
+	@Column(DataType.BOOLEAN)
+	declare plugged: boolean;
 
 	@Default(true)
-	@Column(DataType.BOOLEAN) // Alterado para BOOLEAN
-	isActive: boolean;
+	@Column(DataType.BOOLEAN)
+	declare isActive: boolean;
 
 	@Default(false)
-	@Column(DataType.BOOLEAN) // Alterado para BOOLEAN
-	isDeleted: boolean;
+	@Column(DataType.BOOLEAN)
+	declare isDeleted: boolean;
 
-	@Column(DataType.INTEGER) // Alterado para INTEGER
-	retries: number;
+	@Column(DataType.INTEGER)
+	declare retries: number;
 
 	@Default(false)
-	@Column(DataType.BOOLEAN) // Alterado para BOOLEAN
-	isDefault: boolean;
+	@Column(DataType.BOOLEAN)
+	declare isDefault: boolean;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	tokenTelegram: string;
+	@Column(DataType.STRING)
+	declare tokenTelegram: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	instagramUser: string;
+	@Column(DataType.STRING)
+	declare instagramUser: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	instagramKey: string;
+	@Column(DataType.STRING)
+	declare instagramKey: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	fbPageId: string;
+	@Column(DataType.STRING)
+	declare fbPageId: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.JSONB) // Usando JSONB para objetos JSON
+	@Column(DataType.JSONB)
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	fbObject: object;
+	declare fbObject: object;
 
 	@Default("whatsapp")
-	@Column(DataType.ENUM("whatsapp", "telegram", "instagram", "messenger")) // Usando ENUM para tipos específicos
+	@Column(DataType.ENUM("whatsapp", "telegram", "instagram", "messenger"))
 	declare type: string;
 
 	@CreatedAt
@@ -106,61 +105,61 @@ class Whatsapp extends Model<Whatsapp> {
 	@Column(DataType.DATE(6))
 	declare updatedAt: Date;
 
-	@Column(DataType.STRING) // Alterado para STRING
+	@Column(DataType.STRING)
 	declare number: string;
 
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	wppUser: string;
+	@Column(DataType.STRING)
+	declare wppUser: string;
 
 	@Default(false)
-	@Column(DataType.BOOLEAN) // Alterado para BOOLEAN
-	pairingCodeEnabled: boolean;
+	@Column(DataType.BOOLEAN)
+	declare pairingCodeEnabled: boolean;
 
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	pairingCode: string;
+	@Column(DataType.STRING)
+	declare pairingCode: string;
 
-	@Column(DataType.JSONB) // Usando JSONB para objetos JSON
+	@Column(DataType.JSONB)
 	// eslint-disable-next-line @typescript-eslint/ban-types
-	phone: object;
+	declare phone: object;
 
 	@HasMany(() => Ticket)
 	declare tickets: Ticket[];
 
 	@ForeignKey(() => Tenant)
-	@Column(DataType.INTEGER) // Alterado para INTEGER
-	tenantId: number;
+	@Column(DataType.INTEGER)
+	declare tenantId: number;
 
 	@BelongsTo(() => Tenant)
-	tenant: Tenant;
+	declare tenant: Tenant;
 
 	@ForeignKey(() => ChatFlow)
-	@Column(DataType.INTEGER) // Alterado para INTEGER
-	chatFlowId: number;
+	@Column(DataType.INTEGER)
+	declare chatFlowId: number;
 
 	@BelongsTo(() => ChatFlow)
-	chatFlow: ChatFlow;
+	declare chatFlow: ChatFlow;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.ENUM("360", "gupshup")) // Usando ENUM para valores específicos
-	wabaBSP: string;
+	@Column(DataType.ENUM("360", "gupshup"))
+	declare wabaBSP: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	tokenAPI: string;
+	@Column(DataType.STRING)
+	declare tokenAPI: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	tokenHook: string;
+	@Column(DataType.STRING)
+	declare tokenHook: string;
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.STRING) // Alterado para STRING
-	farewellMessage: string;
+	@Column(DataType.STRING)
+	declare farewellMessage: string;
 
 	@Column(DataType.VIRTUAL)
 	get UrlWabaWebHook(): string | null {
@@ -240,5 +239,4 @@ class Whatsapp extends Model<Whatsapp> {
 		}
 	}
 }
-
 export default Whatsapp;
