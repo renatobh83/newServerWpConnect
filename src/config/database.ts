@@ -1,5 +1,5 @@
 // require('ts-node/register');
-import  "../app/config-env";
+import "../app/config-env";
 module.exports = {
 	define: {
 		charset: "utf8mb4",

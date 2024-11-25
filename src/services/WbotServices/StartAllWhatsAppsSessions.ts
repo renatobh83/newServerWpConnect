@@ -1,5 +1,5 @@
 import { Op } from "sequelize";
-import Whatsapp from "../../models/Whatsapp";
+import Whatsapp from "../../models/whatsapp";
 import { StartWhatsAppSession } from "./StartWhatsAppSession";
 
 export const StartAllWhatsAppsSessions = async (): Promise<void> => {

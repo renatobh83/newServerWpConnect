@@ -126,7 +126,7 @@ class Whatsapp extends Model<Whatsapp> {
 	phone: object;
 
 	@HasMany(() => Ticket)
-	tickets: Ticket[];
+	declare tickets: Ticket[];
 
 	@ForeignKey(() => Tenant)
 	@Column(DataType.INTEGER) // Alterado para INTEGER
@@ -184,7 +184,7 @@ class Whatsapp extends Model<Whatsapp> {
 	}
 
 	@AfterUpdate
-		static async HookStatus(instance: Whatsapp & any): Promise<void> {
+	static async HookStatus(instance: Whatsapp & any): Promise<void> {
 		const { status, name, qrcode, number, tenantId, id: sessionId } = instance;
 		const payload: any = {
 			name,

@@ -2,8 +2,8 @@ import { type Server, createServer } from "node:http";
 import express, { type Express } from "express";
 import { initIO } from "../libs/scoket";
 import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
-import bootstrap from "./boot";
 import { logger } from "../utils/logger";
+import bootstrap from "./boot";
 
 export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -21,22 +21,22 @@ export default async function application() {
 
 		initIO(app.server);
 	}
-	// async function close() {
-	// 	return new Promise<void>((resolve, reject) => {
-	// 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	// 		httpServer.close((err: any) => {
-	// 			if (err) {
-	// 				reject(err);
-	// 			}
+	async function close() {
+		return new Promise<void>((resolve, reject) => {
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+			httpServer.close((err: any) => {
+				if (err) {
+					reject(err);
+				}
 
-	// 			resolve();
-	// 		});
-	// 	});
-	// }
-	// process.on("SIGTERM", close);
+				resolve();
+			});
+		});
+	}
+	process.on("SIGTERM", close);
 
 	app.start = start;
-	// app.close = close;
+	app.close = close;
 
 	return app;
 }

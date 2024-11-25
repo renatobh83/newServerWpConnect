@@ -13,7 +13,7 @@ import {
 } from "sequelize-typescript";
 import Contact from "./Contact";
 import Tenant from "./Tenant";
-import Whatsapp from "./Whatsapp";
+import Whatsapp from "./whatsapp";
 
 @Table({ tableName: "Confirmacao" })
 class Confirmacao extends Model<Confirmacao> {
@@ -22,7 +22,7 @@ class Confirmacao extends Model<Confirmacao> {
 	@Column(DataType.INTEGER)
 	declare id: number;
 
-	@Column({ defaultValue: "pending", type:  DataType.STRING })
+	@Column({ defaultValue: "pending", type: DataType.STRING })
 	declare status: string;
 
 	@Column(DataType.STRING)
