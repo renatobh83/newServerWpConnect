@@ -20,6 +20,7 @@ import Whatsapp from "./Whatsapp";
 
 @Table
 class Campaign extends Model<Campaign> {
+	[x: string]: any;
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER)
@@ -32,8 +33,15 @@ class Campaign extends Model<Campaign> {
 	declare start: Date;
 
 	@Default("pending")
-	@Column(DataType.ENUM("pending", "scheduled", "processing", "canceled", "finished"))
-	declare status: "pending" | "scheduled" | "processing" | "canceled" | "finished";
+	@Column(
+		DataType.ENUM("pending", "scheduled", "processing", "canceled", "finished"),
+	)
+	declare status:
+		| "pending"
+		| "scheduled"
+		| "processing"
+		| "canceled"
+		| "finished";
 
 	@Column(DataType.STRING)
 	declare message1: string;
@@ -93,41 +101,48 @@ class Campaign extends Model<Campaign> {
 	declare delay: number;
 
 	@AfterFind
-	static async updatedInstances(instances: Campaign[]): Promise<Campaign[] | Campaign> {
+	static async updatedInstances(
+		instances: Campaign[],
+	): Promise<Campaign[] | Campaign> {
 		if (!Array.isArray(instances)) return instances;
-		const newInstances = await Promise.all(
-			instances.map(async (instance: Campaign) => {
-				if (!["pending", "finished", "canceled"].includes(instance.status)) {
-					const pendentesEntrega = +instance.dataValues.pendentesEntrega;
-					const pendentesEnvio = +instance.dataValues.pendentesEnvio;
-					const recebidas = +instance.dataValues.recebidas;
-					const lidas = +instance.dataValues.lidas;
-					const contactsCount = +instance.dataValues.contactsCount;
 
-					const totalTransacionado =
-						pendentesEntrega + pendentesEnvio + recebidas + lidas;
+		const newInstances = (
+			await Promise.all(
+				instances.map(async (instance: Campaign) => {
+					if (!["pending", "finished", "canceled"].includes(instance.status)) {
+						const pendentesEntrega = +instance.dataValues.pendentesEntrega;
+						const pendentesEnvio = +instance.dataValues.pendentesEnvio;
+						const recebidas = +instance.dataValues.recebidas;
+						const lidas = +instance.dataValues.lidas;
+						const contactsCount = +instance.dataValues.contactsCount;
 
-					if (
-						instance.status === "scheduled" &&
-						contactsCount === pendentesEnvio
-					) {
+						const totalTransacionado =
+							pendentesEntrega + pendentesEnvio + recebidas + lidas;
+
+						if (
+							instance.status === "scheduled" &&
+							contactsCount === pendentesEnvio
+						) {
+							return instance;
+						}
+
+						if (contactsCount !== totalTransacionado) {
+							instance.status = "processing";
+							await instance.update({ status: "processing" });
+						}
+
+						if (contactsCount === totalTransacionado) {
+							instance.status = "finished";
+							await instance.update({ status: "finished" });
+						}
+
 						return instance;
 					}
+					return undefined;
+				}),
+			)
+		).filter((instance): instance is Campaign => instance !== undefined);
 
-					if (contactsCount !== totalTransacionado) {
-						instance.status = "processing";
-						await instance.update({ status: "processing" });
-					}
-
-					if (contactsCount === totalTransacionado) {
-						instance.status = "finished";
-						await instance.update({ status: "finished" });
-					}
-
-					return instance;
-				}
-			}),
-		);
 		return newInstances;
 	}
 }

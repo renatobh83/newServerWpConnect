@@ -18,8 +18,8 @@ import {
 	Unique,
 	UpdatedAt,
 } from "sequelize-typescript";
-import webHooks from "../config/webHooks.dev.json";
 import authConfig from "../config/auth";
+import webHooks from "../config/webHooks.dev.json";
 import Queue from "../libs/Queue";
 import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
@@ -166,8 +166,7 @@ class Whatsapp extends Model<Whatsapp> {
 	get UrlWabaWebHook(): string | null {
 		const key = this.getDataValue("tokenHook");
 		const wabaBSP = this.getDataValue("wabaBSP");
-		let BACKEND_URL;
-		BACKEND_URL = process.env.BACKEND_URL;
+		let BACKEND_URL = process.env.BACKEND_URL;
 		if (process.env.NODE_ENV === "dev") {
 			BACKEND_URL = webHooks.urlWabahooks;
 		}
@@ -177,8 +176,7 @@ class Whatsapp extends Model<Whatsapp> {
 	@Column(DataType.VIRTUAL)
 	get UrlMessengerWebHook(): string | null {
 		const key = this.getDataValue("tokenHook");
-		let BACKEND_URL;
-		BACKEND_URL = process.env.BACKEND_URL;
+		let BACKEND_URL = process.env.BACKEND_URL;
 		if (process.env.NODE_ENV === "dev") {
 			BACKEND_URL = webHooks.urlWabahooks;
 		}

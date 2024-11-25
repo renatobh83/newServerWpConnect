@@ -55,9 +55,7 @@ class UserMessagesLog extends Model<UserMessagesLog> {
 	@UpdatedAt
 	@Column(DataType.DATE(6))
 	declare updatedAt: Date;
-	tableName : '"UserMessagesLog";'
+	tableName: '"UserMessagesLog";';
 }
-
-
 
 export default UserMessagesLog;

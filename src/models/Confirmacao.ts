@@ -22,7 +22,7 @@ class Confirmacao extends Model<Confirmacao> {
 	@Column(DataType.INTEGER)
 	declare id: number;
 
-	@Column({ defaultValue: "pending" })
+	@Column({ defaultValue: "pending", type:  DataType.STRING })
 	declare status: string;
 
 	@Column(DataType.STRING)

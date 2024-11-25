@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import Queue from "bull";
 import * as jobs from "../jobs/Index";
 import QueueListeners from "./QueueListeners";

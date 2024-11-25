@@ -18,6 +18,7 @@ import Tenant from "./Tenant";
 import Whatsapp from "./Whatsapp";
 
 class ApiMessage extends Model<ApiMessage> {
+	[x: string]: any;
 	@PrimaryKey
 	@Default(uuidV4)
 	@Column(DataType.UUID)
@@ -88,7 +89,7 @@ class ApiMessage extends Model<ApiMessage> {
 
 	@AfterCreate
 	@AfterUpdate
-	static HookMessage(instance: ApiMessage): void {
+	static HookMessage(instance: ApiMessage | any): void {
 		if (instance?.apiConfig?.urlMessageStatus) {
 			const payload = {
 				ack: instance.ack,

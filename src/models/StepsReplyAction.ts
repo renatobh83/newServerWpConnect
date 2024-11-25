@@ -17,7 +17,6 @@ import User from "./User";
 
 @Table({ freezeTableName: true, tableName: "StepsReplyActions" })
 class StepsReplyActions extends Model<StepsReplyActions> {
-
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER) // Alterado para INTEGER
@@ -75,7 +74,6 @@ class StepsReplyActions extends Model<StepsReplyActions> {
 
 	@BelongsTo(() => StepsReply, "nextStepId")
 	nextStep: StepsReply; // Relacionamento com o próximo passo
-
 }
 
 export default StepsReplyActions;

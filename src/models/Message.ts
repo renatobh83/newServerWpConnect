@@ -136,7 +136,9 @@ class Message extends Model<Message> {
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.ENUM("campaign", "chat", "external", "schedule", "bot", "sync")) // Usando ENUM para tipo de envio
+	@Column(
+		DataType.ENUM("campaign", "chat", "external", "schedule", "bot", "sync"),
+	) // Usando ENUM para tipo de envio
 	declare sendType: string;
 
 	@ForeignKey(() => Tenant)

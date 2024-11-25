@@ -1,4 +1,4 @@
-import type { ServerOptions } from "./types/ServerOptions";
+import type { ServerOptions } from "../types/ServerOptions";
 
 export default {
 	secretKey: "THISISMYSECURETOKEN",

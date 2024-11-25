@@ -36,8 +36,8 @@ interface CustomSequelize extends Sequelize {
 	afterDisconnect?: any;
 }
 
-// eslint-disable-next-line
 const dbConfig = require("../config/database");
+
 const sequelize: CustomSequelize = new Sequelize(dbConfig);
 
 const models = [
@@ -70,52 +70,62 @@ const models = [
 	ChatFlow,
 	ApiConfirmacao,
 ];
-
+// sequelize.sync({ alter: true }).then((data) => console.log(data));
 sequelize.addModels(models);
 
-async function handleSequelizeError(error: any) {
-	if (
-		error instanceof DatabaseError &&
-		error.message.includes("Connection terminated unexpectedly")
-	) {
-		logger.error(
-			"DATABASE CONNECTION TERMINATED, retrying in 5 seconds:",
-			error,
-		);
+// console.log(sequelize);
 
-		setTimeout(() => {
-			logger.info("Retrying database connection...");
-			connectWithRetry();
-		}, 5000);
-	} else {
-		logger.error("Sequelize encountered an error:", error);
-		throw error; // Lançar o erro para tratamento posterior
-	}
-}
-// Função para tentar reconectar automaticamente
-// Função de conexão com retry apenas quando necessário
-async function connectWithRetry() {
-	try {
-		await sequelize.authenticate();
-		logger.info("DATABASE CONNECTED");
-		QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
-		QueueJobs.default.add("SendMessageSchenduled", {});
-	} catch (error) {
-		handleSequelizeError(error); // Chama o handler para reconexão condicional
-	}
-}
+// // Função para tentar reconectar automaticamente
+// async function connectWithRetry() {
+// 	try {
+// 		await sequelize.authenticate();
+// 		logger.info("DATABASE CONNECTED");
 
-sequelize.afterConnect(() => {
-	logger.info("DATABASE CONNECT");
-	QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
-	QueueJobs.default.add("SendMessageSchenduled", {});
-});
+// 		// Adicionar tarefas à fila após a conexão bem-sucedida
+// 		QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
+// 		QueueJobs.default.add("SendMessageSchenduled", {});
+// 	} catch (error) {
+// 		handleSequelizeError(error); // Chama o handler para reconexão condicional
+// 	}
+// }
 
-sequelize.afterDisconnect(() => {
-	logger.info("DATABASE DISCONNECT");
-});
+// // Função para tratar erros de conexão
+// async function handleSequelizeError(error: any) {
+// 	if (
+// 		error instanceof DatabaseError &&
+// 		error.message.includes("Connection terminated unexpectedly")
+// 	) {
+// 		logger.error(
+// 			"DATABASE CONNECTION TERMINATED, retrying in 5 seconds:",
+// 			error,
+// 		);
 
-// Inicializar a primeira tentativa de conexão
-connectWithRetry();
+// 		// Tentar reconectar após 5 segundos
+// 		setTimeout(() => {
+// 			logger.info("Retrying database connection...");
+// 			connectWithRetry();
+// 		}, 5000);
+// 	} else {
+// 		logger.error("Sequelize encountered an error:", error);
+// 		throw error; // Lançar o erro para tratamento posterior
+// 	}
+// }
+
+// // Inicializar a primeira tentativa de conexão
+// connectWithRetry().catch((error) => {
+// 	logger.error("Initial connection attempt failed.", error);
+// 	process.exit(1); // Encerra o servidor se a conexão inicial falhar
+// });
+
+// // Exemplo de log para monitorar o estado da conexão
+// sequelize.afterConnect(() => {
+// 	logger.info("DATABASE CONNECT");
+// 	QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
+// 	QueueJobs.default.add("SendMessageSchenduled", {});
+// });
+
+// sequelize.afterDisconnect(() => {
+// 	logger.info("DATABASE DISCONNECT");
+// });
 
 export default sequelize;

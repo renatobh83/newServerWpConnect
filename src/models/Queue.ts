@@ -16,41 +16,38 @@ import User from "./User";
 
 @Table
 class Queue extends Model<Queue> {
-
 	@PrimaryKey
 	@AutoIncrement
-	@Column(DataType.INTEGER)  // Especificando explicitamente o tipo de dado
+	@Column(DataType.INTEGER) // Especificando explicitamente o tipo de dado
 	declare id: number;
 
-	@Column(DataType.STRING)  // Definindo explicitamente o tipo de dado para 'queue'
+	@Column(DataType.STRING) // Definindo explicitamente o tipo de dado para 'queue'
 	queue: string;
 
 	@Default(true)
-	@Column(DataType.BOOLEAN)  // Especificando o tipo booleano para 'isActive'
+	@Column(DataType.BOOLEAN) // Especificando o tipo booleano para 'isActive'
 	isActive: boolean;
 
-	@Column(DataType.DATE)  // Definindo explicitamente o tipo de dado para 'createdAt'
+	@Column(DataType.DATE) // Definindo explicitamente o tipo de dado para 'createdAt'
 	@CreatedAt
 	declare createdAt: Date;
 
-	@Column(DataType.DATE)  // Definindo explicitamente o tipo de dado para 'updatedAt'
+	@Column(DataType.DATE) // Definindo explicitamente o tipo de dado para 'updatedAt'
 	@UpdatedAt
 	declare updatedAt: Date;
 
 	@ForeignKey(() => User)
-	@Column(DataType.INTEGER)  // Definindo explicitamente o tipo de dado para 'userId' como inteiro
-	declare userId: number;  // 'userId' é uma chave estrangeira para o modelo 'User'
+	@Column(DataType.INTEGER) // Definindo explicitamente o tipo de dado para 'userId' como inteiro
+	declare userId: number; // 'userId' é uma chave estrangeira para o modelo 'User'
 
-
-	@BelongsTo(() => User)  // Estabelecendo o relacionamento com 'User'
+	@BelongsTo(() => User) // Estabelecendo o relacionamento com 'User'
 	declare user: User;
 
 	@ForeignKey(() => Tenant)
-	@Column(DataType.INTEGER)  // Definindo explicitamente o tipo de dado para 'tenantId' como inteiro
-	declare tenantId: number;  // 'tenantId' é uma chave estrangeira para o modelo 'Tenant'
+	@Column(DataType.INTEGER) // Definindo explicitamente o tipo de dado para 'tenantId' como inteiro
+	declare tenantId: number; // 'tenantId' é uma chave estrangeira para o modelo 'Tenant'
 
-
-	@BelongsTo(() => Tenant)  // Estabelecendo o relacionamento com 'Tenant'
+	@BelongsTo(() => Tenant) // Estabelecendo o relacionamento com 'Tenant'
 	declare tenant: Tenant;
 }
 

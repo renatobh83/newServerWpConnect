@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import axios from "axios";
-import CheckResponseConfirmacao from "../helpers/CheckResponseConfirmacao";
 import { logger } from "../utils/logger";
 
 interface Data {
@@ -22,7 +19,7 @@ export default {
 			delay: 60000 * 3, // 3 min
 		},
 	},
-	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+
 	async handle({ data }: HandlerPayload) {
 		try {
 			const payload = {};
@@ -30,11 +27,7 @@ export default {
 			logger.info(`Queue WebHooksAPI success: Data: ${data}`);
 			return true;
 		} catch (error) {
-			logger.error(`Error send message confirmacao response: ${error}`);
-			if (error?.response?.status === 404) {
-				return { message: "url configurar no webhook não existe." };
-			}
-			throw new Error(error);
+			logger.error(`Error send message api: ${error}`);
 		}
 	},
 };
