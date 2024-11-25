@@ -3,9 +3,9 @@ import express, { type Express } from "express";
 import { initIO } from "../libs/scoket";
 import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
 import bootstrap from "./boot";
+import { logger } from "../utils/logger";
 
 export default async function application() {
-
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const app: Express | any = express();
 	const httpServer: Server = createServer(app);
@@ -13,10 +13,9 @@ export default async function application() {
 	await bootstrap(app);
 
 	async function start() {
-
 		const host = app.get("host") || "0.0.0.0";
 		app.server = httpServer.listen(PORT, host, async () => {
-			console.info(`Web server listening at: http://${host}:${PORT}/`);
+			logger.info(`Web server listening at: http://${host}:${PORT}/`);
 			// await StartAllWhatsAppsSessions();
 		});
 

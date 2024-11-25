@@ -5553,3 +5553,1524 @@
   ],
   timestamp: '2024-11-25T14:05:57.444Z'
 }
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\foreign-key\foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\has\has-association.js:18:77)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:46:16)
+      at Sequelize.addModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:38:14)
+      at ApiConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:74:11)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:131:16),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:06:45 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 16320,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 156766208,
+      heapTotal: 94978048,
+      heapUsed: 72280240,
+      external: 5411146,
+      arrayBuffers: 558343
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 12991.5 },
+  trace: [
+    {
+      column: 15,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: 'ApiConfirmacao',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: null,
+      line: 131,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:06:45.874Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\foreign-key\foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\has\has-association.js:18:77)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:46:16)
+      at Sequelize.addModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:38:14)
+      at ApiConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:74:11)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:131:16),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:07:02 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 12180,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 167657472,
+      heapTotal: 96268288,
+      heapUsed: 73302120,
+      external: 5416710,
+      arrayBuffers: 563915
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 13008.078 },
+  trace: [
+    {
+      column: 15,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: 'ApiConfirmacao',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: null,
+      line: 131,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:07:02.453Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\foreign-key\foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\has\has-association.js:18:77)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:46:16)
+      at Sequelize.addModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:38:14)
+      at ApiConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:74:11)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:131:16),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:07:19 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4472,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 167071744,
+      heapTotal: 95502336,
+      heapUsed: 72698648,
+      external: 5416753,
+      arrayBuffers: 563958
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 13025.218 },
+  trace: [
+    {
+      column: 15,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: 'ApiConfirmacao',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: null,
+      line: 131,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:07:19.597Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\foreign-key\foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\associations\has\has-association.js:18:77)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:46:16)
+      at Sequelize.addModels (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize-typescript\dist\sequelize\sequelize\sequelize.js:38:14)
+      at ApiConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:74:11)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:131:16),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at ApiConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:131:16)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:07:29 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4476,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 167870464,
+      heapTotal: 96362496,
+      heapUsed: 73729360,
+      external: 5416753,
+      arrayBuffers: 563958
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 13034.734 },
+  trace: [
+    {
+      column: 15,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: 'ApiConfirmacao',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: null,
+      line: 131,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:07:29.111Z'
+}
+{
+  error: [96msrc/routes/index.ts[0m:[93m23[0m:[93m12[0m - [91merror[0m[90m TS2339: [0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  
+  [7m23[0m   if (req?.client) {
+  [7m  [0m [91m           ~~~~~~[0m
+  [96msrc/routes/index.ts[0m:[93m30[0m:[93m19[0m - [91merror[0m[90m TS2339: [0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  
+  [7m30[0m    const qr = req.client
+  [7m  [0m [91m                  ~~~~~~[0m
+  [96msrc/routes/index.ts[0m:[93m45[0m:[93m25[0m - [91merror[0m[90m TS2339: [0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  
+  [7m45[0m   } else if (typeof req.client === "undefined") {
+  [7m  [0m [91m                        ~~~~~~[0m
+  [96msrc/routes/index.ts[0m:[93m53[0m:[93m17[0m - [91merror[0m[90m TS2339: [0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.
+  
+  [7m53[0m     status: req.client.status,
+  [7m  [0m [91m                ~~~~~~[0m
+  ,
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m23\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m23\x1B[0m   if (req?.client) {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m           ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m30\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m30\x1B[0m    const qr = req.client\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                  ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m45\x1B[0m:\x1B[93m25\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m45\x1B[0m   } else if (typeof req.client === "undefined") {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                        ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m53\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m53\x1B[0m     status: req.client.status,\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                ~~~~~~\x1B[0m\r\n' +
+    '\n' +
+    'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m23\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m23\x1B[0m   if (req?.client) {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m           ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m30\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m30\x1B[0m    const qr = req.client\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                  ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m45\x1B[0m:\x1B[93m25\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m45\x1B[0m   } else if (typeof req.client === "undefined") {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                        ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m53\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m53\x1B[0m     status: req.client.status,\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                ~~~~~~\x1B[0m\r\n' +
+    '\n' +
+    '    at createTSError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:859:12)\n' +
+    '    at reportTSError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:863:19)\n' +
+    '    at getOutput (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1077:36)\n' +
+    '    at Object.compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1433:41)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1617:30)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)',
+  stack: 'TSError: ⨯ Unable to compile TypeScript:\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m23\x1B[0m:\x1B[93m12\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m23\x1B[0m   if (req?.client) {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m           ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m30\x1B[0m:\x1B[93m19\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m30\x1B[0m    const qr = req.client\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                  ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m45\x1B[0m:\x1B[93m25\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m45\x1B[0m   } else if (typeof req.client === "undefined") {\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                        ~~~~~~\x1B[0m\r\n' +
+    "\x1B[96msrc/routes/index.ts\x1B[0m:\x1B[93m53\x1B[0m:\x1B[93m17\x1B[0m - \x1B[91merror\x1B[0m\x1B[90m TS2339: \x1B[0mProperty 'client' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.\r\n" +
+    '\r\n' +
+    '\x1B[7m53\x1B[0m     status: req.client.status,\r\n' +
+    '\x1B[7m  \x1B[0m \x1B[91m                ~~~~~~\x1B[0m\r\n' +
+    '\n' +
+    '    at createTSError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:859:12)\n' +
+    '    at reportTSError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:863:19)\n' +
+    '    at getOutput (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1077:36)\n' +
+    '    at Object.compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1433:41)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1617:30)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at Object.require.extensions.<computed> [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts:1621:12)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:10:19 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4500,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\dist\\bin.js',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ],
+    memoryUsage: {
+      rss: 631451648,
+      heapTotal: 575750144,
+      heapUsed: 544063624,
+      external: 6779687,
+      arrayBuffers: 2783616
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 13205.109 },
+  trace: [
+    {
+      column: 12,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'createTSError',
+      line: 859,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'reportTSError',
+      line: 863,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'getOutput',
+      line: 1077,
+      method: null,
+      native: false
+    },
+    {
+      column: 41,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'Object.compile',
+      line: 1433,
+      method: 'compile',
+      native: false
+    },
+    {
+      column: 30,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'Module.m._compile',
+      line: 1617,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node\\src\\index.ts',
+      function: 'Object.require.extensions.<computed> [as .ts]',
+      line: 1621,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:10:19.483Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:15:34.751Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:16:45.757Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:19:08.253Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:20:43.230Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:22:56.527Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:24:16.299Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:25:11.427Z'
+}
+{
+  error: Error: Cannot find module '@bullmq'
+  Require stack:
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Whatsapp.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Ticket.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Message.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\CampaignContacts.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Campaign.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Contact.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\User.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Tenant.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\ApiConfig.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\database.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\boot.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+      at Function._load (node:internal/modules/cjs/loader:1075:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1340:12)
+      at require (node:internal/modules/helpers:141:16)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:1:19)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37541309940434253.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    "Error: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:1:19)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37541309940434253.js:69:33)',
+  stack: "Error: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:1:19)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37541309940434253.js:69:33)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:27:42 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 11304,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 111501312,
+      heapTotal: 71503872,
+      heapUsed: 39743920,
+      external: 2391229,
+      arrayBuffers: 189373
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 14247.906 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1249,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1075,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1340,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 141,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37541309940434253.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:27:42.288Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:28:07.357Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:28:54.907Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:29:50.667Z'
+}
+{
+  error: Error: Cannot find module '@bullmq'
+  Require stack:
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Whatsapp.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Ticket.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Message.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\CampaignContacts.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Campaign.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Contact.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\User.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Tenant.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\ApiConfig.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\database.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\boot.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+      at Function._load (node:internal/modules/cjs/loader:1075:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1340:12)
+      at require (node:internal/modules/helpers:141:16)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:1:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Port\app\node_modules\ts-node-dev\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-05875944410159151.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    "Error: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-05875944410159151.js:69:33)',
+  stack: "Error: Cannot find module '@bullmq'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Tenant.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\ApiConfig.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\database.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\boot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-05875944410159151.js:69:33)',
+  exception: true,
+  date: 'Mon Nov 25 2024 11:32:25 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 14356,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 118706176,
+      heapTotal: 78671872,
+      heapUsed: 57554808,
+      external: 2392705,
+      arrayBuffers: 190849
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 14530.671 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1249,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1075,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1340,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 141,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node_modules\\ts-node-dev\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-05875944410159151.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T14:32:25.060Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:33:18.585Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:33:37.886Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:33:47.966Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:34:56.451Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:36:09.161Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:36:37.445Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:36:57.164Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:37:35.286Z'
+}
+{
+  level: 'error',
+  message: 'Foreign key for "Whatsapp" is missing on "Ticket".',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\foreign-key\\foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\associations\\has\\has-association.js:18:77)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize-typescript\\dist\\sequelize\\sequelize\\sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:12)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  timestamp: '2024-11-25T14:37:56.759Z'
+}
