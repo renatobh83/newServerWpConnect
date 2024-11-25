@@ -14070,3 +14070,21 @@
   ],
   timestamp: '2024-11-25T19:00:04.872Z'
 }
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-25T19:01:00.125Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-25T19:01:00.151Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-25T19:01:00.348Z'
+}
