@@ -17041,3 +17041,1454 @@
   level: 'error',
   timestamp: '2024-11-26T09:57:45.745Z'
 }
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/controllers/UserController.ts(77,26): error TS1005: ',' expected.
+  src/controllers/UserController.ts(102,33): error TS1005: ',' expected.
+  src/controllers/UserController.ts(119,26): error TS1005: ',' expected.
+  
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\controllers\UserController.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Tue Nov 26 2024 07:44:49 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 13548,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 169926656,
+      heapTotal: 115363840,
+      heapUsed: 84600864,
+      external: 3513190,
+      arrayBuffers: 508758
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 3913.062 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T10:44:49.983Z'
+}
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/controllers/UserController.ts(77,26): error TS1005: ',' expected.
+  src/controllers/UserController.ts(102,33): error TS1005: ',' expected.
+  src/controllers/UserController.ts(119,26): error TS1005: ',' expected.
+  
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\controllers\UserController.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Tue Nov 26 2024 07:44:55 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 10656,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 170016768,
+      heapTotal: 116035584,
+      heapUsed: 85692632,
+      external: 3513190,
+      arrayBuffers: 508758
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 3918.671 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T10:44:55.588Z'
+}
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/controllers/UserController.ts(77,26): error TS1005: ',' expected.
+  src/controllers/UserController.ts(102,33): error TS1005: ',' expected.
+  src/controllers/UserController.ts(119,26): error TS1005: ',' expected.
+  
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\controllers\UserController.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-1045648694798671.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/UserController.ts(77,26): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(102,33): error TS1005: ',' expected.\r\n" +
+    "src/controllers/UserController.ts(119,26): error TS1005: ',' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Tue Nov 26 2024 07:44:57 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 3688,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 169779200,
+      heapTotal: 115306496,
+      heapUsed: 85334376,
+      external: 3513190,
+      arrayBuffers: 508758
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 3920.468 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\UserController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-1045648694798671.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T10:44:57.407Z'
+}
+{
+  error: Error: erro socket
+      at getIO (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\scoket.ts:21:9)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts:50:17)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-4200667000289853.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-4200667000289853.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-4200667000289853.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32),
+  level: 'error',
+  message: 'uncaughtException: erro socket\n' +
+    'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  stack: 'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  exception: true,
+  date: 'Tue Nov 26 2024 08:39:25 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 3152,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 147591168,
+      heapTotal: 98947072,
+      heapUsed: 79107552,
+      external: 3504979,
+      arrayBuffers: 428677
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7188.968 },
+  trace: [
+    {
+      column: 9,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts',
+      function: 'getIO',
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 17,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4200667000289853.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T11:39:25.916Z'
+}
+{
+  error: Error: erro socket
+      at getIO (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\scoket.ts:21:9)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts:50:17)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32),
+  level: 'error',
+  message: 'uncaughtException: erro socket\n' +
+    'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  stack: 'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  exception: true,
+  date: 'Tue Nov 26 2024 08:39:36 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 9396,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 145862656,
+      heapTotal: 95047680,
+      heapUsed: 69468224,
+      external: 3504979,
+      arrayBuffers: 428677
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7200.046 },
+  trace: [
+    {
+      column: 9,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts',
+      function: 'getIO',
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 17,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T11:39:36.992Z'
+}
+{
+  error: Error: erro socket
+      at getIO (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\scoket.ts:21:9)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts:50:17)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-12695115103606924.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32),
+  level: 'error',
+  message: 'uncaughtException: erro socket\n' +
+    'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  stack: 'Error: erro socket\n' +
+    '    at getIO (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:21:9)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:50:17)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  exception: true,
+  date: 'Tue Nov 26 2024 08:41:07 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 3576,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 157474816,
+      heapTotal: 107040768,
+      heapUsed: 79734192,
+      external: 3504979,
+      arrayBuffers: 428677
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 7290.562 },
+  trace: [
+    {
+      column: 9,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts',
+      function: 'getIO',
+      line: 21,
+      method: null,
+      native: false
+    },
+    {
+      column: 17,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-12695115103606924.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T11:41:07.504Z'
+}
+{
+  level: 'error',
+  message: 'Auto Close Called',
+  session: 'TESTE Wpp',
+  type: 'client',
+  timestamp: '2024-11-26T12:23:53.868Z'
+}
+{
+  message: "removeWbot | Error: TypeError: Cannot read properties of undefined (reading 'options')",
+  level: 'error',
+  timestamp: '2024-11-26T13:59:42.472Z'
+}
+{
+  level: 'error',
+  message: 'Execution context was destroyed, most likely because of a navigation.',
+  session: 'TESTE Wpp',
+  type: 'client',
+  stack: 'Error: Execution context was destroyed, most likely because of a navigation.\n' +
+    '    at rewriteError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:530:11)\n' +
+    '    at ExecutionContext.#evaluate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:447:7)\n' +
+    '    at ExecutionContext.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:351:12)\n' +
+    '    at IsolatedWorld.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:175:12)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:911:7)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:01:26.232Z'
+}
+{
+  message: "removeWbot | Error: TypeError: Cannot read properties of undefined (reading 'logout')",
+  level: 'error',
+  timestamp: '2024-11-26T14:03:21.422Z'
+}
+{
+  message: "removeWbot | Error: TypeError: Cannot read properties of undefined (reading 'logout')",
+  level: 'error',
+  timestamp: '2024-11-26T14:03:27.629Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 'TESTE Wpp',
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:10:04.316Z'
+}
+{
+  level: 'error',
+  message: 'Execution context was destroyed, most likely because of a navigation.',
+  session: 'TESTE Wpp',
+  type: 'client',
+  stack: 'Error: Execution context was destroyed, most likely because of a navigation.\n' +
+    '    at rewriteError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:530:11)\n' +
+    '    at ExecutionContext.#evaluate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:447:7)\n' +
+    '    at ExecutionContext.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:351:12)\n' +
+    '    at IsolatedWorld.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:175:12)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:911:7)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:11:01.334Z'
+}
+{
+  message: "removeWbot | Error: Error: Attempted to use detached Frame '4F8030367B8F6EAB616FC6EF3C250B06'.",
+  level: 'error',
+  timestamp: '2024-11-26T14:12:09.194Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 'TESTE Wpp',
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:12:50.716Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 'TESTE Wpp',
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:38:06.479Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'TESTE Wpp',
+  type: 'client',
+  timestamp: '2024-11-26T14:38:20.820Z'
+}
+{
+  level: 'error',
+  message: 'Execution context was destroyed, most likely because of a navigation.',
+  session: 'TESTE Wpp',
+  type: 'client',
+  stack: 'Error: Execution context was destroyed, most likely because of a navigation.\n' +
+    '    at rewriteError (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:530:11)\n' +
+    '    at ExecutionContext.#evaluate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:447:7)\n' +
+    '    at ExecutionContext.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\ExecutionContext.ts:351:12)\n' +
+    '    at IsolatedWorld.evaluateHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:175:12)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:911:7)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T14:40:23.371Z'
+}
+{
+  message: 'removeWbot | Error: ReferenceError: whatsapp is not defined',
+  level: 'error',
+  timestamp: '2024-11-26T14:40:56.155Z'
+}
+{
+  session: 'pessoal',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T14:51:45.939Z'
+}
+{
+  session: 'pessoal',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T14:51:45.941Z'
+}
+{
+  level: 'error',
+  message: "Attempted to use detached Frame '8D23DEF78EBAB2395A9DB81CD46174E5'.",
+  stack: "Error: Attempted to use detached Frame '8D23DEF78EBAB2395A9DB81CD46174E5'.\n" +
+    '    at CdpFrame.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\util\\decorators.ts:61:15)\n' +
+    '    at CdpPage.evaluate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:2225:35)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:99:56\n' +
+    '    at step (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:49:23)\n' +
+    '    at Object.next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:30:53)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:24:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:20:12)\n' +
+    '    at evaluateAndReturn (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:71:12)\n' +
+    '    at Whatsapp.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\whatsapp.js:241:82)',
+  timestamp: '2024-11-26T14:52:25.878Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:24:19.094Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:24:19.096Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:28:09.040Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:28:09.042Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:31:06.899Z'
+}
+{
+  session: 'TESTE Wpp',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:31:06.901Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\TESTE Wpp-30',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:39:22.503Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\TESTE Wpp-30',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:39:22.504Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\pessoal-31',
+  type: 'client',
+  timestamp: '2024-11-26T15:40:21.719Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:44:02.994Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:44:02.996Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\32',
+  type: 'client',
+  timestamp: '2024-11-26T15:45:41.347Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\32',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:49:02.488Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\32',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:49:02.492Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\33',
+  type: 'client',
+  timestamp: '2024-11-26T15:49:18.381Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\32',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T15:52:56.662Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\32',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T15:52:56.663Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T16:00:34.542Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T16:00:34.544Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\3-33',
+  type: 'client',
+  timestamp: '2024-11-26T16:00:48.586Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-26T16:01:58.485Z'
+}
+{
+  session: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\tokens\\1-32',
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-26T16:01:58.487Z'
+}
+{
+  level: 'error',
+  message: "Attempted to use detached Frame 'F60D338608E946F940C76E8B1E666821'.",
+  stack: "Error: Attempted to use detached Frame 'F60D338608E946F940C76E8B1E666821'.\n" +
+    '    at CdpFrame.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\util\\decorators.ts:61:15)\n' +
+    '    at CdpPage.evaluate (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:2225:35)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:99:56\n' +
+    '    at step (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:49:23)\n' +
+    '    at Object.next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:30:53)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:24:71\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at __awaiter (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:20:12)\n' +
+    '    at evaluateAndReturn (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:71:12)\n' +
+    '    at Whatsapp.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\whatsapp.js:241:82)',
+  timestamp: '2024-11-26T17:29:18.773Z'
+}
+{
+  message: "removeWbot | Error: TypeError: Cannot read properties of undefined (reading 'update')",
+  level: 'error',
+  timestamp: '2024-11-26T17:29:18.785Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 'pessoal',
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-26T17:41:30.932Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'm')",
+  stack: "Error: Cannot read properties of undefined (reading 'm')\n" +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:107:31\n' +
+    '    at step (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:49:23)\n' +
+    '    at Object.next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:30:53)\n' +
+    '    at fulfilled (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:21:58)\n' +
+    "JS Stack: TypeError: Cannot read properties of undefined (reading 'm')\n" +
+    '    at Object.p [as searchId] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:339558)\n' +
+    '    at Object.get [as Socket] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:358073)\n' +
+    '    at t.logout (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:239448)\n' +
+    '    at pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:56:63\n' +
+    '    at pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:56:76\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at anonymous (pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:54:14)\n' +
+    'Function: function () { return WPP.conn.logout(); }',
+  timestamp: '2024-11-26T17:42:07.407Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 'pessoal',
+  type: 'client',
+  timestamp: '2024-11-26T17:42:16.884Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'm')",
+  stack: "Error: Cannot read properties of undefined (reading 'm')\n" +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:107:31\n' +
+    '    at step (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:49:23)\n' +
+    '    at Object.next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:30:53)\n' +
+    '    at fulfilled (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect-team\\wppconnect\\dist\\api\\helpers\\evaluate-and-return.js:21:58)\n' +
+    "JS Stack: TypeError: Cannot read properties of undefined (reading 'm')\n" +
+    '    at Object.p [as searchId] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:339558)\n' +
+    '    at Object.get [as Socket] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:358073)\n' +
+    '    at t.logout (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\@wppconnect\\wa-js\\dist\\wppconnect-wa.js:2:239448)\n' +
+    '    at pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:56:63\n' +
+    '    at pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:56:76\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at anonymous (pptr:evaluate;C%3A%5CUsers%5Csuporte2%5CDocuments%5CProgramacao%5CNodejs%5CWpconnect%5Cnode_modules%5C%40wppconnect-team%5Cwppconnect%5Cdist%5Capi%5Chelpers%5Cevaluate-and-return.js%3A99%3A56:54:14)\n' +
+    'Function: function () { return WPP.conn.logout(); }',
+  timestamp: '2024-11-26T17:47:24.108Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 38,
+  type: 'client',
+  timestamp: '2024-11-26T17:57:48.546Z'
+}
+{
+  level: 'error',
+  message: 'Page Closed',
+  session: 39,
+  type: 'client',
+  timestamp: '2024-11-26T17:59:45.751Z'
+}
+{
+  error: TypeError: callback is not a function
+      at CB (node:internal/fs/rimraf:59:5)
+      at FSReqCallback.oncomplete (node:fs:187:23),
+  level: 'error',
+  message: 'uncaughtException: callback is not a function\n' +
+    'TypeError: callback is not a function\n' +
+    '    at CB (node:internal/fs/rimraf:59:5)\n' +
+    '    at FSReqCallback.oncomplete (node:fs:187:23)',
+  stack: 'TypeError: callback is not a function\n' +
+    '    at CB (node:internal/fs/rimraf:59:5)\n' +
+    '    at FSReqCallback.oncomplete (node:fs:187:23)',
+  exception: true,
+  date: 'Tue Nov 26 2024 15:00:58 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 7560,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 144986112,
+      heapTotal: 97652736,
+      heapUsed: 68737248,
+      external: 4498127,
+      arrayBuffers: 909526
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 30081.656 },
+  trace: [
+    {
+      column: 5,
+      file: 'node:internal/fs/rimraf',
+      function: 'CB',
+      line: 59,
+      method: null,
+      native: false
+    },
+    {
+      column: 23,
+      file: 'node:fs',
+      function: 'FSReqCallback.oncomplete',
+      line: 187,
+      method: 'oncomplete',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T18:00:58.762Z'
+}
+{
+  error: TypeError: callback is not a function
+      at CB (node:internal/fs/rimraf:59:5)
+      at FSReqCallback.oncomplete (node:fs:187:23),
+  level: 'error',
+  message: 'uncaughtException: callback is not a function\n' +
+    'TypeError: callback is not a function\n' +
+    '    at CB (node:internal/fs/rimraf:59:5)\n' +
+    '    at FSReqCallback.oncomplete (node:fs:187:23)',
+  stack: 'TypeError: callback is not a function\n' +
+    '    at CB (node:internal/fs/rimraf:59:5)\n' +
+    '    at FSReqCallback.oncomplete (node:fs:187:23)',
+  exception: true,
+  date: 'Tue Nov 26 2024 15:05:24 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 6544,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 141135872,
+      heapTotal: 68816896,
+      heapUsed: 64643360,
+      external: 3951026,
+      arrayBuffers: 359530
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 30347.218 },
+  trace: [
+    {
+      column: 5,
+      file: 'node:internal/fs/rimraf',
+      function: 'CB',
+      line: 59,
+      method: null,
+      native: false
+    },
+    {
+      column: 23,
+      file: 'node:fs',
+      function: 'FSReqCallback.oncomplete',
+      line: 187,
+      method: 'oncomplete',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T18:05:24.333Z'
+}

@@ -9,11 +9,10 @@ import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService
 import UpdateWhatsAppService from "../services/WhatsappService/UpdateWhatsAppService";
 import CreateWhatsAppService from "../services/WhatsappService/CreateWhatsAppService";
 import { getIO } from "../libs/scoket";
+import { removeWbot } from "../libs/wbot";
 
 export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
-	const token: string = req.cookies.jrt;
-	console.log(token);
 	const whatsapps = await ListWhatsAppsService(tenantId);
 
 	res.status(200).json(whatsapps);
@@ -65,8 +64,9 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 export const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { whatsappId } = req.params;
 	const { tenantId } = req.user;
+
 	await DeleteWhatsAppService(whatsappId, tenantId);
-	// removeWbot(+whatsappId);
+	removeWbot(+whatsappId);
 
 	const io = getIO();
 	io.emit(`${tenantId}:whatsapp`, {

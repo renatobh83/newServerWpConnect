@@ -10,11 +10,13 @@ export const HandleMessage = async (
 	msg: Message,
 	wbot: Session,
 ): Promise<void> => {
+	// biome-ignore lint/suspicious/noAsyncPromiseExecutor: <explanation>
 	return new Promise(async (resolve, reject) => {
 		try {
 			if (!isValidMsg(msg)) {
 				return;
 			}
+			console.log(msg);
 			let msgContact: Contact;
 			let groupContact: Contact | undefined;
 			const chat = await wbot.getChatById(msg.to);

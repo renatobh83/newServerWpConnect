@@ -11,7 +11,6 @@ export const initIO = (httpServer: Server): SocketIO => {
 		pingTimeout: 180000,
 		pingInterval: 60000,
 	});
-
 	io.on("connection", (socket) => {});
 	return io;
 };

@@ -38,6 +38,7 @@ export interface ServerOptions {
 	};
 	createOptions: {
 		browserArgs: string[];
+		puppeteerOptions: any;
 	};
 	mapper: {
 		enable: boolean;

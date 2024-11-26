@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 
 import AppError from "../errors/AppError";
 import CheckSettingsHelper from "../helpers/CheckSettings";
@@ -16,7 +16,7 @@ type IndexQuery = {
 	pageNumber: string;
 };
 
-export const index = async (req: Request, res: Response): Promise<Response> => {
+export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const { searchParam, pageNumber } = req.query as IndexQuery;
 
@@ -26,10 +26,10 @@ export const index = async (req: Request, res: Response): Promise<Response> => {
 		tenantId,
 	});
 
-	return res.json({ users, count, hasMore });
+	res.json({ users, count, hasMore });
 };
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const { email, password, name, profile } = req.body;
 	const { users } = await ListUsersService({ tenantId });
@@ -62,22 +62,19 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 		user,
 	});
 
-	return res.status(200).json(user);
+	res.status(200).json(user);
 };
 
-export const show = async (req: Request, res: Response): Promise<Response> => {
+export const show: RequestHandler = async (req: Request, res: Response) => {
 	const { userId } = req.params;
 	const { tenantId } = req.user;
 
 	const user = await ShowUserService(userId, tenantId);
 
-	return res.status(200).json(user);
+	res.status(200).json(user);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
@@ -96,13 +93,13 @@ export const update = async (
 		user,
 	});
 
-	return res.status(200).json(user);
+	res.status(200).json(user);
 };
 
-export const updateConfigs = async (
+export const updateConfigs: RequestHandler = async (
 	req: Request,
 	res: Response,
-): Promise<Response> => {
+) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
@@ -113,13 +110,10 @@ export const updateConfigs = async (
 
 	await UpdateUserConfigsService({ userConfigs, userId, tenantId });
 
-	return res.status(200).json();
+	res.status(200).json();
 };
 
-export const remove = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { userId } = req.params;
 	const { tenantId } = req.user;
 	const userIdRequest = Number(req.user.id);
@@ -136,5 +130,5 @@ export const remove = async (
 		userId,
 	});
 
-	return res.status(200).json({ message: "User deleted" });
+	res.status(200).json({ message: "User deleted" });
 };
