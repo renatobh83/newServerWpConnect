@@ -10,7 +10,7 @@ import { logger } from "../../utils/logger";
 import Ticket from "../../models/Ticket";
 import Message from "../../models/Message";
 import socketEmit from "../../helpers/socketEmit";
-import Queue from "../../libs/Queue";
+
 import { pupa } from "../../utils/pupa";
 import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
 
@@ -101,13 +101,13 @@ const downloadMedia = async (msg: any): Promise<any> => {
 				authToken: msg.apiConfig.authToken,
 				type: "hookMessageStatus",
 			};
-			if (msg?.apiConfig?.urlMessageStatus) {
-				Queue.add("WebHooksAPI", {
-					url: msg.apiConfig.urlMessageStatus,
-					type: payload.type,
-					payload,
-				});
-			}
+			// if (msg?.apiConfig?.urlMessageStatus) {
+			// 	Queue.add("WebHooksAPI", {
+			// 		url: msg.apiConfig.urlMessageStatus,
+			// 		type: payload.type,
+			// 		payload,
+			// 	});
+			// }
 			return {};
 		}
 		throw new Error(error);
@@ -145,6 +145,7 @@ const CreateMessageSystemService = async ({
 		tenantId,
 		idFront,
 	};
+
 	try {
 		// Alter template message
 		if (msg.body && !Array.isArray(msg.body)) {
@@ -191,14 +192,13 @@ const CreateMessageSystemService = async ({
 							media,
 							userId,
 						});
-						///
 					}
 
 					const msgCreated = await Message.create({
 						...messageData,
 						...message,
 						userId,
-						id: messageData.id,
+						id: messageData?.id,
 						messageId: message.id?.id || message.messageId || null,
 						body: media.originalname,
 						mediaUrl: media.filename,
@@ -206,7 +206,6 @@ const CreateMessageSystemService = async ({
 							media.mediaType ||
 							media.mimetype.substr(0, media.mimetype.indexOf("/")),
 					});
-
 					const messageCreated = await Message.findByPk(msgCreated.id, {
 						include: [
 							{
@@ -256,7 +255,7 @@ const CreateMessageSystemService = async ({
 			const msgCreated = await Message.create({
 				...messageData,
 				...message,
-				id: messageData.id,
+				id: messageData?.id,
 				userId,
 				messageId: message.id?.id || message.messageId || null,
 				mediaType: "chat",
