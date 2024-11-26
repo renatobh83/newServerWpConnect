@@ -1,68 +1,44 @@
-// import { createBullBoard } from "@bull-board/api";
-// import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
-// import { ExpressAdapter } from "@bull-board/express";
-// import Queue from "../libs/Queue";
 
-// export default async function bullMQ(app: any) {
-// 	console.info("bullMQ started");
-// 	Queue.process();
+import { Queue as BullQueue } from "bullmq";
+import { BullMQAdapter } from '@bull-board/api/bullMQAdapter';
+import { ExpressAdapter } from '@bull-board/express';
+import { createBullBoard } from '@bull-board/api';
+// import Queue from '../libs/Queue';
+import { logger } from '../utils/logger';
 
-// 	// await Queue.add("VerifyTicketsChatBotInactives", {});
-// 	// await Queue.add("SendMessageSchenduled", {});
-
-// 	if (process.env.NODE_ENV !== "production") {
-// 		const serverAdapter = new ExpressAdapter();
-// 		serverAdapter.setBasePath("/admin/queues");
-
-// 		createBullBoard({
-// 			queues: Queue.queues.map((q: any) => new BullMQAdapter(q.bull)),
-// 			serverAdapter: serverAdapter,
-// 		});
-
-// 		app.use("/admin/queues", serverAdapter.getRouter());
-// 	}
-// }
-// import { createBullBoard } from "@bull-board/api";
-// import { BullAdapter } from "@bull-board/api/bullAdapter"; // Use BullAdapter em vez de BullMQAdapter
-// import { ExpressAdapter } from "@bull-board/express";
-// import Queue from "../libs/Queue";
-
-// export default async function bullMQ(app: any) {
-// 	console.info("bullMQ started");
-// 	Queue.process();
-
-// 	if (process.env.NODE_ENV !== "production") {
-// 		const serverAdapter = new ExpressAdapter();
-// 		serverAdapter.setBasePath("/admin/queues");
-
-// 		createBullBoard({
-// 			queues: Queue.queues.map((q: any) => new BullAdapter(q.bull)), // Use BullAdapter
-// 			serverAdapter: serverAdapter,
-// 		});
-
-// 		app.use("/admin/queues", serverAdapter.getRouter());
-// 	}
-// }
-import { createBullBoard } from "@bull-board/api";
-import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
-import { ExpressAdapter } from "@bull-board/express";
-import Queue from "../libs/Queue";
-import { logger } from "../utils/logger";
 
 export default async function bullMQ(app: any) {
-	logger.info("bullMQ started");
+  logger.info("bullMQ started");
+  const queues = [
+	{
+	  queue: new BullQueue("WebHooksAPIConfirmacao", {
+		connection: {
+		  host: process.env.IO_REDIS_SERVER,
+		  port: 6379,
+		},
+	  }),
+	  name: "WebHooksAPIConfirmacao",
+	  handle: async (job: any) => {
+		console.log(`Processando job: ${job.id}`);
+	  },
+	  options: {
+		delay: 6000,
+		attempts: 5,
+		backoff: { type: "fixed", delay: 180000 },
+	  },
+	},
+  ];
+  
+  // Inicialize o painel do Bull
+  const serverAdapter = new ExpressAdapter();
+  serverAdapter.setBasePath("/admin/queues");
+  
+  createBullBoard({
+	queues: queues.map((q) => new BullMQAdapter(q.queue)), // Apenas `q.queue`
+	serverAdapter: serverAdapter,
+  });
+  
+  // Adicione ao Express
+  app.use("/admin/queues", serverAdapter.getRouter());
 
-	Queue.process(); // Inicia o processamento dos jobs
-
-	if (process.env.NODE_ENV !== "production") {
-		const serverAdapter = new ExpressAdapter();
-		serverAdapter.setBasePath("/admin/queues");
-
-		createBullBoard({
-			queues: Queue.queues.map((q: any) => new BullMQAdapter(q.bull)), // BullMQAdapter
-			serverAdapter: serverAdapter,
-		});
-
-		app.use("/admin/queues", serverAdapter.getRouter());
-	}
 }

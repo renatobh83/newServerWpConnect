@@ -13,7 +13,7 @@ import UpdateTicketService from "../services/TicketServices/UpdateTicketService"
 import CreateMessageSystemService from "../services/MessageServices/CreateMessageSystemService";
 import { pupa } from "../utils/pupa";
 import { getIO } from "../libs/scoket";
-import Whatsapp from "../models/whatsapp";
+import Whatsapp from "../models/Whatsapp";
 
 type IndexQuery = {
 	searchParam: string;

@@ -29,7 +29,7 @@ import Ticket from "../models/Ticket";
 import User from "../models/User";
 import UserMessagesLog from "../models/UserMessagesLog";
 import UsersQueues from "../models/UsersQueues";
-import Whatsapp from "../models/whatsapp";
+import Whatsapp from "../models/Whatsapp";
 import { logger } from "../utils/logger";
 
 interface CustomSequelize extends Sequelize {

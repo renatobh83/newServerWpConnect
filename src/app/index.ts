@@ -10,6 +10,8 @@ export default async function application() {
 	const app: Express | any = express();
 	const httpServer: Server = createServer(app);
 	const PORT = 3100;
+
+
 	await bootstrap(app);
 
 	async function start() {
@@ -19,7 +21,7 @@ export default async function application() {
 		});
 
 		initIO(app.server);
-		// await StartAllWhatsAppsSessions();
+		await StartAllWhatsAppsSessions();
 	}
 	async function close() {
 		return new Promise<void>((resolve, reject) => {

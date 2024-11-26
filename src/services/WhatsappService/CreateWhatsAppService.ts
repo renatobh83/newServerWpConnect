@@ -1,7 +1,7 @@
 import AppError from "../../errors/AppError";
 import { getIO } from "../../libs/scoket";
 
-import Whatsapp from "../../models/whatsapp";
+import Whatsapp from "../../models/Whatsapp";
 import { logger } from "../../utils/logger";
 
 interface Request {

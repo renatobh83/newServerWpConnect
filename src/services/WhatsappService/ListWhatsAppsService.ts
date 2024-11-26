@@ -1,4 +1,4 @@
-import Whatsapp from "../../models/whatsapp";
+import Whatsapp from "../../models/Whatsapp";
 
 const ListWhatsAppsService = async (
 	tenantId: string | number,

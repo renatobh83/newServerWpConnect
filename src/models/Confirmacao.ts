@@ -13,7 +13,7 @@ import {
 } from "sequelize-typescript";
 import Contact from "./Contact";
 import Tenant from "./Tenant";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 @Table({ tableName: "Confirmacao" })
 class Confirmacao extends Model<Confirmacao> {

@@ -16,7 +16,7 @@ import {
 import CampaignContacts from "./CampaignContacts";
 import Tenant from "./Tenant";
 import User from "./User";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 @Table
 class Campaign extends Model<Campaign> {

@@ -2,7 +2,7 @@ import { Op } from "sequelize";
 import * as Yup from "yup";
 
 import AppError from "../../errors/AppError";
-import Whatsapp from "../../models/whatsapp";
+import Whatsapp from "../../models/Whatsapp";
 
 interface WhatsappData {
 	name?: string;

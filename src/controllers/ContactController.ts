@@ -17,7 +17,7 @@ import UpdateContactWalletsService from "../services/ContactServices/UpdateConta
 import SyncContactsWhatsappInstanceService from "../services/WbotServices/SyncContactsWhatsappInstanceService";
 import Contact from "../models/Contact";
 import ShowContactByNumber from "../services/ContactServices/ShowContactByNumber";
-import Whatsapp from "../models/whatsapp";
+import Whatsapp from "../models/Whatsapp";
 
 type IndexQuery = {
 	searchParam: string;

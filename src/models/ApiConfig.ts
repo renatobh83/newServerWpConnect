@@ -13,7 +13,7 @@ import {
 import { v4 as uuidV4 } from "uuid";
 import Tenant from "./Tenant";
 import User from "./User";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 @Table({ freezeTableName: true, tableName: "ApiConfigs" }) // Adicionado o decorador @Table
 class ApiConfig extends Model<ApiConfig> {

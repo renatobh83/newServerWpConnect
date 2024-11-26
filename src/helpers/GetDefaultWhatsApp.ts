@@ -1,5 +1,5 @@
 import AppError from "../errors/AppError";
-import Whatsapp from "../models/whatsapp";
+import Whatsapp from "../models/Whatsapp";
 
 const GetDefaultWhatsApp = async (
 	tenantId: string | number,

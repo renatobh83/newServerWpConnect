@@ -15056,3 +15056,1536 @@
   ],
   timestamp: '2024-11-25T19:44:38.557Z'
 }
+{
+  error: Error: Please install pg package manually
+      at ConnectionManager._loadDialectModule (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/abstract/connection-manager.js:81:15)
+      at new ConnectionManager (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/connection-manager.js:18:24)
+      at new PostgresDialect (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/index.js:15:30)
+      at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:368:20)
+      at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:16:9)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:73:36)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-8698758208629516.js:69:33)
+      at node:internal/modules/cjs/loader:1698:10,
+  level: 'error',
+  message: 'uncaughtException: Please install pg package manually\n' +
+    'Error: Please install pg package manually\n' +
+    '    at ConnectionManager._loadDialectModule (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/abstract/connection-manager.js:81:15)\n' +
+    '    at new ConnectionManager (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/connection-manager.js:18:24)\n' +
+    '    at new PostgresDialect (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/index.js:15:30)\n' +
+    '    at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:368:20)\n' +
+    '    at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:16:9)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:73:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-8698758208629516.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1698:10',
+  stack: 'Error: Please install pg package manually\n' +
+    '    at ConnectionManager._loadDialectModule (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/abstract/connection-manager.js:81:15)\n' +
+    '    at new ConnectionManager (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/connection-manager.js:18:24)\n' +
+    '    at new PostgresDialect (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/index.js:15:30)\n' +
+    '    at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:368:20)\n' +
+    '    at new Sequelize (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:16:9)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:73:36)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-8698758208629516.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1698:10',
+  exception: true,
+  date: 'Mon Nov 25 2024 20:24:10 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 3884,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 156991488,
+      heapTotal: 98893824,
+      heapUsed: 64600416,
+      external: 2370183,
+      arrayBuffers: 56722
+    }
+  },
+  os: {
+    loadavg: [ 3.01318359375, 2.8623046875, 3.15087890625 ],
+    uptime: 91288
+  },
+  trace: [
+    {
+      column: 15,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/abstract/connection-manager.js',
+      function: 'ConnectionManager._loadDialectModule',
+      line: 81,
+      method: '_loadDialectModule',
+      native: false
+    },
+    {
+      column: 24,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/connection-manager.js',
+      function: 'new ConnectionManager',
+      line: 18,
+      method: null,
+      native: false
+    },
+    {
+      column: 30,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/dialects/postgres/index.js',
+      function: 'new PostgresDialect',
+      line: 15,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js',
+      function: 'new Sequelize',
+      line: 368,
+      method: null,
+      native: false
+    },
+    {
+      column: 9,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'new Sequelize',
+      line: 16,
+      method: null,
+      native: false
+    },
+    {
+      column: 36,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 73,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-8698758208629516.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1698,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T23:24:10.771Z'
+}
+{
+  error: Error: Cannot find module 'yup'
+  Require stack:
+  - /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)
+      at Function._load (node:internal/modules/cjs/loader:1064:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1325:12)
+      at require (node:internal/modules/helpers:136:16)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9669374410317206.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/index.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    "Error: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9669374410317206.js:69:33)',
+  stack: "Error: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9669374410317206.js:69:33)',
+  exception: true,
+  date: 'Mon Nov 25 2024 20:24:22 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 3901,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 187269120,
+      heapTotal: 118292480,
+      heapUsed: 92235256,
+      external: 3434105,
+      arrayBuffers: 118097
+    }
+  },
+  os: {
+    loadavg: [ 2.77685546875, 2.81689453125, 3.13134765625 ],
+    uptime: 91300
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1239,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1064,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 322,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1325,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 136,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9669374410317206.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T23:24:22.451Z'
+}
+{
+  error: Error: Cannot find module 'yup'
+  Require stack:
+  - /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts
+  - /Users/renatomendonca/Desktop/Node/p1/src/server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)
+      at Function._load (node:internal/modules/cjs/loader:1064:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1325:12)
+      at require (node:internal/modules/helpers:136:16)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-5669539476796743.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/app/index.ts',
+      '/Users/renatomendonca/Desktop/Node/p1/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    "Error: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-5669539476796743.js:69:33)',
+  stack: "Error: Cannot find module 'yup'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/contactRoutes.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/routes/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/modules.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/boot.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-5669539476796743.js:69:33)',
+  exception: true,
+  date: 'Mon Nov 25 2024 20:28:31 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4063,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 181469184,
+      heapTotal: 113704960,
+      heapUsed: 83459328,
+      external: 3434105,
+      arrayBuffers: 118097
+    }
+  },
+  os: {
+    loadavg: [ 2.15576171875, 2.5263671875, 2.923828125 ],
+    uptime: 91549
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1239,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1064,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 322,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1325,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 136,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/controllers/ContactController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-5669539476796743.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-25T23:28:31.691Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:15:52 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4875,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 145506304,
+      heapTotal: 86409216,
+      heapUsed: 60660104,
+      external: 2400891,
+      arrayBuffers: 56978
+    }
+  },
+  os: {
+    loadavg: [ 2.6298828125, 2.36083984375, 2.4033203125 ],
+    uptime: 94390
+  },
+  trace: [
+    {
+      column: 15,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:15:52.835Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:16:13 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4880,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 137216000,
+      heapTotal: 78807040,
+      heapUsed: 55733808,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: {
+    loadavg: [ 2.3935546875, 2.32080078125, 2.3876953125 ],
+    uptime: 94411
+  },
+  trace: [
+    {
+      column: 15,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:16:13.799Z'
+}
+{
+  error: Error: Foreign key for "Whatsapp" is missing on "Ticket".
+      at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)
+      at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Foreign key for "Whatsapp" is missing on "Ticket".\n' +
+    '    at getForeignKeyOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js:24:15)\n' +
+    '    at HasAssociation.getSequelizeOptions (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js:18:77)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:51:45\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:16:18 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4896,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 144441344,
+      heapTotal: 85196800,
+      heapUsed: 55268384,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: {
+    loadavg: [ 2.44189453125, 2.33203125, 2.39111328125 ],
+    uptime: 94416
+  },
+  trace: [
+    {
+      column: 15,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/foreign-key/foreign-key-service.js',
+      function: 'getForeignKeyOptions',
+      line: 24,
+      method: null,
+      native: false
+    },
+    {
+      column: 77,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/associations/has/has-association.js',
+      function: 'HasAssociation.getSequelizeOptions',
+      line: 18,
+      method: 'getSequelizeOptions',
+      native: false
+    },
+    {
+      column: 45,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 51,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:16:18.169Z'
+}
+{
+  error: Error: Tenant has not been defined
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Tenant has not been defined\n' +
+    'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:16:59 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4934,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 143343616,
+      heapTotal: 84885504,
+      heapUsed: 56537552,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: {
+    loadavg: [ 2.87744140625, 2.43505859375, 2.42431640625 ],
+    uptime: 94457
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js',
+      function: 'Sequelize.model',
+      line: 483,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.model',
+      line: 30,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 46,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 52,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:16:59.270Z'
+}
+{
+  error: Error: Tenant has not been defined
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Tenant has not been defined\n' +
+    'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:18:23 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4949,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 136986624,
+      heapTotal: 79134720,
+      heapUsed: 57749416,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: {
+    loadavg: [ 2.27001953125, 2.3505859375, 2.39306640625 ],
+    uptime: 94541
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js',
+      function: 'Sequelize.model',
+      line: 483,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.model',
+      line: 30,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 46,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 52,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:18:23.527Z'
+}
+{
+  error: Error: Tenant has not been defined
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Tenant has not been defined\n' +
+    'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:18:27 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4954,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 135561216,
+      heapTotal: 78807040,
+      heapUsed: 56188128,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: { loadavg: [ 2.408203125, 2.3779296875, 2.40234375 ], uptime: 94545 },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js',
+      function: 'Sequelize.model',
+      line: 483,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.model',
+      line: 30,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 46,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 52,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:18:27.913Z'
+}
+{
+  error: Error: Tenant has not been defined
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)
+      at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46
+      at Array.forEach (<anonymous>)
+      at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26
+      at Array.forEach (<anonymous>)
+      at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)
+      at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14),
+  level: 'error',
+  message: 'uncaughtException: Tenant has not been defined\n' +
+    'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  stack: 'Error: Tenant has not been defined\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js:483:13)\n' +
+    '    at Sequelize.model (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:30:26)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:52:46\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:50:26\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at Sequelize.associateModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:46:16)\n' +
+    '    at Sequelize.addModels (/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js:38:14)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)',
+  exception: true,
+  date: 'Mon Nov 25 2024 21:18:42 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 4983,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/p1',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 143638528,
+      heapTotal: 84459520,
+      heapUsed: 54506512,
+      external: 2400647,
+      arrayBuffers: 56734
+    }
+  },
+  os: {
+    loadavg: [ 2.453125, 2.39111328125, 2.40673828125 ],
+    uptime: 94560
+  },
+  trace: [
+    {
+      column: 13,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize/src/sequelize.js',
+      function: 'Sequelize.model',
+      line: 483,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.model',
+      line: 30,
+      method: 'model',
+      native: false
+    },
+    {
+      column: 46,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 52,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 26,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: null,
+      line: 50,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.forEach',
+      line: null,
+      method: 'forEach',
+      native: false
+    },
+    {
+      column: 16,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.associateModels',
+      line: 46,
+      method: 'associateModels',
+      native: false
+    },
+    {
+      column: 14,
+      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/sequelize-typescript/dist/sequelize/sequelize/sequelize.js',
+      function: 'Sequelize.addModels',
+      line: 38,
+      method: 'addModels',
+      native: false
+    },
+    {
+      column: 11,
+      file: '/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    }
+  ],
+  timestamp: '2024-11-26T00:18:42.537Z'
+}

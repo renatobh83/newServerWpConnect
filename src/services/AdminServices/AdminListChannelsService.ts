@@ -1,5 +1,5 @@
 import Tenant from "../../models/Tenant";
-import Whatsapp from "../../models/whatsapp";
+import Whatsapp from "../../models/Whatsapp";
 
 interface Request {
 	tenantId?: number;

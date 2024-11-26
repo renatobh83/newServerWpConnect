@@ -26,7 +26,7 @@ import StepsReply from "./StepsReply";
 // import ShowStepAutoReplyMessageService from "../services/AutoReplyServices/ShowStepAutoReplyMessageService";
 import Tenant from "./Tenant";
 import User from "./User";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 @Table
 class Ticket extends Model<Ticket> {

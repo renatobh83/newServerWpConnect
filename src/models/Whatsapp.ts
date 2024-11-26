@@ -20,11 +20,11 @@ import {
 } from "sequelize-typescript";
 import authConfig from "../config/auth";
 import webHooks from "../config/webHooks.dev.json";
-import Queue from "../libs/Queue";
 import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
+import Queue from "../libs/Queue";
 
 @Table
 class Whatsapp extends Model<Whatsapp> {

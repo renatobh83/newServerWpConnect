@@ -15,7 +15,7 @@ import {
 import { v4 as uuidV4 } from "uuid";
 import Queue from "../libs/Queue";
 import Tenant from "./Tenant";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "./Whatsapp";
 
 class ApiMessage extends Model<ApiMessage> {
 	[x: string]: any;
