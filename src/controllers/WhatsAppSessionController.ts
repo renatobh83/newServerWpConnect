@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import { getWbot } from "../libs/wbot";
 import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
@@ -7,7 +7,7 @@ import * as logger from "../utils/logger";
 import AppError from "../errors/AppError";
 import { getIO } from "../libs/scoket";
 
-const store = async (req: Request, res: Response): Promise<Response> => {
+const store: RequestHandler = async (req: Request, res: Response) => {
 	const { whatsappId } = req.params;
 	const { tenantId } = req.user;
 	const whatsapp = await ShowWhatsAppService({
@@ -18,10 +18,10 @@ const store = async (req: Request, res: Response): Promise<Response> => {
 
 	StartWhatsAppSession(whatsapp);
 
-	return res.status(200).json({ message: "Starting session." });
+	res.status(200).json({ message: "Starting session." });
 };
 
-const update = async (req: Request, res: Response): Promise<Response> => {
+const update: RequestHandler = async (req: Request, res: Response) => {
 	const { whatsappId } = req.params;
 	const { isQrcode } = req.body;
 	const { tenantId } = req.user;
@@ -38,10 +38,10 @@ const update = async (req: Request, res: Response): Promise<Response> => {
 
 	// await apagarPastaSessao(whatsappId);
 	StartWhatsAppSession(whatsapp);
-	return res.status(200).json({ message: "Starting session." });
+	res.status(200).json({ message: "Starting session." });
 };
 
-const remove = async (req: Request, res: Response): Promise<Response> => {
+const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { whatsappId } = req.params;
 	const { tenantId } = req.user;
 	const channel = await ShowWhatsAppService({ id: whatsappId, tenantId });
@@ -100,7 +100,7 @@ const remove = async (req: Request, res: Response): Promise<Response> => {
 		});
 		throw new AppError("ERR_NO_WAPP_FOUND", 404);
 	}
-	return res.status(200).json({ message: "Session disconnected." });
+	res.status(200).json({ message: "Session disconnected." });
 };
 
 export default { store, remove, update };

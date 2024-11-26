@@ -12,7 +12,8 @@ import { getIO } from "../libs/scoket";
 
 export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
-
+	const token: string = req.cookies.jrt;
+	console.log(token);
 	const whatsapps = await ListWhatsAppsService(tenantId);
 
 	res.status(200).json(whatsapps);

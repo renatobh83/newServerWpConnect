@@ -1,12 +1,12 @@
 import axios from "axios";
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 import { SendRefreshToken } from "../helpers/SendRefreshToken";
 import User from "../models/User";
 import { RefreshTokenService } from "../services/AuthServices/RefreshTokenService";
 import AuthUserService from "../services/UserServices/AuthUserService";
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	// const io = getIO();
 
 	const { email, password } = req.body;
@@ -41,13 +41,10 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 	//   }
 	// });
 
-	return res.status(200).json(params);
+	res.status(200).json(params);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	const token: string = req.cookies.jrt;
 
 	if (!token) {
@@ -58,13 +55,10 @@ export const update = async (
 
 	SendRefreshToken(res, refreshToken);
 
-	return res.json({ token: newToken });
+	res.json({ token: newToken });
 };
 
-export const logout = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const logout: RequestHandler = async (req: Request, res: Response) => {
 	const { userId } = req.body;
 	if (!userId) {
 		throw new AppError("ERR_USER_NOT_FOUND", 404);
@@ -89,5 +83,5 @@ export const logout = async (
 
 	// SendRefreshToken(res, refreshToken);
 
-	return res.json({ message: "USER_LOGOUT" });
+	res.json({ message: "USER_LOGOUT" });
 };

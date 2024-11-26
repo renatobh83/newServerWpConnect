@@ -18,7 +18,7 @@ export default async function application() {
 		app.server = httpServer.listen(PORT, host, async () => {
 			logger.info(`Web server listening at: http://${host}:${PORT}/`);
 		});
-
+		app.use(express.json());
 		initIO(app.server);
 		await StartAllWhatsAppsSessions();
 	}

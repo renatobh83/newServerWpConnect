@@ -18,8 +18,14 @@ export default async function express(
 		? serverOptions.log.level
 		: "silly";
 
+	app.use(
+		cors({
+			origin: ["http://localhost:5173", "https://app3.pluslive.online"],
+			credentials: true,
+		}),
+	);
+
 	app.use(helmet());
-	app.use(cors());
 	app.use(cookieParser());
 	app.use(json({ limit: "50MB" }));
 

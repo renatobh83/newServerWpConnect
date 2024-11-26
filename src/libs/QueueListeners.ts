@@ -1,4 +1,5 @@
 import type { Job } from "bull";
+import { logger } from "../utils/logger";
 
 export enum ExecutionType {
 	DELAY = "delay",

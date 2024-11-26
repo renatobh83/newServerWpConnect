@@ -29,13 +29,12 @@ export const StartAllWhatsAppsSessions = async (): Promise<void> => {
 			isActive: true,
 		},
 	});
-	console.log(whatsapps);
-	// const whatsappSessions = whatsapps.filter((w) => w.type === "whatsapp");
-	// if (whatsappSessions.length > 0) {
-	// 	// biome-ignore lint/complexity/noForEach: <explanation>
-	// 	whatsappSessions.forEach((whatsapp: Whatsapp) => {
-	// 		// StartWhatsAppSession(whatsapp);
-	// 		console.log(whatsapp);
-	// 	});
-	// }
+
+	const whatsappSessions = whatsapps.filter((w) => w.type === "whatsapp");
+	if (whatsappSessions.length > 0) {
+		// biome-ignore lint/complexity/noForEach: <explanation>
+		whatsappSessions.forEach((whatsapp: Whatsapp) => {
+			StartWhatsAppSession(whatsapp);
+		});
+	}
 };
