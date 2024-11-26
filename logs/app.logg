@@ -16589,3 +16589,11 @@
   ],
   timestamp: '2024-11-26T00:18:42.537Z'
 }
+{
+  level: 'error',
+  message: "Sequelize encountered an error: Cannot read properties of undefined (reading 'add')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'add')\n" +
+    '    at connectWithRetry (/Users/renatomendonca/Desktop/Node/p1/src/database/index.ts:83:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-26T00:57:29.063Z'
+}

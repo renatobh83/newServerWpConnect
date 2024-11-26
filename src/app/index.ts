@@ -11,7 +11,6 @@ export default async function application() {
 	const httpServer: Server = createServer(app);
 	const PORT = 3100;
 
-
 	await bootstrap(app);
 
 	async function start() {

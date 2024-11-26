@@ -1,6 +1,5 @@
 import { DatabaseError } from "sequelize";
 import { Sequelize } from "sequelize-typescript";
-import * as QueueJobs from "../libs/Queue";
 import ApiConfig from "../models/ApiConfig";
 import ApiConfirmacao from "../models/ApiConfirmacao";
 import ApiMessage from "../models/ApiMessage";
@@ -23,7 +22,6 @@ import Setting from "../models/Setting";
 import StepsReply from "../models/StepsReply";
 import StepsReplyAction from "../models/StepsReplyAction";
 import Tag from "../models/Tag";
-import Tags from "../models/Tag";
 import Tenant from "../models/Tenant";
 import Ticket from "../models/Ticket";
 import User from "../models/User";
@@ -80,7 +78,7 @@ async function connectWithRetry() {
 
 		// Adicionar tarefas à fila após a conexão bem-sucedida
 		// QueueJobs.default.add("VerifyTicketsChatBotInactives", {});
-		QueueJobs.default.add("SendMessageSchenduled", {});
+		// QueueJobs.default.add("SendMessageSchenduled", {});
 	} catch (error) {
 		handleSequelizeError(error); // Chama o handler para reconexão condicional
 	}
