@@ -29,7 +29,11 @@ export const queues = Object.values(jobs).map((job: any) => {
 });
 
 // Função para adicionar jobs a uma fila específica
-export async function addJob(queueName: string, data: Record<string, any>, options?: Record<string, any>) {
+export async function addJob(
+	queueName: string,
+	data: Record<string, any>,
+	options?: Record<string, any>,
+) {
 	const queue = queues.find((q) => q.name === queueName);
 
 	if (!queue) {
@@ -40,13 +44,17 @@ export async function addJob(queueName: string, data: Record<string, any>, optio
 		await queue.bull.add(queueName, data, { ...queue.options, ...options });
 		logger.info(`Job adicionado à fila ${queueName}`);
 	} catch (error) {
-		logger.error({ message: `Erro ao adicionar job à fila ${queueName}`, error });
+		logger.error({
+			message: `Erro ao adicionar job à fila ${queueName}`,
+			error,
+		});
 		throw error;
 	}
 }
 
 // Função para configurar o processamento
 export function processQueues(concurrency = 1) {
+	// biome-ignore lint/complexity/noForEach: <explanation>
 	queues.forEach(({ bull, name, handle }) => {
 		new Worker(
 			name,

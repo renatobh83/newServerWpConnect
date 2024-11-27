@@ -26,14 +26,9 @@ export const initIO = async (httpServer: Server): SocketIO => {
 	});
 	const pubClient = connRedis;
 	const subClient = connRedis.duplicate();
-	pubClient.on("error", (err) => console.error("Redis Pub Client Error:", err));
-	subClient.on("error", (err) => console.error("Redis Sub Client Error:", err));
 
 	// Configurar o adaptador Redis
 	io.adapter(createAdapter(pubClient, subClient));
-	// Evento para verificar conexões do Redis
-	pubClient.on("connect", () => );
-	subClient.on("connect", () => );
 
 	// Erros de conexão
 	pubClient.on("error", (err) =>

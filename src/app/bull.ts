@@ -1,9 +1,8 @@
 import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
-import { Queue as BullQueue } from "bullmq";
 import type { Application } from "express";
-import { queues } from "../libs/Queue";
+import { queues, addJob, processQueues } from "../libs/Queue";
 import { logger } from "../utils/logger";
 
 export const redisConfig = {
@@ -16,16 +15,14 @@ export const redisConfig = {
 
 export default async function bullMQ(app: Application) {
 	logger.info("bullMQ started");
+	processQueues(100);
 
-	const myQueue = new BullQueue("minha-fila", {
-		connection: redisConfig,
-	});
-
+	addJob("SendMessageSchenduled", {});
 	// Inicialize o painel do Bull
 	const serverAdapter = new ExpressAdapter();
 	serverAdapter.setBasePath("/admin/queues");
 
-	const board = createBullBoard({
+	createBullBoard({
 		queues: queues.map((q) => new BullMQAdapter(q.bull)), // Apenas `q.queue`
 		serverAdapter: serverAdapter,
 	});
