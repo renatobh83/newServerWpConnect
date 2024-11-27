@@ -1,18 +1,22 @@
-import type { Message } from "@wppconnect-team/wppconnect";
+import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
+import Message from "../../../models/Message";
 
-const VerifyQuotedMessage = async (msg: Message): Promise<Message | null> => {
-	//   if (!msg.quotedMsgId) return null;
+const VerifyQuotedMessage = async (
+	msg: WbotMessage,
+): Promise<Message | null> => {
+	let quotedMsg: Message | null = null;
 
-	const wbotQuotedMsg = await msg.quotedMsgId;
+	const wbotQuotedMsg = msg.quotedMsgId;
 
-	//   const quotedMsg = await Message.findOne({
-	//     where: { messageId: wbotQuotedMsg.id.id }
-	//   });
+	if (!wbotQuotedMsg) return null;
 
-	//   if (!quotedMsg) return null;
+	if (wbotQuotedMsg) {
+		quotedMsg = (await Message.findOne({
+			where: { messageId: wbotQuotedMsg },
+		})) as Message;
+	}
 
-	//   return quotedMsg;
-	return wbotQuotedMsg;
+	return quotedMsg;
 };
 
 export default VerifyQuotedMessage;

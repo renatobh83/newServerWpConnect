@@ -1,6 +1,6 @@
-import type { Chat } from "@wppconnect-team/wppconnect";
-// import SendWhatsAppMedia from "../services/WbotServices/SendWhatsAppMedia";
-// import SendWhatsAppMessage from "../services/WbotServices/SendWhatsAppMessage";
+import type { Chat, Message } from "@wppconnect-team/wppconnect";
+import SendWhatsAppMedia from "../services/WbotServices/SendWhatsAppMedia";
+import SendWhatsAppMessage from "../services/WbotServices/SendWhatsAppMessage";
 
 type Payload = {
 	ticket: any;
@@ -14,19 +14,19 @@ const SendMessageSystemProxy = async ({
 	messageData,
 	media,
 	userId,
-}: Payload): Promise<Chat> => {
-	let message: Chat;
+}: Payload): Promise<Message | null> => {
+	let message: Message | null = null; // Inicializa com um valor padrão
 
 	if (messageData.mediaName) {
-		// message = await SendWhatsAppMedia({ media, ticket, userId });
+		message = await SendWhatsAppMedia({ media, ticket, userId });
 	}
 
 	if (!media) {
-		// message = await SendWhatsAppMessage({
-		// 	body: messageData.body,
-		// 	ticket,
-		// 	quotedMsg: messageData?.quotedMsg,
-		// });
+		message = await SendWhatsAppMessage({
+			body: messageData.body,
+			ticket,
+			quotedMsg: messageData?.quotedMsg,
+		});
 	}
 
 	return message;

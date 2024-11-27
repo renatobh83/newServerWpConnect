@@ -1,29 +1,47 @@
 import type { Server } from "node:http";
+import { createAdapter } from "@socket.io/redis-adapter";
 import { Server as SocketIO } from "socket.io";
-import socketRedis from "socket.io-redis";
+import redisAdapter from "socket.io-redis";
 import { logger } from "../utils/logger";
 import User from "../models/User";
 import decodeTokenSocket from "./decodeTokenSocket";
+import IORedis from "ioredis";
 let io: SocketIO;
 
-export const initIO = (httpServer: Server): SocketIO => {
+export const initIO = async (httpServer: Server): SocketIO => {
 	io = new SocketIO(httpServer, {
 		cors: {
-			origin: "*",
+			origin: ["http://localhost:5173", "https://app3.pluslive.online"],
+			credentials: true,
+			methods: ["GET", "POST"],
 		},
 		pingTimeout: 180000,
 		pingInterval: 60000,
 	});
 
-	const connRedis = {
-		host: process.env.IO_REDIS_SERVER,
-		port: Number(process.env.IO_REDIS_PORT),
-		password: undefined,
-	};
+	const connRedis = new IORedis({
+		host: process.env.IO_REDIS_SERVER || "localhost",
+		port: +(process.env.IO_REDIS_PORT || 6379),
+		password: process.env.IO_REDIS_PASSWORD || undefined,
+	});
+	const pubClient = connRedis;
+	const subClient = connRedis.duplicate();
+	pubClient.on("error", (err) => console.error("Redis Pub Client Error:", err));
+	subClient.on("error", (err) => console.error("Redis Sub Client Error:", err));
 
-	const redis = socketRedis as any;
-	io.adapter(redis(connRedis));
+	// Configurar o adaptador Redis
+	io.adapter(createAdapter(pubClient, subClient));
+	// Evento para verificar conexões do Redis
+	pubClient.on("connect", () => console.log("PubClient conectado ao Redis"));
+	subClient.on("connect", () => console.log("SubClient conectado ao Redis"));
 
+	// Erros de conexão
+	pubClient.on("error", (err) =>
+		console.error("Erro no PubClient Redis:", err),
+	);
+	subClient.on("error", (err) =>
+		console.error("Erro no SubClient Redis:", err),
+	);
 	io.use(async (socket, next) => {
 		try {
 			const token = socket?.handshake?.auth?.token;

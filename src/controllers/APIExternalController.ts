@@ -2,7 +2,7 @@ import type { Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 
 import AppError from "../errors/AppError";
-import Queue from "../libs/Queue";
+// import Queue from "../libs/Queue";
 import { getWbot } from "../libs/wbot";
 import ApiConfig from "../models/ApiConfig";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
@@ -92,7 +92,7 @@ export const sendMessageConfirmacao = async (
 		idWbot,
 	};
 
-	Queue.add("SendMessageConfirmar", newMessage);
+	// Queue.add("SendMessageConfirmar", newMessage);
 
 	return res.status(200).json({ message: "Message add queue" });
 };
@@ -157,7 +157,7 @@ export const sendMessageAPI: RequestHandler = async (
 		throw new AppError(error.message);
 	}
 
-	Queue.add("SendMessageAPI", newMessage);
+	// Queue.add("SendMessageAPI", newMessage);
 
 	res.status(200).json({ message: "Message add queue" });
 };

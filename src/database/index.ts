@@ -73,6 +73,8 @@ sequelize.addModels(models);
 // Função para tentar reconectar automaticamente
 async function connectWithRetry() {
 	try {
+		// const sync = await sequelize.sync();
+		// console.log(sync);
 		await sequelize.authenticate();
 		logger.info("DATABASE CONNECTED");
 

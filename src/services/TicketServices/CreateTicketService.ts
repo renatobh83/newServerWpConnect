@@ -31,7 +31,7 @@ const CreateTicketService = async ({
 		throw new AppError("ERR_CREATING_TICKET");
 	}
 
-	await CheckContactOpenTickets(contactId);
+	await CheckContactOpenTickets(contactId, defaultWhatsapp.id);
 
 	const { isGroup } = await ShowContactService({ id: contactId, tenantId });
 

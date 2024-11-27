@@ -55,8 +55,8 @@ class Whatsapp extends Model<Whatsapp> {
 	@Column(DataType.STRING)
 	declare status: string;
 
-	@Column(DataType.INTEGER)
-	declare battery: number;
+	@Column(DataType.STRING)
+	declare battery: string;
 
 	@Column(DataType.BOOLEAN)
 	declare plugged: boolean;
@@ -102,7 +102,7 @@ class Whatsapp extends Model<Whatsapp> {
 	declare fbObject: object;
 
 	@Default("whatsapp")
-	@Column(DataType.ENUM("whatsapp", "telegram", "instagram", "messenger"))
+	@Column(DataType.STRING)
 	declare type: string;
 
 	@CreatedAt
@@ -150,7 +150,7 @@ class Whatsapp extends Model<Whatsapp> {
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.ENUM("360", "gupshup"))
+	@Column(DataType.STRING)
 	declare wabaBSP: string;
 
 	@Default(null)

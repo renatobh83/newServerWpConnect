@@ -22,15 +22,10 @@ const SetTicketMessagesAsRead = async (ticket: Ticket): Promise<void> => {
 	try {
 		if (ticket.channel === "whatsapp") {
 			const wbot = await GetTicketWbot(ticket);
-
 			wbot
 				.sendSeen(`${ticket.contact.number}@${ticket.isGroup ? "g" : "c"}.us`)
 				.catch((e) => console.error("não foi possível marcar como lido", e));
 		}
-		// if (ticket.channel === "messenger") {
-		//   const messengerBot = getMessengerBot(ticket.whatsappId);
-		//   messengerBot.markSeen(ticket.contact.messengerId);
-		// }
 	} catch (err) {
 		logger.warn(
 			`Could not mark messages as read. Maybe whatsapp session disconnected? Err: ${err}`,

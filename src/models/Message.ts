@@ -88,7 +88,11 @@ class Message extends Model<Message> {
 	@Column(DataType.UUID) // Usando UUID para referenciar o id da mensagem citada
 	declare quotedMsgId: string;
 
-	@BelongsTo(() => Message, "quotedMsgId")
+	@BelongsTo(() => Message, {
+		foreignKey: "quotedMsgId", // quotedMsgId referencia messageId
+		targetKey: "messageId", // messageId é o campo no modelo Message
+		as: "quotedMsg", // Alias para facilitar o uso
+	})
 	declare quotedMsg: Message;
 
 	@ForeignKey(() => Ticket)

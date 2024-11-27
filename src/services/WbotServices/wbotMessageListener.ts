@@ -7,14 +7,26 @@ import type {
 } from "@wppconnect-team/wppconnect";
 import { HandleMessage } from "./Helpers/HandleMessage";
 import { VerifyCall } from "./VerifyCall";
+import HandleMsgAck from "./Helpers/HandleMsgAck";
+import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
 
 interface Session extends Whatsapp {
 	id: number;
 }
 
-interface ReactionMessage {
-	id: string;
-	msgId: string;
+export interface MessageReaction {
+	id: {
+		fromMe: boolean;
+		remote: string;
+		id: string;
+		_serialized: string;
+	};
+	msgId: {
+		fromMe: boolean;
+		remote: string;
+		id: string;
+		_serialized: string;
+	};
 	reactionText: string;
 	read: boolean;
 	orphan: number;
@@ -31,7 +43,11 @@ export const wbotMessageListener = (wbot: Session): void => {
 		VerifyCall(call, wbot);
 	});
 
-	wbot.onReactionMessage((reaction: ReactionMessage) => {});
-	wbot.onAck((ack: Ack) => {});
+	wbot.onReactionMessage((msg: MessageReaction) => {
+		HandleMsgReaction(msg);
+	});
+	wbot.onAck((ack: Ack) => {
+		HandleMsgAck(ack);
+	});
 	wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
 };

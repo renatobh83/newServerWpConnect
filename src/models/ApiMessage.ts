@@ -101,11 +101,11 @@ class ApiMessage extends Model<ApiMessage> {
 				authToken: instance.authToken, // Assumindo que 'authToken' seja um campo de ApiMessage
 			};
 
-			Queue.add("WebHooksAPI", {
-				url: instance.apiConfig.urlMessageStatus,
-				type: payload.type,
-				payload,
-			});
+			// Queue.add("WebHooksAPI", {
+			// 	url: instance.apiConfig.urlMessageStatus,
+			// 	type: payload.type,
+			// 	payload,
+			// });
 		}
 	}
 }

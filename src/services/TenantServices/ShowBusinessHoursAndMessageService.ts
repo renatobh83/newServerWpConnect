@@ -1,23 +1,21 @@
-
 import Tenant from "../../models/Tenant";
 import AppError from "../../errors/AppError";
 
 interface Request {
-  tenantId: string | number;
+	tenantId: string | number;
 }
 
 const ShowBusinessHoursAndMessageService = async ({
-  tenantId
+	tenantId,
 }: Request): Promise<Tenant> => {
-  const tenant = await Tenant.findByPk(tenantId, {
-    attributes: ["businessHours", "messageBusinessHours"]
-  });
+	const tenant = await Tenant.findByPk(tenantId, {
+		attributes: ["businessHours", "messageBusinessHours"],
+	});
+	if (!tenant) {
+		throw new AppError("ERR_NO_TENANT_FOUND", 404);
+	}
 
-  if (!tenant) {
-    throw new AppError("ERR_NO_TENANT_FOUND", 404);
-  }
-
-  return tenant;
+	return tenant;
 };
 
 export default ShowBusinessHoursAndMessageService;

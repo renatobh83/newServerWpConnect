@@ -70,7 +70,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 	try {
 		// Criar uma nova sessão
 		wbot = (await create(
-			Object.assign({}, { headless: false }, config.createOptions, {
+			Object.assign({}, { headless: true }, config.createOptions, {
 				logger: logger,
 				// whatsappVersion: "2.3000.10184x",
 				disableWelcome: true,

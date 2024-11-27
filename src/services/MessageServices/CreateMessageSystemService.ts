@@ -198,8 +198,7 @@ const CreateMessageSystemService = async ({
 						...messageData,
 						...message,
 						userId,
-						id: messageData?.id,
-						messageId: message.id?.id || message.messageId || null,
+						messageId: message.id || message.messageId || null,
 						body: media.originalname,
 						mediaUrl: media.filename,
 						mediaType:
@@ -242,7 +241,6 @@ const CreateMessageSystemService = async ({
 			let message: any = {};
 
 			if (!messageData.scheduleDate) {
-				/// enviar mensagem > run time
 				message = await SendMessageSystemProxy({
 					ticket,
 					messageData,
@@ -257,7 +255,7 @@ const CreateMessageSystemService = async ({
 				...message,
 				id: messageData?.id,
 				userId,
-				messageId: message.id?.id || message.messageId || null,
+				messageId: message.id || message.messageId || null,
 				mediaType: "chat",
 			});
 
