@@ -2,6 +2,7 @@
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import socketEmit from "../../helpers/socketEmit";
 import type Ticket from "../../models/Ticket";
+import { validarCPF } from "../../utils/ApiWebhook";
 import CreateMessageSystemService from "../MessageServices/CreateMessageSystemService";
 import CreateLogTicketService from "../TicketServices/CreateLogTicketService";
 import BuildSendMessageService, {
@@ -9,7 +10,6 @@ import BuildSendMessageService, {
 } from "./BuildSendMessageService";
 import DefinedUserBotService from "./DefinedUserBotService";
 import IsContactTest from "./IsContactTest";
-import { validarCPF } from "../../utils/ApiWebhook";
 
 const validateStep = async (ticket: Ticket, step: any): Promise<boolean> => {
 	if (step.data.label === "pesquisaCPF") {

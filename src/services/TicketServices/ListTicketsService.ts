@@ -2,10 +2,10 @@
 import { QueryTypes } from "sequelize";
 // import { startOfDay, endOfDay, parseISO } from "date-fns";
 
-import Ticket from "../../models/Ticket";
-import UsersQueues from "../../models/UsersQueues";
 import AppError from "../../errors/AppError";
 import Queue from "../../models/Queue";
+import Ticket from "../../models/Ticket";
+import UsersQueues from "../../models/UsersQueues";
 // import ListSettingsService from "../SettingServices/ListSettingsService";
 // import Queue from "../../models/Queue";
 // import ListSettingsService from "../SettingServices/ListSettingsService";
@@ -46,11 +46,11 @@ const ListTicketsService = async ({
 	profile,
 }: Request): Promise<Response> => {
 	// check is admin
-	const isAdminShowAll = showAll == "true" && profile === "admin";
+	const isAdminShowAll = showAll === "true" && profile === "admin";
 	const isUnread =
-		withUnreadMessages && withUnreadMessages == "true" ? "S" : "N";
+		withUnreadMessages && withUnreadMessages === "true" ? "S" : "N";
 	const isNotAssigned =
-		isNotAssignedUser && isNotAssignedUser == "true" ? "S" : "N";
+		isNotAssignedUser && isNotAssignedUser === "true" ? "S" : "N";
 	const isShowAll = isAdminShowAll ? "S" : "N";
 	const isQueuesIds = queuesIds ? "S" : "N";
 

@@ -1,19 +1,19 @@
+import { fs, existsSync } from "node:fs";
 import { join } from "node:path";
-import { existsSync, fs } from "node:fs";
 import { promisify } from "node:util";
 import type ApiConfirmacao from "../models/ApiConfirmacao";
 import Message from "../models/Message";
 import Ticket from "../models/Ticket";
 import ShowApiListService from "../services/ApiConfirmacaoServices/ShowApiListService";
 import {
+	ConfirmaExame,
+	ListaExamesPreparo,
 	apiConsulta,
 	apiConsultaCPF,
-	ConfirmaExame,
 	consultaAtendimentos,
 	getAgendamentos,
 	getLaudoPDF,
 	getPreparo,
-	ListaExamesPreparo,
 } from "../services/ChatFlowServices/Helpers/ActionsApi";
 
 import VerifyStepsChatFlowTicketWebhook from "../services/ChatFlowServices/VerifyStepsChatFlowTicketWebhook";
@@ -61,7 +61,6 @@ export const CheckChatFlowWebhook = async (
 	}
 	const nome = ticket.contact.name;
 	const numero = formatarNumero(ticket.contact.number);
-	console.log(acaoWebhook);
 	if (acaoWebhook === "consulta") {
 		const dadosConsulta = await apiConsulta(nome, servicesApi.tenantId, numero);
 		if (!dadosConsulta) return;

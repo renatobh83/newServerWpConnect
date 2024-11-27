@@ -6,9 +6,9 @@ import type {
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import { HandleMessage } from "./Helpers/HandleMessage";
-import { VerifyCall } from "./VerifyCall";
 import HandleMsgAck from "./Helpers/HandleMsgAck";
 import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
+import { VerifyCall } from "./VerifyCall";
 
 interface Session extends Whatsapp {
 	id: number;

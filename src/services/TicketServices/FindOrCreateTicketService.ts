@@ -1,19 +1,19 @@
 // import { subHours } from "date-fns";
 import { Op } from "sequelize";
 
-import Contact from "../../models/Contact";
-import Ticket from "../../models/Ticket";
-import User from "../../models/User";
-import ShowTicketService from "./ShowTicketService";
-import CampaignContacts from "../../models/CampaignContacts";
-import socketEmit from "../../helpers/socketEmit";
+import type { Message } from "@wppconnect-team/wppconnect";
 // import CheckChatBotWelcome from "../../helpers/CheckChatBotWelcome";
 import CheckChatBotFlowWelcome from "../../helpers/CheckChatBotWelcome";
-import CreateLogTicketService from "./CreateLogTicketService";
-import MessageModel from "../../models/Message";
-import ListSettingsService from "../SettingServices/ListSettingsService";
+import socketEmit from "../../helpers/socketEmit";
+import CampaignContacts from "../../models/CampaignContacts";
 import Confirmacao from "../../models/Confirmacao";
-import type { Message } from "@wppconnect-team/wppconnect";
+import Contact from "../../models/Contact";
+import MessageModel from "../../models/Message";
+import Ticket from "../../models/Ticket";
+import User from "../../models/User";
+import ListSettingsService from "../SettingServices/ListSettingsService";
+import CreateLogTicketService from "./CreateLogTicketService";
+import ShowTicketService from "./ShowTicketService";
 
 interface Data {
 	contact: Contact;
@@ -39,7 +39,7 @@ const FindOrCreateTicketService = async ({
 	// se for uma mensagem de campanha, não abrir tícket
 
 	try {
-		if (msg && msg.fromMe) {
+		if (msg?.fromMe) {
 			const msgCampaign = await CampaignContacts.findOne({
 				where: {
 					contactId: contact.id,
@@ -63,7 +63,7 @@ const FindOrCreateTicketService = async ({
 			}
 		}
 
-		if (msg && msg.fromMe) {
+		if (msg?.fromMe) {
 			const farewellMessage = await MessageModel.findOne({
 				where: { messageId: msg.id || msg.message_id || msg.item_id },
 				include: ["ticket"],
@@ -262,7 +262,7 @@ const FindOrCreateTicketService = async ({
 		if (DirectTicketsToWallets && contact.id) {
 			const wallet: any = contact;
 			const wallets = await wallet.getWallets();
-			if (wallets && wallets[0]?.id) {
+			if (wallets?.[0]?.id) {
 				ticketObj.status = "open";
 				ticketObj.userId = wallets[0].id;
 				ticketObj.startedAttendanceAt = new Date().getTime();

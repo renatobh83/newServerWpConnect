@@ -1,23 +1,23 @@
-import * as Yup from "yup";
 import type { Request, RequestHandler, Response } from "express";
+import * as Yup from "yup";
+import AppError from "../errors/AppError";
+import Contact from "../models/Contact";
+import Whatsapp from "../models/Whatsapp";
+import CreateContactService from "../services/ContactServices/CreateContactService";
+import DeleteContactService from "../services/ContactServices/DeleteContactService";
 // import { head } from "lodash";
 // import path from "node:path";
 // import { v4 as uuidV4 } from "uuid";
 // import fs from "node:fs";
 import ListContactsService from "../services/ContactServices/ListContactsService";
-import CreateContactService from "../services/ContactServices/CreateContactService";
+import ShowContactByNumber from "../services/ContactServices/ShowContactByNumber";
 import ShowContactService from "../services/ContactServices/ShowContactService";
 import UpdateContactService from "../services/ContactServices/UpdateContactService";
-import DeleteContactService from "../services/ContactServices/DeleteContactService";
 import UpdateContactTagsService from "../services/ContactServices/UpdateContactTagsService";
+import UpdateContactWalletsService from "../services/ContactServices/UpdateContactWalletsService";
 import CheckIsValidContact from "../services/WbotServices/CheckIsValidContact";
 import GetProfilePicUrl from "../services/WbotServices/GetProfilePicUrl";
-import AppError from "../errors/AppError";
-import UpdateContactWalletsService from "../services/ContactServices/UpdateContactWalletsService";
 import SyncContactsWhatsappInstanceService from "../services/WbotServices/SyncContactsWhatsappInstanceService";
-import Contact from "../models/Contact";
-import ShowContactByNumber from "../services/ContactServices/ShowContactByNumber";
-import Whatsapp from "../models/Whatsapp";
 
 type IndexQuery = {
 	searchParam: string;

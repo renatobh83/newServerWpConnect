@@ -1,10 +1,10 @@
-import * as Yup from "yup";
 import type { Request, RequestHandler, Response } from "express";
+import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
 import CreateFastReplyService from "../services/FastReplyServices/CreateFastReplyService";
-import ListFastReplyService from "../services/FastReplyServices/ListFastReplyService";
 import DeleteFastReplyService from "../services/FastReplyServices/DeleteFastReplyService";
+import ListFastReplyService from "../services/FastReplyServices/ListFastReplyService";
 import UpdateFastReplyService from "../services/FastReplyServices/UpdateFastReplyService";
 
 interface FastReplyData {

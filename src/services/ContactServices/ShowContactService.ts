@@ -1,31 +1,31 @@
-import Contact from "../../models/Contact";
 import AppError from "../../errors/AppError";
+import Contact from "../../models/Contact";
 
 interface Request {
-  id: string | number;
-  tenantId: string | number;
+	id: string | number;
+	tenantId: string | number;
 }
 
 const ShowContactService = async ({
-  id,
-  tenantId
+	id,
+	tenantId,
 }: Request): Promise<Contact> => {
-  const contact = await Contact.findByPk(id, {
-    include: [
-      "extraInfo",
-      "tags",
-      {
-        association: "wallets",
-        attributes: ["id", "name"]
-      }
-    ]
-  });
+	const contact = await Contact.findByPk(id, {
+		include: [
+			"extraInfo",
+			"tags",
+			{
+				association: "wallets",
+				attributes: ["id", "name"],
+			},
+		],
+	});
 
-  if (!contact || contact.tenantId !== tenantId) {
-    throw new AppError("ERR_NO_CONTACT_FOUND", 404);
-  }
+	if (!contact || contact.tenantId !== tenantId) {
+		throw new AppError("ERR_NO_CONTACT_FOUND", 404);
+	}
 
-  return contact;
+	return contact;
 };
 
 export default ShowContactService;

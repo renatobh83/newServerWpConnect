@@ -1,11 +1,11 @@
 import type { Request, RequestHandler, Response } from "express";
-import { getWbot } from "../libs/wbot";
-import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
-import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
-import UpdateWhatsAppService from "../services/WhatsappService/UpdateWhatsAppService";
-import * as logger from "../utils/logger";
 import AppError from "../errors/AppError";
 import { getIO } from "../libs/scoket";
+import { getWbot } from "../libs/wbot";
+import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
+import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
+import UpdateWhatsAppService from "../services/WhatsappService/UpdateWhatsAppService";
+import * as logger from "../utils/logger";
 
 const store: RequestHandler = async (req: Request, res: Response) => {
 	const { whatsappId } = req.params;

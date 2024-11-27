@@ -3,9 +3,9 @@ import type { Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 
 import CreateCampaignContactsService from "../services/CampaignContactsServices/CreateCampaignContactsService";
-import ListCampaignContactsService from "../services/CampaignContactsServices/ListCampaignContactsService";
-import DeleteCampaignContactsService from "../services/CampaignContactsServices/DeleteCampaignContactsService";
 import DeleteAllCampaignContactsService from "../services/CampaignContactsServices/DeleteAllCampaignContactsService";
+import DeleteCampaignContactsService from "../services/CampaignContactsServices/DeleteCampaignContactsService";
+import ListCampaignContactsService from "../services/CampaignContactsServices/ListCampaignContactsService";
 
 export const store: RequestHandler = async (req: Request, res: Response) => {
 	// const { tenantId } = req.user;

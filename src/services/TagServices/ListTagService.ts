@@ -1,29 +1,29 @@
 import Tag from "../../models/Tag";
 
 interface Request {
-  tenantId: string | number;
-  isActive?: string | boolean | null;
+	tenantId: string | number;
+	isActive?: string | boolean | null;
 }
 
 const ListTagService = async ({
-  tenantId,
-  isActive
+	tenantId,
+	isActive,
 }: Request): Promise<Tag[]> => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const where: any = {
-    tenantId
-  };
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const where: any = {
+		tenantId,
+	};
 
-  if (isActive) {
-    where.isActive = isActive;
-  }
+	if (isActive) {
+		where.isActive = isActive;
+	}
 
-  const tagData = await Tag.findAll({
-    where,
-    order: [["tag", "ASC"]]
-  });
+	const tagData = await Tag.findAll({
+		where,
+		order: [["tag", "ASC"]],
+	});
 
-  return tagData;
+	return tagData;
 };
 
 export default ListTagService;

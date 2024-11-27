@@ -1,23 +1,23 @@
 import { QueryTypes } from "sequelize";
-import User from "../../models/User";
 // import AppError from "../../errors/AppError";
 // import Queue from "../../models/Queue";
 import type Ticket from "../../models/Ticket";
+import User from "../../models/User";
 import CreateLogTicketService from "../TicketServices/CreateLogTicketService";
 
 const DefinedUserBotService = async (
-  ticket: Ticket,
-  queueId: string | number,
-  tenantId: string | number,
-  method = "R"
+	ticket: Ticket,
+	queueId: string | number,
+	tenantId: string | number,
+	method = "R",
 ): Promise<void> => {
-  // method: R = Random | B = Balanced ;
-  // R: pega usuario de forma randomica;
-  // B: pega o usuario com menor número de atendimentos;
+	// method: R = Random | B = Balanced ;
+	// R: pega usuario de forma randomica;
+	// B: pega o usuario com menor número de atendimentos;
 
-  if (method === "N") return;
+	if (method === "N") return;
 
-  let query = `
+	let query = `
     select u.id from "Users" u
     left join "UsersQueues" uq on (u.id = uq."userId")
     where u."isOnline" = true
@@ -27,8 +27,8 @@ const DefinedUserBotService = async (
     order by random() limit 1
   `;
 
-  if (method === "B") {
-    query = `
+	if (method === "B") {
+		query = `
       select id from (
         select u.id, u."name", coalesce(count(t.id), 0) qtd_atendimentos  from "Users" u
         left join "UsersQueues" uq on (u.id = uq."userId")
@@ -42,28 +42,28 @@ const DefinedUserBotService = async (
         order by 3 limit 1
       ) a
     `;
-  }
+	}
 
-  const user: any = await User.sequelize?.query(query, {
-    replacements: {
-      tenantId,
-      queueId,
-    },
-    type: QueryTypes.SELECT,
-  });
+	const user: any = await User.sequelize?.query(query, {
+		replacements: {
+			tenantId,
+			queueId,
+		},
+		type: QueryTypes.SELECT,
+	});
 
-  if (user.length) {
-    const userId = user[0].id;
-    await ticket.update({
-      userId,
-    });
+	if (user.length) {
+		const userId = user[0].id;
+		await ticket.update({
+			userId,
+		});
 
-    await CreateLogTicketService({
-      ticketId: ticket.id,
-      type: "userDefine",
-      userId,
-    });
-  }
+		await CreateLogTicketService({
+			ticketId: ticket.id,
+			type: "userDefine",
+			userId,
+		});
+	}
 };
 
 export default DefinedUserBotService;

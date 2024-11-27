@@ -1,18 +1,18 @@
 import type Contato from "../../controllers/APIExternalController";
 
 interface Request {
-  msg: Contato;
-  hora: string;
+	msg: Contato;
+	hora: string;
 }
 export default function CreateTemplateMessageService({ msg, hora }: Request): {
-  body: string;
+	body: string;
 } {
-  const nome = msg.paciente_nome;
-  const atendimentoData = msg.atendimento_data;
-  const atendimentoHora = hora;
+	const nome = msg.paciente_nome;
+	const atendimentoData = msg.atendimento_data;
+	const atendimentoHora = hora;
 
-  const template = {
-    body: `
+	const template = {
+		body: `
 Olá ${nome}. 😊,
 Nós, da Diagnóstico Por Imagem, temos um importante lembrete pra você:
 🗓 Seu atendimento de Densitometria na nossa clínica está agendado para o dia ${atendimentoData} às ${atendimentoHora}.
@@ -29,18 +29,18 @@ Podemos confirmar sua presença?
 🚫 Para cancelar, 2.
 🔁 Se quiser reagendar, digite 3
 `,
-  };
+	};
 
-  return template;
+	return template;
 }
 export function CreateTemplateMessageConsulta({ msg }: any): { body: string } {
-  const nome = msg.ds_paciente;
-  const atendimentoData = msg.dt_data;
-  const horaAgendamento = msg.dt_hora;
-  const chegada = msg.dt_hora_chegada;
+	const nome = msg.ds_paciente;
+	const atendimentoData = msg.dt_data;
+	const horaAgendamento = msg.dt_hora;
+	const chegada = msg.dt_hora_chegada;
 
-  const template = {
-    body: `
+	const template = {
+		body: `
 Olá ${nome}. 😊,
 O seu proximo agendamento conosco esta marcado para o dia ${atendimentoData} às ${horaAgendamento}.
 
@@ -56,7 +56,7 @@ Podemos confirmar sua presença?
 🚫 Para cancelar, 2.
 🔁 Se quiser reagendar, digite 3
 `,
-  };
+	};
 
-  return template;
+	return template;
 }

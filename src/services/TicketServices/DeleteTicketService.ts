@@ -1,7 +1,7 @@
-import type Ticket from "../../models/Ticket";
 import AppError from "../../errors/AppError";
-import ShowTicketService from "./ShowTicketService";
+import type Ticket from "../../models/Ticket";
 import CreateLogTicketService from "./CreateLogTicketService";
+import ShowTicketService from "./ShowTicketService";
 
 interface Request {
 	id: string | number;

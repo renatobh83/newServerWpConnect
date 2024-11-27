@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { promises } from "fs";
+import { promises } from "node:fs";
 import path, { resolve } from "node:path";
 import { type Whatsapp, create } from "@wppconnect-team/wppconnect";
 

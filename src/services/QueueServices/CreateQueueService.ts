@@ -2,26 +2,26 @@
 import Queue from "../../models/Queue";
 
 interface Request {
-  queue: string;
-  isActive: boolean;
-  userId: number;
-  tenantId: number ;
+	queue: string;
+	isActive: boolean;
+	userId: number;
+	tenantId: number;
 }
 
 const CreateQueueService = async ({
-  queue,
-  isActive,
-  userId,
-  tenantId
+	queue,
+	isActive,
+	userId,
+	tenantId,
 }: Request): Promise<Queue> => {
-  const queueData = await Queue.create({
-    queue,
-    isActive,
-    userId,
-    tenantId
-  });
+	const queueData = await Queue.create({
+		queue,
+		isActive,
+		userId,
+		tenantId,
+	});
 
-  return queueData;
+	return queueData;
 };
 
 export default CreateQueueService;

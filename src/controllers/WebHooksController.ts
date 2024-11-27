@@ -22,7 +22,6 @@ export const CheckServiceMessenger: RequestHandler = async (
 	res: Response,
 ) => {
 	const challenge = req.query["hub.challenge"];
-	console.log("WEBHOOK_VERIFIED");
 	res.status(200).send(challenge);
 };
 

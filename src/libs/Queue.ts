@@ -1,7 +1,7 @@
-import { Queue, Worker, type Job } from "bullmq";
-import QueueListener from "./QueueListeners"; // Classe de listeners
+import { type Job, Queue, Worker } from "bullmq";
 import * as jobs from "../jobs/Index";
 import { logger } from "../utils/logger";
+import QueueListener from "./QueueListeners"; // Classe de listeners
 
 // Redis connection options
 const redisConfig = {

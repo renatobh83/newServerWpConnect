@@ -1,10 +1,10 @@
 import { Op } from "sequelize";
+import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
+import Contact from "../../models/Contact";
 import Message from "../../models/Message";
 import Ticket from "../../models/Ticket";
 import { logger } from "../../utils/logger";
-import Contact from "../../models/Contact";
 import SendMessage from "./SendMessage";
-import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
 
 const SendMessagesSchenduleWbot = async (): Promise<void> => {
 	const currentDate = new Date(

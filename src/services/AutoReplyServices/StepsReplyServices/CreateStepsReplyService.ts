@@ -2,26 +2,26 @@
 import StepsReply from "../../../models/StepsReply";
 
 interface Request {
-  reply: string;
-  idAutoReply: number;
-  userId?: number;
-  initialStep: boolean;
+	reply: string;
+	idAutoReply: number;
+	userId?: number;
+	initialStep: boolean;
 }
 
 const CreateStepsReplyService = async ({
-  reply,
-  idAutoReply,
-  userId,
-  initialStep
+	reply,
+	idAutoReply,
+	userId,
+	initialStep,
 }: Request): Promise<StepsReply> => {
-  const stepsReply = await StepsReply.create({
-    reply,
-    idAutoReply,
-    userId,
-    initialStep
-  });
+	const stepsReply = await StepsReply.create({
+		reply,
+		idAutoReply,
+		userId,
+		initialStep,
+	});
 
-  return stepsReply;
+	return stepsReply;
 };
 
 export default CreateStepsReplyService;

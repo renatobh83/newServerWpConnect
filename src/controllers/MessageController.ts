@@ -43,9 +43,7 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 		});
 	try {
 		SetTicketMessagesAsRead(ticket);
-	} catch (error) {
-		console.log("SetTicketMessagesAsRead", error);
-	}
+	} catch (error) {}
 
 	res.json({ count, messages, messagesOffLine, ticket, hasMore });
 };
@@ -59,9 +57,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	// console.log(ticket)
 	try {
 		SetTicketMessagesAsRead(ticket);
-	} catch (error) {
-		console.log("SetTicketMessagesAsRead", error);
-	}
+	} catch (error) {}
 
 	await CreateMessageSystemService({
 		msg: messageData,

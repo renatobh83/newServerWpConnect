@@ -2,9 +2,9 @@ import { QueryTypes } from "sequelize";
 import sequelize from "../../database";
 
 interface Request {
-  startDate: string;
-  endDate: string;
-  tenantId: string | number;
+	startDate: string;
+	endDate: string;
+	tenantId: string | number;
 }
 
 const query = `
@@ -34,20 +34,20 @@ const query = `
 `;
 
 const StatisticsPerUser = async ({
-  startDate,
-  endDate,
-  tenantId
+	startDate,
+	endDate,
+	tenantId,
 }: Request): Promise<any[]> => {
-  const data = await sequelize.query(query, {
-    replacements: {
-      tenantId,
-      startDate,
-      endDate
-    },
-    type: QueryTypes.SELECT
-    // logging: console.log
-  });
-  return data;
+	const data = await sequelize.query(query, {
+		replacements: {
+			tenantId,
+			startDate,
+			endDate,
+		},
+		type: QueryTypes.SELECT,
+		// logging: console.log
+	});
+	return data;
 };
 
 export default StatisticsPerUser;

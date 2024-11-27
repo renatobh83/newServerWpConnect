@@ -1,21 +1,21 @@
 import type {
-	Contact as WbotContact,
 	Message,
 	ProfilePicThumbObj,
+	Contact as WbotContact,
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
-import { isValidMsg } from "./IsValidMsg";
-import Setting from "../../../models/Setting";
-import ShowWhatsAppService from "../../WhatsappService/ShowWhatsAppService";
-import VerifyContact from "./VerifyContact";
-import FindOrCreateTicketService from "../../TicketServices/FindOrCreateTicketService";
-import type Contact from "../../../models/Contact";
 import { tryCatch } from "bullmq";
+import type Contact from "../../../models/Contact";
+import Setting from "../../../models/Setting";
+import { getId } from "../../../utils/normalize";
+import VerifyStepsChatFlowTicket from "../../ChatFlowServices/VerifyStepsChatFlowTicket";
+import FindOrCreateTicketService from "../../TicketServices/FindOrCreateTicketService";
+import ShowWhatsAppService from "../../WhatsappService/ShowWhatsAppService";
+import { isValidMsg } from "./IsValidMsg";
+import verifyBusinessHours from "./VerifyBusinessHours";
+import VerifyContact from "./VerifyContact";
 import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
-import { getId } from "../../../utils/normalize";
-import verifyBusinessHours from "./VerifyBusinessHours";
-import VerifyStepsChatFlowTicket from "../../ChatFlowServices/VerifyStepsChatFlowTicket";
 
 interface Session extends Whatsapp {
 	id: number;

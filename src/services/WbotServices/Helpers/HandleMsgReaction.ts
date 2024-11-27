@@ -1,9 +1,9 @@
+import socketEmit from "../../../helpers/socketEmit";
 import Message from "../../../models/Message";
 import Ticket from "../../../models/Ticket";
-import socketEmit from "../../../helpers/socketEmit";
 import { logger } from "../../../utils/logger";
-import type { MessageReaction } from "../wbotMessageListener";
 import { getId } from "../../../utils/normalize";
+import type { MessageReaction } from "../wbotMessageListener";
 
 export async function HandleMsgReaction(msg: MessageReaction) {
 	try {

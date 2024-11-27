@@ -1,8 +1,8 @@
 // import Contact from '../models/Contact';
 import type { Request, RequestHandler, Response } from "express";
-import TicketsQueuesService from "../services/Statistics/TicketsQueuesService";
-import ContactsReportService from "../services/Statistics/ContactsReportService";
 import AppError from "../errors/AppError";
+import ContactsReportService from "../services/Statistics/ContactsReportService";
+import TicketsQueuesService from "../services/Statistics/TicketsQueuesService";
 
 type IndexQuery = {
 	dateStart: string;

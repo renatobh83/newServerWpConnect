@@ -1,10 +1,10 @@
-import { Queue as BullQueue } from "bullmq";
+import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
-import { createBullBoard } from "@bull-board/api";
+import { Queue as BullQueue } from "bullmq";
+import type { Application } from "express";
 import { queues } from "../libs/Queue";
 import { logger } from "../utils/logger";
-import type { Application } from "express";
 
 export const redisConfig = {
 	host: process.env.IO_REDIS_SERVER,

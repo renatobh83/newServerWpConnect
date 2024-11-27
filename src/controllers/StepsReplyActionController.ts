@@ -1,5 +1,5 @@
-import * as Yup from "yup";
 import type { Request, Response } from "express";
+import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
 import CreateStepsReplyActionService from "../services/AutoReplyServices/StepsReplyActionServices/CreateStepsReplyActionService";

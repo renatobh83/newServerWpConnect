@@ -1,8 +1,8 @@
-import type Ticket from "../models/Ticket";
-import GetTicketWbot from "./GetTicketWbot";
-import AppError from "../errors/AppError";
-import { logger } from "../utils/logger";
 import type { Message } from "@wppconnect-team/wppconnect";
+import AppError from "../errors/AppError";
+import type Ticket from "../models/Ticket";
+import { logger } from "../utils/logger";
+import GetTicketWbot from "./GetTicketWbot";
 
 type CustomWbotMessage = Omit<Message, "id"> & {
 	id: { _serialized: string }; // Redefinindo o tipo de `id`

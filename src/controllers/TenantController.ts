@@ -1,10 +1,10 @@
-import * as Yup from "yup";
-import type { Request, RequestHandler, Response } from "express";
 import { isMatch } from "date-fns";
+import type { Request, RequestHandler, Response } from "express";
+import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
-import UpdateBusinessHoursService from "../services/TenantServices/UpdateBusinessHoursService";
 import ShowBusinessHoursAndMessageService from "../services/TenantServices/ShowBusinessHoursAndMessageService";
+import UpdateBusinessHoursService from "../services/TenantServices/UpdateBusinessHoursService";
 import UpdateMessageBusinessHoursService from "../services/TenantServices/UpdateMessageBusinessHoursService";
 
 export const updateBusinessHours: RequestHandler = async (

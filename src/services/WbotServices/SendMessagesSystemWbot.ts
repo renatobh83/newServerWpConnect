@@ -1,16 +1,16 @@
 import { join } from "node:path";
 
-import { Op } from "sequelize";
-import Message from "../../models/Message";
-import Ticket from "../../models/Ticket";
-import { logger } from "../../utils/logger";
-import { sleepRandomTime } from "../../utils/sleepRandomTime";
-import Contact from "../../models/Contact";
-import GetWbotMessage from "../../helpers/GetWbotMessage";
 import type {
 	Message as WbotMessage,
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
+import { Op } from "sequelize";
+import GetWbotMessage from "../../helpers/GetWbotMessage";
+import Contact from "../../models/Contact";
+import Message from "../../models/Message";
+import Ticket from "../../models/Ticket";
+import { logger } from "../../utils/logger";
+import { sleepRandomTime } from "../../utils/sleepRandomTime";
 // import SetTicketMessagesAsRead from "../../helpers/SetTicketMessagesAsRead";
 interface Session extends Whatsapp {
 	id: number;
@@ -97,7 +97,6 @@ const SendMessagesSystemWbot = async (
 			} else {
 				quotedMsgSerializedId = undefined;
 			}
-			// eslint-disable-next-line no-underscore-dangle
 		}
 
 		try {

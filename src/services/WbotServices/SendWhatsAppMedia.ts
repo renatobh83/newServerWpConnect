@@ -1,11 +1,11 @@
 import fs from "node:fs";
 
+import type { Chat, Message, Whatsapp } from "@wppconnect-team/wppconnect";
 import AppError from "../../errors/AppError";
 import GetTicketWbot from "../../helpers/GetTicketWbot";
 import type Ticket from "../../models/Ticket";
 import UserMessagesLog from "../../models/UserMessagesLog";
 import { logger } from "../../utils/logger";
-import type { Chat, Message, Whatsapp } from "@wppconnect-team/wppconnect";
 
 interface Request {
 	media: any;

@@ -2,11 +2,11 @@ import { QueryTypes } from "sequelize";
 import sequelize from "../../database";
 
 interface Request {
-  startDate: string;
-  endDate: string;
-  tenantId: string | number;
-  userId: string | number;
-  userProfile: string;
+	startDate: string;
+	endDate: string;
+	tenantId: string | number;
+	userId: string | number;
+	userProfile: string;
 }
 
 const queryAdmin = `
@@ -50,26 +50,26 @@ const query = `
 `;
 
 const DashTicketsEvolutionByPeriod = async ({
-  startDate,
-  endDate,
-  tenantId,
-  userId,
-  userProfile
+	startDate,
+	endDate,
+	tenantId,
+	userId,
+	userProfile,
 }: Request): Promise<any[]> => {
-  const data = await sequelize.query(
-    userProfile == "admin" ? queryAdmin : query,
-    {
-      replacements: {
-        tenantId,
-        startDate,
-        endDate,
-        userId
-      },
-      type: QueryTypes.SELECT
-      // logging: console.log
-    }
-  );
-  return data;
+	const data = await sequelize.query(
+		userProfile === "admin" ? queryAdmin : query,
+		{
+			replacements: {
+				tenantId,
+				startDate,
+				endDate,
+				userId,
+			},
+			type: QueryTypes.SELECT,
+			// logging: console.log
+		},
+	);
+	return data;
 };
 
 export default DashTicketsEvolutionByPeriod;

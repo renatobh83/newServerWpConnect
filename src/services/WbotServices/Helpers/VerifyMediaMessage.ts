@@ -1,16 +1,16 @@
+import { writeFile } from "node:fs";
 import { join } from "node:path";
 import { promisify } from "node:util";
-import { writeFile } from "node:fs";
-import type Contact from "../../../models/Contact";
-import type Ticket from "../../../models/Ticket";
-import type Message from "../../../models/Message";
-import VerifyQuotedMessage from "./VerifyQuotedMessage";
-import CreateMessageService from "../../MessageServices/CreateMessageService";
-import { logger } from "../../../utils/logger";
 import type {
 	Message as WbotMessage,
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
+import type Contact from "../../../models/Contact";
+import type Message from "../../../models/Message";
+import type Ticket from "../../../models/Ticket";
+import { logger } from "../../../utils/logger";
+import CreateMessageService from "../../MessageServices/CreateMessageService";
+import VerifyQuotedMessage from "./VerifyQuotedMessage";
 
 const writeFileAsync = promisify(writeFile);
 

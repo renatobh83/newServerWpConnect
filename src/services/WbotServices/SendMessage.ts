@@ -1,8 +1,8 @@
 import { join } from "node:path";
+import type { Chat, Whatsapp } from "@wppconnect-team/wppconnect";
+import { getWbot } from "../../libs/wbot";
 import Message from "../../models/Message";
 import { logger } from "../../utils/logger";
-import { getWbot } from "../../libs/wbot";
-import type { Chat, Whatsapp } from "@wppconnect-team/wppconnect";
 
 const SendMessage = async (message: Message): Promise<void> => {
 	logger.info(`SendMessage: ${message.id}`);

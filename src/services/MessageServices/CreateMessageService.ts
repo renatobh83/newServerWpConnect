@@ -1,6 +1,6 @@
+import socketEmit from "../../helpers/socketEmit";
 import Message from "../../models/Message";
 import Ticket from "../../models/Ticket";
-import socketEmit from "../../helpers/socketEmit";
 
 interface MessageData {
 	id?: string;

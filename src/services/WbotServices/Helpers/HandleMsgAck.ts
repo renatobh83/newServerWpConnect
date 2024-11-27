@@ -1,10 +1,10 @@
 import type { Ack } from "@wppconnect-team/wppconnect";
+import socketEmit from "../../../helpers/socketEmit";
+import ApiMessage from "../../../models/ApiMessage";
+import CampaignContacts from "../../../models/CampaignContacts";
 import Message from "../../../models/Message";
 import Ticket from "../../../models/Ticket";
 import { logger } from "../../../utils/logger";
-import CampaignContacts from "../../../models/CampaignContacts";
-import ApiMessage from "../../../models/ApiMessage";
-import socketEmit from "../../../helpers/socketEmit";
 import { getId } from "../../../utils/normalize";
 
 const HandleMsgAck = async (msg: Ack) => {

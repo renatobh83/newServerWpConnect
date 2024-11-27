@@ -1,28 +1,28 @@
+import { fs, existsSync } from "node:fs";
 import { join } from "node:path";
-import { existsSync, fs } from "node:fs";
 
-import { pupa } from "../../utils/pupa";
-import { logger } from "../../utils/logger";
-import Ticket from "../../models/Ticket";
-import Message from "../../models/Message";
-import socketEmit from "../../helpers/socketEmit";
-import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
-import ShowApiListService from "../ApiConfirmacaoServices/ShowApiListService";
 import { promisify } from "node:util";
+import { CheckChatFlowWebhook } from "../../helpers/CheckChatFlowWebhook";
+import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
+import socketEmit from "../../helpers/socketEmit";
+// import SendMessageBlobHtml from "../../helpers/SendWhatsAppBlob";
+import type ApiConfirmacao from "../../models/ApiConfirmacao";
+import Message from "../../models/Message";
+import Ticket from "../../models/Ticket";
 import type { ResponseListaAgendamentos } from "../../templates/ListaAgendamentos";
+import { logger } from "../../utils/logger";
+import { pupa } from "../../utils/pupa";
+import ShowApiListService from "../ApiConfirmacaoServices/ShowApiListService";
 import {
+	ConfirmaExame,
+	ListaExamesPreparo,
 	apiConsulta,
 	apiConsultaCPF,
-	ConfirmaExame,
 	consultaAtendimentos,
 	getAgendamentos,
 	getLaudoPDF,
 	getPreparo,
-	ListaExamesPreparo,
 } from "./Helpers/ActionsApi";
-// import SendMessageBlobHtml from "../../helpers/SendWhatsAppBlob";
-import type ApiConfirmacao from "../../models/ApiConfirmacao";
-import { CheckChatFlowWebhook } from "../../helpers/CheckChatFlowWebhook";
 interface MessageData {
 	id?: string;
 	ticketId: number;

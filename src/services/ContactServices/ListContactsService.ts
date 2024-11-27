@@ -1,47 +1,47 @@
 import { QueryTypes } from "sequelize";
-import Contact from "../../models/Contact";
+import type Contact from "../../models/Contact";
 
 import sequelize from "../../database";
 
 interface Request {
-  searchParam?: string;
-  pageNumber?: string;
-  tenantId: string | number;
-  profile: string;
-  userId: string | number;
+	searchParam?: string;
+	pageNumber?: string;
+	tenantId: string | number;
+	profile: string;
+	userId: string | number;
 }
 
 interface Response {
-  contacts: Contact[];
-  count: number;
-  hasMore: boolean;
+	contacts: Contact[];
+	count: number;
+	hasMore: boolean;
 }
 
 const ListContactsService = async ({
-  searchParam = "",
-  pageNumber = "1",
-  tenantId,
-  profile,
-  userId
+	searchParam = "",
+	pageNumber = "1",
+	tenantId,
+	profile,
+	userId,
 }: Request): Promise<Response> => {
-  const limit = 40;
-  const offset = limit * (+pageNumber - 1);
+	const limit = 40;
+	const offset = limit * (+pageNumber - 1);
 
-  const where = `
+	const where = `
     "Contact"."tenantId" = ${tenantId}
     and (LOWER("Contact"."name") like '%${searchParam.toLowerCase().trim()}%'
         or "Contact"."number" like '%${searchParam.toLowerCase().trim()}%')
     and (('${profile}' = 'admin') or (("cw"."walletId" = ${userId}) or ("cw"."walletId" is null)))
   `;
 
-  const queryCount = `
+	const queryCount = `
     select count(*)
     from "Contacts" as "Contact"
     left join "ContactWallets" cw on cw."contactId" = "Contact".id
     where ${where}
   `;
 
-  const query = `
+	const query = `
     select
       distinct
       "Contact"."id",
@@ -69,22 +69,22 @@ const ListContactsService = async ({
     order by "Contact"."name" asc
     limit ${limit} offset ${offset}
   `;
-  const contacts: Contact[] = await sequelize.query(query, {
-    type: QueryTypes.SELECT
-  });
+	const contacts: Contact[] = await sequelize.query(query, {
+		type: QueryTypes.SELECT,
+	});
 
-  const data: any = await sequelize.query(queryCount, {
-    type: QueryTypes.SELECT
-  });
+	const data: any = await sequelize.query(queryCount, {
+		type: QueryTypes.SELECT,
+	});
 
-  const count = (data && data[0]?.count) || 0;
-  const hasMore = count > offset + contacts.length;
+	const count = data?.[0]?.count || 0;
+	const hasMore = count > offset + contacts.length;
 
-  return {
-    contacts,
-    count,
-    hasMore
-  };
+	return {
+		contacts,
+		count,
+		hasMore,
+	};
 };
 
 export default ListContactsService;

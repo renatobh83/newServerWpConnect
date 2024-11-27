@@ -1,10 +1,10 @@
-import type Contact from "../../../models/Contact";
 import type {
 	ProfilePicThumbObj,
 	Contact as WbotContact,
 } from "@wppconnect-team/wppconnect";
-import CreateOrUpdateContactService from "../../ContactServices/CreateOrUpdateContactService";
+import type Contact from "../../../models/Contact";
 import { getId } from "../../../utils/normalize";
+import CreateOrUpdateContactService from "../../ContactServices/CreateOrUpdateContactService";
 
 const VerifyContact = async (
 	msgContact: WbotContact,

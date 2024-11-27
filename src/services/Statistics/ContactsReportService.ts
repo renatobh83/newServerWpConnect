@@ -1,8 +1,8 @@
 import { endOfDay, parseISO, startOfDay } from "date-fns";
 import { type Includeable, Op, Sequelize } from "sequelize";
 import Contact from "../../models/Contact";
-import Tag from "../../models/Tag";
 import ContactWallet from "../../models/ContactWallet";
+import Tag from "../../models/Tag";
 
 const dddsPorEstado = [
 	{ estado: "AC", ddds: ["68"] },

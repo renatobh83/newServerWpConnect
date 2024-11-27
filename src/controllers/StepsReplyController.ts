@@ -1,10 +1,10 @@
-import * as Yup from "yup";
 import type { Request, Response } from "express";
+import * as Yup from "yup";
 
-import CreateStepsReplyService from "../services/AutoReplyServices/StepsReplyServices/CreateStepsReplyService";
 import AppError from "../errors/AppError";
-import UpdateStepsReplyService from "../services/AutoReplyServices/StepsReplyServices/UpdateStepsReplyService";
+import CreateStepsReplyService from "../services/AutoReplyServices/StepsReplyServices/CreateStepsReplyService";
 import DeleteStepsReplyService from "../services/AutoReplyServices/StepsReplyServices/DeleteStepsReplyService";
+import UpdateStepsReplyService from "../services/AutoReplyServices/StepsReplyServices/UpdateStepsReplyService";
 
 interface StepsReplyData {
 	reply: string;

@@ -1,11 +1,11 @@
 import type { Server } from "node:http";
 import { createAdapter } from "@socket.io/redis-adapter";
+import IORedis from "ioredis";
 import { Server as SocketIO } from "socket.io";
 import redisAdapter from "socket.io-redis";
-import { logger } from "../utils/logger";
 import User from "../models/User";
+import { logger } from "../utils/logger";
 import decodeTokenSocket from "./decodeTokenSocket";
-import IORedis from "ioredis";
 let io: SocketIO;
 
 export const initIO = async (httpServer: Server): SocketIO => {
@@ -32,8 +32,8 @@ export const initIO = async (httpServer: Server): SocketIO => {
 	// Configurar o adaptador Redis
 	io.adapter(createAdapter(pubClient, subClient));
 	// Evento para verificar conexões do Redis
-	pubClient.on("connect", () => console.log("PubClient conectado ao Redis"));
-	subClient.on("connect", () => console.log("SubClient conectado ao Redis"));
+	pubClient.on("connect", () => );
+	subClient.on("connect", () => );
 
 	// Erros de conexão
 	pubClient.on("error", (err) =>

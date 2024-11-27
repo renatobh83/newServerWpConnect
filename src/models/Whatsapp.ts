@@ -1,3 +1,4 @@
+import { Queue } from "bullmq";
 import { sign } from "jsonwebtoken";
 import {
 	AfterUpdate,
@@ -18,14 +19,13 @@ import {
 	Unique,
 	UpdatedAt,
 } from "sequelize-typescript";
+import { redisConfig } from "../app/bull";
 import authConfig from "../config/auth";
 import webHooks from "../config/webHooks.dev.json";
 import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
-import { Queue } from "bullmq";
-import { redisConfig } from "../app/bull";
 
 const queue = new Queue("WebHooksAPI", {
 	connection: {

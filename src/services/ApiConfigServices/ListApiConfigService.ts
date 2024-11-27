@@ -1,23 +1,22 @@
-
 import ApiConfig from "../../models/ApiConfig";
 
 interface Response {
-  apis: ApiConfig[];
+	apis: ApiConfig[];
 }
 
 interface Request {
-  tenantId: number | string;
+	tenantId: number | string;
 }
 
 const ListApiConfigService = async ({
-  tenantId
+	tenantId,
 }: Request): Promise<Response> => {
-  const apis = await ApiConfig.findAll({
-    where: { tenantId },
-    order: [["name", "ASC"]]
-  });
+	const apis = await ApiConfig.findAll({
+		where: { tenantId },
+		order: [["name", "ASC"]],
+	});
 
-  return { apis };
+	return { apis };
 };
 
 export default ListApiConfigService;

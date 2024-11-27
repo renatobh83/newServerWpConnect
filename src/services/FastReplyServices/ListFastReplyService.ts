@@ -1,20 +1,20 @@
 import FastReply from "../../models/FastReply";
 
 interface Request {
-  tenantId: string | number;
+	tenantId: string | number;
 }
 
 const ListFastReplyService = async ({
-  tenantId
+	tenantId,
 }: Request): Promise<FastReply[]> => {
-  const fastReplyData = await FastReply.findAll({
-    where: {
-      tenantId
-    },
-    order: [["key", "ASC"]]
-  });
+	const fastReplyData = await FastReply.findAll({
+		where: {
+			tenantId,
+		},
+		order: [["key", "ASC"]],
+	});
 
-  return fastReplyData;
+	return fastReplyData;
 };
 
 export default ListFastReplyService;

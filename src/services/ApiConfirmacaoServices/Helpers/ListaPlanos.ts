@@ -1,9 +1,9 @@
 import { doListaPlano } from "../../../helpers/SEMNOME";
 
 interface ConsultarLaudosProps {
-  tenantId: number;
+	tenantId: number;
 }
 export const ListarPlanos = async ({ tenantId }: ConsultarLaudosProps) => {
-  const data = await doListaPlano(tenantId);
-  return data;
+	const data = await doListaPlano(tenantId);
+	return data;
 };

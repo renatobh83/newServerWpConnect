@@ -1,6 +1,6 @@
 import LogTicket from "../../models/LogTicket";
-import User from "../../models/User";
 import Queue from "../../models/Queue";
+import User from "../../models/User";
 
 interface Request {
 	ticketId: string | number;

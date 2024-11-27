@@ -1,11 +1,11 @@
-import * as Yup from "yup";
 import type { Request, RequestHandler, Response } from "express";
+import * as Yup from "yup";
 
-import CreateAutoReplyService from "../services/AutoReplyServices/CreateAutoReplyService";
 import AppError from "../errors/AppError";
+import CreateAutoReplyService from "../services/AutoReplyServices/CreateAutoReplyService";
+import DeleteAutoReplyService from "../services/AutoReplyServices/DeleteAutoReplyService";
 import ListAutoReplyService from "../services/AutoReplyServices/ListAutoReplyService";
 import UpdateAutoReplyService from "../services/AutoReplyServices/UpdateAutoReplyService";
-import DeleteAutoReplyService from "../services/AutoReplyServices/DeleteAutoReplyService";
 
 interface AutoReplyData {
 	name: string;

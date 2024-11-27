@@ -1,9 +1,9 @@
+import type { Contact as WpContact } from "@wppconnect-team/wppconnect";
 import { QueryTypes } from "sequelize";
+import AppError from "../../errors/AppError";
 import { getWbot } from "../../libs/wbot";
 import Contact from "../../models/Contact";
-import AppError from "../../errors/AppError";
 import { logger } from "../../utils/logger";
-import type { Contact as WpContact } from "@wppconnect-team/wppconnect";
 
 const SyncContactsWhatsappInstanceService = async (
 	whatsappId: number,

@@ -3,13 +3,13 @@ import type { Request, RequestHandler, Response } from "express";
 // import { removeWbot } from "../libs/wbot";
 import AppError from "../errors/AppError";
 
+import { getIO } from "../libs/scoket";
+import { removeWbot } from "../libs/wbot";
+import CreateWhatsAppService from "../services/WhatsappService/CreateWhatsAppService";
 import DeleteWhatsAppService from "../services/WhatsappService/DeleteWhatsAppService";
 import ListWhatsAppsService from "../services/WhatsappService/ListWhatsAppsService";
 import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
 import UpdateWhatsAppService from "../services/WhatsappService/UpdateWhatsAppService";
-import CreateWhatsAppService from "../services/WhatsappService/CreateWhatsAppService";
-import { getIO } from "../libs/scoket";
-import { removeWbot } from "../libs/wbot";
 
 export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;

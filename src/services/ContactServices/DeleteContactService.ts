@@ -1,40 +1,40 @@
-import Contact from "../../models/Contact";
 import AppError from "../../errors/AppError";
-import Ticket from "../../models/Ticket";
 import socketEmit from "../../helpers/socketEmit";
+import Contact from "../../models/Contact";
+import Ticket from "../../models/Ticket";
 
 interface Request {
-  id: string | number;
-  tenantId: string | number;
+	id: string | number;
+	tenantId: string | number;
 }
 
 const DeleteContactService = async ({
-  id,
-  tenantId
+	id,
+	tenantId,
 }: Request): Promise<void> => {
-  const contact = await Contact.findOne({
-    where: { id, tenantId }
-  });
+	const contact = await Contact.findOne({
+		where: { id, tenantId },
+	});
 
-  if (!contact) {
-    throw new AppError("ERR_NO_CONTACT_FOUND", 404);
-  }
+	if (!contact) {
+		throw new AppError("ERR_NO_CONTACT_FOUND", 404);
+	}
 
-  const tickets = await Ticket.count({
-    where: { contactId: id }
-  });
+	const tickets = await Ticket.count({
+		where: { contactId: id },
+	});
 
-  if (tickets) {
-    throw new AppError("ERR_CONTACT_TICKETS_REGISTERED", 404);
-  }
+	if (tickets) {
+		throw new AppError("ERR_CONTACT_TICKETS_REGISTERED", 404);
+	}
 
-  await contact.destroy();
+	await contact.destroy();
 
-  socketEmit({
-    tenantId,
-    type: "contact:delete",
-    payload: contact
-  });
+	socketEmit({
+		tenantId,
+		type: "contact:delete",
+		payload: contact,
+	});
 };
 
 export default DeleteContactService;

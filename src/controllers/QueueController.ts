@@ -1,10 +1,10 @@
-import * as Yup from "yup";
 import type { Request, Response } from "express";
+import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
 import CreateQueueService from "../services/QueueServices/CreateQueueService";
-import ListQueueService from "../services/QueueServices/ListQueueService";
 import DeleteQueueService from "../services/QueueServices/DeleteQueueService";
+import ListQueueService from "../services/QueueServices/ListQueueService";
 import UpdateQueueService from "../services/QueueServices/UpdateQueueService";
 
 interface QueueData {

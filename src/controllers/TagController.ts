@@ -1,10 +1,10 @@
-import * as Yup from "yup";
 import type { Request, RequestHandler, Response } from "express";
+import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
 import CreateTagService from "../services/TagServices/CreateTagService";
-import ListTagService from "../services/TagServices/ListTagService";
 import DeleteTagService from "../services/TagServices/DeleteTagService";
+import ListTagService from "../services/TagServices/ListTagService";
 import UpdateTagService from "../services/TagServices/UpdateTagService";
 
 interface TagData {
@@ -47,7 +47,7 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 	const tags = await ListTagService({
 		tenantId,
 		// eslint-disable-next-line eqeqeq
-		isActive: isActive ? isActive == "true" : false,
+		isActive: isActive ? isActive === "true" : false,
 	});
 	res.status(200).json(tags);
 };

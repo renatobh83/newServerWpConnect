@@ -1,5 +1,5 @@
-import Tenant from "../../models/Tenant";
 import AppError from "../../errors/AppError";
+import Tenant from "../../models/Tenant";
 
 interface Request {
 	tenantId: string | number;
