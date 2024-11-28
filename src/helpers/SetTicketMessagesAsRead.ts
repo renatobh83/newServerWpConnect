@@ -20,10 +20,10 @@ const SetTicketMessagesAsRead = async (ticket: Ticket): Promise<void> => {
 	await ticket.update({ unreadMessages: 0 });
 
 	try {
-		if (ticket.channel === "whatsapp") {
+		if (ticket.channel === "whatsapp" && !ticket.isGroup) {
 			const wbot = await GetTicketWbot(ticket);
 			wbot
-				.sendSeen(`${ticket.contact.number}@${ticket.isGroup ? "g" : "c"}.us`)
+				.sendSeen(`${ticket.contact.number}@c.us`)
 				.catch((e) => console.error("não foi possível marcar como lido", e));
 		}
 	} catch (err) {

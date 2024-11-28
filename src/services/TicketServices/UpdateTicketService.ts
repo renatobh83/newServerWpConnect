@@ -78,7 +78,7 @@ const UpdateTicketService = async ({
 	const oldUserId = ticket.user?.id;
 
 	if (oldStatus === "closed") {
-		await CheckContactOpenTickets(ticket.contact.id);
+		// await CheckContactOpenTickets(ticket.contact.id);
 	}
 
 	// verificar se o front envia close e substituir por closed

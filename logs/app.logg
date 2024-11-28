@@ -516,3 +516,151 @@
   level: 'error',
   timestamp: '2024-11-28T11:09:18.940Z'
 }
+{
+  level: 'error',
+  message: 'value too long for type character varying(255)',
+  session: 46,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: value too long for type character varying(255)
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 99,
+    severity: 'ERROR',
+    code: '22001',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'varchar.c',
+    line: '637',
+    routine: 'varchar',
+    sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
+        'Cheguei a mandar por email \n' +
+        'segue os dados do novo.\n' +
+        'Segue os dados para ativação do circuito da Conrad\n' +
+        '\n' +
+        'BLOCO ALOCADO\n' +
+        'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
+        'GATEWAY: 45.175.249.132\n' +
+        'IP WAN: 45.175.249.133\n' +
+        '\n' +
+        'WAN IPV6: 2804:5f64:1000::94c/126\n' +
+        'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
+        '\n' +
+        'DNS 1: 177.74.224.29\n' +
+        'DNS 2: 177.74.225.22',
+      1732794063436,
+      false,
+      '2024-11-28 08:41:03.437 -03:00',
+      209
+    ]
+  },
+  original: error: value too long for type character varying(255)
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 99,
+    severity: 'ERROR',
+    code: '22001',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'varchar.c',
+    line: '637',
+    routine: 'varchar',
+    sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
+        'Cheguei a mandar por email \n' +
+        'segue os dados do novo.\n' +
+        'Segue os dados para ativação do circuito da Conrad\n' +
+        '\n' +
+        'BLOCO ALOCADO\n' +
+        'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
+        'GATEWAY: 45.175.249.132\n' +
+        'IP WAN: 45.175.249.133\n' +
+        '\n' +
+        'WAN IPV6: 2804:5f64:1000::94c/126\n' +
+        'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
+        '\n' +
+        'DNS 1: 177.74.224.29\n' +
+        'DNS 2: 177.74.225.22',
+      1732794063436,
+      false,
+      '2024-11-28 08:41:03.437 -03:00',
+      209
+    ]
+  },
+  sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
+      'Cheguei a mandar por email \n' +
+      'segue os dados do novo.\n' +
+      'Segue os dados para ativação do circuito da Conrad\n' +
+      '\n' +
+      'BLOCO ALOCADO\n' +
+      'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
+      'GATEWAY: 45.175.249.132\n' +
+      'IP WAN: 45.175.249.133\n' +
+      '\n' +
+      'WAN IPV6: 2804:5f64:1000::94c/126\n' +
+      'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
+      '\n' +
+      'DNS 1: 177.74.224.29\n' +
+      'DNS 2: 177.74.225.22',
+    1732794063436,
+    false,
+    '2024-11-28 08:41:03.437 -03:00',
+    209
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Ticket.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Ticket.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:27:2)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-28T11:41:04.427Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:47:20)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-11-28T12:21:51.159Z'
+}
