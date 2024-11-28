@@ -171,22 +171,22 @@ class Whatsapp extends Model<Whatsapp> {
 	@Column(DataType.VIRTUAL)
 	get UrlWabaWebHook(): string | null {
 		const key = this.getDataValue("tokenHook");
-		const wabaBSP = this.getDataValue("wabaBSP");
-		let BACKEND_URL = process.env.BACKEND_URL;
+		const wabaBsp = this.getDataValue("wabaBSP");
+		let backendUrl = process.env.BACKEND_URL;
 		if (process.env.NODE_ENV === "dev") {
-			BACKEND_URL = webHooks.urlWabahooks;
+			backendUrl = webHooks.urlWabahooks;
 		}
-		return `${BACKEND_URL}/wabahooks/${wabaBSP}/${key}`;
+		return `${backendUrl}/wabahooks/${wabaBsp}/${key}`;
 	}
 
 	@Column(DataType.VIRTUAL)
 	get UrlMessengerWebHook(): string | null {
 		const key = this.getDataValue("tokenHook");
-		let BACKEND_URL = process.env.BACKEND_URL;
+		let backendUrl = process.env.BACKEND_URL;
 		if (process.env.NODE_ENV === "dev") {
-			BACKEND_URL = webHooks.urlWabahooks;
+			backendUrl = webHooks.urlWabahooks;
 		}
-		return `${BACKEND_URL}/fb-messenger-hooks/${key}`;
+		return `${backendUrl}/fb-messenger-hooks/${key}`;
 	}
 
 	@AfterUpdate

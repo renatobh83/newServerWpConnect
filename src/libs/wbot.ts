@@ -92,7 +92,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 				},
 				catchQR: async (
 					base64Qr: any,
-					_asciiQR: any,
+					_asciiQr: any,
 					attempt: number,
 					urlCode?: string,
 				) => {

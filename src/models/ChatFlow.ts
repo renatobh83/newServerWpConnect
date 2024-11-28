@@ -28,6 +28,7 @@ class ChatFlow extends Model<ChatFlow> {
 	@Default({})
 	@AllowNull
 	@Column(DataType.JSON)
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	declare flow: any;
 
 	@Default(true)
@@ -40,7 +41,7 @@ class ChatFlow extends Model<ChatFlow> {
 
 	@Default(null)
 	@Column(DataType.TEXT)
-	declare celularTeste: string | null;
+	declare celularTeste?: string | null;
 
 	@ForeignKey(() => User)
 	@Column(DataType.INTEGER)
@@ -58,15 +59,16 @@ class ChatFlow extends Model<ChatFlow> {
 
 	@CreatedAt
 	@Column(DataType.DATE(6))
-	declare createdAt: Date;
+	declare createdAt?: Date;
 
 	@UpdatedAt
 	@Column(DataType.DATE(6))
-	declare updatedAt: Date;
+	declare updatedAt?: Date;
 
 	tableName: "ChatFlow";
 
 	// Método getter ajustado para o flow
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	get flowData(): any {
 		const flow = this.getDataValue("flow");
 		if (flow) {

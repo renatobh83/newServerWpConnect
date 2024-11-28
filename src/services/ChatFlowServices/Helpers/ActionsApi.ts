@@ -13,12 +13,12 @@ import { TemplateListaAtendimentos } from "../../../templates/ListaAtendimentos"
 import { TemplateConfirmaAgendamento } from "../../../templates/confirmacao";
 import { TemplateConsulta } from "../../../templates/consultaDados";
 import { validarCPF } from "../../../utils/ApiWebhook";
-import { ConsultaPaciente } from "../../ApiConfirmacaoServices/Helpers/ConsultaPacientes";
+import { ConsultaPaciente } from "../../../apiExternal/ApiGen/services/ApiConfirmacaoServices/Helpers/ConsultaPacientes";
 import {
 	ConsultarLaudos,
 	ConsultarLaudosNovo,
-} from "../../ApiConfirmacaoServices/Helpers/ConsultarLaudos";
-import { ListarPlanos } from "../../ApiConfirmacaoServices/Helpers/ListaPlanos";
+} from "../../../apiExternal/ApiGen/services/ApiConfirmacaoServices/Helpers/ConsultarLaudos";
+import { ListarPlanos } from "../../../apiExternal/ApiGen/services/ApiConfirmacaoServices/Helpers/ListaPlanos";
 import VerifyStepsChatFlowTicket from "../VerifyStepsChatFlowTicket";
 interface ResponseListaAtendimento {
 	ds_medico: string;

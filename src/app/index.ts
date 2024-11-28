@@ -9,14 +9,14 @@ export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const app: Express | any = express();
 	const httpServer: Server = createServer(app);
-	const PORT = 3100;
+	const port = 3100;
 
 	await bootstrap(app);
 
 	async function start() {
 		const host = app.get("host") || "0.0.0.0";
-		app.server = httpServer.listen(PORT, host, async () => {
-			logger.info(`Web server listening at: http://${host}:${PORT}/`);
+		app.server = httpServer.listen(port, host, async () => {
+			logger.info(`Web server listening at: http://${host}:${port}/`);
 			await StartAllWhatsAppsSessions();
 		});
 		app.use(express.json());

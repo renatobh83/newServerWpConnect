@@ -1,12 +1,8 @@
 import { writeFile } from "node:fs";
 import { join } from "node:path";
-/* eslint-disable no-restricted-syntax */
-// import AppError from "../../errors/AppError";
 import { promisify } from "node:util";
 import ChatFlow from "../../models/ChatFlow";
-// import { logger } from "../../utils/logger";
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const writeFileAsync = promisify(writeFile);
 
 interface Request {
@@ -16,6 +12,24 @@ interface Request {
 	userId: number;
 	tenantId: number;
 }
+type ChatFlowCreateAttributes = Pick<
+	ChatFlow,
+	"flow" | "userId" | "tenantId" | "name" | "isActive"
+>;
+type ChatFlowCreateAttributesP = Partial<
+	Pick<ChatFlow, "flow" | "userId" | "tenantId" | "name" | "isActive">
+>;
+interface ChatFlowCreationAttributesI {
+	flow: any;
+	userId: number;
+	tenantId: number;
+	name: string;
+	isActive: boolean;
+}
+type ChatFlowCreateAttributesO = Omit<
+	ChatFlow,
+	"tableName" | "sequelize" | "destroy" | "restore"
+>;
 
 const CreateChatFlowService = async ({
 	flow,

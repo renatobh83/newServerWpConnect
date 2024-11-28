@@ -15,7 +15,16 @@ function formatValue(value: number, metricName: string): string {
 	if (metricName === "process_start_time_seconds") {
 		// Converter timestamp UNIX para data legível
 		const date = new Date(value * 1000);
-		return date;
+		const formattedDate = date.toLocaleString("pt-BR", {
+			hour: "2-digit",
+			minute: "2-digit",
+			second: "2-digit",
+			hour12: false,
+			day: "2-digit",
+			month: "2-digit",
+			year: "2-digit",
+		});
+		return formattedDate;
 	}
 	if (value >= 1e9) {
 		return `${(value / 1e9).toFixed(2)} GB`;

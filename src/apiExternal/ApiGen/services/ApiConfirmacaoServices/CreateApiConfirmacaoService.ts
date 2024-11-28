@@ -1,5 +1,5 @@
 import { sign } from "jsonwebtoken";
-import ApiConfirmacao from "../../models/ApiConfirmacao";
+import ApiConfirmacao from "../../../../models/ApiConfirmacao";
 
 interface Request {
 	usuario: string;

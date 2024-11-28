@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --inspect=9229 --respawn --transpile-only --ignore node_modules src/server.ts",
-    "check-lint": "npx @biomejs/biome lint --write --unsafe --skip=style --skip=suspicious/noExplicitAny ./src",
+    "check-lint": "npx @biomejs/biome lint  --error-on-warnings --write --unsafe --skip=style --skip=suspicious/noExplicitAny ./src",
     "check": "npx @biomejs/biome check --fix --unsafe ./src"
   },
   "keywords": [],

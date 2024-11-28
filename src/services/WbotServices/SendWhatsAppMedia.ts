@@ -22,7 +22,8 @@ const SendWhatsAppMedia = async ({
 		const wbot = await GetTicketWbot(ticket);
 
 		const pathFile = media.path;
-		if (pathFile) {
+
+		if (!pathFile) {
 			throw new AppError("ERR_SENDING_WAPP_MSG");
 		}
 
@@ -53,7 +54,8 @@ const SendWhatsAppMedia = async ({
 
 		return sendMessage;
 	} catch (err) {
-		logger.error(`SendWhatsAppMedia | Error: ${err}`);
+		logger.error(`SendWhatsAppMedia | Error: ${JSON.stringify(err)}`);
+
 		// StartWhatsAppSessionVerify(ticket.whatsappId, err);
 		throw new AppError("ERR_SENDING_WAPP_MSG");
 	}

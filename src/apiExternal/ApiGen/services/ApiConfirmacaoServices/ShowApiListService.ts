@@ -1,20 +1,21 @@
-import AppError from "../../errors/AppError";
-import ApiConfirmacao from "../../models/ApiConfirmacao";
-import Whatsapp from "../../models/Whatsapp";
+import AppError from "../../../../errors/AppError";
+import ApiConfirmacao from "../../../../models/ApiConfirmacao";
+import Whatsapp from "../../../../models/Whatsapp";
 
 interface Data {
-	nomeApi: string;
+	id: string | number;
 	tenantId?: string | number;
+	isInternal?: boolean;
 }
 
-const ShowApiListServiceName = async ({
-	nomeApi,
+const ShowApiListService = async ({
+	id,
 	tenantId,
 }: Data): Promise<ApiConfirmacao> => {
-	const attr = ["action", "token", "token2", "baseURl"];
+	const attr = ["action", "token", "token2", "baseURl", "tenantId"];
 
 	const api = await ApiConfirmacao.findOne({
-		where: { nomeApi, tenantId },
+		where: { id, tenantId },
 		attributes: attr,
 	});
 
@@ -41,4 +42,4 @@ const ShowApiListServiceName = async ({
 	return api;
 };
 
-export default ShowApiListServiceName;
+export default ShowApiListService;

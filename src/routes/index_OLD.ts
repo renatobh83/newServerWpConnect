@@ -1,5 +1,5 @@
 import { NextFunction, type Request, type Response, Router } from "express";
-import QRCode from "qrcode";
+import qrCode from "qrcode";
 import { getWbot, initWbot } from "../libs/wbot";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
 
@@ -28,7 +28,7 @@ routes.get("/qrCode", async (req: Request, res: Response) => {
 				width: 500,
 			};
 			const qr = req.client
-				? await QRCode.toDataURL(
+				? await qrCode.toDataURL(
 						"2@ogcQHeD8I6VxG9sEYypd8Nwkd6EFTfA3w5NBuzPSin5SWZ5TiZk1CC9tDG3SuxuK+osuqp0RvxXPMUE85evZfm/Io5SM4mX57CQ=,GPYB6rGdnI3B94PJYMrUPxzLtmPSwptdx9sDKSNCQlM=,eJbuYo63saz7WHYUgwOcr7piiVwnpuODsHX8vomKeHA=,daKO7AmW3kKI4KvBmFujZA9sO6gMJe2BE4Up7A4NfJI=,1",
 						qrOptions,
 					)

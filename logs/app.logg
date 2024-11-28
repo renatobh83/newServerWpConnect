@@ -201,3 +201,318 @@
   ],
   timestamp: '2024-11-28T00:25:32.502Z'
 }
+{
+  error: Error: Cannot find module '../../../apiExternal/SEMNOME'
+  Require stack:
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\Helpers\ActionsApi.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\CheckChatFlowWebhook.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\BuildSendMessageService.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\VerifyStepsChatFlowTicket.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\HandleMessage.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\wbotMessageListener.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartWhatsAppSession.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartAllWhatsAppsSessions.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+      at Function._load (node:internal/modules/cjs/loader:1075:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1340:12)
+      at require (node:internal/modules/helpers:141:16)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\Helpers\ActionsApi.ts:1:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-2526532144934335.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '../../../apiExternal/SEMNOME'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    "Error: Cannot find module '../../../apiExternal/SEMNOME'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js:69:33)',
+  stack: "Error: Cannot find module '../../../apiExternal/SEMNOME'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts:1:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js:69:33)',
+  exception: true,
+  date: 'Thu Nov 28 2024 06:42:43 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 11296,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 156184576,
+      heapTotal: 104910848,
+      heapUsed: 74890608,
+      external: 3509727,
+      arrayBuffers: 446000
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 84137.656 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1249,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1075,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1340,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 141,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-11-28T09:42:43.942Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T10:59:55.831Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T10:59:55.834Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:00:08.447Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:00:08.448Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:00:36.096Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:00:36.097Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:02:18.776Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:02:18.779Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:03:04.709Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:03:04.712Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:03:32.194Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:03:32.196Z'
+}
+{
+  level: 'error',
+  message: "CreateMessageSystemService Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:201:26\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:170:4)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:2)',
+  timestamp: '2024-11-28T11:03:58.267Z'
+}
+{
+  level: 'error',
+  message: "CreateMessageSystemService Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:201:26\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:170:4)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:2)',
+  timestamp: '2024-11-28T11:04:47.535Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: [object Object]',
+  level: 'error',
+  timestamp: '2024-11-28T11:06:02.069Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:06:02.075Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: {"message":"ERR_SENDING_WAPP_MSG","statusCode":400}',
+  level: 'error',
+  timestamp: '2024-11-28T11:09:18.938Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-11-28T11:09:18.940Z'
+}

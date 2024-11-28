@@ -56,12 +56,12 @@ const HandleMsgAck = async (msg: Ack) => {
 			}
 		}
 
-		const messageAPI = await ApiMessage.findOne({
+		const messageApi = await ApiMessage.findOne({
 			where: { messageId: getId(msg) },
 		});
 
-		if (messageAPI) {
-			await messageAPI.update({ ack });
+		if (messageApi) {
+			await messageApi.update({ ack });
 		}
 
 		const messageCampaign = await CampaignContacts.findOne({

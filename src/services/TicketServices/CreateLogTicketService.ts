@@ -2,7 +2,7 @@
 // import socketEmit from "../../helpers/socketEmit";
 import LogTicket from "../../models/LogTicket";
 
-type logType =
+type LogType =
 	| "access"
 	| "create"
 	| "closed"
@@ -19,7 +19,7 @@ type logType =
 	| "retriesLimitUserDefine";
 
 interface Request {
-	type: logType;
+	type: LogType;
 	ticketId: number;
 	userId?: number;
 	queueId?: number;

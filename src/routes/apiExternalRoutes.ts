@@ -1,9 +1,9 @@
 import express from "express";
 import multer from "multer";
 import uploadConfig from "../config/upload";
-import isAPIAuth from "../middleware/isAPIAuth";
+import isApiAuth from "../middleware/isAPIAuth";
 
-import * as APIExternalController from "../controllers/APIExternalController";
+import * as apiExternalController from "../controllers/APIExternalController";
 import isAuth from "../middleware/isAuth";
 
 const apiExternalRoute = express.Router();
@@ -24,15 +24,15 @@ const upload = multer({
 
 apiExternalRoute.post(
 	"/v1/api/external/:apiId",
-	isAPIAuth,
+	isApiAuth,
 	upload.single("media"),
-	APIExternalController.sendMessageAPI,
+	apiExternalController.sendMessageAPI,
 );
 
 apiExternalRoute.post(
 	"/v1/api/external/:apiId/start-session",
-	isAPIAuth,
-	APIExternalController.startSession,
+	isApiAuth,
+	apiExternalController.startSession,
 );
 
 // apiExternalRoute.post(

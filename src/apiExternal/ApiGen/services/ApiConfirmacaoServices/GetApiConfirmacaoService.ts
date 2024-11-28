@@ -1,4 +1,4 @@
-import ApiConfirmacao from "../../models/ApiConfirmacao";
+import ApiConfirmacao from "../../../../models/ApiConfirmacao";
 
 interface Response {
 	action: string[];

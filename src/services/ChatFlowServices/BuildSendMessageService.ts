@@ -1,28 +1,27 @@
-import { fs, existsSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 
 import { promisify } from "node:util";
-import { CheckChatFlowWebhook } from "../../helpers/CheckChatFlowWebhook";
 import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
 import socketEmit from "../../helpers/socketEmit";
-// import SendMessageBlobHtml from "../../helpers/SendWhatsAppBlob";
 import type ApiConfirmacao from "../../models/ApiConfirmacao";
 import Message from "../../models/Message";
 import Ticket from "../../models/Ticket";
 import type { ResponseListaAgendamentos } from "../../templates/ListaAgendamentos";
 import { logger } from "../../utils/logger";
 import { pupa } from "../../utils/pupa";
-import ShowApiListService from "../ApiConfirmacaoServices/ShowApiListService";
-import {
-	ConfirmaExame,
-	ListaExamesPreparo,
-	apiConsulta,
-	apiConsultaCPF,
-	consultaAtendimentos,
-	getAgendamentos,
-	getLaudoPDF,
-	getPreparo,
-} from "./Helpers/ActionsApi";
+// import ShowApiListService from "../../apiExternal/ApiGen/services/ApiConfirmacaoServices/ShowApiListService";
+// import {
+// 	ConfirmaExame,
+// 	ListaExamesPreparo,
+// 	apiConsulta,
+// 	apiConsultaCPF,
+// 	consultaAtendimentos,
+// 	getAgendamentos,
+// 	getLaudoPDF,
+// 	getPreparo,
+// } from "./Helpers/ActionsApi";
+
 interface MessageData {
 	id?: string;
 	ticketId: number;
@@ -75,28 +74,23 @@ interface Request {
 	userId?: number | string;
 }
 
-interface ResponseListaAtendimento {
-	ds_medico: string;
-	dt_data: string;
-	ds_procedimento: string;
-	cd_exame: string;
-}
 // const writeFileAsync = promisify(writeFile);
-let codPaciente: number;
-let listaAtendimentos: ResponseListaAtendimento[];
-let listaAgendamentos: ResponseListaAgendamentos[];
-let servicesApi: ApiConfirmacao;
-const delay = promisify(setTimeout);
+// let codPaciente: number;
+// let listaAtendimentos: ResponseListaAtendimento[];
+// let listaAgendamentos: ResponseListaAgendamentos[];
+// let servicesApi: ApiConfirmacao;
 
-async function verificarArquivo(mediaPath, intervalo = 500, tentativas = 20) {
-	for (let i = 0; i < tentativas; i++) {
-		if (existsSync(mediaPath)) {
-			return true;
-		}
-		await delay(intervalo);
-	}
-	return false;
-}
+// const delay = promisify(setTimeout);
+
+// async function verificarArquivo(mediaPath, intervalo = 500, tentativas = 20) {
+// 	for (let i = 0; i < tentativas; i++) {
+// 		if (existsSync(mediaPath)) {
+// 			return true;
+// 		}
+// 		await delay(intervalo);
+// 	}
+// 	return false;
+// }
 const BuildSendMessageService = async ({
 	msg,
 	tenantId,
@@ -152,8 +146,8 @@ const BuildSendMessageService = async ({
 			const msgCreated = await Message.create({
 				...message,
 				...messageSent,
-				id: messageData.id,
-				messageId: messageSent.id?.id || messageSent.messageId || null,
+				id: messageData?.id,
+				messageId: messageSent?.id ?? messageSent?.messageId ?? "",
 			});
 
 			const messageCreated = await Message.findByPk(msgCreated.id, {
@@ -190,12 +184,13 @@ const BuildSendMessageService = async ({
 			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			// biome-ignore lint/style/useConst: <explanation>
 			let messageSent: any;
-			const mensagem = await CheckChatFlowWebhook(
-				msg.data.webhook,
-				tenantId,
-				ticket,
-				messageData,
-			);
+			const mensagem = true;
+			// await CheckChatFlowWebhook(
+			// 	msg.data.webhook,
+			// 	tenantId,
+			// 	ticket,
+			// 	messageData,
+			// );
 			if (mensagem === true || mensagem === undefined) return;
 			messageSent = await SendMessageSystemProxy({
 				ticket,
@@ -272,7 +267,7 @@ const BuildSendMessageService = async ({
 				...messageData,
 				...messageSent,
 				id: messageData.id,
-				messageId: messageSent.id?.id || messageSent.messageId || null,
+				messageId: messageSent?.id ?? messageSent?.messageId ?? "",
 				mediaType: "bot",
 			});
 

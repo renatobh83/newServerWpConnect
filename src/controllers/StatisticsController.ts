@@ -12,7 +12,7 @@ type IndexQuery = {
 	showAll: string;
 };
 
-type tContactReport = {
+type TContactReport = {
 	startDate: string;
 	endDate: string;
 	tags?: number[] | string[];
@@ -50,7 +50,7 @@ export const ContactsReport: RequestHandler = async (
 	//   throw new AppError("ERR_NO_PERMISSION", 403);
 	// }
 	const { startDate, endDate, tags, ddds, searchParam } =
-		req.query as tContactReport;
+		req.query as TContactReport;
 
 	const tickets = await ContactsReportService({
 		startDate,

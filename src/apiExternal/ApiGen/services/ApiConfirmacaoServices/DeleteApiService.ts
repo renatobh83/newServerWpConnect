@@ -1,5 +1,5 @@
-import AppError from "../../errors/AppError";
-import ApiConfirmacao from "../../models/ApiConfirmacao";
+import AppError from "../../../../errors/AppError";
+import ApiConfirmacao from "../../../../models/ApiConfirmacao";
 
 interface Request {
 	id: string | number;

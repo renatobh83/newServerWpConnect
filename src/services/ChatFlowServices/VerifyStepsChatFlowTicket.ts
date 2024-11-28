@@ -1,4 +1,3 @@
-/* eslint-disable no-return-assign */
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import socketEmit from "../../helpers/socketEmit";
 import type Ticket from "../../models/Ticket";

@@ -1,15 +1,15 @@
 import type { Server } from "node:http";
 import { createAdapter } from "@socket.io/redis-adapter";
-import IORedis from "ioredis";
-import { Server as SocketIO } from "socket.io";
+import ioRedis from "ioredis";
+import { Server as socketIo } from "socket.io";
 import redisAdapter from "socket.io-redis";
 import User from "../models/User";
 import { logger } from "../utils/logger";
 import decodeTokenSocket from "./decodeTokenSocket";
-let io: SocketIO;
+let io: socketIo;
 
-export const initIO = async (httpServer: Server): SocketIO => {
-	io = new SocketIO(httpServer, {
+export const initIO = async (httpServer: Server): socketIo => {
+	io = new socketIo(httpServer, {
 		cors: {
 			origin: ["http://localhost:5173", "https://app3.pluslive.online"],
 			credentials: true,
@@ -19,7 +19,7 @@ export const initIO = async (httpServer: Server): SocketIO => {
 		pingInterval: 60000,
 	});
 
-	const connRedis = new IORedis({
+	const connRedis = new ioRedis({
 		host: process.env.IO_REDIS_SERVER || "localhost",
 		port: +(process.env.IO_REDIS_PORT || 6379),
 		password: process.env.IO_REDIS_PASSWORD || undefined,
@@ -117,7 +117,7 @@ export const initIO = async (httpServer: Server): SocketIO => {
 	return io;
 };
 
-export const getIO = (): SocketIO => {
+export const getIO = (): socketIo => {
 	if (!io) {
 		throw new Error("erro socket");
 	}

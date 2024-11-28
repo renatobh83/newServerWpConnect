@@ -71,14 +71,14 @@ export const sendMessageConfirmacao = async (
 	const { contatos }: Configuracao = req.body;
 	const { apiId, authToken, idWbot } = req.params;
 
-	const APIConfig = await ApiConfig.findOne({
+	const apiConfig = await ApiConfig.findOne({
 		where: {
 			id: apiId,
 			authToken,
 		},
 	});
 
-	if (APIConfig === null) {
+	if (apiConfig === null) {
 		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
 	}
 
@@ -86,9 +86,9 @@ export const sendMessageConfirmacao = async (
 		externalKey: authToken,
 		body: contatos[0],
 		apiId,
-		sessionId: APIConfig.sessionId,
-		tenantId: APIConfig.tenantId,
-		apiConfig: APIConfig,
+		sessionId: apiConfig.sessionId,
+		tenantId: apiConfig.tenantId,
+		apiConfig: apiConfig,
 		idWbot,
 	};
 
@@ -110,14 +110,14 @@ export const sendMessageAPI: RequestHandler = async (
 	//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
 	// }
 
-	const APIConfig = await ApiConfig.findOne({
+	const apiConfig = await ApiConfig.findOne({
 		where: {
 			id: apiId,
 			tenantId,
 		},
 	});
 
-	if (APIConfig?.sessionId !== Number(sessionId)) {
+	if (apiConfig?.sessionId !== Number(sessionId)) {
 		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
 	}
 
@@ -126,7 +126,7 @@ export const sendMessageAPI: RequestHandler = async (
 		apiId,
 		sessionId,
 		tenantId,
-		apiConfig: APIConfig,
+		apiConfig: apiConfig,
 		media,
 	};
 
@@ -169,24 +169,24 @@ export const startSession: RequestHandler = async (
 	const { tenantId, sessionId } = req.APIAuth;
 	const { apiId } = req.params;
 
-	const APIConfig = await ApiConfig.findOne({
+	const apiConfig = await ApiConfig.findOne({
 		where: {
 			id: apiId,
 			tenantId,
 		},
 	});
 
-	if (APIConfig?.sessionId !== Number(sessionId)) {
+	if (apiConfig?.sessionId !== Number(sessionId)) {
 		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
 	}
 
 	const whatsapp = await ShowWhatsAppService({
-		id: APIConfig.sessionId,
-		tenantId: APIConfig.tenantId,
+		id: apiConfig.sessionId,
+		tenantId: apiConfig.tenantId,
 		isInternal: true,
 	});
 	try {
-		const wbot = getWbot(APIConfig.sessionId);
+		const wbot = getWbot(apiConfig.sessionId);
 		const isConnectStatus = (await wbot.getState()) === "CONNECTED";
 		if (!isConnectStatus) {
 			throw new Error("Necessário iniciar sessão");

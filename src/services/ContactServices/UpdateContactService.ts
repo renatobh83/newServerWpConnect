@@ -83,7 +83,7 @@ const UpdateContactService = async ({
 		});
 
 		const contactWallets: Wallet[] = [];
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		// biome-ignore lint/complexity/noForEach: <explanation>
 		wallets.forEach((wallet: any) => {
 			contactWallets.push({
 				walletId: !wallet.id ? wallet : wallet.id,

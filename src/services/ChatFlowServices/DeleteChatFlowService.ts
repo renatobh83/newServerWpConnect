@@ -1,9 +1,8 @@
 import { writeFile } from "node:fs";
-/* eslint-disable no-restricted-syntax */
+
 import { promisify } from "node:util";
 import AppError from "../../errors/AppError";
 import ChatFlow from "../../models/ChatFlow";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const writeFileAsync = promisify(writeFile);
 
 interface Request {
