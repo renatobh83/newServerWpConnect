@@ -1,4 +1,5 @@
 import { Queue } from "bullmq";
+import { env } from "../config/env";
 import {
 	AfterCreate,
 	AfterUpdate,
@@ -19,7 +20,7 @@ import Whatsapp from "./Whatsapp";
 
 const queue = new Queue("WebHooksAPI", {
 	connection: {
-		host: "109.199.105.36",
+		host: env.IO_REDIS_SERVER,
 		port: +(process.env.IO_REDIS_PORT || "6379"),
 		password: process.env.IO_REDIS_PASSWORD || undefined,
 	},
