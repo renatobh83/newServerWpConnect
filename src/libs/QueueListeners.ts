@@ -45,6 +45,7 @@ export default class QueueListener {
 		}
 	}
 	static onWaiting(jobId: string): void {
+		logger.info(`Job with ID ${jobId} is waiting`, "DEBUG");
 		QueueListener.log(`Job with ID ${jobId} is waiting`, "DEBUG");
 	}
 
@@ -61,48 +62,14 @@ export default class QueueListener {
 
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	static onCompleted(job: Job<JobConfig>, result: any): void {
+		logger.info(`Job with ID ${job} is completed`, "DEBUG");
 		QueueListener.log(`Job with ID ${job.id} completed`, "INFO");
 		QueueListener.log(`Result: ${JSON.stringify(result)}`, "DEBUG");
 	}
 
 	// eslint-disable-next-line consistent-return
 	static onFailed(job: Job<JobConfig>, err: Error) {
-		// if (job.opts.attempts && job.attemptsMade === job.opts.attempts) {
-		//   // if max attempts reached, execute fallback logic.
-		//   const jobConfig = job.data;
-		//   if (jobConfig.retryOptions?.fallbackUrl) {
-		//     const apiBody = {
-		//       ...jobConfig,
-		//       id: job.id,
-		//       error: err
-		//     };
-		//     // console.log("Sending fallback hook");
-		//     return axios.post(jobConfig.retryOptions.fallbackUrl, apiBody);
-		//   }
-		//   // if no fallback, mail admin that the job has failed repeatedly
-		//   const {
-		//     id: jobId,
-		//     data: jobData,
-		//     name: jobName,
-		//     opts: jobOpts,
-		//     timestamp
-		//   } = job;
-		//   const subject = `Job - ${jobId} failed ${job.attemptsMade} times`;
-		//   const mailBody = `
-		//                 <h1> Job Failed Repeatedly </h1>
-		//                 <div>
-		//                     <p> Job ID : ${jobId} </p>
-		//                     <p> Job Name: ${jobName} </p>
-		//                     <p> Timestamp: ${timestamp} </p
-		//                     <div> <p> JobData : </p>
-		//                     <code> ${JSON.stringify(jobData)} </code> </div>
-		//                     <div> <p> JobOptions : </p>
-		//                     <code> ${JSON.stringify(jobOpts)} </code> </div>
-		//                 </div>
-		//            `;
-		//   // return Mailer.sendMail(mailBody, subject);
-		//   console.error("On Failed", subject, mailBody);
-		// }
+		logger.info(`Job with ID ${job} is onFailed`, "DEBUG");
 	}
 
 	static onClean(jobs: Job<JobConfig>[], type: string): void {

@@ -13,10 +13,17 @@ import {
 	UpdatedAt,
 } from "sequelize-typescript";
 import { v4 as uuidV4 } from "uuid";
-import Queue from "../libs/Queue";
 import Tenant from "./Tenant";
 import Whatsapp from "./Whatsapp";
+import { Queue } from "bullmq";
 
+const queue = new Queue("WebHooksAPI", {
+	connection: {
+		host: "109.199.105.36",
+		port: +(process.env.IO_REDIS_PORT || "6379"),
+		password: process.env.IO_REDIS_PASSWORD || undefined,
+	},
+});
 class ApiMessage extends Model<ApiMessage> {
 	[x: string]: any;
 	@PrimaryKey
@@ -101,11 +108,11 @@ class ApiMessage extends Model<ApiMessage> {
 				authToken: instance.authToken, // Assumindo que 'authToken' seja um campo de ApiMessage
 			};
 
-			// Queue.add("WebHooksAPI", {
-			// 	url: instance.apiConfig.urlMessageStatus,
-			// 	type: payload.type,
-			// 	payload,
-			// });
+			queue.add("WebHooksAPI", {
+				url: instance.apiConfig.urlMessageStatus,
+				type: payload.type,
+				payload,
+			});
 		}
 	}
 }

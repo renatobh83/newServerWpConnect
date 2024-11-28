@@ -19,7 +19,6 @@ import {
 	Unique,
 	UpdatedAt,
 } from "sequelize-typescript";
-import { redisConfig } from "../app/bull";
 import authConfig from "../config/auth";
 import webHooks from "../config/webHooks.dev.json";
 import ApiConfig from "./ApiConfig";
