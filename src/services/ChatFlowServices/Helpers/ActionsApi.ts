@@ -3,7 +3,7 @@ import {
 	doGetAgendamentos,
 	doListaAtendimentos,
 	getPreparos,
-} from "../../../helpers/SEMNOME";
+} from "../../../apiExternal/SEMNOME";
 import { TemplateExamesPreparo } from "../../../templates/ExamesPreparo";
 import {
 	type ResponseListaAgendamentos,

@@ -1,8 +1,6 @@
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import AppError from "../../errors/AppError";
 import GetTicketWbot from "../../helpers/GetTicketWbot";
-import GetWbotMessage from "../../helpers/GetWbotMessage";
-import SerializeWbotMsgId from "../../helpers/SerializeWbotMsgId";
 import type Message from "../../models/Message";
 import type Ticket from "../../models/Ticket";
 import UserMessagesLog from "../../models/UserMessagesLog";

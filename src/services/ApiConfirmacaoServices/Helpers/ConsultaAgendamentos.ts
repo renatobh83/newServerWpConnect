@@ -1,4 +1,4 @@
-import { doGetAgendamentos } from "../../../helpers/SEMNOME";
+import { doGetAgendamentos } from "../../../apiExternal/SEMNOME";
 
 interface AxiosInstance {
 	baseURl: string;

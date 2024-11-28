@@ -1,5 +1,5 @@
 import AppError from "../../../errors/AppError";
-import { consultaPaciente } from "../../../helpers/SEMNOME";
+import { consultaPaciente } from "../../../apiExternal/SEMNOME";
 interface InstanceAxios {
 	baseURl: string;
 	token2: string;

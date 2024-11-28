@@ -1,4 +1,4 @@
-import { consultaLaudo, doGetLaudo } from "../../../helpers/SEMNOME";
+import { consultaLaudo, doGetLaudo } from "../../../apiExternal/SEMNOME";
 interface ConsultarLaudosNovo {
 	tenantId: number;
 	cdExame: number;

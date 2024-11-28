@@ -12,6 +12,7 @@ const SendMessagesSchenduleWbot = async (): Promise<void> => {
 			timeZone: process.env.TIMEZONE || "America/Sao_Paulo",
 		}),
 	);
+
 	const twentyFourHoursAgo = new Date(
 		currentDate.getTime() - 24 * 60 * 60 * 1000,
 	);

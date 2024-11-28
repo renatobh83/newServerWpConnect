@@ -1,4 +1,4 @@
-import { doListaPlano } from "../../../helpers/SEMNOME";
+import { doListaPlano } from "../../../apiExternal/SEMNOME";
 
 interface ConsultarLaudosProps {
 	tenantId: number;

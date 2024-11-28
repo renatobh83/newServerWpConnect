@@ -1,30 +1,24 @@
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
-import { fromUnixTime, isWithinInterval, parse } from "date-fns";
+import { fromUnixTime, parse, isWithinInterval } from "date-fns";
 import type Ticket from "../../../models/Ticket";
-import CreateMessageSystemService from "../../MessageServices/CreateMessageSystemService";
 import ShowBusinessHoursAndMessageService from "../../TenantServices/ShowBusinessHoursAndMessageService";
-// import { getIO } from "../../../libs/socket";
-// import SetTicketMessagesAsRead from "../../../helpers/SetTicketMessagesAsRead";
-// import SendWhatsAppMessage from "../SendWhatsAppMessage";
-// import Queue from "../../../libs/Queue";
-// import { sleepRandomTime } from "../../../utils/sleepRandomTime";
+import CreateMessageSystemService from "../../MessageServices/CreateMessageSystemService";
 
 const verifyBusinessHours = async (
 	msg: WbotMessage | any,
 	ticket: Ticket,
 ): Promise<boolean> => {
 	let isBusinessHours = true;
-
 	// Considerar o envio da mensagem de ausência se:
 	// Ticket não está no fluxo de autoresposta
 	// Ticket não estiver fechado
 	// Mensagem não enviada por usuário via sistema
-
 	// Não é um ticket referente a um grupo do whatsapp
 	if (ticket.status !== "closed" && !msg.fromMe && !ticket.isGroup) {
 		const tenant = await ShowBusinessHoursAndMessageService({
 			tenantId: ticket.tenantId,
 		});
+
 		const dateMsg = fromUnixTime(msg.timestamp);
 		const businessDay: any = tenant.businessHours.find(
 			(d: any) => d.day === dateMsg.getDay(),
@@ -75,7 +69,6 @@ const verifyBusinessHours = async (
 				sendType: "bot",
 				tenantId: ticket.tenantId,
 			};
-
 			await CreateMessageSystemService({
 				msg: messageData,
 				tenantId: ticket.tenantId,

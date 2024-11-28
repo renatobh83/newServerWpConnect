@@ -11,11 +11,11 @@ const SendMessageBlobHtml = async ({
 	ticket,
 	blob,
 	userId,
-}: Payload): Promise<Chat> => {
+}: Payload): Promise<void> => {
 	// biome-ignore lint/style/useConst: <explanation>
-	let message: Chat;
-	message = await SendMessageBlob({ base64Html: blob, ticket, userId });
-	return message;
+	// let message: Chat;
+	// message = await SendMessageBlob({ base64Html: blob, ticket, userId });
+	// return message;
 };
 
 export default SendMessageBlobHtml;

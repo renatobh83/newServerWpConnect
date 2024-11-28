@@ -1,20 +1,16 @@
 import type { Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 import DeleteMessageSystem from "../helpers/DeleteMessageSystem";
-// import GetTicketWbot from "../helpers/GetTicketWbot";
 
 import SetTicketMessagesAsRead from "../helpers/SetTicketMessagesAsRead";
 import type Message from "../models/Message";
 import CreateForwardMessageService from "../services/MessageServices/CreateForwardMessageService";
-// import CreateMessageOffilineService from "../services/MessageServices/CreateMessageOfflineService";
 import CreateMessageSystemService from "../services/MessageServices/CreateMessageSystemService";
 
 import ListMessagesService from "../services/MessageServices/ListMessagesService";
 import ShowTicketService from "../services/TicketServices/ShowTicketService";
 
 import { logger } from "../utils/logger";
-// import SendWhatsAppMedia from "../services/WbotServices/SendWhatsAppMedia";
-// import SendWhatsAppMessage from "../services/WbotServices/SendWhatsAppMessage";
 
 type IndexQuery = {
 	pageNumber: string;

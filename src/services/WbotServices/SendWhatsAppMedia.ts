@@ -1,6 +1,6 @@
 import fs from "node:fs";
 
-import type { Chat, Message, Whatsapp } from "@wppconnect-team/wppconnect";
+import type { Message } from "@wppconnect-team/wppconnect";
 import AppError from "../../errors/AppError";
 import GetTicketWbot from "../../helpers/GetTicketWbot";
 import type Ticket from "../../models/Ticket";
