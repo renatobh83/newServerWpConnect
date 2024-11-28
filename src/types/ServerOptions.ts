@@ -38,6 +38,7 @@ export interface ServerOptions {
 	};
 	createOptions: {
 		browserArgs: string[];
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		puppeteerOptions: any;
 	};
 	mapper: {

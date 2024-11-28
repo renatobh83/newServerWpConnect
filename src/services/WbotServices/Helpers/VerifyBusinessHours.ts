@@ -1,8 +1,8 @@
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
-import { fromUnixTime, parse, isWithinInterval } from "date-fns";
+import { fromUnixTime, isWithinInterval, parse } from "date-fns";
 import type Ticket from "../../../models/Ticket";
-import ShowBusinessHoursAndMessageService from "../../TenantServices/ShowBusinessHoursAndMessageService";
 import CreateMessageSystemService from "../../MessageServices/CreateMessageSystemService";
+import ShowBusinessHoursAndMessageService from "../../TenantServices/ShowBusinessHoursAndMessageService";
 
 const verifyBusinessHours = async (
 	msg: WbotMessage | any,

@@ -2,7 +2,7 @@ import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
 import type { Application } from "express";
-import { queues, addJob, processQueues } from "../libs/Queue";
+import { addJob, processQueues, queues } from "../libs/Queue";
 import { logger } from "../utils/logger";
 
 export const redisConfig = {

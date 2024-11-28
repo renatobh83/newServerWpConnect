@@ -12,6 +12,7 @@ import UpdateChatFlowService from "../services/ChatFlowServices/UpdateChatFlowSe
 interface Line {
 	connector: string;
 	from: string;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	paintStyle: string | any;
 	to: string;
 }
@@ -37,6 +38,7 @@ interface NodeList {
 	left: string;
 	name: string;
 	status: string;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	style?: string | any;
 	top: string;
 	type?: string;

@@ -14,10 +14,7 @@ interface Request {
 const ListAutoReplyService = async ({
 	tenantId,
 }: Request): Promise<Response> => {
-	// biome-ignore lint/style/useConst: <explanation>
-	let includeCondition: Includeable[];
-	// eslint-disable-next-line prefer-const
-	includeCondition = [
+	const includeCondition: Includeable[] = [
 		{
 			model: StepsReply,
 			include: [

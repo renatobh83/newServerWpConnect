@@ -17,7 +17,7 @@ const VerifyContact = async (
 		profilePicUrl = profilePicThumbObj.imgFull;
 	}
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// biome-ignore lint/suspicious/noExplicitAny: Contact Return
 	const contactData: any = {
 		name: msgContact.name || msgContact.pushname || msgContact.shortName,
 		number: number.split("@")[0],

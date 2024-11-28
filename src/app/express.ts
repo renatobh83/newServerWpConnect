@@ -10,12 +10,13 @@ export default async function express(
 	app: Application,
 	serverOptions: Partial<ServerOptions>,
 ) {
-	if (typeof serverOptions !== "object") {
-		serverOptions = {};
-	}
+	const normalizedServerOptions =
+		typeof serverOptions === "object" && serverOptions !== null
+			? serverOptions
+			: {};
 
-	defaultLogger.level = serverOptions?.log?.level
-		? serverOptions.log.level
+	defaultLogger.level = normalizedServerOptions?.log?.level
+		? normalizedServerOptions.log.level
 		: "silly";
 
 	app.use(
@@ -35,7 +36,7 @@ export default async function express(
 
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	app.use((req: any, res: any, next: NextFunction) => {
-		req.serverOptions = serverOptions;
+		req.serverOptions = normalizedServerOptions;
 		next();
 	});
 	logger.info("express already in server!");

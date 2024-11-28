@@ -31,7 +31,9 @@ import Whatsapp from "../models/Whatsapp";
 import { logger } from "../utils/logger";
 
 interface CustomSequelize extends Sequelize {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	afterConnect?: any;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	afterDisconnect?: any;
 }
 

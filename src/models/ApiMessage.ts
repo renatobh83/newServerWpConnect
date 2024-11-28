@@ -1,3 +1,4 @@
+import { Queue } from "bullmq";
 import {
 	AfterCreate,
 	AfterUpdate,
@@ -15,7 +16,6 @@ import {
 import { v4 as uuidV4 } from "uuid";
 import Tenant from "./Tenant";
 import Whatsapp from "./Whatsapp";
-import { Queue } from "bullmq";
 
 const queue = new Queue("WebHooksAPI", {
 	connection: {

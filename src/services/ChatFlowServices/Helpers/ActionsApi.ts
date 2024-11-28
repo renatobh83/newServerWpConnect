@@ -42,7 +42,7 @@ export const apiConsulta = async (
 	nome: string,
 	tenantId: number,
 	numero: string,
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// biome-ignore lint/suspicious/noExplicitAny: qualquer valor
 ): Promise<any[]> => {
 	const dataResponseConsulta = await ConsultaPaciente({
 		tenantId,

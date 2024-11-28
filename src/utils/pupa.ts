@@ -1,56 +1,49 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable prettier/prettier */
-
 import { getHours } from "date-fns";
 
-// Funções de escape e unescape para HTML
-const _htmlEscape = (string: string): string =>
+const escapeHtml = (string: string): string =>
 	string
-		.replace(/&/g, "&amp;") // Deve ocorrer primeiro para não escapar caracteres já escapados
+		.replace(/&/g, "&amp;")
 		.replace(/"/g, "&quot;")
 		.replace(/'/g, "&#39;")
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;");
 
-const _htmlUnescape = (htmlString: string): string =>
+const unescapeHtml = (htmlString: string): string =>
 	htmlString
 		.replace(/&gt;/g, ">")
 		.replace(/&lt;/g, "<")
 		.replace(/&#0?39;/g, "'")
 		.replace(/&quot;/g, '"')
-		.replace(/&amp;/g, "&"); // Deve ocorrer por último para evitar unescape incorreto
+		.replace(/&amp;/g, "&");
 
 export function htmlEscape(
 	strings: TemplateStringsArray | string,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	...values: any[]
 ): string {
 	if (typeof strings === "string") {
-		return _htmlEscape(strings);
+		return escapeHtml(strings);
 	}
 
-	let output = strings[0];
-	for (const [index, value] of values.entries()) {
-		output = output + _htmlEscape(String(value)) + strings[index + 1];
-	}
-
-	return output;
+	return strings.reduce(
+		(output, part, index) =>
+			output + escapeHtml(String(values[index - 1] || "")) + part,
+	);
 }
 
 export function htmlUnescape(
 	strings: TemplateStringsArray | string,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	...values: any[]
 ): string {
 	if (typeof strings === "string") {
-		return _htmlUnescape(strings);
+		return unescapeHtml(strings);
 	}
 
-	let output = strings[0];
-	for (const [index, value] of values.entries()) {
-		output = output + _htmlUnescape(String(value)) + strings[index + 1];
-	}
-
-	return output;
+	return strings.reduce(
+		(output, part, index) =>
+			output + unescapeHtml(String(values[index - 1] || "")) + part,
+	);
 }
 
 export class MissingValueError extends Error {
@@ -67,61 +60,58 @@ export class MissingValueError extends Error {
 
 export const pupa = function pupa(
 	template: string,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	data: Record<string, any>,
-	options: {
+	{
+		ignoreMissing = true,
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		transform = ({ value }: { value: any }) => value,
+	}: {
 		ignoreMissing?: boolean;
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		transform?: ({ value, key }: { value: any; key: string }) => any;
 	} = {},
 ): string {
-	const { ignoreMissing = true, transform = ({ value }) => value } = options;
-
-	const hours = getHours(new Date());
-	const getGreeting = (): string => {
-		if (hours >= 6 && hours <= 11) {
-			return "Bom dia!";
-		}
-		if (hours > 11 && hours <= 17) {
-			return "Boa Tarde!";
-		}
-		if (hours > 17 && hours <= 23) {
-			return "Boa Noite!";
-		}
+	const getGreeting = (hour = getHours(new Date())): string => {
+		if (hour >= 6 && hour <= 11) return "Bom dia!";
+		if (hour <= 17) return "Boa Tarde!";
+		if (hour <= 23) return "Boa Noite!";
 		return "Olá!";
 	};
 
-	data = { ...data, greeting: getGreeting() };
+	// const enhancedData = { ...data, greeting: getGreeting() };
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	const enhancedData: Record<string, any> = {
+		...data,
+		greeting: getGreeting(),
+	};
 
 	const replace = (placeholder: string, key: string): string => {
-		let value: any = data;
-		for (const property of key.split(".")) {
-			value = value ? value[property] : undefined;
-		}
+		const value = key
+			.split(".")
+			.reduce((acc, property) => acc?.[property], enhancedData);
 
 		const transformedValue = transform({ value, key });
 		if (transformedValue === undefined) {
-			if (ignoreMissing) {
-				return "";
-			}
-
+			if (ignoreMissing) return "";
 			throw new MissingValueError(key);
 		}
 
 		return String(transformedValue);
 	};
 
-	const composeHtmlEscape =
-		(replacer: (...args: any[]) => string) =>
-		(...args: any[]) =>
-			htmlEscape(replacer(...args));
-
-	// Regex para identificar {{ }} e {}
-	const doubleBraceRegex = /{{(\d+|[a-z$_][\w\-$]*?(?:\.[\w\-$]*?)*?)}}/gi;
-	const braceRegex = /{(\d+|[a-z$_][\w\-$]*?(?:\.[\w\-$]*?)*?)}/gi;
-
-	if (doubleBraceRegex.test(template)) {
-		const regex = new RegExp(doubleBraceRegex.source, doubleBraceRegex.flags); // Clonando regex para evitar problemas com flags
-		template = template.replace(regex, composeHtmlEscape(replace));
+	const bracePatterns = [
+		{ regex: /{{(\d+|[a-z$_][\w\-$]*?(?:\.[\w\-$]*?)*?)}}/gi, escape: true },
+		{ regex: /{(\d+|[a-z$_][\w\-$]*?(?:\.[\w\-$]*?)*?)}/gi, escape: false },
+	];
+	let processedTemplate = template;
+	// biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
+	for (const { regex, escape } of bracePatterns) {
+		processedTemplate = processedTemplate.replace(
+			regex,
+			escape ? (match, key) => htmlEscape(replace(match, key)) : replace,
+		);
 	}
 
-	return template.replace(braceRegex, replace);
+	return processedTemplate;
 };
