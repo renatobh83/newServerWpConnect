@@ -33,7 +33,6 @@ const SendWhatsAppMessage = async ({
 			body,
 			{
 				quotedMsg: quotedMsgSerializedId,
-				waitForAck: false, // fix: send a message takes 2 seconds when there's a link on message body
 			},
 		);
 

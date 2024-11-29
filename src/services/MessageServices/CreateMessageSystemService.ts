@@ -193,6 +193,8 @@ const CreateMessageSystemService = async ({
 							userId,
 						});
 					}
+					console.log(message.ack);
+					if (message.ack === 0) return;
 
 					const msgCreated = await Message.create({
 						...messageData,
@@ -249,7 +251,8 @@ const CreateMessageSystemService = async ({
 				});
 				///
 			}
-
+			console.log(message.ack);
+			if (message.ack === 0) return;
 			const msgCreated = await Message.create({
 				...messageData,
 				...message,

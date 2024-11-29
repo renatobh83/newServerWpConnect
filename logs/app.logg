@@ -677,3 +677,237 @@
     '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
   timestamp: '2024-11-29T15:40:02.473Z'
 }
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T18:51:41.570Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:41.880Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:41.891Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:42.138Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.684Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.700Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.709Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.720Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.732Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:43.741Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T18:51:43.997Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.772Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.793Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.805Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.813Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.823Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-11-29T18:51:58.831Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T18:51:59.066Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T18:52:00.827Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 46,
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-29T18:53:52.868Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 46,
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-11-29T18:55:51.133Z'
+}
+{
+  level: 'error',
+  message: 'CreateMessageSystemService ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at GetTicketWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\GetTicketWbot.ts:16:22)\n' +
+    '    at SendWhatsAppMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendWhatsAppMessage.ts:29:34)\n' +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:28:38)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:244:43)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:34)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T18:59:54.973Z'
+}
+{
+  level: 'error',
+  message: 'ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at remove (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\WhatsAppSessionController.ts:53:24)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-11-29T19:00:03.706Z'
+}
+{
+  session: 46,
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-11-29T19:00:05.204Z'
+}
+{
+  session: 46,
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-11-29T19:00:05.206Z'
+}
+{
+  level: 'error',
+  message: 'Auto Close Called',
+  session: 46,
+  type: 'client',
+  timestamp: '2024-11-29T19:00:21.609Z'
+}
