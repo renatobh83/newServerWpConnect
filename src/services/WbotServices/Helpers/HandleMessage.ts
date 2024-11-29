@@ -58,12 +58,12 @@ export const HandleMessage = async (
 				await wbot.getProfilePicFromServer(getId(msgContact));
 			if (msg.isGroupMsg) {
 				let msgGroupContact: WbotContact;
-
 				if (msg.fromMe) {
 					msgGroupContact = await wbot.getContact(msg.to);
 				} else {
 					msgGroupContact = await wbot.getContact(msg.from);
 				}
+
 				groupContact = (await VerifyContact(
 					msgGroupContact,
 					tenantId,

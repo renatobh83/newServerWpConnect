@@ -292,7 +292,7 @@ const FindOrCreateTicketService = async ({
 		});
 
 		return ticket;
-	} catch (error) {
+	} catch (_error) {
 		return;
 	}
 };
