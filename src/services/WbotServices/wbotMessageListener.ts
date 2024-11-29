@@ -37,7 +37,6 @@ export const wbotMessageListener = (wbot: Session): void => {
 	wbot.onAnyMessage(async (msg: Message) => {
 		if (msg.chatId === "status@broadcast") return;
 		await HandleMessage(msg, wbot);
-		console.log(msg);
 	});
 
 	wbot.onIncomingCall(async (call: IncomingCall) => {
@@ -46,7 +45,6 @@ export const wbotMessageListener = (wbot: Session): void => {
 
 	wbot.onReactionMessage((msg: MessageReaction) => {
 		HandleMsgReaction(msg);
-		console.log(msg, "onReactionMessage");
 	});
 	wbot.onAck((ack: Ack) => {
 		// HandleMsgAck(ack);
