@@ -31,12 +31,16 @@ const CreateLogTicketService = async ({
 	ticketId,
 	queueId,
 }: Request): Promise<void> => {
-	await LogTicket.create({
-		userId,
-		ticketId,
-		type,
-		queueId,
-	});
+	try {
+		await LogTicket.create({
+			userId,
+			ticketId,
+			type,
+			queueId,
+		});
+	} catch (error) {
+		console.log("Erro na criacao do log");
+	}
 
 	// socketEmit({
 	//   tenantId,

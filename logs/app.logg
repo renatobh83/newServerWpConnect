@@ -1,658 +1,13 @@
 {
-  error: Error: Cannot find module './SendWhatsAppBlob'
-  Require stack:
-  - /Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/BuildSendMessageService.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/VerifyStepsChatFlowTicket.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/Helpers/HandleMessage.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/wbotMessageListener.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/libs/wbot.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartWhatsAppSession.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartAllWhatsAppsSessions.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts
-  - /Users/renatomendonca/Desktop/Node/p1/src/server.ts
-      at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)
-      at Function._load (node:internal/modules/cjs/loader:1064:27)
-      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
-      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
-      at Module.require (node:internal/modules/cjs/loader:1325:12)
-      at require (node:internal/modules/helpers:136:16)
-      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts:22:1)
-      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
-      at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)
-      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-032529401067396435.js:69:33) {
-    code: 'MODULE_NOT_FOUND',
-    requireStack: [
-      '/Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/BuildSendMessageService.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/VerifyStepsChatFlowTicket.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/Helpers/HandleMessage.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/wbotMessageListener.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/libs/wbot.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartWhatsAppSession.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartAllWhatsAppsSessions.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/app/index.ts',
-      '/Users/renatomendonca/Desktop/Node/p1/src/server.ts'
-    ]
-  },
   level: 'error',
-  message: "uncaughtException: Cannot find module './SendWhatsAppBlob'\n" +
-    'Require stack:\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/BuildSendMessageService.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/VerifyStepsChatFlowTicket.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/Helpers/HandleMessage.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/wbotMessageListener.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/libs/wbot.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartWhatsAppSession.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartAllWhatsAppsSessions.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
-    "Error: Cannot find module './SendWhatsAppBlob'\n" +
-    'Require stack:\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/BuildSendMessageService.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/VerifyStepsChatFlowTicket.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/Helpers/HandleMessage.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/wbotMessageListener.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/libs/wbot.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartWhatsAppSession.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartAllWhatsAppsSessions.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
-    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
-    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
-    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
-    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
-    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
-    '    at require (node:internal/modules/helpers:136:16)\n' +
-    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts:22:1)\n' +
-    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
-    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
-    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-032529401067396435.js:69:33)',
-  stack: "Error: Cannot find module './SendWhatsAppBlob'\n" +
-    'Require stack:\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/BuildSendMessageService.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/ChatFlowServices/VerifyStepsChatFlowTicket.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/Helpers/HandleMessage.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/wbotMessageListener.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/libs/wbot.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartWhatsAppSession.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/services/WbotServices/StartAllWhatsAppsSessions.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/app/index.ts\n' +
-    '- /Users/renatomendonca/Desktop/Node/p1/src/server.ts\n' +
-    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
-    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
-    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
-    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
-    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
-    '    at require (node:internal/modules/helpers:136:16)\n' +
-    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts:22:1)\n' +
-    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
-    '    at Module._compile (/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js:568:25)\n' +
-    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-032529401067396435.js:69:33)',
-  exception: true,
-  date: 'Wed Nov 27 2024 21:25:32 GMT-0300 (Horário Padrão de Brasília)',
-  process: {
-    pid: 3212,
-    uid: 501,
-    gid: 20,
-    cwd: '/Users/renatomendonca/Desktop/Node/p1',
-    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
-    version: 'v23.3.0',
-    argv: [
-      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
-      'src/server.ts'
-    ],
-    memoryUsage: {
-      rss: 182386688,
-      heapTotal: 113295360,
-      heapUsed: 86162800,
-      external: 3403752,
-      arrayBuffers: 116838
-    }
-  },
-  os: {
-    loadavg: [ 2.1611328125, 1.5654296875, 1.83837890625 ],
-    uptime: 3553
-  },
-  trace: [
-    {
-      column: 15,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Function._resolveFilename',
-      line: 1239,
-      method: '_resolveFilename',
-      native: false
-    },
-    {
-      column: 27,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Function._load',
-      line: 1064,
-      method: '_load',
-      native: false
-    },
-    {
-      column: 14,
-      file: 'node:diagnostics_channel',
-      function: 'TracingChannel.traceSync',
-      line: 322,
-      method: 'traceSync',
-      native: false
-    },
-    {
-      column: 24,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'wrapModuleLoad',
-      line: 218,
-      method: null,
-      native: false
-    },
-    {
-      column: 12,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Module.require',
-      line: 1325,
-      method: 'require',
-      native: false
-    },
-    {
-      column: 16,
-      file: 'node:internal/modules/helpers',
-      function: 'require',
-      line: 136,
-      method: null,
-      native: false
-    },
-    {
-      column: 1,
-      file: '/Users/renatomendonca/Desktop/Node/p1/src/helpers/CheckChatFlowWebhook.ts',
-      function: null,
-      line: 22,
-      method: null,
-      native: false
-    },
-    {
-      column: 14,
-      file: 'node:internal/modules/cjs/loader',
-      function: null,
-      line: 1546,
-      method: null,
-      native: false
-    },
-    {
-      column: 25,
-      file: '/Users/renatomendonca/Desktop/Node/p1/node_modules/source-map-support/source-map-support.js',
-      function: 'Module._compile',
-      line: 568,
-      method: '_compile',
-      native: false
-    },
-    {
-      column: 33,
-      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-032529401067396435.js',
-      function: 'Module.m._compile',
-      line: 69,
-      method: '_compile',
-      native: false
-    }
-  ],
-  timestamp: '2024-11-28T00:25:32.502Z'
-}
-{
-  error: Error: Cannot find module '../../../apiExternal/SEMNOME'
-  Require stack:
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\Helpers\ActionsApi.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\CheckChatFlowWebhook.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\BuildSendMessageService.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\VerifyStepsChatFlowTicket.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\HandleMessage.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\wbotMessageListener.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartWhatsAppSession.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartAllWhatsAppsSessions.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
-  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
-      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
-      at Function._load (node:internal/modules/cjs/loader:1075:27)
-      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
-      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
-      at Module.require (node:internal/modules/cjs/loader:1340:12)
-      at require (node:internal/modules/helpers:141:16)
-      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\ChatFlowServices\Helpers\ActionsApi.ts:1:1)
-      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
-      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
-      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-2526532144934335.js:69:33) {
-    code: 'MODULE_NOT_FOUND',
-    requireStack: [
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
-    ]
-  },
-  level: 'error',
-  message: "uncaughtException: Cannot find module '../../../apiExternal/SEMNOME'\n" +
-    'Require stack:\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
-    "Error: Cannot find module '../../../apiExternal/SEMNOME'\n" +
-    'Require stack:\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
-    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
-    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
-    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
-    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
-    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
-    '    at require (node:internal/modules/helpers:141:16)\n' +
-    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts:1:1)\n' +
-    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
-    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
-    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js:69:33)',
-  stack: "Error: Cannot find module '../../../apiExternal/SEMNOME'\n" +
-    'Require stack:\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\CheckChatFlowWebhook.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\BuildSendMessageService.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\VerifyStepsChatFlowTicket.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
-    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
-    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
-    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
-    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
-    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
-    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
-    '    at require (node:internal/modules/helpers:141:16)\n' +
-    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts:1:1)\n' +
-    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
-    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
-    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js:69:33)',
-  exception: true,
-  date: 'Thu Nov 28 2024 06:42:43 GMT-0300 (Horário Padrão de Brasília)',
-  process: {
-    pid: 11296,
-    uid: null,
-    gid: null,
-    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
-    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
-    version: 'v22.11.0',
-    argv: [
-      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
-      'src/server.ts'
-    ],
-    memoryUsage: {
-      rss: 156184576,
-      heapTotal: 104910848,
-      heapUsed: 74890608,
-      external: 3509727,
-      arrayBuffers: 446000
-    }
-  },
-  os: { loadavg: [ 0, 0, 0 ], uptime: 84137.656 },
-  trace: [
-    {
-      column: 15,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Function._resolveFilename',
-      line: 1249,
-      method: '_resolveFilename',
-      native: false
-    },
-    {
-      column: 27,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Function._load',
-      line: 1075,
-      method: '_load',
-      native: false
-    },
-    {
-      column: 14,
-      file: 'node:diagnostics_channel',
-      function: 'TracingChannel.traceSync',
-      line: 315,
-      method: 'traceSync',
-      native: false
-    },
-    {
-      column: 24,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'wrapModuleLoad',
-      line: 218,
-      method: null,
-      native: false
-    },
-    {
-      column: 12,
-      file: 'node:internal/modules/cjs/loader',
-      function: 'Module.require',
-      line: 1340,
-      method: 'require',
-      native: false
-    },
-    {
-      column: 16,
-      file: 'node:internal/modules/helpers',
-      function: 'require',
-      line: 141,
-      method: null,
-      native: false
-    },
-    {
-      column: 1,
-      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ChatFlowServices\\Helpers\\ActionsApi.ts',
-      function: null,
-      line: 1,
-      method: null,
-      native: false
-    },
-    {
-      column: 14,
-      file: 'node:internal/modules/cjs/loader',
-      function: null,
-      line: 1546,
-      method: null,
-      native: false
-    },
-    {
-      column: 25,
-      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
-      function: 'Module._compile',
-      line: 568,
-      method: '_compile',
-      native: false
-    },
-    {
-      column: 33,
-      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-2526532144934335.js',
-      function: 'Module.m._compile',
-      line: 69,
-      method: '_compile',
-      native: false
-    }
-  ],
-  timestamp: '2024-11-28T09:42:43.942Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T10:59:55.831Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T10:59:55.834Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:00:08.447Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:00:08.448Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:00:36.096Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:00:36.097Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:02:18.776Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:02:18.779Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:03:04.709Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:03:04.712Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:03:32.194Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:03:32.196Z'
-}
-{
-  level: 'error',
-  message: "CreateMessageSystemService Cannot read properties of undefined (reading 'id')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:201:26\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
-    '    at async Promise.all (index 0)\n' +
-    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:170:4)\n' +
-    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:2)',
-  timestamp: '2024-11-28T11:03:58.267Z'
-}
-{
-  level: 'error',
-  message: "CreateMessageSystemService Cannot read properties of undefined (reading 'id')",
-  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:201:26\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
-    '    at async Promise.all (index 0)\n' +
-    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:170:4)\n' +
-    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:2)',
-  timestamp: '2024-11-28T11:04:47.535Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: [object Object]',
-  level: 'error',
-  timestamp: '2024-11-28T11:06:02.069Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:06:02.075Z'
-}
-{
-  message: 'SendWhatsAppMedia | Error: {"message":"ERR_SENDING_WAPP_MSG","statusCode":400}',
-  level: 'error',
-  timestamp: '2024-11-28T11:09:18.938Z'
-}
-{
-  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
-  statusCode: 400,
-  level: 'error',
-  timestamp: '2024-11-28T11:09:18.940Z'
-}
-{
-  level: 'error',
-  message: 'value too long for type character varying(255)',
+  message: "Cannot read properties of undefined (reading 'id')",
   session: 46,
   type: 'client',
-  name: 'SequelizeDatabaseError',
-  parent: error: value too long for type character varying(255)
-      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
-      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
-      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
-      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
-      at Socket.emit (node:events:518:28)
-      at addChunk (node:internal/streams/readable:561:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
-      at Socket.Readable.push (node:internal/streams/readable:392:5)
-      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
-    length: 99,
-    severity: 'ERROR',
-    code: '22001',
-    detail: undefined,
-    hint: undefined,
-    position: undefined,
-    internalPosition: undefined,
-    internalQuery: undefined,
-    where: undefined,
-    schema: undefined,
-    table: undefined,
-    column: undefined,
-    dataType: undefined,
-    constraint: undefined,
-    file: 'varchar.c',
-    line: '637',
-    routine: 'varchar',
-    sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
-    parameters: [
-      'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
-        'Cheguei a mandar por email \n' +
-        'segue os dados do novo.\n' +
-        'Segue os dados para ativação do circuito da Conrad\n' +
-        '\n' +
-        'BLOCO ALOCADO\n' +
-        'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
-        'GATEWAY: 45.175.249.132\n' +
-        'IP WAN: 45.175.249.133\n' +
-        '\n' +
-        'WAN IPV6: 2804:5f64:1000::94c/126\n' +
-        'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
-        '\n' +
-        'DNS 1: 177.74.224.29\n' +
-        'DNS 2: 177.74.225.22',
-      1732794063436,
-      false,
-      '2024-11-28 08:41:03.437 -03:00',
-      209
-    ]
-  },
-  original: error: value too long for type character varying(255)
-      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
-      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
-      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
-      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
-      at Socket.emit (node:events:518:28)
-      at addChunk (node:internal/streams/readable:561:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
-      at Socket.Readable.push (node:internal/streams/readable:392:5)
-      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
-    length: 99,
-    severity: 'ERROR',
-    code: '22001',
-    detail: undefined,
-    hint: undefined,
-    position: undefined,
-    internalPosition: undefined,
-    internalQuery: undefined,
-    where: undefined,
-    schema: undefined,
-    table: undefined,
-    column: undefined,
-    dataType: undefined,
-    constraint: undefined,
-    file: 'varchar.c',
-    line: '637',
-    routine: 'varchar',
-    sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
-    parameters: [
-      'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
-        'Cheguei a mandar por email \n' +
-        'segue os dados do novo.\n' +
-        'Segue os dados para ativação do circuito da Conrad\n' +
-        '\n' +
-        'BLOCO ALOCADO\n' +
-        'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
-        'GATEWAY: 45.175.249.132\n' +
-        'IP WAN: 45.175.249.133\n' +
-        '\n' +
-        'WAN IPV6: 2804:5f64:1000::94c/126\n' +
-        'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
-        '\n' +
-        'DNS 1: 177.74.224.29\n' +
-        'DNS 2: 177.74.225.22',
-      1732794063436,
-      false,
-      '2024-11-28 08:41:03.437 -03:00',
-      209
-    ]
-  },
-  sql: 'UPDATE "Tickets" SET "lastMessage"=$1,"lastMessageAt"=$2,"answered"=$3,"updatedAt"=$4 WHERE "id" = $5',
-  parameters: [
-    'Mensagem do Julio da Conrad ontem: instalaram um novo link dedicado na conrad. \n' +
-      'Cheguei a mandar por email \n' +
-      'segue os dados do novo.\n' +
-      'Segue os dados para ativação do circuito da Conrad\n' +
-      '\n' +
-      'BLOCO ALOCADO\n' +
-      'BLOCO: 45.175.249.132/31 (255.255.255.254)\n' +
-      'GATEWAY: 45.175.249.132\n' +
-      'IP WAN: 45.175.249.133\n' +
-      '\n' +
-      'WAN IPV6: 2804:5f64:1000::94c/126\n' +
-      'LAN IPV6: 2804:5f64:2000:ac00::/56\n' +
-      '\n' +
-      'DNS 1: 177.74.224.29\n' +
-      'DNS 2: 177.74.225.22',
-    1732794063436,
-    false,
-    '2024-11-28 08:41:03.437 -03:00',
-    209
-  ],
-  stack: 'Error: \n' +
-    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
-    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
-    '    at Ticket.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
-    '    at Ticket.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
-    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:27:2)\n' +
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
     '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
-  timestamp: '2024-11-28T11:41:04.427Z'
+  timestamp: '2024-11-29T10:51:16.213Z'
 }
 {
   level: 'error',
@@ -660,7 +15,140 @@
   session: 46,
   type: 'client',
   stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
-    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:47:20)\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
-  timestamp: '2024-11-28T12:21:51.159Z'
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T12:42:27.081Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:111:5',
+  timestamp: '2024-11-29T12:45:16.194Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T12:48:41.877Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T12:49:57.054Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T12:52:12.730Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:05:41.644Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:06:39.469Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:09:39.975Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:12:57.035Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:21:20.625Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:23:11.400Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:24:45.041Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 46,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:16:20)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:110:5',
+  timestamp: '2024-11-29T13:25:46.156Z'
 }

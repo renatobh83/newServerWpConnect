@@ -3,7 +3,7 @@ import { Op } from "sequelize";
 
 import type { Message } from "@wppconnect-team/wppconnect";
 // import CheckChatBotWelcome from "../../helpers/CheckChatBotWelcome";
-import CheckChatBotFlowWelcome from "../../helpers/CheckChatBotWelcome";
+
 import socketEmit from "../../helpers/socketEmit";
 import CampaignContacts from "../../models/CampaignContacts";
 import Confirmacao from "../../models/Confirmacao";
@@ -14,6 +14,7 @@ import User from "../../models/User";
 import ListSettingsService from "../SettingServices/ListSettingsService";
 import CreateLogTicketService from "./CreateLogTicketService";
 import ShowTicketService from "./ShowTicketService";
+import CheckChatBotFlowWelcome from "../../helpers/CheckChatBotFlowWelcome";
 
 interface Data {
 	contact: Contact;
@@ -281,6 +282,7 @@ const FindOrCreateTicketService = async ({
 		}
 
 		ticket = await ShowTicketService({ id: ticketCreated.id, tenantId });
+
 		ticket.setDataValue("isCreated", true);
 
 		socketEmit({
