@@ -23,7 +23,6 @@ const VerifyMessage = async (
 		timestamp: msg.timestamp,
 		status: "received",
 	};
-
 	await ticket.update({
 		lastMessage: msg.content,
 		lastMessageAt: new Date().getTime(),

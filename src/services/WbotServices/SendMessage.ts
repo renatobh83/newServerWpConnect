@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import type { Chat, Whatsapp } from "@wppconnect-team/wppconnect";
+import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import { getWbot } from "../../libs/wbot";
 import Message from "../../models/Message";
 import { logger } from "../../utils/logger";
@@ -7,7 +7,7 @@ import { logger } from "../../utils/logger";
 const SendMessage = async (message: Message): Promise<void> => {
 	logger.info(`SendMessage: ${message.id}`);
 	const wbot = getWbot(message.ticket.whatsappId);
-	let sendedMessage: Whatsapp;
+	let sendedMessage: WbotMessage;
 
 	let quotedMsgSerializedId: string | undefined;
 	const { ticket } = message;
@@ -23,16 +23,12 @@ const SendMessage = async (message: Message): Promise<void> => {
 		const customPath = join(__dirname, "..", "..", "..", "public");
 		const mediaPath = join(customPath, message.mediaName);
 		// const newMedia = MessageMedia.fromFilePath(mediaPath);
-		// sendedMessage = await wbot.sendMessage(chatId, newMedia, {
-		// 	quotedMessageId: quotedMsgSerializedId,
-		// 	linkPreview: false, // fix: send a message takes 2 seconds when there's a link on message body
-		// 	sendAudioAsVoice: true,
-		// });
+		sendedMessage = await wbot.sendFile(chatId, mediaPath, {});
 	} else {
-		// sendedMessage = await wbot.sendMessage(chatId, message.body, {
-		// 	quotedMessageId: quotedMsgSerializedId,
-		// 	linkPreview: false, // fix: send a message takes 2 seconds when there's a link on message body
-		// });
+		sendedMessage = await wbot.sendText(chatId, message.body, {
+			quotedMsg: quotedMsgSerializedId,
+			linkPreview: false, // fix: send a message takes 2 seconds when there's a link on message body
+		});
 	}
 
 	// enviar old_id para substituir no front a mensagem corretamente
@@ -40,14 +36,14 @@ const SendMessage = async (message: Message): Promise<void> => {
 		...message,
 		...sendedMessage,
 		id: message.id,
-		messageId: sendedMessage.id.id,
+		messageId: sendedMessage.id,
 		status: "sended",
-	};
+	} as unknown as Message;
 	// TODO Removido update ate verificar erro TS
 
 	await Message.update({ ...messageToUpdate }, { where: { id: message.id } });
 
-	logger.info("rabbit::sendedMessage", sendedMessage.id.id);
+	logger.info("rabbit::sendedMessage", sendedMessage.id);
 };
 
 export default SendMessage;

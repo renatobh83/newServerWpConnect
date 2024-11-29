@@ -31,6 +31,7 @@ export const HandleMessage = async (
 			if (!isValidMsg(msg)) {
 				return;
 			}
+
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;
@@ -56,6 +57,7 @@ export const HandleMessage = async (
 			}
 			const profilePicUrl: ProfilePicThumbObj | undefined =
 				await wbot.getProfilePicFromServer(getId(msgContact));
+
 			if (msg.isGroupMsg) {
 				let msgGroupContact: WbotContact;
 				if (msg.fromMe) {

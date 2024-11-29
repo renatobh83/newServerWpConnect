@@ -452,3 +452,228 @@
   ],
   timestamp: '2024-11-29T13:39:20.057Z'
 }
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:33:01.499Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:33:01.501Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:34:02.390Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:34:02.392Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:35:01.237Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:35:01.238Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:36:01.413Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:36:01.418Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:37:02.667Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:37:02.671Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:38:02.695Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:38:02.700Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:39:01.840Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:39:01.844Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:40:02.470Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:40:02.472Z'
+}
+{
+  level: 'error',
+  message: "SendMessagesSchenduleWbot > SendMessage Cannot read properties of undefined (reading 'id')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:43:28)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:80:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:19:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:64:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-11-29T15:40:02.473Z'
+}
