@@ -6,7 +6,7 @@ import type {
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import { HandleMessage } from "./Helpers/HandleMessage";
-import HandleMsgAck from "./Helpers/HandleMsgAck";
+// import HandleMsgAck from "./Helpers/HandleMsgAck";
 import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
 import { VerifyCall } from "./VerifyCall";
 
@@ -47,7 +47,7 @@ export const wbotMessageListener = (wbot: Session): void => {
 		HandleMsgReaction(msg);
 	});
 	wbot.onAck((ack: Ack) => {
-		HandleMsgAck(ack);
+		// HandleMsgAck(ack);
 	});
 	wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
 };
