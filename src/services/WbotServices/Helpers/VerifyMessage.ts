@@ -19,10 +19,11 @@ const VerifyMessage = async (
 		fromMe: msg.fromMe,
 		mediaType: msg.type,
 		read: msg.fromMe,
-		quotedMsgId: quotedMsg?.id,
+		quotedMsgId: quotedMsg?.messageId,
 		timestamp: msg.timestamp,
 		status: "received",
 	};
+
 	await ticket.update({
 		lastMessage: msg.content,
 		lastMessageAt: new Date().getTime(),

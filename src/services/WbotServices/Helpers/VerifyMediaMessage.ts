@@ -51,7 +51,7 @@ const VerifyMediaMessage = async (
 		read: msg.fromMe,
 		mediaUrl: msg.id,
 		mediaType: msg.mimetype.split("/")[0],
-		quotedMsgId: quotedMsg?.id,
+		quotedMsgId: quotedMsg?.messageId,
 		timestamp: msg.timestamp,
 		status: msg.fromMe ? "sended" : "received",
 	};

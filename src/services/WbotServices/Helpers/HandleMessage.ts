@@ -31,7 +31,6 @@ export const HandleMessage = async (
 			if (!isValidMsg(msg)) {
 				return;
 			}
-
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;
@@ -57,22 +56,20 @@ export const HandleMessage = async (
 			}
 			const profilePicUrl: ProfilePicThumbObj | undefined =
 				await wbot.getProfilePicFromServer(getId(msgContact));
-
 			if (msg.isGroupMsg) {
 				let msgGroupContact: WbotContact;
+
 				if (msg.fromMe) {
 					msgGroupContact = await wbot.getContact(msg.to);
 				} else {
 					msgGroupContact = await wbot.getContact(msg.from);
 				}
-
 				groupContact = (await VerifyContact(
 					msgGroupContact,
 					tenantId,
 					profilePicUrl,
 				)) as unknown as Contact;
 			}
-
 			const unreadMessages = msg.fromMe ? 0 : chat.unreadCount;
 			const contact = await VerifyContact(msgContact, tenantId, profilePicUrl);
 

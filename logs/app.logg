@@ -911,3 +911,69 @@
   type: 'client',
   timestamp: '2024-11-29T19:00:21.609Z'
 }
+{
+  name: 'SequelizeConnectionRefusedError',
+  parent: AggregateError: 
+      at internalConnectMultiple (node:net:1128:18)
+      at afterConnectMultiple (node:net:1693:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:443
+          at createConnectionError (node:net:1656:14)
+          at afterConnectMultiple (node:net:1686:16) {
+        errno: -61,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 443
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:443
+          at createConnectionError (node:net:1656:14)
+          at afterConnectMultiple (node:net:1686:16) {
+        errno: -61,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 443
+      }
+    ]
+  },
+  original: AggregateError: 
+      at internalConnectMultiple (node:net:1128:18)
+      at afterConnectMultiple (node:net:1693:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:443
+          at createConnectionError (node:net:1656:14)
+          at afterConnectMultiple (node:net:1686:16) {
+        errno: -61,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 443
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:443
+          at createConnectionError (node:net:1656:14)
+          at afterConnectMultiple (node:net:1686:16) {
+        errno: -61,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 443
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Sequelize encountered an error:',
+  stack: 'SequelizeConnectionRefusedError: \n' +
+    '    at Client._connectionCallback (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/connection-manager.js:184:24)\n' +
+    '    at Client._handleErrorWhileConnecting (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg/lib/client.js:326:19)\n' +
+    '    at Client._handleErrorEvent (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg/lib/client.js:336:19)\n' +
+    '    at Connection.emit (node:events:513:28)\n' +
+    '    at Socket.reportStreamError (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg/lib/connection.js:57:12)\n' +
+    '    at Socket.emit (node:events:513:28)\n' +
+    '    at emitErrorNT (node:internal/streams/destroy:170:8)\n' +
+    '    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  timestamp: '2024-11-30T12:22:08.806Z'
+}
