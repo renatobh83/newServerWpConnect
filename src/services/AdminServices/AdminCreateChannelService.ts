@@ -49,7 +49,8 @@ const AdminCreateChannelService = async ({
 
 	try {
 		await schema.validate({ name, status, isDefault });
-	} catch (err) {
+	} catch (error) {
+		const err = error as Error; // Asserção de tipo para o tipo Error console.error(err.message); }
 		throw new AppError(err.message);
 	}
 

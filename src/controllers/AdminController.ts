@@ -80,7 +80,7 @@ export const updateUser: RequestHandler = async (
 };
 
 export const indexTenants: RequestHandler = async (
-	req: Request,
+	_req: Request,
 	res: Response,
 ) => {
 	const tenants = await AdminListTenantsService();

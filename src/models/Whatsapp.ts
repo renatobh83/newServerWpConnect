@@ -26,6 +26,41 @@ import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
+interface WhatsappAttributes {
+	id?: number;
+	name: string;
+	session?: string;
+	qrcode?: string;
+	status?: string;
+	battery?: string;
+	plugged?: boolean;
+	isActive?: boolean;
+	isDeleted?: boolean;
+	retries?: number;
+	isDefault?: boolean;
+	tokenTelegram?: string;
+	instagramUser?: string;
+	instagramKey?: string;
+	fbPageId?: string;
+	fbObject?: object;
+	type?: string;
+	createdAt?: Date;
+	updatedAt?: Date;
+	number?: string;
+	wppUser?: string;
+	pairingCodeEnabled?: boolean;
+	pairingCode?: string;
+	phone?: object;
+	tickets?: Ticket[];
+	tenantId?: number;
+	tenant?: Tenant;
+	chatFlowId?: number;
+	chatFlow?: ChatFlow;
+	wabaBSP?: string;
+	tokenAPI?: string;
+	tokenHook?: string;
+	farewellMessage?: string;
+}
 
 const queue = new Queue("WebHooksAPI", {
 	connection: {
@@ -35,7 +70,7 @@ const queue = new Queue("WebHooksAPI", {
 	},
 });
 @Table
-class Whatsapp extends Model<Whatsapp> {
+class Whatsapp extends Model<WhatsappAttributes> {
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER)

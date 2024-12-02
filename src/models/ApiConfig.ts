@@ -14,61 +14,78 @@ import { v4 as uuidV4 } from "uuid";
 import Tenant from "./Tenant";
 import User from "./User";
 import Whatsapp from "./Whatsapp";
+interface ApiConfigAttributes {
+	id?: string;
+	sessionId: number;
+	session?: Whatsapp;
+	name: string;
+	isActive?: boolean;
+	token: string;
+	authToken?: string;
+	urlServiceStatus?: string;
+	urlMessageStatus?: string;
+	userId: number;
+	user?: User;
+	createdAt?: Date;
+	updatedAt?: Date;
+	tenantId: number;
+	tenant?: Tenant;
+}
 
 @Table({ freezeTableName: true, tableName: "ApiConfigs" }) // Adicionado o decorador @Table
-class ApiConfig extends Model<ApiConfig> {
+class ApiConfig extends Model<ApiConfigAttributes> {
 	@PrimaryKey
 	@Default(uuidV4)
 	@Column(DataType.UUID)
 	declare id: string;
 
 	@ForeignKey(() => Whatsapp)
-	@Column(DataType.INTEGER) // Definido o tipo INTEGER para sessionId
-	sessionId: number;
+	@Column(DataType.INTEGER)
+	declare sessionId: number;
 
 	@BelongsTo(() => Whatsapp)
-	session: Whatsapp;
+	declare session: Whatsapp;
 
-	@Column(DataType.STRING) // Adicionado DataType.STRING para name
-	name: string;
+	@Column(DataType.STRING)
+	declare name: string;
 
 	@Default(true)
-	@Column(DataType.BOOLEAN) // Definido o tipo BOOLEAN para isActive
-	isActive: boolean;
+	@Column(DataType.BOOLEAN)
+	declare isActive: boolean;
 
-	@Column(DataType.STRING) // Adicionado DataType.STRING para token
-	token: string;
+	@Column(DataType.STRING)
+	declare token: string;
 
-	@Column(DataType.STRING) // Adicionado DataType.STRING para authToken
-	authToken: string;
+	@Column(DataType.STRING)
+	declare authToken: string;
 
-	@Column(DataType.STRING) // Adicionado DataType.STRING para urlServiceStatus
-	urlServiceStatus: string;
+	@Column(DataType.STRING)
+	declare urlServiceStatus: string;
 
-	@Column(DataType.STRING) // Adicionado DataType.STRING para urlMessageStatus
-	urlMessageStatus: string;
+	@Column(DataType.STRING)
+	declare urlMessageStatus: string;
 
 	@ForeignKey(() => User)
-	@Column(DataType.INTEGER) // Definido o tipo INTEGER para userId
-	userId: number;
+	@Column(DataType.INTEGER)
+	declare userId: number;
 
 	@BelongsTo(() => User)
-	user: User;
+	declare user: User;
 
 	@CreatedAt
-	@Column(DataType.DATE(6)) // Definido DataType.DATE(6) para createdAt
+	@Column(DataType.DATE(6))
 	declare createdAt: Date;
 
 	@UpdatedAt
-	@Column(DataType.DATE(6)) // Definido DataType.DATE(6) para updatedAt
+	@Column(DataType.DATE(6))
 	declare updatedAt: Date;
 
 	@ForeignKey(() => Tenant)
-	@Column(DataType.INTEGER) // Definido o tipo INTEGER para tenantId
-	tenantId: number;
+	@Column(DataType.INTEGER)
+	declare tenantId: number;
 
 	@BelongsTo(() => Tenant)
-	tenant: Tenant;
+	declare tenant: Tenant;
 }
 
 export default ApiConfig;

@@ -22,6 +22,7 @@ export const VerifyCall = async (
 			const messageDefault =
 				"As chamadas de voz e vídeo estão desabilitas para esse WhatsApp, favor enviar uma mensagem de texto.";
 
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			let settings: any;
 
 			const query = `
@@ -38,14 +39,16 @@ export const VerifyCall = async (
 				settings = settings[0];
 			}
 			const rejectCalls =
-				settings.find((s) => s.key === "rejectCalls")?.value === "enabled" ||
-				false;
+				settings.find((s: { key: string }) => s.key === "rejectCalls")
+					?.value === "enabled" || false;
 
 			const callRejectMessage =
-				settings.find((s) => s.key === "callRejectMessage")?.value ||
-				messageDefault;
+				settings.find((s: { key: string }) => s.key === "callRejectMessage")
+					?.value || messageDefault;
 
-			const tenantId = settings.find((s) => s.key === "rejectCalls")?.tenantId;
+			const tenantId = settings.find(
+				(s: { key: string }) => s.key === "rejectCalls",
+			)?.tenantId;
 
 			if (!rejectCalls) {
 				resolve();

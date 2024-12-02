@@ -44,6 +44,7 @@ const DefinedUserBotService = async (
     `;
 	}
 
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const user: any = await User.sequelize?.query(query, {
 		replacements: {
 			tenantId,

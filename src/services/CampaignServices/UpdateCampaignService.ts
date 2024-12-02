@@ -36,6 +36,7 @@ const UpdateCampaignService = async ({
 	tenantId,
 }: Request): Promise<Campaign> => {
 	let mediaData: Express.Multer.File | undefined;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	let data: any = {
 		...campaignData,
 		mediaUrl: cArquivoName(campaignData.mediaUrl),

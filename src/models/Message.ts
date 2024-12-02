@@ -16,9 +16,41 @@ import Contact from "./Contact";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
 import User from "./User";
+interface MessageAttributes {
+	id?: string;
+	messageId?: string;
+	ack?: number;
+	status?: "pending" | "sended" | "received";
+	wabaMediaId?: string;
+	read?: boolean;
+	fromMe?: boolean;
+	body: string;
+	mediaName?: string;
+	mediaUrl?: string;
+	mediaType?: string;
+	isDeleted?: boolean;
+	createdAt?: Date;
+	updatedAt?: Date;
+	quotedMsgId?: string;
+	quotedMsg?: Message;
+	ticketId: number;
+	ticket?: Ticket;
+	contactId: number;
+	contact?: Contact;
+	timestamp?: number;
+	userId?: number;
+	user?: User;
+	scheduleDate?: Date;
+	reaction?: string;
+	reactionFromMe?: string;
+	sendType?: "campaign" | "chat" | "external" | "schedule" | "bot" | "sync";
+	tenantId: number;
+	tenant?: Tenant;
+	idFront?: string;
+}
 
 @Table
-class Message extends Model<Message> {
+class Message extends Model<MessageAttributes> {
 	@PrimaryKey
 	@Default(uuidV4)
 	@Column(DataType.UUID) // UUID para gerar automaticamente um identificador único
@@ -55,7 +87,7 @@ class Message extends Model<Message> {
 	declare body: string;
 
 	@Column(DataType.VIRTUAL) // Propriedade virtual para obter mediaName
-	get mediaName(): string | null {
+	get mediaName(): string | undefined {
 		return this.getDataValue("mediaUrl");
 	}
 

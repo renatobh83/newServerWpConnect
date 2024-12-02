@@ -44,6 +44,7 @@ const CreateCampaignService = async ({
 		);
 	}
 
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const data: any = {
 		name: campaign.name,
 		start: campaign.start,
