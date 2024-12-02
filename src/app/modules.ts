@@ -17,10 +17,12 @@ export default async function modules(app: Application): Promise<void> {
 				logger.error(err);
 			}
 			res.status(err.statusCode).json({ error: err.message });
+			return;
 		}
 
 		logger.error(err);
 		res.status(500).json({ error: `Internal server error: ${err}` });
+		return;
 	});
 	logger.info("modules routes already in server!");
 }
