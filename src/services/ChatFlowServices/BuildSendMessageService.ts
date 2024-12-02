@@ -1,13 +1,9 @@
-import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-
-import { promisify } from 'node:util';
 import SendMessageSystemProxy from '../../helpers/SendMessageSystemProxy';
 import socketEmit from '../../helpers/socketEmit';
-import type ApiConfirmacao from '../../models/ApiConfirmacao';
+
 import Message from '../../models/Message';
 import Ticket from '../../models/Ticket';
-import type { ResponseListaAgendamentos } from '../../templates/ListaAgendamentos';
 import { logger } from '../../utils/logger';
 import { pupa } from '../../utils/pupa';
 // import ShowApiListService from "../../apiExternal/ApiGen/services/ApiConfirmacaoServices/ShowApiListService";

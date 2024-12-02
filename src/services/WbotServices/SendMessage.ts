@@ -1,8 +1,8 @@
-import { join } from "node:path";
-import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
-import { getWbot } from "../../libs/wbot";
-import Message from "../../models/Message";
-import { logger } from "../../utils/logger";
+import { join } from 'node:path';
+import type { Message as WbotMessage } from '@wppconnect-team/wppconnect';
+import { getWbot } from '../../libs/wbot';
+import Message from '../../models/Message';
+import { logger } from '../../utils/logger';
 
 const SendMessage = async (message: Message): Promise<void> => {
 	logger.info(`SendMessage: ${message.id}`);
@@ -12,15 +12,15 @@ const SendMessage = async (message: Message): Promise<void> => {
 	let quotedMsgSerializedId: string | undefined;
 	const { ticket } = message;
 	const contactNumber = message.contact.number;
-	const typeGroup = ticket?.isGroup ? "g" : "c";
+	const typeGroup = ticket?.isGroup ? 'g' : 'c';
 	const chatId = `${contactNumber}@${typeGroup}.us`;
 
 	if (message.quotedMsg) {
 		quotedMsgSerializedId = `${message.quotedMsg.fromMe}_${contactNumber}@${typeGroup}.us_${message.quotedMsg.messageId}`;
 	}
 
-	if (message.mediaType !== "chat" && message.mediaName) {
-		const customPath = join(__dirname, "..", "..", "..", "public");
+	if (message.mediaType !== 'chat' && message.mediaName) {
+		const customPath = join(__dirname, '..', '..', '..', 'public');
 		const mediaPath = join(customPath, message.mediaName);
 		// const newMedia = MessageMedia.fromFilePath(mediaPath);
 		sendedMessage = await wbot.sendFile(chatId, mediaPath, {});
@@ -37,13 +37,12 @@ const SendMessage = async (message: Message): Promise<void> => {
 		...sendedMessage,
 		id: message.id,
 		messageId: sendedMessage.id,
-		status: "sended",
+		status: 'sended',
 	} as unknown as Message;
-	// TODO Removido update ate verificar erro TS
 
 	await Message.update({ ...messageToUpdate }, { where: { id: message.id } });
 
-	logger.info("rabbit::sendedMessage", sendedMessage.id);
+	logger.info('rabbit::sendedMessage', sendedMessage.id);
 };
 
 export default SendMessage;

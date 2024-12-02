@@ -10,17 +10,17 @@ import {
 	PrimaryKey,
 	Table,
 	UpdatedAt,
-} from "sequelize-typescript";
-import { v4 as uuidV4 } from "uuid";
-import Contact from "./Contact";
-import Tenant from "./Tenant";
-import Ticket from "./Ticket";
-import User from "./User";
+} from 'sequelize-typescript';
+import { v4 as uuidV4 } from 'uuid';
+import Contact from './Contact';
+import Tenant from './Tenant';
+import Ticket from './Ticket';
+import User from './User';
 interface MessageAttributes {
 	id?: string;
 	messageId?: string;
 	ack?: number;
-	status?: "pending" | "sended" | "received";
+	status?: 'pending' | 'sended' | 'received';
 	wabaMediaId?: string;
 	read?: boolean;
 	fromMe?: boolean;
@@ -43,7 +43,7 @@ interface MessageAttributes {
 	scheduleDate?: Date;
 	reaction?: string;
 	reactionFromMe?: string;
-	sendType?: "campaign" | "chat" | "external" | "schedule" | "bot" | "sync";
+	sendType?: 'campaign' | 'chat' | 'external' | 'schedule' | 'bot' | 'sync';
 	tenantId: number;
 	tenant?: Tenant;
 	idFront?: string;
@@ -67,8 +67,8 @@ class Message extends Model<MessageAttributes> {
 
 	@Default(null)
 	@AllowNull
-	@Column(DataType.ENUM("pending", "sended", "received")) // Tipo ENUM para status da mensagem
-	declare status: string;
+	@Column({ type: DataType.ENUM('pending', 'sended', 'received') })
+	declare status: 'pending' | 'sended' | 'received';
 
 	@Default(null)
 	@AllowNull
@@ -88,14 +88,14 @@ class Message extends Model<MessageAttributes> {
 
 	@Column(DataType.VIRTUAL) // Propriedade virtual para obter mediaName
 	get mediaName(): string | undefined {
-		return this.getDataValue("mediaUrl");
+		return this.getDataValue('mediaUrl');
 	}
 
 	@Column(DataType.STRING) // Usando STRING para armazenar a URL do mídia
 	get mediaUrl(): string | null {
-		if (this.getDataValue("mediaUrl")) {
+		if (this.getDataValue('mediaUrl')) {
 			const { BACKEND_URL } = process.env;
-			const value = this.getDataValue("mediaUrl");
+			const value = this.getDataValue('mediaUrl');
 			return `${BACKEND_URL}/public/${value}`;
 		}
 		return null;
@@ -121,9 +121,9 @@ class Message extends Model<MessageAttributes> {
 	declare quotedMsgId: string;
 
 	@BelongsTo(() => Message, {
-		foreignKey: "quotedMsgId", // quotedMsgId referencia messageId
-		targetKey: "messageId", // messageId é o campo no modelo Message
-		as: "quotedMsg", // Alias para facilitar o uso
+		foreignKey: 'quotedMsgId', // quotedMsgId referencia messageId
+		targetKey: 'messageId', // messageId é o campo no modelo Message
+		as: 'quotedMsg', // Alias para facilitar o uso
 	})
 	declare quotedMsg: Message;
 
@@ -138,7 +138,7 @@ class Message extends Model<MessageAttributes> {
 	@Column(DataType.INTEGER) // Usando INTEGER para referenciar o id do Contact
 	declare contactId: number;
 
-	@BelongsTo(() => Contact, "contactId")
+	@BelongsTo(() => Contact, 'contactId')
 	declare contact: Contact;
 
 	@Default(null)
@@ -172,10 +172,8 @@ class Message extends Model<MessageAttributes> {
 
 	@Default(null)
 	@AllowNull
-	@Column(
-		DataType.ENUM("campaign", "chat", "external", "schedule", "bot", "sync"),
-	) // Usando ENUM para tipo de envio
-	declare sendType: string;
+	@Column(DataType.ENUM('campaign', 'chat', 'external', 'schedule', 'bot', 'sync')) // Usando ENUM para tipo de envio
+	declare sendType: 'campaign' | 'chat' | 'external' | 'schedule' | 'bot' | 'sync';
 
 	@ForeignKey(() => Tenant)
 	@Column(DataType.INTEGER) // Usando INTEGER para referenciar o id do Tenant

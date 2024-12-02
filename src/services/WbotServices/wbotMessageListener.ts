@@ -1,13 +1,8 @@
-import type {
-	Ack,
-	IncomingCall,
-	Message,
-	Whatsapp,
-} from "@wppconnect-team/wppconnect";
-import { HandleMessage } from "./Helpers/HandleMessage";
-import HandleMsgAck from "./Helpers/HandleMsgAck";
-import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
-import { VerifyCall } from "./VerifyCall";
+import type { Ack, IncomingCall, Message, Whatsapp } from '@wppconnect-team/wppconnect';
+import { HandleMessage } from './Helpers/HandleMessage';
+import HandleMsgAck from './Helpers/HandleMsgAck';
+import { HandleMsgReaction } from './Helpers/HandleMsgReaction';
+import { VerifyCall } from './VerifyCall';
 
 interface Session extends Whatsapp {
 	id: number;
@@ -25,7 +20,7 @@ export interface MessageReaction {
 }
 export const wbotMessageListener = (wbot: Session): void => {
 	wbot.onAnyMessage(async (msg: Message) => {
-		if (msg.chatId === "status@broadcast") return;
+		if (msg.chatId === 'status@broadcast') return;
 		await HandleMessage(msg, wbot);
 	});
 

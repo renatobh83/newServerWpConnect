@@ -1,25 +1,23 @@
-import socketEmit from "../../../helpers/socketEmit";
-import Message from "../../../models/Message";
-import Ticket from "../../../models/Ticket";
-import { logger } from "../../../utils/logger";
-import { getId } from "../../../utils/normalize";
-import type { MessageReaction } from "../wbotMessageListener";
+import socketEmit from '../../../helpers/socketEmit';
+import Message from '../../../models/Message';
+import Ticket from '../../../models/Ticket';
 
-export async function HandleMsgReaction(msg: MessageReaction) {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export async function HandleMsgReaction(msg: any) {
 	try {
 		const messageToUpdate = await Message.findOne({
 			where: { messageId: msg.msgId._serialized },
 			include: [
-				"contact",
+				'contact',
 				{
 					model: Ticket,
-					as: "ticket",
-					attributes: ["id", "tenantId", "apiConfig"],
+					as: 'ticket',
+					attributes: ['id', 'tenantId', 'apiConfig'],
 				},
 				{
 					model: Message,
-					as: "quotedMsg",
-					include: ["contact"],
+					as: 'quotedMsg',
+					include: ['contact'],
 				},
 			],
 		});
@@ -30,7 +28,7 @@ export async function HandleMsgReaction(msg: MessageReaction) {
 				await messageToUpdate.update(updateData);
 				socketEmit({
 					tenantId: ticket.tenantId,
-					type: "chat:update",
+					type: 'chat:update',
 					payload: messageToUpdate,
 				});
 			}
@@ -39,12 +37,12 @@ export async function HandleMsgReaction(msg: MessageReaction) {
 				await messageToUpdate.update(updateData);
 				socketEmit({
 					tenantId: ticket.tenantId,
-					type: "chat:update",
+					type: 'chat:update',
 					payload: messageToUpdate,
 				});
 			}
 		}
-	} catch (error) {}
+	} catch (_error) {}
 	// try {
 	// console.log(msg)
 	// return

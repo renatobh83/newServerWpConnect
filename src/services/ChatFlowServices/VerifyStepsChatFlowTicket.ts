@@ -1,25 +1,27 @@
-import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
-import socketEmit from "../../helpers/socketEmit";
-import type Ticket from "../../models/Ticket";
-import { validarCPF } from "../../utils/ApiWebhook";
-import CreateMessageSystemService from "../MessageServices/CreateMessageSystemService";
-import CreateLogTicketService from "../TicketServices/CreateLogTicketService";
-import BuildSendMessageService, {
-	MessageType,
-} from "./BuildSendMessageService";
-import DefinedUserBotService from "./DefinedUserBotService";
-import IsContactTest from "./IsContactTest";
+import type { Message as WbotMessage } from '@wppconnect-team/wppconnect';
+import socketEmit from '../../helpers/socketEmit';
+import type Ticket from '../../models/Ticket';
+import { validarCPF } from '../../utils/ApiWebhook';
+import CreateMessageSystemService from '../MessageServices/CreateMessageSystemService';
+import CreateLogTicketService from '../TicketServices/CreateLogTicketService';
+import BuildSendMessageService, { MessageType } from './BuildSendMessageService';
+import DefinedUserBotService from './DefinedUserBotService';
+import IsContactTest from './IsContactTest';
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const validateStep = async (ticket: Ticket, step: any): Promise<boolean> => {
-	if (step.data.label === "pesquisaCPF") {
+	if (step.data.label === 'pesquisaCPF') {
 		return validarCPF(ticket.lastMessage.toString().trim());
 	}
 	return true;
 };
 export const isNextSteps = async (
 	ticket: Ticket,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	chatFlow: any,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	step: any,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	stepCondition: any,
 ): Promise<void> => {
 	// action = 0: enviar para proximo step: nextStepId
@@ -36,15 +38,15 @@ export const isNextSteps = async (
 			// Enviar mensagem de erro para o usuário
 			await CreateMessageSystemService({
 				msg: {
-					body: "CPF inválido. Por favor, revise as informações e tente novamente.",
+					body: 'CPF inválido. Por favor, revise as informações e tente novamente.',
 					fromMe: true,
 					read: true,
-					sendType: "bot",
+					sendType: 'bot',
 				},
 				tenantId: ticket.tenantId,
 				ticket,
-				sendType: "bot",
-				status: "pending",
+				sendType: 'bot',
+				status: 'pending',
 			});
 
 			return; // Sair sem avançar para o próximo passo
@@ -59,9 +61,8 @@ export const isNextSteps = async (
 		const nodesList = [...chatFlow.flow.nodeList];
 
 		/// pegar os dados do proximo step
-		const nextStep = nodesList.find(
-			(n: any) => n.id === stepCondition.nextStepId,
-		);
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		const nextStep = nodesList.find((n: any) => n.id === stepCondition.nextStepId);
 
 		if (!nextStep) return;
 
@@ -75,13 +76,8 @@ export const isNextSteps = async (
 		// await SetTicketMessagesAsRead(ticket);
 	}
 };
-
-const isQueueDefine = async (
-	ticket: Ticket,
-	flowConfig: any,
-	step: any,
-	stepCondition: any,
-): Promise<void> => {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const isQueueDefine = async (ticket: Ticket, flowConfig: any, _step: any, stepCondition: any): Promise<void> => {
 	// action = 1: enviar para fila: queue
 	if (stepCondition.action === 1) {
 		ticket.update({
@@ -94,7 +90,7 @@ const isQueueDefine = async (
 
 		await CreateLogTicketService({
 			ticketId: ticket.id,
-			type: "queue",
+			type: 'queue',
 			queueId: stepCondition.queueId,
 		});
 
@@ -110,17 +106,13 @@ const isQueueDefine = async (
 
 		socketEmit({
 			tenantId: ticket.tenantId,
-			type: "ticket:update",
+			type: 'ticket:update',
 			payload: ticket,
 		});
 	}
 };
-
-const isUserDefine = async (
-	ticket: Ticket,
-	step: any,
-	stepCondition: any,
-): Promise<void> => {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const isUserDefine = async (ticket: Ticket, _step: any, stepCondition: any): Promise<void> => {
 	// action = 2: enviar para determinado usuário
 	if (stepCondition.action === 2) {
 		ticket.update({
@@ -136,20 +128,21 @@ const isUserDefine = async (
 
 		socketEmit({
 			tenantId: ticket.tenantId,
-			type: "ticket:update",
+			type: 'ticket:update',
 			payload: ticket,
 		});
 
 		await CreateLogTicketService({
 			userId: stepCondition.userIdDestination,
 			ticketId: ticket.id,
-			type: "userDefine",
+			type: 'userDefine',
 		});
 	}
 };
 
 const isCloseDefine = async (
 	ticket: {
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		tenantId: any;
 		update: (arg0: {
 			status: string;
@@ -158,8 +151,10 @@ const isCloseDefine = async (
 			botRetries: number;
 			lastInteractionBot: Date;
 		}) => void;
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		id: any;
 	},
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	actionDetails: { action: number; closeTicket: any; id: any },
 ) => {
 	if (actionDetails.action === 3) {
@@ -171,26 +166,28 @@ const isCloseDefine = async (
 			type: MessageType.MediaField,
 		};
 		const messageArray = [messageField];
-		const firstMessage = messageArray[0];
+		const _firstMessage = messageArray[0];
 
 		const sendMessageParams = {
 			msg: messageField,
 			tenantId: ticket.tenantId,
 			ticket: ticket,
 		};
+
 		await BuildSendMessageService(sendMessageParams);
 
 		ticket.update({
-			status: "closed",
+			status: 'closed',
 			chatFlowId: null,
 			stepChatFlow: null,
 			botRetries: 0,
 			lastInteractionBot: new Date(),
 		});
-		const showTicketParams = {
-			id: ticket.id,
-			tenantId: ticket.tenantId,
-		};
+
+		// const showTicketParams = {
+		// 	id: ticket.id,
+		// 	tenantId: ticket.tenantId,
+		// };
 
 		// const updatedTicket = yield ShowTicketServiceZPRO_1.default(
 		//     showTicketParams
@@ -205,16 +202,14 @@ const isCloseDefine = async (
 };
 
 // enviar mensagem de boas vindas à fila ou usuário
-const sendWelcomeMessage = async (
-	ticket: Ticket,
-	flowConfig: any,
-): Promise<void> => {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const sendWelcomeMessage = async (ticket: Ticket, flowConfig: any): Promise<void> => {
 	if (flowConfig?.data?.welcomeMessage?.message) {
 		const messageData = {
 			body: flowConfig.data?.welcomeMessage.message,
 			fromMe: true,
 			read: true,
-			sendType: "bot",
+			sendType: 'bot',
 		};
 
 		await CreateMessageSystemService({
@@ -222,33 +217,28 @@ const sendWelcomeMessage = async (
 			tenantId: ticket.tenantId,
 			ticket,
 			sendType: messageData.sendType,
-			status: "pending",
+			status: 'pending',
 		});
 	}
 };
-
-const isRetriesLimit = async (
-	ticket: Ticket,
-	flowConfig: any,
-): Promise<boolean> => {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const isRetriesLimit = async (ticket: Ticket, flowConfig: any): Promise<boolean> => {
 	// verificar o limite de retentativas e realizar ação
 	const maxRetryNumber = flowConfig?.data?.maxRetryBotMessage?.number;
-	if (
-		flowConfig?.data?.maxRetryBotMessage &&
-		maxRetryNumber &&
-		ticket.botRetries >= maxRetryNumber - 1
-	) {
+	if (flowConfig?.data?.maxRetryBotMessage && maxRetryNumber && ticket.botRetries >= maxRetryNumber - 1) {
 		const destinyType = flowConfig.data.maxRetryBotMessage.type;
 		const { destiny } = flowConfig.data.maxRetryBotMessage;
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		const updatedValues: any = {
 			chatFlowId: null,
 			stepChatFlow: null,
 			botRetries: 0,
 			lastInteractionBot: new Date(),
 		};
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		const logsRetry: any = {
 			ticketId: ticket.id,
-			type: destinyType === 1 ? "retriesLimitQueue" : "retriesLimitUserDefine",
+			type: destinyType === 1 ? 'retriesLimitQueue' : 'retriesLimitUserDefine',
 		};
 
 		// enviar para fila
@@ -265,7 +255,7 @@ const isRetriesLimit = async (
 		ticket.update(updatedValues);
 		socketEmit({
 			tenantId: ticket.tenantId,
-			type: "ticket:update",
+			type: 'ticket:update',
 			payload: ticket,
 		});
 		await CreateLogTicketService(logsRetry);
@@ -276,25 +266,16 @@ const isRetriesLimit = async (
 	}
 	return false;
 };
-
-const isAnswerCloseTicket = async (
-	flowConfig: any,
-	ticket: Ticket,
-	message: string,
-): Promise<boolean> => {
-	if (
-		!flowConfig?.data?.answerCloseTicket ||
-		flowConfig?.data?.answerCloseTicket?.length < 1
-	) {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const isAnswerCloseTicket = async (flowConfig: any, ticket: Ticket, message: string): Promise<boolean> => {
+	if (!flowConfig?.data?.answerCloseTicket || flowConfig?.data?.answerCloseTicket?.length < 1) {
 		return false;
 	}
 
 	// verificar condição com a ação
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const params = flowConfig.data.answerCloseTicket.find((condition: any) => {
-		return (
-			String(condition).toLowerCase().trim() ===
-			String(message).toLowerCase().trim()
-		);
+		return String(condition).toLowerCase().trim() === String(message).toLowerCase().trim();
 	});
 
 	if (params) {
@@ -305,17 +286,17 @@ const isAnswerCloseTicket = async (
 			lastInteractionBot: new Date(),
 			unreadMessages: 0,
 			answered: false,
-			status: "closed",
+			status: 'closed',
 		});
 
 		await CreateLogTicketService({
 			ticketId: ticket.id,
-			type: "autoClose",
+			type: 'autoClose',
 		});
 
 		socketEmit({
 			tenantId: ticket.tenantId,
-			type: "ticket:update",
+			type: 'ticket:update',
 			payload: ticket,
 		});
 
@@ -323,66 +304,42 @@ const isAnswerCloseTicket = async (
 	}
 	return false;
 };
-
-const VerifyStepsChatFlowTicket = async (
-	msg: WbotMessage | any,
-	ticket: Ticket | any,
-): Promise<void> => {
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const VerifyStepsChatFlowTicket = async (msg: WbotMessage | any, ticket: Ticket | any): Promise<void> => {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	let celularTeste: any; // ticket.chatFlow?.celularTeste;
 
-	if (
-		ticket.chatFlowId &&
-		ticket.status === "pending" &&
-		!msg.fromMe &&
-		!ticket.isGroup &&
-		!ticket.answered
-	) {
+	if (ticket.chatFlowId && ticket.status === 'pending' && !msg.fromMe && !ticket.isGroup && !ticket.answered) {
 		if (ticket.chatFlowId) {
 			const chatFlow = await ticket.getChatFlow();
 
 			if (chatFlow.celularTeste) {
-				celularTeste = chatFlow.celularTeste.replace(/\s/g, ""); // retirar espaços
+				celularTeste = chatFlow.celularTeste.replace(/\s/g, ''); // retirar espaços
 			}
-
-			const step = chatFlow.flow.nodeList.find(
-				(node: any) => node.id === ticket.stepChatFlow,
-			);
-
-			const flowConfig = chatFlow.flow.nodeList.find(
-				(node: any) => node.type === "configurations",
-			);
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+			const step = chatFlow.flow.nodeList.find((node: any) => node.id === ticket.stepChatFlow);
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+			const flowConfig = chatFlow.flow.nodeList.find((node: any) => node.type === 'configurations');
 
 			// verificar condição com a ação do step
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			const stepCondition = step.data.conditions.find((conditions: any) => {
-				if (conditions.type === "US") return true;
+				if (conditions.type === 'US') return true;
 
 				// const newConditions = conditions.condition.map((c: any) =>
 				//   String(c).toLowerCase().trim()
 				// );
 				const message = String(msg.body).toLowerCase().trim();
 
-				return conditions.condition.some(
-					(c: any) => String(c).toLowerCase().trim() === message,
-				);
+				return conditions.condition.some((c: any) => String(c).toLowerCase().trim() === message);
 			});
 
-			if (
-				!ticket.isCreated &&
-				(await isAnswerCloseTicket(flowConfig, ticket, msg.body))
-			)
-				return;
+			if (!ticket.isCreated && (await isAnswerCloseTicket(flowConfig, ticket, msg.body))) return;
 
 			if (stepCondition && !ticket.isCreated) {
 				// await CreateAutoReplyLogsService(stepAutoReplyAtual, ticket, msg.body);
 				// Verificar se rotina em teste
-				if (
-					await IsContactTest(
-						ticket.contact.number,
-						celularTeste,
-						ticket.channel,
-					)
-				)
-					return;
+				if (await IsContactTest(ticket.contact.number, celularTeste, ticket.channel)) return;
 
 				// action = 0: enviar para proximo step: nextStepId
 				await isNextSteps(ticket, chatFlow, step, stepCondition);
@@ -398,7 +355,7 @@ const VerifyStepsChatFlowTicket = async (
 
 				socketEmit({
 					tenantId: ticket.tenantId,
-					type: "ticket:update",
+					type: 'ticket:update',
 					payload: ticket,
 				});
 
@@ -407,14 +364,7 @@ const VerifyStepsChatFlowTicket = async (
 				}
 			} else {
 				// Verificar se rotina em teste
-				if (
-					await IsContactTest(
-						ticket.contact.number,
-						celularTeste,
-						ticket.channel,
-					)
-				)
-					return;
+				if (await IsContactTest(ticket.contact.number, celularTeste, ticket.channel)) return;
 
 				// se ticket tiver sido criado, ingnorar na primeria passagem
 				if (!ticket.isCreated) {
@@ -423,17 +373,17 @@ const VerifyStepsChatFlowTicket = async (
 					const messageData = {
 						body:
 							flowConfig.data.notOptionsSelectMessage.message ||
-							"Desculpe! Não entendi sua resposta. Vamos tentar novamente! Escolha uma opção válida.",
+							'Desculpe! Não entendi sua resposta. Vamos tentar novamente! Escolha uma opção válida.',
 						fromMe: true,
 						read: true,
-						sendType: "bot",
+						sendType: 'bot',
 					};
 					await CreateMessageSystemService({
 						msg: messageData,
 						tenantId: ticket.tenantId,
 						ticket,
 						sendType: messageData.sendType,
-						status: "pending",
+						status: 'pending',
 					});
 
 					// tratar o número de retentativas do bot
