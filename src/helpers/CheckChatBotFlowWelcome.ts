@@ -1,9 +1,9 @@
-import Contact from "../models/Contact";
+// import Contact from "../models/Contact";
 import type Ticket from "../models/Ticket";
 import Setting from "../models/Setting";
 import ChatFlow from "../models/ChatFlow";
 import CreateLogTicketService from "../services/TicketServices/CreateLogTicketService";
-import IsContactTest from "../services/ChatFlowServices/IsContactTest";
+// import IsContactTest from "../services/ChatFlowServices/IsContactTest";
 import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
 
 const CheckChatBotFlowWelcome = async (instance: Ticket): Promise<void> => {
@@ -36,15 +36,16 @@ const CheckChatBotFlowWelcome = async (instance: Ticket): Promise<void> => {
 
 	if (!chatFlow) return;
 
-	const contato = await Contact.findByPk(instance.contactId);
-	const { celularTeste } = chatFlow;
-	const celularContato = contato?.number;
+	// const contato = await Contact.findByPk(instance.contactId);
+	// const { celularTeste } = chatFlow;
+	// const celularContato = contato?.number;
 
-	if (await IsContactTest(celularContato, celularTeste, instance.channel))
-		return;
+	// if (await IsContactTest(celularContato, celularTeste, instance.channel))
+	// 	return;
 
 	// alteracao do conteudo da line de from para source
 	const lineFlow = chatFlow.flow.lineList.find(
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		(line: any) => line.source === "start",
 	);
 

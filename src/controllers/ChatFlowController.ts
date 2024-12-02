@@ -1,5 +1,5 @@
 // import * as Yup from "yup";
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 
 import AppError from "../errors/AppError";
 import CreateChatFlowService from "../services/ChatFlowServices/CreateChatFlowService";
@@ -24,7 +24,7 @@ interface Configuration {
 	};
 	notOptionsSelectMessage: {
 		message: string;
-		stepReturn: string;
+		step: string;
 	};
 	notResponseMessage: {
 		destiny: string;
@@ -64,7 +64,7 @@ interface ChatFlowData {
 	tenantId: number;
 }
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -93,19 +93,16 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 
 	const chatFlow = await CreateChatFlowService(newFlow);
 
-	return res.status(200).json(chatFlow);
+	res.status(200).json(chatFlow);
 };
 
-export const index = async (req: Request, res: Response): Promise<Response> => {
+export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const chatFlow = await ListChatFlowService({ tenantId });
-	return res.status(200).json(chatFlow);
+	res.status(200).json(chatFlow);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
@@ -138,24 +135,21 @@ export const update = async (
 		tenantId,
 	});
 
-	return res.status(200).json(chatFlow);
+	res.status(200).json(chatFlow);
 };
-export const remove = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { chatFlowId } = req.params;
 	const { tenantId } = req.user;
 
 	await DeleteChatFlowService({ id: chatFlowId, tenantId });
 
-	return res.status(200).json({ message: "Flow deleted" });
+	res.status(200).json({ message: "Flow deleted" });
 };
 
-// export const remove = async (
+// export const remove:RequestHandler = async (
 //   req: Request,
 //   res: Response
-// ): Promise<Response> => {
+// ) => {
 //   if (req.user.profile !== "admin") {
 //     throw new AppError("ERR_NO_PERMISSION", 403);
 //   }
@@ -163,5 +157,5 @@ export const remove = async (
 //   const { autoReplyId } = req.params;
 
 //   await DeleteAutoReplyService({ id: autoReplyId, tenantId });
-//   return res.status(200).json({ message: "Auto reply deleted" });
+//    res.status(200).json({ message: "Auto reply deleted" });
 // };

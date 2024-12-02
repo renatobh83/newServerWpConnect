@@ -30,8 +30,8 @@ const AutoReplyWelcome = async (instance: Ticket): Promise<void> => {
 	}
 
 	await instance.update({
-		autoReplyId: stepAutoReply.autoReply.id,
-		stepAutoReplyId: stepAutoReply.id,
+		autoReplyId: String(stepAutoReply.autoReply.id),
+		stepAutoReplyId: String(stepAutoReply.id),
 	});
 
 	await CreateLogTicketService({

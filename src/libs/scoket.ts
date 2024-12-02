@@ -8,7 +8,7 @@ import { logger } from "../utils/logger";
 import decodeTokenSocket from "./decodeTokenSocket";
 let io: socketIo;
 
-export const initIO = async (httpServer: Server): socketIo => {
+export const initIO = async (httpServer: Server): Promise<socketIo> => {
 	io = new socketIo(httpServer, {
 		cors: {
 			origin: ["http://localhost:5173", "https://app3.pluslive.online"],
@@ -70,7 +70,7 @@ export const initIO = async (httpServer: Server): socketIo => {
 			} else {
 				next(new Error("authentication error"));
 			}
-		} catch (error) {
+		} catch (_error) {
 			logger.warn(`tokenInvalid: ${socket}`);
 			socket.emit(`tokenInvalid:${socket.id}`);
 			next(new Error("authentication error"));
@@ -108,6 +108,7 @@ export const initIO = async (httpServer: Server): socketIo => {
 			});
 			// Chat.register(socket);
 		}
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		socket.on("disconnect", (reason: any) => {
 			logger.info({
 				message: `SOCKET Client disconnected , ${tenantId}, ${reason}`,

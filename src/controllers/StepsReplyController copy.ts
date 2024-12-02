@@ -30,7 +30,8 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 	try {
 		await schema.validate(newStepsReply);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const stepsReply = await CreateStepsReplyService(newStepsReply);
@@ -57,7 +58,8 @@ export const update = async (
 	try {
 		await schema.validate(stepsReplyData);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const { stepsReplyId } = req.params;

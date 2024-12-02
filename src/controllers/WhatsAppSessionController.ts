@@ -82,7 +82,7 @@ const remove: RequestHandler = async (req: Request, res: Response) => {
 		await channel.update({
 			status: "DISCONNECTED",
 			session: "",
-			qrcode: null,
+			qrcode: undefined,
 			retries: 0,
 		});
 	} catch (error) {
@@ -90,7 +90,7 @@ const remove: RequestHandler = async (req: Request, res: Response) => {
 		await channel.update({
 			status: "DISCONNECTED",
 			session: "",
-			qrcode: null,
+			qrcode: undefined,
 			retries: 0,
 		});
 

@@ -8,6 +8,7 @@ interface Request {
 const AdminListChannelsService = async ({
 	tenantId,
 }: Request): Promise<Whatsapp[]> => {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const whereCondition: any = {};
 	if (tenantId) {
 		whereCondition.tenantId = tenantId;

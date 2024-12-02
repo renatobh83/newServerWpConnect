@@ -36,7 +36,8 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newReply);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const reply = await CreateFastReplyService(newReply);
@@ -71,7 +72,8 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(fastReplyData);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const { fastReplyId } = req.params;

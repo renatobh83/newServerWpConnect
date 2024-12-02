@@ -1,6 +1,6 @@
 const IsContactTest = async (
 	celularContato: string | undefined,
-	celularTeste: string,
+	celularTeste: string | null,
 	channel: undefined | string,
 ): Promise<boolean> => {
 	// Verificar se rotina em teste e contato informado é compatível

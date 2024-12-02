@@ -1,21 +1,22 @@
-import type { Chat } from "@wppconnect-team/wppconnect";
-import SendMessageBlob from "../services/WbotServices/SendMessageBlob";
+// import type { Chat } from "@wppconnect-team/wppconnect";
+// import SendMessageBlob from "../services/WbotServices/SendMessageBlob";
 
-type Payload = {
-	ticket: any;
-	blob: string;
-	userId: number;
-};
+// type Payload = {
+// 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+// 	ticket: any;
+// 	blob: string;
+// 	userId: number;
+// };
 
-const SendMessageBlobHtml = async ({
-	ticket,
-	blob,
-	userId,
-}: Payload): Promise<void> => {
-	// biome-ignore lint/style/useConst: <explanation>
-	// let message: Chat;
-	// message = await SendMessageBlob({ base64Html: blob, ticket, userId });
-	// return message;
-};
+// const SendMessageBlobHtml = async ({
+// 	ticket,
+// 	blob,
+// 	userId,
+// }: Payload): Promise<void> => {
+// 	// biome-ignore lint/style/useConst: <explanation>
+// 	// let message: Chat;
+// 	// message = await SendMessageBlob({ base64Html: blob, ticket, userId });
+// 	// return message;
+// };
 
-export default SendMessageBlobHtml;
+// export default SendMessageBlobHtml;

@@ -45,7 +45,8 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newApi);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const api = await CreateApiConfigService(newApi);
@@ -84,7 +85,8 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(apiData);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const api = await UpdateApiConfigService({
@@ -128,7 +130,8 @@ export const renewTokenApi: RequestHandler = async (
 	try {
 		await schema.validate(api);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const newApi = await RenewApiConfigTokenService({

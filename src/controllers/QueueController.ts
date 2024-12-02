@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
@@ -14,7 +14,7 @@ interface QueueData {
 	tenantId: number;
 }
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -31,24 +31,22 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 	try {
 		await schema.validate(newQueue);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const queue = await CreateQueueService(newQueue);
 
-	return res.status(200).json(queue);
+	res.status(200).json(queue);
 };
 
-export const index = async (req: Request, res: Response): Promise<Response> => {
+export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const queues = await ListQueueService({ tenantId });
-	return res.status(200).json(queues);
+	res.status(200).json(queues);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 
 	if (req.user.profile !== "admin") {
@@ -65,7 +63,8 @@ export const update = async (
 	try {
 		await schema.validate(queueData);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const { queueId } = req.params;
@@ -74,13 +73,10 @@ export const update = async (
 		queueId,
 	});
 
-	return res.status(200).json(queueObj);
+	res.status(200).json(queueObj);
 };
 
-export const remove = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -88,5 +84,5 @@ export const remove = async (
 	const { queueId } = req.params;
 
 	await DeleteQueueService({ id: queueId, tenantId });
-	return res.status(200).json({ message: "Queue deleted" });
+	res.status(200).json({ message: "Queue deleted" });
 };

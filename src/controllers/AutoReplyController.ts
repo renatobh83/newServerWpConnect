@@ -34,7 +34,8 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newAutoReply);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const autoReply = await CreateAutoReplyService(newAutoReply);
@@ -64,7 +65,8 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(autoReplyData);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	const { autoReplyId } = req.params;

@@ -47,11 +47,11 @@ interface Contato {
 	notificacao: Notificacao;
 }
 
-interface Configuracao {
-	expiraLista: number;
-	cancelarPendentes: boolean;
-	contatos: Contato[];
-}
+// interface Configuracao {
+// 	expiraLista: number;
+// 	cancelarPendentes: boolean;
+// 	contatos: Contato[];
+// }
 
 interface MessageDataRequest {
 	apiId: string;
@@ -64,38 +64,36 @@ interface MessageDataRequest {
 	idWbot: string;
 }
 
-export const sendMessageConfirmacao = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
-	const { contatos }: Configuracao = req.body;
-	const { apiId, authToken, idWbot } = req.params;
+// export const sendMessageConfirmacao = async (
+// 	req: Request,
+// 	res: Response,
+// ): Promise<Response> => {
+// 	const { contatos }: Configuracao = req.body;
+// 	const { apiId, authToken, idWbot } = req.params;
 
-	const apiConfig = await ApiConfig.findOne({
-		where: {
-			id: apiId,
-			authToken,
-		},
-	});
+// 	const apiConfig = await ApiConfig.findOne({
+// 		where: {
+// 			id: apiId,
+// 			authToken,
+// 		},
+// 	});
 
-	if (apiConfig === null) {
-		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
-	}
+// 	if (apiConfig === null) {
+// 		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
+// 	}
 
-	const newMessage: MessageDataRequest = {
-		externalKey: authToken,
-		body: contatos[0],
-		apiId,
-		sessionId: apiConfig.sessionId,
-		tenantId: apiConfig.tenantId,
-		apiConfig: apiConfig,
-		idWbot,
-	};
+// 	const newMessage: MessageDataRequest = {
+// 		externalKey: authToken,
+// 		body: contatos[0],
+// 		apiId,
+// 		sessionId: apiConfig.sessionId,
+// 		tenantId: apiConfig.tenantId,
+// 		apiConfig: apiConfig,
+// 		idWbot,
+// 	};
 
-	// Queue.add("SendMessageConfirmar", newMessage);
-
-	return res.status(200).json({ message: "Message add queue" });
-};
+// 	return res.status(200).json({ message: "Message add queue" });
+// };
 
 export const sendMessageAPI: RequestHandler = async (
 	req: Request,
@@ -154,7 +152,8 @@ export const sendMessageAPI: RequestHandler = async (
 	try {
 		await schema.validate(newMessage);
 	} catch (error) {
-		throw new AppError(error.message);
+		const err = error as Error;
+		throw new AppError(err.message);
 	}
 
 	// Queue.add("SendMessageAPI", newMessage);
@@ -187,11 +186,12 @@ export const startSession: RequestHandler = async (
 	});
 	try {
 		const wbot = getWbot(apiConfig.sessionId);
-		const isConnectStatus = (await wbot.getState()) === "CONNECTED";
+
+		const isConnectStatus = await wbot.isConnected();
 		if (!isConnectStatus) {
 			throw new Error("Necessário iniciar sessão");
 		}
-	} catch (error) {
+	} catch (_error) {
 		StartWhatsAppSession(whatsapp);
 	}
 

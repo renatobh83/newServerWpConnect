@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { promises } from "node:fs";
-import path, { resolve } from "node:path";
+import path from "node:path";
 import { type Whatsapp, create } from "@wppconnect-team/wppconnect";
 
 import config from "../config/config";
@@ -8,47 +8,50 @@ import { wbotMessageListener } from "../services/WbotServices/wbotMessageListene
 import type { WhatsAppServer } from "../types/WhatsAppServer";
 import { logger } from "../utils/logger";
 import { getIO } from "./scoket";
+import AppError from "../errors/AppError";
 interface Session extends Whatsapp {
 	id: number;
 	// requestPairingCode(phoneNumber: string): Promise<string>;
 }
 
 const sessions: Session[] = [];
-const exportPhoneCode = (
-	_req: any,
-	_phone: any,
-	_phoneCode: any,
-	_client: WhatsAppServer,
-	_res?: any,
-) => {
-	// eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
-	// Object.assign(client, {
-	//   status: 'PHONECODE',
-	//   phoneCode: phoneCode,
-	//   phone: phone,
-	// });
-	// req.io.emit('phoneCode', {
-	//   data: phoneCode,
-	//   phone: phone,
-	//   session: client.session,
-	// });
-	// callWebHook(client, req, 'phoneCode', {
-	//   phoneCode: phoneCode,
-	//   phone: phone,
-	//   session: client.session,
-	// });
-	// if (res && !res._headerSent)
-	//   res.status(200).json({
-	//     status: 'phoneCode',
-	//     phone: phone,
-	//     phoneCode: phoneCode,
-	//     session: client.session,
-	//   });
-};
+// const exportPhoneCode = (
+// 	_req: any,
+// 	_phone: any,
+// 	_phoneCode: any,
+// 	_client: WhatsAppServer,
+// 	_res?: any,
+// ) => {
+// 	// eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
+// 	// Object.assign(client, {
+// 	//   status: 'PHONECODE',
+// 	//   phoneCode: phoneCode,
+// 	//   phone: phone,
+// 	// });
+// 	// req.io.emit('phoneCode', {
+// 	//   data: phoneCode,
+// 	//   phone: phone,
+// 	//   session: client.session,
+// 	// });
+// 	// callWebHook(client, req, 'phoneCode', {
+// 	//   phoneCode: phoneCode,
+// 	//   phone: phone,
+// 	//   session: client.session,
+// 	// });
+// 	// if (res && !res._headerSent)
+// 	//   res.status(200).json({
+// 	//     status: 'phoneCode',
+// 	//     phone: phone,
+// 	//     phoneCode: phoneCode,
+// 	//     session: client.session,
+// 	//   });
+// };
 let sessionName: string;
 let tenantId: string;
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 let whatsappSession: any;
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export const initWbot = async (whatsapp: any): Promise<Session> => {
 	let wbot: Session;
 	tenantId = whatsapp.tenantId;
@@ -91,7 +94,9 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 					this._catchLinkCode = value;
 				},
 				catchQR: async (
+					// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 					base64Qr: any,
+					// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 					_asciiQr: any,
 					attempt: number,
 					urlCode?: string,
@@ -122,7 +127,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 						session: whatsapp,
 					});
 				},
-				statusFind: async (statusSession: string, session: string) => {
+				statusFind: async (statusSession: string, _session: string) => {
 					if (statusSession === "isLogged") {
 					}
 					if (statusSession === "qrReadFail") {
@@ -273,7 +278,10 @@ const start = async (client: Session) => {
 			});
 			wbotMessageListener(client);
 		}
-	} catch (error) {}
+	} catch (error) {
+		const err = error as Error;
+		throw new AppError(err.message);
+	}
 };
 async function removeSession(session: string) {
 	try {
@@ -300,7 +308,7 @@ async function removeSession(session: string) {
 		logger.error(`Erro ao remover a pasta da sessão ${session}:`, error);
 	}
 }
-export const removeWbot = async (whatsappId: number): void => {
+export const removeWbot = async (whatsappId: number): Promise<void> => {
 	try {
 		const io = getIO();
 		const sessionIndex = sessions.findIndex((s) => s.id === whatsappId);

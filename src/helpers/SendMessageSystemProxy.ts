@@ -3,9 +3,13 @@ import SendWhatsAppMedia from "../services/WbotServices/SendWhatsAppMedia";
 import SendWhatsAppMessage from "../services/WbotServices/SendWhatsAppMessage";
 
 type Payload = {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	ticket: any;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	messageData: any;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	media: any;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	userId: any;
 };
 interface CustomMessage extends WbotMessage {
