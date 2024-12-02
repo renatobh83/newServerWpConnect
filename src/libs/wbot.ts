@@ -14,37 +14,37 @@ interface Session extends Whatsapp {
 }
 
 const sessions: Session[] = [];
-const exportPhoneCode = (
-	_req: any,
-	_phone: any,
-	_phoneCode: any,
-	_client: WhatsAppServer,
-	_res?: any,
-) => {
-	// eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
-	// Object.assign(client, {
-	//   status: 'PHONECODE',
-	//   phoneCode: phoneCode,
-	//   phone: phone,
-	// });
-	// req.io.emit('phoneCode', {
-	//   data: phoneCode,
-	//   phone: phone,
-	//   session: client.session,
-	// });
-	// callWebHook(client, req, 'phoneCode', {
-	//   phoneCode: phoneCode,
-	//   phone: phone,
-	//   session: client.session,
-	// });
-	// if (res && !res._headerSent)
-	//   res.status(200).json({
-	//     status: 'phoneCode',
-	//     phone: phone,
-	//     phoneCode: phoneCode,
-	//     session: client.session,
-	//   });
-};
+// const exportPhoneCode = (
+// 	_req: any,
+// 	_phone: any,
+// 	_phoneCode: any,
+// 	_client: WhatsAppServer,
+// 	_res?: any,
+// ) => {
+// eventEmitter.emit(`phoneCode-${client.session}`, phoneCode, client);
+// Object.assign(client, {
+//   status: 'PHONECODE',
+//   phoneCode: phoneCode,
+//   phone: phone,
+// });
+// req.io.emit('phoneCode', {
+//   data: phoneCode,
+//   phone: phone,
+//   session: client.session,
+// });
+// callWebHook(client, req, 'phoneCode', {
+//   phoneCode: phoneCode,
+//   phone: phone,
+//   session: client.session,
+// });
+// if (res && !res._headerSent)
+//   res.status(200).json({
+//     status: 'phoneCode',
+//     phone: phone,
+//     phoneCode: phoneCode,
+//     session: client.session,
+//   });
+// };
 let sessionName: string;
 let tenantId: string;
 let whatsappSession: any;
@@ -122,7 +122,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 						session: whatsapp,
 					});
 				},
-				statusFind: async (statusSession: string, session: string) => {
+				statusFind: async (statusSession: string, _session: string) => {
 					if (statusSession === "isLogged") {
 					}
 					if (statusSession === "qrReadFail") {
@@ -273,7 +273,7 @@ const start = async (client: Session) => {
 			});
 			wbotMessageListener(client);
 		}
-	} catch (error) {}
+	} catch (_error) {}
 };
 async function removeSession(session: string) {
 	try {
@@ -300,7 +300,7 @@ async function removeSession(session: string) {
 		logger.error(`Erro ao remover a pasta da sessão ${session}:`, error);
 	}
 }
-export const removeWbot = async (whatsappId: number): void => {
+export const removeWbot = async (whatsappId: number): Promise<void> => {
 	try {
 		const io = getIO();
 		const sessionIndex = sessions.findIndex((s) => s.id === whatsappId);

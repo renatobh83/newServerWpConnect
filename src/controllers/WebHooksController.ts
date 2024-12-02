@@ -2,7 +2,7 @@ import type { Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 
 export const ReceivedRequest360: RequestHandler = async (
-	req: Request,
+	_req: Request,
 	res: Response,
 ) => {
 	try {
@@ -11,7 +11,7 @@ export const ReceivedRequest360: RequestHandler = async (
 		//   messages: req.body
 		// };
 		// await req.app.rabbit.publishInQueue("waba360", JSON.stringify(message));
-	} catch (error) {}
+	} catch (_error) {}
 	// Queue.add("SendMessageAPI", newMessage);
 
 	res.status(200).json({ message: "Message add queue" });
@@ -26,7 +26,7 @@ export const CheckServiceMessenger: RequestHandler = async (
 };
 
 export const ReceivedRequestMessenger: RequestHandler = async (
-	req: Request,
+	_req: Request,
 	res: Response,
 ) => {
 	// try {

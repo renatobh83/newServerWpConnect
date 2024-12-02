@@ -5,7 +5,7 @@ import { logger } from "../../../utils/logger";
 import { getId } from "../../../utils/normalize";
 import type { MessageReaction } from "../wbotMessageListener";
 
-export async function HandleMsgReaction(msg: MessageReaction) {
+export async function HandleMsgReaction(msg: any) {
 	try {
 		const messageToUpdate = await Message.findOne({
 			where: { messageId: msg.msgId._serialized },
@@ -44,7 +44,7 @@ export async function HandleMsgReaction(msg: MessageReaction) {
 				});
 			}
 		}
-	} catch (error) {}
+	} catch (_error) {}
 	// try {
 	// console.log(msg)
 	// return

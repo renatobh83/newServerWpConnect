@@ -12,24 +12,24 @@ interface Request {
 	userId: number;
 	tenantId: number;
 }
-type ChatFlowCreateAttributes = Pick<
-	ChatFlow,
-	"flow" | "userId" | "tenantId" | "name" | "isActive"
->;
-type ChatFlowCreateAttributesP = Partial<
-	Pick<ChatFlow, "flow" | "userId" | "tenantId" | "name" | "isActive">
->;
-interface ChatFlowCreationAttributesI {
-	flow: any;
-	userId: number;
-	tenantId: number;
-	name: string;
-	isActive: boolean;
-}
-type ChatFlowCreateAttributesO = Omit<
-	ChatFlow,
-	"tableName" | "sequelize" | "destroy" | "restore"
->;
+// type ChatFlowCreateAttributes = Pick<
+// 	ChatFlow,
+// 	"flow" | "userId" | "tenantId" | "name" | "isActive"
+// >;
+// type ChatFlowCreateAttributesP = Partial<
+// 	Pick<ChatFlow, "flow" | "userId" | "tenantId" | "name" | "isActive">
+// >;
+// interface ChatFlowCreationAttributesI {
+// 	flow: any;
+// 	userId: number;
+// 	tenantId: number;
+// 	name: string;
+// 	isActive: boolean;
+// }
+// type ChatFlowCreateAttributesO = Omit<
+// 	ChatFlow,
+// 	"tableName" | "sequelize" | "destroy" | "restore"
+// >;
 
 const CreateChatFlowService = async ({
 	flow,

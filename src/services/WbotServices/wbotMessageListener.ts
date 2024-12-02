@@ -1,7 +1,6 @@
 import type {
 	Ack,
 	IncomingCall,
-	LiveLocation,
 	Message,
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
@@ -15,18 +14,8 @@ interface Session extends Whatsapp {
 }
 
 export interface MessageReaction {
-	id: {
-		fromMe: boolean;
-		remote: string;
-		id: string;
-		_serialized: string;
-	};
-	msgId: {
-		fromMe: boolean;
-		remote: string;
-		id: string;
-		_serialized: string;
-	};
+	id: string;
+	msgId: string;
 	reactionText: string;
 	read: boolean;
 	orphan: number;
@@ -46,8 +35,8 @@ export const wbotMessageListener = (wbot: Session): void => {
 	wbot.onReactionMessage((msg: MessageReaction) => {
 		HandleMsgReaction(msg);
 	});
-	wbot.onAck((ack: Ack) => {
+	wbot.onAck((_ack: Ack) => {
 		// HandleMsgAck(ack);
 	});
-	wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
+	// wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
 };

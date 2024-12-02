@@ -119,15 +119,15 @@ export const HandleMessage = async (
 				apiConfig?.externalKey &&
 				apiConfig?.urlMessageStatus
 			) {
-				const payload = {
-					timestamp: Date.now(),
-					msg,
-					messageId: msg.id.id,
-					ticketId: ticket.id,
-					externalKey: apiConfig?.externalKey,
-					authToken: apiConfig?.authToken,
-					type: "hookMessage",
-				};
+				// const payload = {
+				// 	timestamp: Date.now(),
+				// 	msg,
+				// 	messageId: msg.id.id,
+				// 	ticketId: ticket.id,
+				// 	externalKey: apiConfig?.externalKey,
+				// 	authToken: apiConfig?.authToken,
+				// 	type: "hookMessage",
+				// };
 				//   Queue.add("WebHooksAPI", {
 				// 	url: apiConfig.urlMessageStatus,
 				// 	type: payload.type,

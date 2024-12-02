@@ -3,7 +3,7 @@ import { writeFile } from "node:fs";
 import { promisify } from "node:util";
 import AppError from "../../errors/AppError";
 import ChatFlow from "../../models/ChatFlow";
-const writeFileAsync = promisify(writeFile);
+// const writeFileAsync = promisify(writeFile);
 
 interface Request {
 	id: string | number;

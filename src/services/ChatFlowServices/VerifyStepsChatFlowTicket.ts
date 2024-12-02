@@ -10,6 +10,7 @@ import BuildSendMessageService, {
 import DefinedUserBotService from "./DefinedUserBotService";
 import IsContactTest from "./IsContactTest";
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const validateStep = async (ticket: Ticket, step: any): Promise<boolean> => {
 	if (step.data.label === "pesquisaCPF") {
 		return validarCPF(ticket.lastMessage.toString().trim());
@@ -18,8 +19,11 @@ const validateStep = async (ticket: Ticket, step: any): Promise<boolean> => {
 };
 export const isNextSteps = async (
 	ticket: Ticket,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	chatFlow: any,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	step: any,
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	stepCondition: any,
 ): Promise<void> => {
 	// action = 0: enviar para proximo step: nextStepId
@@ -75,11 +79,10 @@ export const isNextSteps = async (
 		// await SetTicketMessagesAsRead(ticket);
 	}
 };
-
 const isQueueDefine = async (
 	ticket: Ticket,
 	flowConfig: any,
-	step: any,
+	_step: any,
 	stepCondition: any,
 ): Promise<void> => {
 	// action = 1: enviar para fila: queue
@@ -118,7 +121,7 @@ const isQueueDefine = async (
 
 const isUserDefine = async (
 	ticket: Ticket,
-	step: any,
+	_step: any,
 	stepCondition: any,
 ): Promise<void> => {
 	// action = 2: enviar para determinado usuário
@@ -158,8 +161,10 @@ const isCloseDefine = async (
 			botRetries: number;
 			lastInteractionBot: Date;
 		}) => void;
+
 		id: any;
 	},
+
 	actionDetails: { action: number; closeTicket: any; id: any },
 ) => {
 	if (actionDetails.action === 3) {
@@ -171,13 +176,14 @@ const isCloseDefine = async (
 			type: MessageType.MediaField,
 		};
 		const messageArray = [messageField];
-		const firstMessage = messageArray[0];
+		const _firstMessage = messageArray[0];
 
 		const sendMessageParams = {
 			msg: messageField,
 			tenantId: ticket.tenantId,
 			ticket: ticket,
 		};
+
 		await BuildSendMessageService(sendMessageParams);
 
 		ticket.update({
@@ -187,10 +193,11 @@ const isCloseDefine = async (
 			botRetries: 0,
 			lastInteractionBot: new Date(),
 		});
-		const showTicketParams = {
-			id: ticket.id,
-			tenantId: ticket.tenantId,
-		};
+
+		// const showTicketParams = {
+		// 	id: ticket.id,
+		// 	tenantId: ticket.tenantId,
+		// };
 
 		// const updatedTicket = yield ShowTicketServiceZPRO_1.default(
 		//     showTicketParams
@@ -205,6 +212,7 @@ const isCloseDefine = async (
 };
 
 // enviar mensagem de boas vindas à fila ou usuário
+
 const sendWelcomeMessage = async (
 	ticket: Ticket,
 	flowConfig: any,
@@ -226,7 +234,6 @@ const sendWelcomeMessage = async (
 		});
 	}
 };
-
 const isRetriesLimit = async (
 	ticket: Ticket,
 	flowConfig: any,
@@ -240,12 +247,14 @@ const isRetriesLimit = async (
 	) {
 		const destinyType = flowConfig.data.maxRetryBotMessage.type;
 		const { destiny } = flowConfig.data.maxRetryBotMessage;
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		const updatedValues: any = {
 			chatFlowId: null,
 			stepChatFlow: null,
 			botRetries: 0,
 			lastInteractionBot: new Date(),
 		};
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		const logsRetry: any = {
 			ticketId: ticket.id,
 			type: destinyType === 1 ? "retriesLimitQueue" : "retriesLimitUserDefine",
@@ -290,6 +299,7 @@ const isAnswerCloseTicket = async (
 	}
 
 	// verificar condição com a ação
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const params = flowConfig.data.answerCloseTicket.find((condition: any) => {
 		return (
 			String(condition).toLowerCase().trim() ===
@@ -323,11 +333,11 @@ const isAnswerCloseTicket = async (
 	}
 	return false;
 };
-
 const VerifyStepsChatFlowTicket = async (
 	msg: WbotMessage | any,
 	ticket: Ticket | any,
 ): Promise<void> => {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	let celularTeste: any; // ticket.chatFlow?.celularTeste;
 
 	if (
@@ -353,6 +363,7 @@ const VerifyStepsChatFlowTicket = async (
 			);
 
 			// verificar condição com a ação do step
+
 			const stepCondition = step.data.conditions.find((conditions: any) => {
 				if (conditions.type === "US") return true;
 

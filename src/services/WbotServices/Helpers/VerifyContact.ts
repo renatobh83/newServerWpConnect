@@ -26,7 +26,7 @@ const VerifyContact = async (
 		pushname: msgContact.pushname,
 		isUser: msgContact.isUser,
 		isWAContact: msgContact.isWAContact,
-		isGroup: null,
+		isGroup: !msgContact.isUser,
 	};
 
 	const contact = await CreateOrUpdateContactService(contactData);

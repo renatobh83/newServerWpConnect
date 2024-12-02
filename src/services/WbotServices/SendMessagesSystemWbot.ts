@@ -24,6 +24,7 @@ const SendMessagesSystemWbot = async (
 ): Promise<void> => {
 	const where = {
 		fromMe: true,
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		messageId: { [Op.is]: null } as any,
 		status: "pending",
 		[Op.or]: [
@@ -33,6 +34,7 @@ const SendMessagesSystemWbot = async (
 				},
 			},
 			{
+				// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 				scheduleDate: { [Op.is]: null } as any,
 			},
 		],
@@ -103,16 +105,13 @@ const SendMessagesSystemWbot = async (
 			if (message.mediaType !== "chat" && message.mediaName) {
 				const customPath = join(__dirname, "..", "..", "..", "public");
 				const mediaPath = join(customPath, message.mediaName);
-				const newMedia = MessageMedia.fromFilePath(mediaPath);
-				sendedMessage = await wbot.sendMessage(chatId, newMedia, {
-					quotedMessageId: quotedMsgSerializedId,
-					linkPreview: false, // fix: send a message takes 2 seconds when there's a link on message body
-					sendAudioAsVoice: true,
+				sendedMessage = await wbot.sendFile(chatId, mediaPath, {
+					quotedMsg: quotedMsgSerializedId,
 				});
 				logger.info("sendMessage media");
 			} else {
-				sendedMessage = await wbot.sendMessage(chatId, message.body, {
-					quotedMessageId: quotedMsgSerializedId,
+				sendedMessage = await wbot.sendText(chatId, message.body, {
+					quotedMsg: quotedMsgSerializedId,
 					linkPreview: false, // fix: send a message takes 2 seconds when there's a link on message body
 				});
 				logger.info("sendMessage text");
@@ -128,10 +127,10 @@ const SendMessagesSystemWbot = async (
 			};
 			// TODO removido udate
 			// eslint-disable-next-line
-			// await Message.update(
-			//   { ...messageToUpdate },
-			//   { where: { id: message.id } }
-			// );
+			await Message.update(
+				{ ...messageToUpdate },
+				{ where: { id: message.id } },
+			);
 
 			logger.info("Message Update");
 			// await SetTicketMessagesAsRead(ticket);

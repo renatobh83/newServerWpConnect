@@ -80,7 +80,7 @@ export const updateUser: RequestHandler = async (
 };
 
 export const indexTenants: RequestHandler = async (
-	req: Request,
+	_req: Request,
 	res: Response,
 ) => {
 	const tenants = await AdminListTenantsService();
@@ -133,6 +133,7 @@ export const indexChannels: RequestHandler = async (
 	req: Request,
 	res: Response,
 ) => {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const { tenantId } = req.query as any;
 	const channels = await AdminListChannelsService({ tenantId });
 

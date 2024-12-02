@@ -33,7 +33,8 @@ export const GetWbotMessage = async (
 	};
 
 	try {
-		const msgFound = await fetchWbotMessagesGradually();
+		const msgFound =
+			(await fetchWbotMessagesGradually()) as unknown as CustomWbotMessage;
 
 		if (!msgFound) {
 			console.error(

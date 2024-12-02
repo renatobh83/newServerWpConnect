@@ -45,6 +45,7 @@ const CheckChatBotFlowWelcome = async (instance: Ticket): Promise<void> => {
 
 	// alteracao do conteudo da line de from para source
 	const lineFlow = chatFlow.flow.lineList.find(
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		(line: any) => line.source === "start",
 	);
 

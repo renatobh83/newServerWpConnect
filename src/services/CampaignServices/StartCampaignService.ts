@@ -16,9 +16,10 @@ import {
 
 import { formatInTimeZone, toZonedTime } from "date-fns-tz";
 import AppError from "../../errors/AppError";
-import Queue from "../../libs/Queue";
+
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
+import { addJob } from "../../libs/Queue";
 
 interface Request {
 	campaignId: string | number;
@@ -156,7 +157,7 @@ const StartCampaignService = async ({
 			delay: calcDelay(new Date(dateDelay), timeDelay),
 		});
 	});
-	Queue.add("SendMessageWhatsappCampaign", data);
+	addJob("SendMessageWhatsappCampaign", data);
 
 	await campaign.update({
 		status: "scheduled",

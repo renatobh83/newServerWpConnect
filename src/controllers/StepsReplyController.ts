@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 
 import AppError from "../errors/AppError";
@@ -13,7 +13,7 @@ interface StepsReplyData {
 	initialStep: boolean;
 }
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
@@ -35,13 +35,10 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 
 	const stepsReply = await CreateStepsReplyService(newStepsReply);
 
-	return res.status(200).json(stepsReply);
+	res.status(200).json(stepsReply);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
@@ -66,18 +63,15 @@ export const update = async (
 		stepsReplyId,
 	});
 
-	return res.status(200).json(stepsReply);
+	res.status(200).json(stepsReply);
 };
 
-export const remove = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const remove: RequestHandler = async (req: Request, res: Response) => {
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
 	}
 	const { stepsReplyId } = req.params;
 
 	await DeleteStepsReplyService(stepsReplyId);
-	return res.status(200).json({ message: "Steps reply deleted" });
+	res.status(200).json({ message: "Steps reply deleted" });
 };
