@@ -5,7 +5,6 @@ const GetDefaultWhatsApp = async (
 	tenantId: string | number,
 	channelId?: number,
 ): Promise<Whatsapp> => {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const where: any = { tenantId, status: "CONNECTED" };
 
 	if (channelId) {

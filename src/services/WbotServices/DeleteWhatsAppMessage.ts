@@ -66,8 +66,8 @@ const DeleteWhatsAppMessage = async (
 		if (!messageToDelete) {
 			throw new AppError("ERROR_NOT_FOUND_MESSAGE");
 		}
-		await messageToDelete.delete(true);
-	} catch (err) {
+		// await messageToDelete.delete(true);/
+	} catch (_err) {
 		// StartWhatsAppSessionVerify(ticket.whatsappId, err);
 		throw new AppError("ERR_DELETE_WAPP_MSG");
 	}

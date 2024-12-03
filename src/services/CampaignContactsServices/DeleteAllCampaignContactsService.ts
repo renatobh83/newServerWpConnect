@@ -31,7 +31,7 @@ const DeleteAllCampaignContactsService = async ({
 				404,
 			);
 		}
-	} catch (_error) {
+	} catch (error) {
 		throw new AppError("ERR_CAMPAIGN_CONTACTS", 404);
 	}
 };

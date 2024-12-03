@@ -4,19 +4,22 @@ import {
 	addSeconds,
 	differenceInDays,
 	differenceInSeconds,
+	getDay,
 	isAfter,
 	isBefore,
 	isWithinInterval,
 	parse,
 	setHours,
 	setMinutes,
+	startOfDay,
 } from "date-fns";
 
-import { toZonedTime } from "date-fns-tz";
+import { formatInTimeZone, toZonedTime } from "date-fns-tz";
 import AppError from "../../errors/AppError";
 
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
+import { addJob } from "../../libs/Queue";
 
 interface Request {
 	campaignId: string | number;
@@ -66,48 +69,48 @@ const mountMessageData = (
 	};
 };
 
-// const nextDayHoursValid = (date: Date) => {
-// 	let dateVerify = date;
-// 	const dateNow = new Date();
-// 	const diffDays = differenceInDays(dateVerify, new Date());
-// 	// se dia for menor que o atual
-// 	if (diffDays < 0) {
-// 		dateVerify = addDays(dateVerify, diffDays * -1);
-// 	}
+const nextDayHoursValid = (date: Date) => {
+	let dateVerify = date;
+	const dateNow = new Date();
+	const diffDays = differenceInDays(dateVerify, new Date());
+	// se dia for menor que o atual
+	if (diffDays < 0) {
+		dateVerify = addDays(dateVerify, diffDays * -1);
+	}
 
-// 	// se a hora for menor que a atual ao programar a campanha
-// 	if (dateVerify.getTime() < dateNow.getTime()) {
-// 		dateVerify = setMinutes(
-// 			setHours(dateVerify, dateNow.getHours()),
-// 			dateNow.getMinutes(),
-// 		);
-// 	}
+	// se a hora for menor que a atual ao programar a campanha
+	if (dateVerify.getTime() < dateNow.getTime()) {
+		dateVerify = setMinutes(
+			setHours(dateVerify, dateNow.getHours()),
+			dateNow.getMinutes(),
+		);
+	}
 
-// 	const start = parse("08:00", "HH:mm", dateVerify);
-// 	const end = parse("20:00", "HH:mm", dateVerify);
+	const start = parse("08:00", "HH:mm", dateVerify);
+	const end = parse("20:00", "HH:mm", dateVerify);
 
-// 	const isValidHour = isWithinInterval(dateVerify, { start, end });
+	const isValidHour = isWithinInterval(dateVerify, { start, end });
 
-// 	const isDateBefore = isBefore(start, dateVerify);
-// 	const isDateAfter = isAfter(end, dateVerify);
+	const isDateBefore = isBefore(start, dateVerify);
+	const isDateAfter = isAfter(end, dateVerify);
 
-// 	// fora do intervalo e menor que a hora inicial
-// 	if (!isValidHour && isDateBefore) {
-// 		dateVerify = setMinutes(setHours(dateVerify, 8), 30);
-// 	}
+	// fora do intervalo e menor que a hora inicial
+	if (!isValidHour && isDateBefore) {
+		dateVerify = setMinutes(setHours(dateVerify, 8), 30);
+	}
 
-// 	// fora do intervalo, maior que a hora final e no mesmo dia
-// 	if (!isValidHour && isDateAfter && diffDays === 0) {
-// 		dateVerify = addDays(setHours(dateVerify, 8), 1);
-// 	}
+	// fora do intervalo, maior que a hora final e no mesmo dia
+	if (!isValidHour && isDateAfter && diffDays === 0) {
+		dateVerify = addDays(setHours(dateVerify, 8), 1);
+	}
 
-// 	// fora do intervalo, maior que a hora final e dia diferente
-// 	if (!isValidHour && isDateAfter && diffDays > 0) {
-// 		dateVerify = setHours(dateVerify, 8);
-// 	}
+	// fora do intervalo, maior que a hora final e dia diferente
+	if (!isValidHour && isDateAfter && diffDays > 0) {
+		dateVerify = setHours(dateVerify, 8);
+	}
 
-// 	return dateVerify;
-// };
+	return dateVerify;
+};
 
 const calcDelay = (nextDate: Date, delay: number) => {
 	const diffSeconds = differenceInSeconds(nextDate, new Date());
@@ -154,7 +157,7 @@ const StartCampaignService = async ({
 			delay: calcDelay(new Date(dateDelay), timeDelay),
 		});
 	});
-	// Queue.add("SendMessageWhatsappCampaign", data);
+	addJob("SendMessageWhatsappCampaign", data);
 
 	await campaign.update({
 		status: "scheduled",

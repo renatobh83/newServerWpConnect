@@ -30,8 +30,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newStepsReply);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const stepsReply = await CreateStepsReplyService(newStepsReply);
@@ -55,8 +54,7 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(stepsReplyData);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const { stepsReplyId } = req.params;

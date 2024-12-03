@@ -1,8 +1,8 @@
-import { writeFile } from 'node:fs';
+import { writeFile } from "node:fs";
 
-import { promisify } from 'node:util';
-import AppError from '../../errors/AppError';
-import ChatFlow from '../../models/ChatFlow';
+import { promisify } from "node:util";
+import AppError from "../../errors/AppError";
+import ChatFlow from "../../models/ChatFlow";
 // const writeFileAsync = promisify(writeFile);
 
 interface Request {
@@ -10,13 +10,16 @@ interface Request {
 	tenantId: string | number;
 }
 
-const DeleteChatFlowService = async ({ id, tenantId }: Request): Promise<void> => {
+const DeleteChatFlowService = async ({
+	id,
+	tenantId,
+}: Request): Promise<void> => {
 	const cahtFlow = await ChatFlow.findOne({
 		where: { id, tenantId },
 	});
 
 	if (!cahtFlow) {
-		throw new AppError('ERR_NO_CHAT_FLOW_FOUND', 404);
+		throw new AppError("ERR_NO_CHAT_FLOW_FOUND", 404);
 	}
 
 	await cahtFlow.update({
@@ -25,7 +28,7 @@ const DeleteChatFlowService = async ({ id, tenantId }: Request): Promise<void> =
 	});
 
 	await cahtFlow.reload({
-		attributes: ['isActive', 'isDeleted'],
+		attributes: ["isActive", "isDeleted"],
 	});
 };
 

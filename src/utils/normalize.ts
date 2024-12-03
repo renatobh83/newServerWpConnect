@@ -1,6 +1,4 @@
-import type { Contact, Ack } from "@wppconnect-team/wppconnect";
-
-export const getId = (obj: Contact | Ack) => {
+export const getId = (obj) => {
 	// Verifica se o id é um objeto com a propriedade `_serialized`
 	if (typeof obj.id === "object" && obj.id._serialized) {
 		return obj.id._serialized;

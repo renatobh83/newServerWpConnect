@@ -31,8 +31,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newQueue);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const queue = await CreateQueueService(newQueue);
@@ -63,8 +62,7 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(queueData);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const { queueId } = req.params;

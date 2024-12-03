@@ -65,8 +65,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 
 	try {
 		await schema.validate(newContact);
-	} catch (error) {
-		const err = error as Error;
+	} catch (err) {
 		throw new AppError(err.message);
 	}
 
@@ -100,8 +99,7 @@ export const storeVcard: RequestHandler = async (
 
 	try {
 		await schema.validate(newContact);
-	} catch (error) {
-		const err = error as Error;
+	} catch (err) {
 		throw new AppError(err.message);
 	}
 
@@ -151,8 +149,7 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 
 	try {
 		await schema.validate(contactData);
-	} catch (error) {
-		const err = error as Error;
+	} catch (err) {
 		throw new AppError(err.message);
 	}
 

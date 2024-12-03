@@ -133,6 +133,7 @@ export const indexChannels: RequestHandler = async (
 	req: Request,
 	res: Response,
 ) => {
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const { tenantId } = req.query as any;
 	const channels = await AdminListChannelsService({ tenantId });
 

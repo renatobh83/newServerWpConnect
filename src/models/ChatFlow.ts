@@ -11,27 +11,12 @@ import {
 	PrimaryKey,
 	Table,
 	UpdatedAt,
-} from 'sequelize-typescript';
-import Tenant from './Tenant';
-import User from './User';
-interface ChatFlowAttributes {
-	id?: number;
-	name: string;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	flow?: any; // JSON data structure, type defined as 'any' for flexibility
-	isActive?: boolean;
-	isDeleted?: boolean;
-	celularTeste?: string | null;
-	userId: number;
-	user?: User;
-	tenantId: number;
-	tenant?: Tenant;
-	createdAt?: Date;
-	updatedAt?: Date;
-}
+} from "sequelize-typescript";
+import Tenant from "./Tenant";
+import User from "./User";
 
 @Table({ freezeTableName: true })
-class ChatFlow extends Model<ChatFlowAttributes> {
+class ChatFlow extends Model<ChatFlow> {
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER)
@@ -80,17 +65,17 @@ class ChatFlow extends Model<ChatFlowAttributes> {
 	@Column(DataType.DATE(6))
 	declare updatedAt?: Date;
 
-	tableName: 'ChatFlow';
+	tableName: "ChatFlow";
 
 	// Método getter ajustado para o flow
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	get flowData(): any {
-		const flow = this.getDataValue('flow');
+		const flow = this.getDataValue("flow");
 		if (flow) {
 			for (const node of flow.nodeList) {
-				if (node.type === 'node') {
+				if (node.type === "node") {
 					for (const item of node.data.interactions) {
-						if (item.type === 'MediaField' && item.data.mediaUrl) {
+						if (item.type === "MediaField" && item.data.mediaUrl) {
 							const { BACKEND_URL, PROXY_PORT } = process.env;
 							const file = item.data.mediaUrl;
 							item.data.fileName = file;

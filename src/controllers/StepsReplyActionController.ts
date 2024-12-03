@@ -36,8 +36,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(stepsReplyActionData);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const stepsReplyAction =
@@ -65,8 +64,7 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(stepsReplyActionData);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const { stepsReplyActionId } = req.params;

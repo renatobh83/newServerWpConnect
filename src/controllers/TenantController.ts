@@ -54,8 +54,7 @@ export const updateBusinessHours: RequestHandler = async (
 	try {
 		await schema.validate(businessHours);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const newBusinessHours = await UpdateBusinessHoursService({

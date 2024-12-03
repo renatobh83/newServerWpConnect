@@ -1,13 +1,12 @@
-import { writeFile } from 'node:fs';
-import { join } from 'node:path';
+import { writeFile } from "node:fs";
+import { join } from "node:path";
 
-import { promisify } from 'node:util';
-import AppError from '../../errors/AppError';
-import ChatFlow from '../../models/ChatFlow';
+import { promisify } from "node:util";
+import AppError from "../../errors/AppError";
+import ChatFlow from "../../models/ChatFlow";
 const writeFileAsync = promisify(writeFile);
 
 interface ChatFlowData {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	flow: any;
 	name: string;
 	userId: number;
@@ -21,35 +20,39 @@ interface Request {
 	tenantId: string | number;
 }
 
-const UpdateChatFlowService = async ({ chatFlowData, chatFlowId, tenantId }: Request): Promise<ChatFlow> => {
+const UpdateChatFlowService = async ({
+	chatFlowData,
+	chatFlowId,
+	tenantId,
+}: Request): Promise<ChatFlow> => {
 	const { name, flow, userId } = chatFlowData;
 
 	const cahtFlow = await ChatFlow.findOne({
 		where: { id: chatFlowId, tenantId },
-		attributes: ['id', 'name', 'flow', 'userId', 'isActive', 'celularTeste'],
+		attributes: ["id", "name", "flow", "userId", "isActive", "celularTeste"],
 	});
 
 	if (!cahtFlow) {
-		throw new AppError('ERR_NO_CHAT_FLOW_FOUND', 404);
+		throw new AppError("ERR_NO_CHAT_FLOW_FOUND", 404);
 	}
 
 	for await (const node of flow.flow.nodeList) {
-		if (node.type === 'node') {
+		if (node.type === "node") {
 			for await (const item of node.data.interactions) {
-				if (item.type === 'MediaField' && item.data.media) {
+				if (item.type === "MediaField" && item.data.media) {
 					const newName = `${new Date().getTime()}-${item.data.name}`;
 					await writeFileAsync(
-						join(__dirname, '..', '..', '..', 'public', newName),
-						item.data.media.split('base64')[1],
-						'base64',
+						join(__dirname, "..", "..", "..", "public", newName),
+						item.data.media.split("base64")[1],
+						"base64",
 					);
 
 					item.data.media = undefined;
 					item.data.mediaUrl = newName;
 				}
 				// ajustar para retirar a informação da URL
-				if (item.type === 'MediaField' && item.data.mediaUrl) {
-					const urlSplit = item.data.mediaUrl.split('/');
+				if (item.type === "MediaField" && item.data.mediaUrl) {
+					const urlSplit = item.data.mediaUrl.split("/");
 					item.data.mediaUrl = urlSplit[urlSplit.length - 1];
 				}
 			}
@@ -65,7 +68,7 @@ const UpdateChatFlowService = async ({ chatFlowData, chatFlowId, tenantId }: Req
 	});
 
 	await cahtFlow.reload({
-		attributes: ['id', 'name', 'flow', 'userId', 'isActive', 'celularTeste'],
+		attributes: ["id", "name", "flow", "userId", "isActive", "celularTeste"],
 	});
 
 	return cahtFlow;

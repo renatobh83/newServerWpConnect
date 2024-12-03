@@ -985,213 +985,251 @@
   timestamp: '2024-11-30T22:55:39.917Z'
 }
 {
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:28:11.000Z,
   level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:28:11.085Z'
+  message: 'null value in column "isGroup" of relation "Contacts" violates not-null constraint',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "isGroup" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 389,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (8, Amor, 553187481219, https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7..., 2024-12-02 20:10:31.531-03, 2024-12-02 20:10:31.531-03, , null, 1, t, Veronica, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'isGroup',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Amor',
+      '553187481219',
+      '',
+      'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+      'Veronica',
+      null,
+      null,
+      null,
+      true,
+      true,
+      null,
+      '2024-12-02 20:10:31.531 -03:00',
+      '2024-12-02 20:10:31.531 -03:00',
+      1
+    ]
+  },
+  original: error: null value in column "isGroup" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 389,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (8, Amor, 553187481219, https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7..., 2024-12-02 20:10:31.531-03, 2024-12-02 20:10:31.531-03, , null, 1, t, Veronica, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'isGroup',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Amor',
+      '553187481219',
+      '',
+      'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+      'Veronica',
+      null,
+      null,
+      null,
+      true,
+      true,
+      null,
+      '2024-12-02 20:10:31.531 -03:00',
+      '2024-12-02 20:10:31.531 -03:00',
+      1
+    ]
+  },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  parameters: [
+    'Amor',
+    '553187481219',
+    '',
+    'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+    'Veronica',
+    null,
+    null,
+    null,
+    true,
+    true,
+    null,
+    '2024-12-02 20:10:31.531 -03:00',
+    '2024-12-02 20:10:31.531 -03:00',
+    1
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at PostgresQueryInterface.insert (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Function.create (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/VerifyContact.ts:32:18)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:74:20',
+  timestamp: '2024-12-02T23:10:32.739Z'
 }
 {
-  message: 'Invalid token.',
-  statusCode: 403,
   level: 'error',
-  timestamp: '2024-12-02T10:28:11.826Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:30:12.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:35:10.844Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:35:11.158Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:35:11.167Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:35:11.168Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:35:11.170Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:37:12.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:37:49.689Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:37:49.995Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:37:50.006Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:37:50.009Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:37:50.011Z'
-}
-{
-  message: 'Invalid token.',
-  statusCode: 403,
-  level: 'error',
-  timestamp: '2024-12-02T10:39:51.446Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:39:51.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:40:26.650Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:39:51.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:41:37.049Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:43:38.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:43:42.366Z'
-}
-{
-  name: 'TokenExpiredError',
-  message: 'jwt expired',
-  expiredAt: 2024-12-02T10:45:44.000Z,
-  level: 'error',
-  stack: 'TokenExpiredError: jwt expired\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:45:48.164Z'
-}
-{
-  name: 'JsonWebTokenError',
-  message: 'invalid signature',
-  level: 'error',
-  stack: 'JsonWebTokenError: invalid signature\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:46:03.080Z'
-}
-{
-  name: 'JsonWebTokenError',
-  message: 'invalid signature',
-  level: 'error',
-  stack: 'JsonWebTokenError: invalid signature\n' +
-    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
-    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
-    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
-    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
-    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
-    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
-    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
-    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
-    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
-  timestamp: '2024-12-02T10:46:20.287Z'
+  message: 'null value in column "isGroup" of relation "Contacts" violates not-null constraint',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "isGroup" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 390,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (11, Amor, 553187481219, https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7..., 2024-12-02 20:10:32.965-03, 2024-12-02 20:10:32.965-03, , null, 1, t, Veronica, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'isGroup',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Amor',
+      '553187481219',
+      '',
+      'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+      'Veronica',
+      null,
+      null,
+      null,
+      true,
+      true,
+      null,
+      '2024-12-02 20:10:32.965 -03:00',
+      '2024-12-02 20:10:32.965 -03:00',
+      1
+    ]
+  },
+  original: error: null value in column "isGroup" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 390,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (11, Amor, 553187481219, https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7..., 2024-12-02 20:10:32.965-03, 2024-12-02 20:10:32.965-03, , null, 1, t, Veronica, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'isGroup',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Amor',
+      '553187481219',
+      '',
+      'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+      'Veronica',
+      null,
+      null,
+      null,
+      true,
+      true,
+      null,
+      '2024-12-02 20:10:32.965 -03:00',
+      '2024-12-02 20:10:32.965 -03:00',
+      1
+    ]
+  },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  parameters: [
+    'Amor',
+    '553187481219',
+    '',
+    'https://media-gru2-1.cdn.whatsapp.net/v/t61.24694-24/440771987_7946612105406481_2785966217708757041_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIGUXy-Iolz0Gjj13yRf9zfPSOTYJmi85W47O9R_FNBXU&oe=675B5154&_nc_sid=5e03e0&_nc_cat=108',
+    'Veronica',
+    null,
+    null,
+    null,
+    true,
+    true,
+    null,
+    '2024-12-02 20:10:32.965 -03:00',
+    '2024-12-02 20:10:32.965 -03:00',
+    1
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Function.create (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/VerifyContact.ts:32:18)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:74:20',
+  timestamp: '2024-12-02T23:10:33.871Z'
 }

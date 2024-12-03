@@ -33,8 +33,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(newTag);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const tag = await CreateTagService(newTag);
@@ -71,8 +70,7 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 	try {
 		await schema.validate(tagData);
 	} catch (error) {
-		const err = error as Error;
-		throw new AppError(err.message);
+		throw new AppError(error.message);
 	}
 
 	const { tagId } = req.params;

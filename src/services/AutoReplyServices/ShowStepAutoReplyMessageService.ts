@@ -8,10 +8,10 @@ const ShowStepAutoReplyMessageService = async (
 	action: number,
 	idAutoReply: number,
 	stepId: number,
-	initialStep: boolean,
+	initialStep,
 	tenantId: number | string,
 ): Promise<StepsReply> => {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const where: any = {};
 	if (initialStep) {
 		where.initialStep = initialStep;

@@ -55,7 +55,7 @@ export async function addJob(
 // Função para configurar o processamento
 export function processQueues(concurrency = 60) {
 	// biome-ignore lint/complexity/noForEach: <explanation>
-	queues.forEach(({ bull, name, handle }) => {
+	queues.forEach(({ name, handle }) => {
 		new Worker(
 			name,
 			async (job: Job) => {

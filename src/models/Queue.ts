@@ -14,17 +14,8 @@ import {
 import Tenant from "./Tenant";
 import User from "./User";
 
-interface QueueAttributes {
-	id?: number;
-	queue: string;
-	isActive: boolean;
-	userId: number;
-	tenantId: number;
-	createdAt?: Date;
-	updatedAt?: Date;
-}
 @Table
-class Queue extends Model<QueueAttributes> {
+class Queue extends Model<Queue> {
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER) // Especificando explicitamente o tipo de dado

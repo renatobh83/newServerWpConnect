@@ -1,11 +1,15 @@
-import { join } from 'node:path';
-import SendMessageSystemProxy from '../../helpers/SendMessageSystemProxy';
-import socketEmit from '../../helpers/socketEmit';
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 
-import Message from '../../models/Message';
-import Ticket from '../../models/Ticket';
-import { logger } from '../../utils/logger';
-import { pupa } from '../../utils/pupa';
+import { promisify } from "node:util";
+import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
+import socketEmit from "../../helpers/socketEmit";
+import type ApiConfirmacao from "../../models/ApiConfirmacao";
+import Message from "../../models/Message";
+import Ticket from "../../models/Ticket";
+import type { ResponseListaAgendamentos } from "../../templates/ListaAgendamentos";
+import { logger } from "../../utils/logger";
+import { pupa } from "../../utils/pupa";
 // import ShowApiListService from "../../apiExternal/ApiGen/services/ApiConfirmacaoServices/ShowApiListService";
 // import {
 // 	ConfirmaExame,
@@ -30,7 +34,7 @@ interface MessageData {
 	timestamp?: number;
 	internalId?: string;
 	userId?: string | number;
-	tenantId: number;
+	tenantId: string | number;
 	quotedMsgId?: string;
 	// status?: string;
 	scheduleDate?: string | Date;
@@ -43,10 +47,10 @@ interface WebhookProps {
 	acao: string;
 }
 export enum MessageType {
-	MessageField = 'MessageField',
-	MessageOptionsField = 'MessageOptionsField',
-	MediaField = 'MediaField',
-	WebhookField = 'WebhookField',
+	MessageField = "MessageField",
+	MessageOptionsField = "MessageOptionsField",
+	MediaField = "MediaField",
+	WebhookField = "WebhookField",
 }
 interface MessageRequest {
 	data: {
@@ -60,12 +64,12 @@ interface MessageRequest {
 		webhook?: WebhookProps;
 	};
 	id: string;
-	type: 'MessageField' | 'MessageOptionsField' | 'MediaField' | 'WebhookField';
+	type: "MessageField" | "MessageOptionsField" | "MediaField" | "WebhookField";
 }
 
 interface Request {
 	msg: MessageRequest;
-	tenantId: number;
+	tenantId: string | number;
 	ticket: Ticket;
 	userId?: number | string;
 }
@@ -87,37 +91,44 @@ interface Request {
 // 	}
 // 	return false;
 // }
-const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Request): Promise<void> => {
+const BuildSendMessageService = async ({
+	msg,
+	tenantId,
+	ticket,
+	userId,
+}: Request): Promise<void> => {
 	const messageData: MessageData = {
 		ticketId: ticket.id,
-		body: '',
+		body: "",
 		contactId: ticket.contactId,
 		fromMe: true,
 		read: true,
-		mediaType: 'chat',
+		mediaType: "chat",
 		mediaUrl: undefined,
 		timestamp: new Date().getTime(),
 		quotedMsgId: undefined,
 		userId,
 		scheduleDate: undefined,
-		sendType: 'bot',
-		status: 'pending',
+		sendType: "bot",
+		status: "pending",
 		tenantId,
 	};
 
 	try {
-		if (msg.type === 'MediaField' && msg.data.mediaUrl) {
-			const urlSplit = msg.data.mediaUrl.split('/');
+		if (msg.type === "MediaField" && msg.data.mediaUrl) {
+			const urlSplit = msg.data.mediaUrl.split("/");
 
 			const message = {
 				...messageData,
 				body: msg.data.name,
 				mediaName: urlSplit[urlSplit.length - 1],
 				mediaUrl: urlSplit[urlSplit.length - 1],
-				mediaType: msg.data.type ? msg.data?.type.substr(0, msg.data.type.indexOf('/')) : 'chat',
+				mediaType: msg.data.type
+					? msg.data?.type.substr(0, msg.data.type.indexOf("/"))
+					: "chat",
 			};
 
-			const customPath = join(__dirname, '..', '..', '..', 'public');
+			const customPath = join(__dirname, "..", "..", "..", "public");
 			const mediaPath = join(customPath, message.mediaUrl);
 
 			const media = {
@@ -135,28 +146,28 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 			const msgCreated = await Message.create({
 				...message,
 				...messageSent,
-				id: messageData.id,
-				messageId: messageSent?.id ?? messageSent?.messageId ?? '',
+				id: messageData?.id,
+				messageId: messageSent?.id ?? messageSent?.messageId ?? "",
 			});
 
 			const messageCreated = await Message.findByPk(msgCreated.id, {
 				include: [
 					{
 						model: Ticket,
-						as: 'ticket',
+						as: "ticket",
 						where: { tenantId },
-						include: ['contact'],
+						include: ["contact"],
 					},
 					{
 						model: Message,
-						as: 'quotedMsg',
-						include: ['contact'],
+						as: "quotedMsg",
+						include: ["contact"],
 					},
 				],
 			});
 
 			if (!messageCreated) {
-				throw new Error('ERR_CREATING_MESSAGE_SYSTEM');
+				throw new Error("ERR_CREATING_MESSAGE_SYSTEM");
 			}
 
 			await ticket.update({
@@ -166,10 +177,10 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 
 			socketEmit({
 				tenantId,
-				type: 'chat:create',
+				type: "chat:create",
 				payload: messageCreated,
 			});
-		} else if (msg.type === 'WebhookField') {
+		} else if (msg.type === "WebhookField") {
 			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			// biome-ignore lint/style/useConst: <explanation>
 			let messageSent: any;
@@ -195,27 +206,27 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 				...messageSent,
 				id: messageData.id,
 				messageId: messageSent.id?.id || messageSent.messageId || null,
-				mediaType: 'bot',
+				mediaType: "bot",
 			});
 
 			const messageCreated = await Message.findByPk(msgCreated.id, {
 				include: [
 					{
 						model: Ticket,
-						as: 'ticket',
+						as: "ticket",
 						where: { tenantId },
-						include: ['contact'],
+						include: ["contact"],
 					},
 					{
 						model: Message,
-						as: 'quotedMsg',
-						include: ['contact'],
+						as: "quotedMsg",
+						include: ["contact"],
 					},
 				],
 			});
 
 			if (!messageCreated) {
-				throw new Error('ERR_CREATING_MESSAGE_SYSTEM');
+				throw new Error("ERR_CREATING_MESSAGE_SYSTEM");
 			}
 
 			await ticket.update({
@@ -226,7 +237,7 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 
 			socketEmit({
 				tenantId,
-				type: 'chat:create',
+				type: "chat:create",
 				payload: messageCreated,
 			});
 			// {
@@ -236,7 +247,7 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 			// }
 		} else {
 			// Alter template message
-			msg.data.message = pupa(msg.data.message || '', {
+			msg.data.message = pupa(msg.data.message || "", {
 				// greeting: será considerado conforme data/hora da mensagem internamente na função pupa
 				protocol: ticket.protocol,
 				name: ticket.contact.name,
@@ -256,28 +267,28 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 				...messageData,
 				...messageSent,
 				id: messageData.id,
-				messageId: messageSent?.id ?? messageSent?.messageId ?? '',
-				mediaType: 'bot',
+				messageId: messageSent?.id ?? messageSent?.messageId ?? "",
+				mediaType: "bot",
 			});
 
 			const messageCreated = await Message.findByPk(msgCreated.id, {
 				include: [
 					{
 						model: Ticket,
-						as: 'ticket',
+						as: "ticket",
 						where: { tenantId },
-						include: ['contact'],
+						include: ["contact"],
 					},
 					{
 						model: Message,
-						as: 'quotedMsg',
-						include: ['contact'],
+						as: "quotedMsg",
+						include: ["contact"],
 					},
 				],
 			});
 
 			if (!messageCreated) {
-				throw new Error('ERR_CREATING_MESSAGE_SYSTEM');
+				throw new Error("ERR_CREATING_MESSAGE_SYSTEM");
 			}
 
 			await ticket.update({
@@ -288,12 +299,12 @@ const BuildSendMessageService = async ({ msg, tenantId, ticket, userId }: Reques
 
 			socketEmit({
 				tenantId,
-				type: 'chat:create',
+				type: "chat:create",
 				payload: messageCreated,
 			});
 		}
 	} catch (error) {
-		logger.error('BuildSendMessageService', error);
+		logger.error("BuildSendMessageService", error);
 	}
 };
 

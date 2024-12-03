@@ -3,6 +3,7 @@ import AppError from "../../errors/AppError";
 import ApiConfirmacao from "../../models/ApiConfirmacao";
 import { logger } from "../../utils/logger";
 
+let cachedToken: string | null = null;
 export const StartApiSession = async (api: ApiConfirmacao) => {
 	const findApi = await ApiConfirmacao.findOne({
 		where: { id: api.id, tenantId: api.tenantId },
@@ -25,7 +26,7 @@ export const StartApiSession = async (api: ApiConfirmacao) => {
 					`${link}/doFuncionarioLogin?id=${usuario}&pw=${senha}`,
 				);
 				const token = response.data[0].ds_token;
-
+				cachedToken = token;
 				findApi.token = token;
 				findApi.status = "CONECTADA";
 				await findApi.save();

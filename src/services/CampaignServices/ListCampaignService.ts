@@ -10,7 +10,7 @@ interface Request {
 const ListCampaignService = async ({
 	tenantId,
 }: Request): Promise<Campaign[]> => {
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const where: any = {
 		tenantId,
 	};

@@ -40,8 +40,7 @@ const DeleteMessageSystem = async (
 		if (!messageToDelete) {
 			throw new AppError("ERROR_NOT_FOUND_MESSAGE");
 		}
-
-		// :await messageToDelete.delete(true);
+		// await messageToDelete.delete(true);
 	}
 
 	await message.update({ isDeleted: true });
