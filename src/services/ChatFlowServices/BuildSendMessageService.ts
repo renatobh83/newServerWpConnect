@@ -33,11 +33,11 @@ interface MessageData {
 	mediaUrl?: string;
 	timestamp?: number;
 	internalId?: string;
-	userId?: string | number;
-	tenantId: string | number;
+	userId?: number;
+	tenantId: number;
 	quotedMsgId?: string;
 	// status?: string;
-	scheduleDate?: string | Date;
+	scheduleDate?: Date;
 	sendType?: string;
 	status?: string;
 }
@@ -69,9 +69,10 @@ interface MessageRequest {
 
 interface Request {
 	msg: MessageRequest;
-	tenantId: string | number;
-	ticket: Ticket;
-	userId?: number | string;
+	tenantId: number;
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	ticket: any;
+	userId?: number;
 }
 
 // const writeFileAsync = promisify(writeFile);

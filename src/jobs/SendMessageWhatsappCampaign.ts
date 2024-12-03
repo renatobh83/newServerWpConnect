@@ -17,45 +17,38 @@ export default {
 			delay: 60000 * 5, // 5 min
 		},
 	},
-	async handle(data: any[]) {
+	async handle(data: any) {
 		try {
-			// biome-ignore lint/complexity/noForEach: <explanation>
-			data.forEach(async (value) => {
-				/// feito por está apresentando problema com o tipo
-				const wbot = getWbot(value.whatsappId);
-				let messageSent = {} as WbotMessage;
-				if (value.mediaUrl) {
-					const customPath = join(__dirname, "..", "..", "public");
-					const mediaPath = join(customPath, value.mediaName);
+			/// feito por está apresentando problema com o tipo
+			const wbot = getWbot(data.whatsappId);
+			let messageSent = {} as WbotMessage;
+			if (data.mediaUrl) {
+				const customPath = join(__dirname, "..", "..", "public");
+				const mediaPath = join(customPath, data.mediaName);
 
-					messageSent = await wbot.sendFile(`${value.number}@c.us`, mediaPath, {
-						caption: value.message,
-					});
-				} else {
-					messageSent = await wbot.sendText(
-						`${value.number}@c.us`,
-						value.message,
-						{
-							linkPreview: false,
-						},
-					);
-				}
+				messageSent = await wbot.sendFile(`${data.number}@c.us`, mediaPath, {
+					caption: data.message,
+				});
+			} else {
+				messageSent = await wbot.sendText(`${data.number}@c.us`, data.message, {
+					linkPreview: false,
+				});
+			}
 
-				await CampaignContacts.update(
-					{
-						messageId: messageSent.id,
-						messageRandom: value.messageRandom,
-						body: value.message,
-						mediaName: value.mediaName,
-						timestamp: value.message.timestamp,
-						//   jobId: data.jobId
-						ack: messageSent.ack,
-					},
-					{ where: { id: value.campaignContact.id } },
-				);
+			await CampaignContacts.update(
+				{
+					messageId: messageSent.id,
+					messageRandom: data.messageRandom,
+					body: data.message,
+					mediaName: data.mediaName,
+					timestamp: data.message.timestamp,
+					//   jobId: data.jobId
+					ack: messageSent.ack,
+				},
+				{ where: { id: data.campaignContact.id } },
+			);
 
-				return messageSent;
-			});
+			return messageSent;
 		} catch (error) {
 			logger.error(`Error enviar message campaign: ${error}`);
 			throw new Error(error);

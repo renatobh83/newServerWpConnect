@@ -20,10 +20,10 @@ const verifyBusinessHours = async (
 		});
 
 		const dateMsg = fromUnixTime(msg.timestamp);
-		const businessDay: any = tenant.businessHours.find(
+
+		const businessDay: any = Object.values(tenant.businessHours).find(
 			(d: any) => d.day === dateMsg.getDay(),
 		);
-
 		// Não existir configuração para a data, não deverá enviar
 		// mensagem de ausencia
 		if (!businessDay) return isBusinessHours;

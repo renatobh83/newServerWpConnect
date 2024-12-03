@@ -41,7 +41,11 @@ export async function addJob(
 	}
 
 	try {
-		await queue.bull.add(queueName, data, { ...queue.options, ...options });
+		await queue.bull.add(queueName, data, {
+			...queue.options,
+			...data.options,
+			...options,
+		});
 		logger.info(`Job adicionado à fila ${queueName}`);
 	} catch (error) {
 		logger.error({

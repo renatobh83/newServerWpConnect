@@ -4,7 +4,7 @@ import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import { getWbot } from "../libs/wbot";
 import CreateMessageSystemService from "../services/MessageServices/CreateMessageSystemService";
 import FindOrCreateTicketService from "../services/TicketServices/FindOrCreateTicketService";
-import VerifyContact from "../services/WbotServices/helpers/VerifyContact";
+
 // import mime from "mime-types";
 import { logger } from "../utils/logger";
 import { addJob } from "../libs/Queue";
@@ -24,88 +24,89 @@ export default {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	async handle({ data }: any) {
 		try {
-			const wbot = getWbot(data.sessionId);
-			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-			const message: any = {} as WbotMessage;
-			try {
-				console.log(data);
-				const idNumber = true; //await wbot.getNumberId(data.number);
-				if (!idNumber) {
-					const payload = {
-						ack: -1,
-						body: data.body,
-						messageId: "",
-						number: data.number,
-						externalKey: data.externalKey,
-						error: "number invalid in whatsapp",
-						type: "hookMessageStatus",
-						authToken: data.authToken,
-					};
+			console.log(data);
+			// 	const wbot = getWbot(data.sessionId);
+			// 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+			// 	const message: any = {} as WbotMessage;
+			// 	try {
+			// 		console.log(data);
+			// 		const idNumber = true; //await wbot.getNumberId(data.number);
+			// 		if (!idNumber) {
+			// 			const payload = {
+			// 				ack: -1,
+			// 				body: data.body,
+			// 				messageId: "",
+			// 				number: data.number,
+			// 				externalKey: data.externalKey,
+			// 				error: "number invalid in whatsapp",
+			// 				type: "hookMessageStatus",
+			// 				authToken: data.authToken,
+			// 			};
 
-					if (data.media) {
-						// excluir o arquivo se o número não existir
-						fs.unlinkSync(data.media.path);
-					}
+			// 			if (data.media) {
+			// 				// excluir o arquivo se o número não existir
+			// 				fs.unlinkSync(data.media.path);
+			// 			}
 
-					if (data?.apiConfig?.urlMessageStatus) {
-						addJob("WebHooksAPI", {
-							url: data.apiConfig.urlMessageStatus,
-							type: payload.type,
-							payload,
-						});
-					}
-					return payload;
-				}
-				return;
-				// '559891191708@c.us'
-				const msgContact = await wbot.getContact(idNumber._serialized);
-				const contact = await VerifyContact(msgContact, data.tenantId);
-				const ticket = await FindOrCreateTicketService({
-					contact,
-					// biome-ignore lint/style/noNonNullAssertion: <explanation>
-					whatsappId: wbot.id!,
-					unreadMessages: 0,
-					tenantId: data.tenantId,
-					groupContact: undefined,
-					msg: data,
-					channel: "whatsapp",
-				});
+			// 			if (data?.apiConfig?.urlMessageStatus) {
+			// 				addJob("WebHooksAPI", {
+			// 					url: data.apiConfig.urlMessageStatus,
+			// 					type: payload.type,
+			// 					payload,
+			// 				});
+			// 			}
+			// 			return payload;
+			// 		}
 
-				await CreateMessageSystemService({
-					msg: data,
-					tenantId: data.tenantId,
-					ticket,
-					sendType: "API",
-					status: "pending",
-				});
+			// 		// '559891191708@c.us'
+			// 		const msgContact = await wbot.getContact(idNumber._serialized);
+			// 		const contact = await VerifyContact(msgContact, data.tenantId);
+			// 		const ticket = await FindOrCreateTicketService({
+			// 			contact,
+			// 			// biome-ignore lint/style/noNonNullAssertion: <explanation>
+			// 			whatsappId: wbot.id!,
+			// 			unreadMessages: 0,
+			// 			tenantId: data.tenantId,
+			// 			groupContact: undefined,
+			// 			msg: data,
+			// 			channel: "whatsapp",
+			// 		});
 
-				await ticket.update({
-					apiConfig: {
-						...data.apiConfig,
-						externalKey: data.externalKey,
-					},
-				});
-			} catch (error) {
-				const payload = {
-					ack: -2,
-					body: data.body,
-					messageId: "",
-					number: data.number,
-					externalKey: data.externalKey,
-					error: "error session",
-					type: "hookMessageStatus",
-					authToken: data.authToken,
-				};
+			// 		await CreateMessageSystemService({
+			// 			msg: data,
+			// 			tenantId: data.tenantId,
+			// 			ticket,
+			// 			sendType: "API",
+			// 			status: "pending",
+			// 		});
 
-				if (data?.apiConfig?.urlMessageStatus) {
-					addJob("WebHooksAPI", {
-						url: data.apiConfig.urlMessageStatus,
-						type: payload.type,
-						payload,
-					});
-				}
-				throw new Error(error);
-			}
+			// 		await ticket.update({
+			// 			apiConfig: {
+			// 				...data.apiConfig,
+			// 				externalKey: data.externalKey,
+			// 			},
+			// 		});
+			// 	} catch (error) {
+			// 		const payload = {
+			// 			ack: -2,
+			// 			body: data.body,
+			// 			messageId: "",
+			// 			number: data.number,
+			// 			externalKey: data.externalKey,
+			// 			error: "error session",
+			// 			type: "hookMessageStatus",
+			// 			authToken: data.authToken,
+			// 		};
+
+			// 		if (data?.apiConfig?.urlMessageStatus) {
+			// 			addJob("WebHooksAPI", {
+			// 				url: data.apiConfig.urlMessageStatus,
+			// 				type: payload.type,
+			// 				payload,
+			// 			});
+			// 		}
+			// 		throw new Error(error);
+			// 	}
 
 			// const apiMessage = await UpsertMessageAPIService({
 			//   sessionId: data.sessionId,
