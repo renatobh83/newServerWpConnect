@@ -1233,3 +1233,597 @@
     '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:74:20',
   timestamp: '2024-12-02T23:10:33.871Z'
 }
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-03T09:45:15.473Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-03T09:45:15.785Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-03T09:45:15.793Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-03T09:45:16.032Z'
+}
+{
+  message: "Error enviar message campaign: TypeError: Cannot read properties of undefined (reading 'whatsappId')",
+  level: 'error',
+  timestamp: '2024-12-03T10:05:14.915Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'whatsappId')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:54:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:64:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:05:14.922Z'
+}
+{
+  message: "Error enviar message campaign: TypeError: Cannot read properties of undefined (reading 'whatsappId')",
+  level: 'error',
+  timestamp: '2024-12-03T10:06:41.941Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'whatsappId')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:55:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:64:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:06:41.947Z'
+}
+{
+  message: "Error enviar message campaign: TypeError: Cannot read properties of undefined (reading 'whatsappId')",
+  level: 'error',
+  timestamp: '2024-12-03T10:08:24.791Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'whatsappId')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:55:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:64:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:08:24.798Z'
+}
+{
+  message: "Error enviar message campaign: TypeError: Cannot read properties of undefined (reading 'whatsappId')",
+  level: 'error',
+  timestamp: '2024-12-03T10:09:50.482Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'whatsappId')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:54:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:09:50.484Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:17:39.586Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:62:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:17:39.592Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:19:57.228Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:19:57.233Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:21:07.975Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:21:07.977Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:22:19.931Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:22:19.935Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:23:23.251Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:23:23.256Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:24:34.160Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:24:34.165Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:25:33.255Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:25:33.260Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-03T10:26:28.222Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:65:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-03T10:26:28.228Z'
+}
+{
+  error: C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:33
+                      messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {
+                                    ^^^^^
+  
+  SyntaxError: await is only valid in async functions and the top level bodies of modules
+      at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: await is only valid in async functions and the top level bodies of modules\n' +
+    'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageWhatsappCampaign.ts:33\n' +
+    '                    messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {\n' +
+    '                                  ^^^^^\n' +
+    '\n' +
+    'SyntaxError: await is only valid in async functions and the top level bodies of modules\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1469:18)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageWhatsappCampaign.ts:33\n' +
+    '                    messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {\n' +
+    '                                  ^^^^^\n' +
+    '\n' +
+    'SyntaxError: await is only valid in async functions and the top level bodies of modules\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1469:18)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Tue Dec 03 2024 07:27:12 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 8736,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 161484800,
+      heapTotal: 111677440,
+      heapUsed: 91195368,
+      external: 3482322,
+      arrayBuffers: 433374
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 518809.484 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1469,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1491,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-03T10:27:12.288Z'
+}
+{
+  error: C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:33
+                      messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {
+                                    ^^^^^
+  
+  SyntaxError: await is only valid in async functions and the top level bodies of modules
+      at wrapSafe (node:internal/modules/cjs/loader:1469:18)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-37733007459396095.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: await is only valid in async functions and the top level bodies of modules\n' +
+    'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageWhatsappCampaign.ts:33\n' +
+    '                    messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {\n' +
+    '                                  ^^^^^\n' +
+    '\n' +
+    'SyntaxError: await is only valid in async functions and the top level bodies of modules\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1469:18)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageWhatsappCampaign.ts:33\n' +
+    '                    messageSent = await wbot.sendFile(`${number}@c.us`, mediaPath, {\n' +
+    '                                  ^^^^^\n' +
+    '\n' +
+    'SyntaxError: await is only valid in async functions and the top level bodies of modules\n' +
+    '    at wrapSafe (node:internal/modules/cjs/loader:1469:18)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:20)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Tue Dec 03 2024 07:27:22 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 18188,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 156397568,
+      heapTotal: 106459136,
+      heapUsed: 76926840,
+      external: 3482322,
+      arrayBuffers: 433374
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 518819.968 },
+  trace: [
+    {
+      column: 18,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapSafe',
+      line: 1469,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1491,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-37733007459396095.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-03T10:27:22.778Z'
+}

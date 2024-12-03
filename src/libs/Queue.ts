@@ -61,6 +61,7 @@ export function processQueues(concurrency = 60) {
 			async (job: Job) => {
 				try {
 					logger.info(`Processando job ${name}`);
+
 					await handle(job.data); // Passa os dados do job para o handle
 					logger.info(`Job ${name} processado com sucesso.`);
 				} catch (error) {

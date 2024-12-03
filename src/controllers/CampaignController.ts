@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
@@ -23,7 +23,7 @@ interface CampaignData {
 	tenantId: string;
 }
 
-export const store = async (req: Request, res: Response): Promise<Response> => {
+export const store: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const medias = req.files as Express.Multer.File[];
 
@@ -59,21 +59,18 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
 		medias,
 	});
 
-	return res.status(200).json(newCampaign);
+	res.status(200).json(newCampaign);
 };
 
-export const index = async (req: Request, res: Response): Promise<Response> => {
+export const index: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const tags = await ListCampaignService({
 		tenantId,
 	});
-	return res.status(200).json(tags);
+	res.status(200).json(tags);
 };
 
-export const update = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const update: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	const medias = req.files as Express.Multer.File[];
 
@@ -112,13 +109,10 @@ export const update = async (
 		tenantId,
 	});
 
-	return res.status(200).json(campaignObj);
+	res.status(200).json(campaignObj);
 };
 
-export const remove = async (
-	req: Request,
-	res: Response,
-): Promise<Response> => {
+export const remove: RequestHandler = async (req: Request, res: Response) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -126,13 +120,13 @@ export const remove = async (
 	const { campaignId } = req.params;
 
 	await DeleteCampaignService({ id: campaignId, tenantId });
-	return res.status(200).json({ message: "Campaign deleted" });
+	res.status(200).json({ message: "Campaign deleted" });
 };
 
-export const startCampaign = async (
+export const startCampaign: RequestHandler = async (
 	req: Request,
 	res: Response,
-): Promise<Response> => {
+) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -147,13 +141,13 @@ export const startCampaign = async (
 		},
 	});
 
-	return res.status(200).json({ message: "Campaign started" });
+	res.status(200).json({ message: "Campaign started" });
 };
 
-export const cancelCampaign = async (
+export const cancelCampaign: RequestHandler = async (
 	req: Request,
 	res: Response,
-): Promise<Response> => {
+) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -165,5 +159,5 @@ export const cancelCampaign = async (
 		tenantId,
 	});
 
-	return res.status(200).json({ message: "Campaign canceled" });
+	res.status(200).json({ message: "Campaign canceled" });
 };

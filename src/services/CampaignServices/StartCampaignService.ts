@@ -4,6 +4,7 @@ import {
 	addSeconds,
 	differenceInDays,
 	differenceInSeconds,
+	format,
 	getDay,
 	isAfter,
 	isBefore,
@@ -146,18 +147,21 @@ const StartCampaignService = async ({
 	if (!campaignContacts) {
 		throw new AppError("ERR_CAMPAIGN_CONTACTS_NOT_EXISTS", 404);
 	}
+	const timeZone = "America/Sao_Paulo";
 
 	const timeDelay = campaign.delay ? campaign.delay * 1000 : 20000;
-	let dateDelay = toZonedTime(campaign.start, "America/Sao_Paulo");
+	let dateDelay = toZonedTime(campaign.start, timeZone);
+
+	console.log(new Date(dateDelay));
 	const data = campaignContacts.map((campaignContact: CampaignContacts) => {
 		dateDelay = addSeconds(dateDelay, timeDelay / 1000);
 		return mountMessageData(campaign, campaignContact, {
 			...options,
 			jobId: `campaginId_${campaign.id}_contact_${campaignContact.contactId}_id_${campaignContact.id}`,
-			delay: calcDelay(new Date(dateDelay), timeDelay),
+			delay: calcDelay(new Date(dateDelay), 0),
 		});
 	});
-	addJob("SendMessageWhatsappCampaign", data);
+	// addJob("SendMessageWhatsappCampaign", data);
 
 	await campaign.update({
 		status: "scheduled",

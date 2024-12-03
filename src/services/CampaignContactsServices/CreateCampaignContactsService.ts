@@ -33,6 +33,7 @@ const CreateCampaignContactsService = async ({
 		},
 	});
 
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const data: CampaignContactData[] = campaignContacts.map((contact: any) => {
 		return {
 			contactId: contact.id,
@@ -41,15 +42,16 @@ const CreateCampaignContactsService = async ({
 		};
 	});
 
-	// eslint-disable-next-line consistent-return
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const filterData = data.filter((d: any): any => {
 		const isExists = isCreateds?.findIndex(
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			(c: any) => d.contactId === c.contactId && +campaignId === c.campaignId,
 		);
 		if (isExists === -1) {
 			return d;
 		}
-	});
+	}) as unknown as CampaignContacts[];
 
 	const schema = Yup.array().of(
 		Yup.object().shape({

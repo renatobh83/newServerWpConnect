@@ -48,6 +48,7 @@ const HandleMsgAck = async (msg: Ack) => {
 					authToken: apiConfig?.authToken,
 					type: "hookMessageStatus",
 				};
+				console.log(payload);
 				// Queue.add("WebHooksAPI", {
 				// 	url: apiConfig.urlMessageStatus,
 				// 	type: payload.type,

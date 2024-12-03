@@ -1,13 +1,15 @@
-import type {
-	Ack,
-	IncomingCall,
-	Message,
-	Whatsapp,
+import {
+	AckType,
+	type Ack,
+	type IncomingCall,
+	type Message,
+	type Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import { HandleMessage } from "./Helpers/HandleMessage";
 // import HandleMsgAck from "./Helpers/HandleMsgAck";
 import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
 import { VerifyCall } from "./VerifyCall";
+import HandleMsgAck from "./Helpers/HandleMsgAck";
 
 interface Session extends Whatsapp {
 	id: number;
@@ -35,8 +37,8 @@ export const wbotMessageListener = (wbot: Session): void => {
 	wbot.onReactionMessage((msg: MessageReaction) => {
 		HandleMsgReaction(msg);
 	});
-	wbot.onAck((_ack: Ack) => {
-		// HandleMsgAck(ack);
+	wbot.onAck((ack: Ack) => {
+		HandleMsgAck(ack);
 	});
 	// wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
 };

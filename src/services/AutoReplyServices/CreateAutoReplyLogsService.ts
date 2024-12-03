@@ -8,15 +8,15 @@ const CreateAutoReplyLogService = async (
 	ticket: Ticket,
 	msg: string,
 ): Promise<AutoReplyLogs> => {
-	const log = {
+	const log: AutoReplyLogs = {
 		autoReplyId: stepsReply.idAutoReply,
 		autoReplyName: stepsReply.autoReply.name,
-		stepsReplyId: stepsReply.id,
+		stepsReplyId: String(stepsReply.id),
 		stepsReplyMessage: stepsReply.reply,
 		wordsReply: msg,
 		ticketId: ticket.id,
 		contactId: ticket.contactId,
-	};
+	} as unknown as AutoReplyLogs;
 	const autoReplyLog = await AutoReplyLogs.create(log);
 
 	return autoReplyLog;
