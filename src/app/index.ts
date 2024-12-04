@@ -5,6 +5,7 @@ import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhat
 import { logger } from "../utils/logger";
 import bootstrap from "./boot";
 import { closeQueues, closeWorkers } from "../libs/Queue";
+import GracefulShutdown from "http-graceful-shutdown";
 
 export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -22,6 +23,7 @@ export default async function application() {
 		});
 		app.use(express.json());
 		initIO(app.server);
+		GracefulShutdown(app.server);
 	}
 	async function close() {
 		try {

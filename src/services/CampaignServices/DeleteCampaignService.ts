@@ -24,7 +24,7 @@ const DeleteCampaignService = async ({
 
 	try {
 		await campaign.destroy();
-	} catch (error) {
+	} catch (_error) {
 		throw new AppError("ERROR_CAMPAIGN_NOT_EXISTS", 404);
 	}
 };

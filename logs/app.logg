@@ -2315,3 +2315,193 @@
   level: 'error',
   timestamp: '2024-12-04T10:59:09.051Z'
 }
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-04T18:20:30.403Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:20:43.638Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:39.256Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:41.433Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:41.462Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:41.480Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:41.535Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-04T18:22:41.749Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-04T18:22:51.855Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:51.871Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:51.878Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:51.886Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:22:51.907Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'invalid signature',
+  level: 'error',
+  stack: 'JsonWebTokenError: invalid signature\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:171:19\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-04T18:23:33.735Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:23:34.057Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:23:34.067Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:23:34.081Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T18:23:34.319Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-04T18:38:56.829Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:57:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:75:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-04T18:38:56.839Z'
+}
+{
+  message: 'Error enviar message campaign: Error: ERR_WAPP_NOT_INITIALIZED',
+  level: 'error',
+  timestamp: '2024-12-04T18:40:40.431Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageWhatsappCampaign',
+  error: Error: Error: ERR_WAPP_NOT_INITIALIZED
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageWhatsappCampaign.ts:57:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:75:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-04T18:40:40.432Z'
+}

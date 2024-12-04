@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { join } from "node:path";
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import { getWbot } from "../libs/wbot";
 import CampaignContacts from "../models/CampaignContacts";
 import { logger } from "../utils/logger";
+import socketEmit from "../helpers/socketEmit";
 
 export default {
 	key: "SendMessageWhatsappCampaign",
@@ -17,9 +17,8 @@ export default {
 			delay: 60000 * 5, // 5 min
 		},
 	},
-	async handle(data: any) {
+	async handle(data: any): Promise<void> {
 		try {
-			/// feito por está apresentando problema com o tipo
 			const wbot = getWbot(data.whatsappId);
 			let messageSent = {} as WbotMessage;
 			if (data.mediaUrl) {
@@ -48,7 +47,11 @@ export default {
 				{ where: { id: data.campaignContact.id } },
 			);
 
-			return messageSent;
+			socketEmit({
+				tenantId: data.tenantId,
+				type: "campaign:send",
+				payload: {},
+			});
 		} catch (error) {
 			logger.error(`Error enviar message campaign: ${error}`);
 			throw new Error(error);

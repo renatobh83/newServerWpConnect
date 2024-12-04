@@ -69,6 +69,7 @@ const mountMessageData = (
 		mediaName: cArquivoName(campaign.mediaUrl),
 		messageRandom: `message${messageRandom}`,
 		campaignContact,
+		tenantId: campaign.tenantId,
 		options,
 	};
 };

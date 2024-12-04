@@ -1,4 +1,10 @@
-import type { Application, NextFunction, Request, Response } from "express";
+import type {
+	Application,
+	ErrorRequestHandler,
+	NextFunction,
+	Request,
+	Response,
+} from "express";
 import expressInstance from "express";
 import uploadConfig from "../config/upload";
 import AppError from "../errors/AppError";
@@ -9,18 +15,19 @@ export default async function modules(app: Application): Promise<void> {
 	app.use("/public", expressInstance.static(uploadConfig.directory));
 	app.use(routes);
 
-	app.use(async (err: Error, _req: Request, res: Response, _: NextFunction) => {
+	app.use((err: Error, _req: Request, res: Response, _: NextFunction) => {
 		if (err instanceof AppError) {
 			if (err.statusCode === 403) {
 				logger.warn(err);
 			} else {
 				logger.error(err);
 			}
-			res.status(err.statusCode).json({ error: err.message });
+			res.status(err.statusCode).json({ error: err.message }); // Adicione o `return`
 		}
 
 		logger.error(err);
-		res.status(500).json({ error: `Internal server error: ${err}` });
+		res.status(500).json({ error: `Internal server error: ${err.message}` }); // Adicione o `return`
 	});
+
 	logger.info("modules routes already in server!");
 }

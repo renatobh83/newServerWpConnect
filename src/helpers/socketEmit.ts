@@ -10,7 +10,8 @@ type Events =
 	| "contact:update"
 	| "contact:delete"
 	| "notification:new"
-	| "campaign:update";
+	| "campaign:update"
+	| "campaign:send";
 
 interface ObjEvent {
 	tenantId: number | string;

@@ -30,6 +30,7 @@ export const HandleMessage = async (
 			if (!isValidMsg(msg)) {
 				return;
 			}
+
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;

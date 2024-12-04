@@ -37,6 +37,7 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 			ticketId,
 			tenantId,
 		});
+
 	try {
 		SetTicketMessagesAsRead(ticket);
 	} catch (_error) {}
@@ -53,7 +54,7 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	// console.log(ticket)
 	try {
 		SetTicketMessagesAsRead(ticket);
-	} catch (error) {}
+	} catch (_error) {}
 
 	await CreateMessageSystemService({
 		msg: messageData,
