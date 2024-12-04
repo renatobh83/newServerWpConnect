@@ -1,4 +1,4 @@
-// import FindUpdateTicketsInactiveChatBot from "../services/TicketServices/FindUpdateTicketsInactiveChatBot";
+import FindUpdateTicketsInactiveChatBot from "../services/TicketServices/FindUpdateTicketsInactiveChatBot";
 import { logger } from "../utils/logger";
 
 export default {
@@ -16,7 +16,7 @@ export default {
 	async handle() {
 		try {
 			logger.info("FindUpdateTicketsInactiveChatBot Initiated");
-			// await FindUpdateTicketsInactiveChatBot();
+			await FindUpdateTicketsInactiveChatBot();
 			logger.info("Finalized FindUpdateTicketsInactiveChatBot");
 		} catch (error) {
 			logger.error({ message: "Error send messages", error });

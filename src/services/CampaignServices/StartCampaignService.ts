@@ -9,6 +9,7 @@ import {
 	getDay,
 	isAfter,
 	isBefore,
+	isWeekend,
 	isWithinInterval,
 	parse,
 	parseISO,
@@ -19,7 +20,7 @@ import {
 
 import { formatInTimeZone, toZonedTime } from "date-fns-tz";
 import AppError from "../../errors/AppError";
-
+import socketEmit from "../../helpers/socketEmit";
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
 import { addJob } from "../../libs/Queue";
@@ -76,6 +77,7 @@ const nextDayHoursValid = (date: Date) => {
 	let dateVerify = date;
 	const dateNow = new Date();
 	const diffDays = differenceInDays(dateVerify, new Date());
+
 	// se dia for menor que o atual
 	if (diffDays < 0) {
 		dateVerify = addDays(dateVerify, diffDays * -1);
@@ -92,8 +94,7 @@ const nextDayHoursValid = (date: Date) => {
 	const start = parse("08:00", "HH:mm", dateVerify);
 	const end = parse("20:00", "HH:mm", dateVerify);
 
-	const isValidHour = isWithinInterval(dateVerify, { start, end });
-
+	let isValidHour = isWithinInterval(dateVerify, { start, end });
 	const isDateBefore = isBefore(start, dateVerify);
 	const isDateAfter = isAfter(end, dateVerify);
 
@@ -102,6 +103,10 @@ const nextDayHoursValid = (date: Date) => {
 		dateVerify = setMinutes(setHours(dateVerify, 8), 30);
 	}
 
+	// fora do intervalo e no mesmo dia
+	if (!isValidHour && isDateBefore && diffDays === 0) {
+		dateVerify = addDays(dateVerify, diffDays + 1);
+	}
 	// fora do intervalo, maior que a hora final e no mesmo dia
 	if (!isValidHour && isDateAfter && diffDays === 0) {
 		dateVerify = addDays(setHours(dateVerify, 8), 1);
@@ -111,15 +116,22 @@ const nextDayHoursValid = (date: Date) => {
 	if (!isValidHour && isDateAfter && diffDays > 0) {
 		dateVerify = setHours(dateVerify, 8);
 	}
+	while (isWeekend(dateVerify)) {
+		dateVerify = addDays(dateVerify, 1); // Passa para o próximo dia
+		if (!isValidHour) {
+			dateVerify = setHours(dateVerify, 8); // Define o horário como 08:00
+		}
+		isValidHour = isWithinInterval(dateVerify, {
+			start: parse("08:00", "HH:mm", dateVerify),
+			end: parse("20:00", "HH:mm", dateVerify),
+		});
+	}
 
 	return dateVerify;
 };
 
 const calcDelay = (nextDate: Date, delay: number) => {
 	const diffSeconds = differenceInSeconds(nextDate, new Date());
-	// se a diferença for negativa, a hora em que a tarefa está sendo
-	// programada é menor que a
-	// if (diffSeconds < 0)
 	return diffSeconds * 1000 + delay;
 };
 
@@ -149,10 +161,20 @@ const StartCampaignService = async ({
 	if (!campaignContacts) {
 		throw new AppError("ERR_CAMPAIGN_CONTACTS_NOT_EXISTS", 404);
 	}
+	const startDay = nextDayHoursValid(campaign.start);
+
+	if (startDay !== campaign.start) {
+		await campaign.update({ start: startDay });
+		socketEmit({
+			tenantId,
+			type: "campaign:update",
+			payload: {},
+		});
+	}
 
 	const timeDelay = campaign.delay ? campaign.delay * 1000 : 20000;
 
-	let dateDelay = toZonedTime(campaign.start, "America/Sao_Paulo");
+	let dateDelay = toZonedTime(startDay, "America/Sao_Paulo");
 
 	const data = campaignContacts.map((campaignContact: CampaignContacts) => {
 		dateDelay = addSeconds(dateDelay, timeDelay / 1000);

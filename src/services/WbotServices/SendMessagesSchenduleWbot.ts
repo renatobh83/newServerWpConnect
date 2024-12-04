@@ -48,6 +48,7 @@ const SendMessagesSchenduleWbot = async (): Promise<void> => {
 			},
 		],
 		order: [["createdAt", "ASC"]],
+		// logging: console.log,
 	});
 
 	for (const message of messages) {

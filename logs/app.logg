@@ -2289,3 +2289,29 @@
   ],
   timestamp: '2024-12-03T16:02:32.197Z'
 }
+{
+  level: 'error',
+  message: 'Auto Close Called',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-04T10:21:30.752Z'
+}
+{
+  level: 'error',
+  message: 'CreateMessageSystemService ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at GetTicketWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\GetTicketWbot.ts:16:22)\n' +
+    '    at SendWhatsAppMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendWhatsAppMessage.ts:29:34)\n' +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:28:38)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:244:43)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:58:34)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-04T10:39:21.077Z'
+}
+{
+  message: 'Invalid token.',
+  statusCode: 403,
+  level: 'error',
+  timestamp: '2024-12-04T10:59:09.051Z'
+}

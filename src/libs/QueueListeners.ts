@@ -1,5 +1,7 @@
 import type { Job } from "bull";
 import { logger } from "../utils/logger";
+import { number } from "yup";
+import { queues } from "./Queue";
 
 export enum ExecutionType {
 	DELAY = "delay",
@@ -34,56 +36,51 @@ export type RabbitMQJob = {
 export default class QueueListener {
 	static logLevel: "DEBUG" | "INFO" | "ERROR" = "INFO"; // Configuração do nível de log
 
-	static onError(err: Error): void {
-		console.error(err);
-	}
 	static log(message: string, level: "DEBUG" | "INFO" | "ERROR" = "INFO") {
 		if (
 			QueueListener.logLevel === level ||
 			QueueListener.logLevel === "DEBUG"
 		) {
+			logger.info(`Messagem from QueueListener ${message}`);
 		}
 	}
+	static onError(err: Error): void {
+		QueueListener.log(`Job with ID ${err} is waiting`, "ERROR");
+	}
+
 	static onWaiting(jobId: string): void {
-		logger.info(`Job with ID ${jobId} is waiting`, "DEBUG");
 		QueueListener.log(`Job with ID ${jobId} is waiting`, "DEBUG");
 	}
 
-	static onActive(
-		job: Job<JobConfig>,
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		jobPromise: Promise<Job<JobConfig>>,
-	): void {}
-
-	static onStalled(job: Job<JobConfig>): void {
-		// console.log(`Job with ID ${job.id} stalled`);
-		// TODO: log stalled request. These requests are most probably double processed.
+	static onProgress(job: any, progress: number | object): void {
+		QueueListener.log(`Job with ID ${job.id} in progress ${progress}`, "DEBUG");
 	}
 
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	static onCompleted(job: Job<JobConfig>, result: any): void {
-		logger.info(`Job with ID ${job} is completed`, "DEBUG");
-		QueueListener.log(`Job with ID ${job.id} completed`, "INFO");
-		QueueListener.log(`Result: ${JSON.stringify(result)}`, "DEBUG");
+	static onIoredis(): void {
+		QueueListener.log("Conexao com o redis foi fechada", "INFO");
 	}
 
-	// eslint-disable-next-line consistent-return
-	static onFailed(job: Job<JobConfig>, err: Error) {
-		logger.info(`Job with ID ${job} is onFailed`, "DEBUG");
-	}
-
-	static onClean(jobs: Job<JobConfig>[], type: string): void {
-		const filteredJobs = jobs.filter(
-			(job) =>
-				job.finishedOn && Date.now() - job.finishedOn > 24 * 60 * 60 * 1000,
-		); // Exemplo: jobs mais antigos que um dia
-		QueueListener.log(
-			`Cleaned ${filteredJobs.length} jobs of type ${type}`,
-			"INFO",
+	static async onClean(jobIds: string[], type: string): void {
+		// Obter os objetos Job a partir das strings
+		const jobs: Array<Job<JobConfig>> = await Promise.all(
+			jobIds.map((jobId) => console.log(jobId, "listener Onclean")), // Exemplo de função para resolver o Job
 		);
+
+		// // Filtrar jobs mais antigos que 1 dia
+		// const filteredJobs = jobs.filter(
+		// 	(job) =>
+		// 		job.finishedOn && Date.now() - job.finishedOn > 24 * 60 * 60 * 1000,
+		// );
+
+		// // Exemplo: limpar jobs
+		// await Promise.all(filteredJobs.map((job) => job.remove()));
+		// QueueListener.log(
+		// 	`Cleaned ${filteredJobs.length} jobs of type ${type}`,
+		// 	"INFO",
+		// );
 	}
 
 	static onRemoved(job: Job<JobConfig>): void {
-		// console.log(`Job with ID ${job.id} removed`);
+		QueueListener.log(`Job with ID ${job.id} removed`, "DEBUG");
 	}
 }

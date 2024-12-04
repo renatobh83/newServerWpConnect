@@ -106,24 +106,7 @@ export const show: RequestHandler = async (req: Request, res: Response) => {
 	const ticketId = Number(tickerP);
 
 	const ticket = await ShowTicketService({ id: ticketId, tenantId });
-	// const messages = await Message.findAll({
-	//   where: {
-	//     fromMe: true,
-	//     ticketId: ticket.id,
-	//     ack: 0,
-	//     messageId: { [Op.not]: null }
-	//   },
-	//   logging: console.log
-	// });
-	// if (messages) {
-	//   await Promise.all(
-	//     messages.map(async message => {
-	//       console.info(message);
-	//       const msg = await GetWbotMessage(ticket, message.messageId);
-	//       console.log(msg);
-	//     })
-	//   );
-	// }
+
 	const where = {
 		contactId: ticket.contactId,
 		scheduleDate: { [Op.not]: null },

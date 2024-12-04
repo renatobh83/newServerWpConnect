@@ -19,24 +19,24 @@ export const initIO = async (httpServer: Server): Promise<socketIo> => {
 		pingInterval: 60000,
 	});
 
-	const connRedis = new ioRedis({
-		host: process.env.IO_REDIS_SERVER || "localhost",
-		port: +(process.env.IO_REDIS_PORT || 6379),
-		password: process.env.IO_REDIS_PASSWORD || undefined,
-	});
-	const pubClient = connRedis;
-	const subClient = connRedis.duplicate();
+	// const connRedis = new ioRedis({
+	// 	host: process.env.IO_REDIS_SERVER || "localhost",
+	// 	port: +(process.env.IO_REDIS_PORT || 6379),
+	// 	connectTimeout: 10000,
+	// });
+	// const pubClient = connRedis;
+	// const subClient = connRedis.duplicate();
 
 	// Configurar o adaptador Redis
-	io.adapter(createAdapter(pubClient, subClient));
+	// io.adapter(createAdapter(pubClient, subClient));
 
 	// Erros de conexão
-	pubClient.on("error", (err) =>
-		console.error("Erro no PubClient Redis:", err),
-	);
-	subClient.on("error", (err) =>
-		console.error("Erro no SubClient Redis:", err),
-	);
+	// pubClient.on("error", (err) =>
+	// 	console.error("Erro no PubClient Redis:", err),
+	// );
+	// subClient.on("error", (err) =>
+	// 	console.error("Erro no SubClient Redis:", err),
+	// );
 	io.use(async (socket, next) => {
 		try {
 			const token = socket?.handshake?.auth?.token;

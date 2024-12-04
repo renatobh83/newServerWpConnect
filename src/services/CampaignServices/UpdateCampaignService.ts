@@ -39,7 +39,7 @@ const UpdateCampaignService = async ({
 	let data: any = {
 		...campaignData,
 		mediaUrl: cArquivoName(campaignData.mediaUrl),
-		start: setHours(setMinutes(parseISO(campaignData.start), 0), 8),
+		//start: setHours(setMinutes(parseISO(campaignData.start), 0), 8),
 	};
 
 	const campaignModel = await Campaign.findOne({

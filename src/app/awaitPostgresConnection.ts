@@ -29,7 +29,7 @@ const waitForPostgresConnection = async () => {
 				logger.info("Migrations executadas com sucesso!");
 			}
 			break;
-		} catch (error) {
+		} catch (_error) {
 			logger.info(
 				"Falha ao conectar ao PostgreSQL. Tentando novamente em 5 segundos...",
 			);

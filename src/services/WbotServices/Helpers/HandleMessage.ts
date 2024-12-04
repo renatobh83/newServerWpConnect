@@ -4,7 +4,6 @@ import type {
 	Contact as WbotContact,
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
-import { tryCatch } from "bullmq";
 import type Contact from "../../../models/Contact";
 import Setting from "../../../models/Setting";
 import { getId } from "../../../utils/normalize";

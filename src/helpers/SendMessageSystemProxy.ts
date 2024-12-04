@@ -31,7 +31,7 @@ const SendMessageSystemProxy = async ({
 			quotedMsg: messageData?.quotedMsg,
 		});
 	}
-
+	if (message.ack === 0) return;
 	return message;
 };
 

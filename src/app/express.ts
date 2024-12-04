@@ -26,11 +26,11 @@ export default async function express(
 		}),
 	);
 	// Permitir CORS para imagens
-	app.use((_req, res, next) => {
-		res.setHeader("Cross-Origin-Resource-Policy", "cross-origin"); // Permitir requisições de outras origens
-		res.setHeader("Access-Control-Allow-Origin", "*"); // Permitir todas as origens (ou configure a origem específica)
-		next();
-	});
+	// app.use((_req, res, next) => {
+	// 	res.setHeader("Cross-Origin-Resource-Policy", "cross-origin"); // Permitir requisições de outras origens
+	// 	res.setHeader("Access-Control-Allow-Origin", "*"); // Permitir todas as origens (ou configure a origem específica)
+	// 	next();
+	// });
 	app.use(helmet());
 	app.use(cookieParser());
 	app.use(json({ limit: "50MB" }));

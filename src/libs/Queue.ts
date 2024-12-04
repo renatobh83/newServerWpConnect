@@ -10,6 +10,7 @@ const redisConfig = {
 	password: process.env.IO_REDIS_PASSWORD || undefined,
 	db: 3,
 	maxRetriesPerRequest: null,
+	retryStrategy: (times: number) => Math.min(times * 50, 2000),
 };
 
 // Cria as filas
@@ -17,14 +18,14 @@ export const queues = Object.values(jobs).map((job: any) => {
 	const bullQueue = new Queue(job.key, { connection: redisConfig });
 
 	// Adiciona os listeners
+
 	bullQueue.on("waiting", QueueListener.onWaiting);
 	bullQueue.on("removed", QueueListener.onRemoved);
-	bullQueue.on("error", (err) => {
-		logger.error(`Erro na conexão com o Redis: ${err.message}`);
-	});
-	bullQueue.on("ioredis:close", () => {
-		logger.warn("close ");
-	});
+	bullQueue.on("error", QueueListener.onError);
+	bullQueue.on("progress", QueueListener.onProgress);
+	bullQueue.on("ioredis:close", QueueListener.onIoredis);
+	bullQueue.on("cleaned", QueueListener.onClean);
+
 	return {
 		bull: bullQueue,
 		name: job.key,
@@ -121,5 +122,36 @@ export async function closeQueues() {
 		} catch (error) {
 			logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
 		}
+	}
+}
+// Função para recuperar um job pelo ID
+export async function getJobById(
+	queueName: string,
+	jobId: string,
+): Promise<Job | null> {
+	try {
+		// Encontra a fila correspondente pelo nome
+		const queue = queues.find((q) => q.name === queueName);
+
+		if (!queue) {
+			throw new Error(`Queue "${queueName}" not found.`);
+		}
+
+		// Usa o método `getJob` para obter o job pelo ID
+		const job = await queue.bull.getJob(jobId);
+
+		if (!job) {
+			throw new Error(
+				`Job with ID "${jobId}" not found in queue "${queueName}".`,
+			);
+		}
+
+		return job; // Retorna o objeto do job
+	} catch (error) {
+		logger.error({
+			message: `Erro ao buscar job ${jobId} na fila ${queueName}`,
+			error,
+		});
+		return null; // Retorna null em caso de erro
 	}
 }

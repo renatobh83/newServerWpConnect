@@ -39,7 +39,7 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 		});
 	try {
 		SetTicketMessagesAsRead(ticket);
-	} catch (error) {}
+	} catch (_error) {}
 
 	res.json({ count, messages, messagesOffLine, ticket, hasMore });
 };

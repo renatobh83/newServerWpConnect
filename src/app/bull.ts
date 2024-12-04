@@ -15,7 +15,7 @@ export const redisConfig = {
 
 export default async function bullMQ(app: Application) {
 	logger.info("bullMQ started");
-	processQueues(100);
+	processQueues(30);
 
 	addJob("SendMessageSchenduled", {});
 	addJob("VerifyTicketsChatBotInactives", {});
