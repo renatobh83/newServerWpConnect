@@ -1,11 +1,12 @@
 import { type Server, createServer } from "node:http";
-import express, { type Express } from "express";
+import express, { NextFunction, type Express } from "express";
 import { initIO } from "../libs/scoket";
 import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
 import { logger } from "../utils/logger";
 import bootstrap from "./boot";
 import { closeQueues, closeWorkers } from "../libs/Queue";
 import GracefulShutdown from "http-graceful-shutdown";
+import AppError from "../errors/AppError";
 
 export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -22,6 +23,19 @@ export default async function application() {
 			await StartAllWhatsAppsSessions();
 		});
 		app.use(express.json());
+		app.use((err: Error, _req: Request, res: Response, _: NextFunction) => {
+			if (err instanceof AppError) {
+				if (err.statusCode === 403) {
+					logger.warn(err);
+				} else {
+					logger.error(err);
+				}
+				res.status(err.statusCode).json({ error: err.message }); // Adicione o `return`
+			}
+
+			logger.error(err);
+			res.status(500).json({ error: `Internal server error: ${err.message}` }); // Adicione o `return`
+		});
 		initIO(app.server);
 		GracefulShutdown(app.server);
 	}

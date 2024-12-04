@@ -1,5 +1,5 @@
 // import * as Yup from "yup";
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 
 import CreateCampaignContactsService from "../services/CampaignContactsServices/CreateCampaignContactsService";
@@ -7,32 +7,48 @@ import DeleteAllCampaignContactsService from "../services/CampaignContactsServic
 import DeleteCampaignContactsService from "../services/CampaignContactsServices/DeleteCampaignContactsService";
 import ListCampaignContactsService from "../services/CampaignContactsServices/ListCampaignContactsService";
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
-	// const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	try {
+		// const { tenantId } = req.user;
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+
+		const contacts = [...req.body];
+		const { campaignId } = req.params;
+
+		const cc = await CreateCampaignContactsService({
+			campaignContacts: contacts,
+			campaignId,
+		});
+
+		res.status(200).json(cc);
+	} catch (error) {
+		next(error);
 	}
-
-	const contacts = [...req.body];
-	const { campaignId } = req.params;
-
-	const cc = await CreateCampaignContactsService({
-		campaignContacts: contacts,
-		campaignId,
-	});
-
-	res.status(200).json(cc);
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
 	const { campaignId } = req.params;
-	const tags = await ListCampaignContactsService({
-		campaignId,
-		tenantId,
-		// eslint-disable-next-line eqeqeq
-	});
-	res.status(200).json(tags);
+	try {
+		const tags = await ListCampaignContactsService({
+			campaignId,
+			tenantId,
+			// eslint-disable-next-line eqeqeq
+		});
+		res.status(200).json(tags);
+	} catch (error) {
+		next(error);
+	}
 };
 
 // export const update: RequestHandler = async (
@@ -68,27 +84,40 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 //    res.status(200).json(tagObj);
 // };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { campaignId, contactId } = req.params;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { campaignId, contactId } = req.params;
 
-	await DeleteCampaignContactsService({ campaignId, contactId, tenantId });
-	res.status(200).json({ message: "Campagin Contact deleted" });
+		await DeleteCampaignContactsService({ campaignId, contactId, tenantId });
+		res.status(200).json({ message: "Campagin Contact deleted" });
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const removeAll: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { campaignId } = req.params;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { campaignId } = req.params;
 
-	await DeleteAllCampaignContactsService({ campaignId, tenantId });
-	res.status(200).json({ message: "Campagin Contacts deleted" });
+		await DeleteAllCampaignContactsService({ campaignId, tenantId });
+		res.status(200).json({ message: "Campagin Contacts deleted" });
+	} catch (error) {
+		next(error);
+	}
 };

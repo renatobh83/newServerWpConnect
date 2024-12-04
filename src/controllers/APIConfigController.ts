@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 
 import AppError from "../errors/AppError";
@@ -25,7 +25,11 @@ interface RenewData {
 	tenantId: number;
 }
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId, id } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -53,7 +57,11 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	res.status(200).json(api);
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -62,81 +70,102 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 	res.status(200).json(apis);
 };
 
-export const update: RequestHandler = async (req: Request, res: Response) => {
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { tenantId, id } = req.user;
-	const { apiId } = req.params;
-
-	const apiData: ApiData = { ...req.body, userId: id, tenantId };
-
-	const schema = Yup.object().shape({
-		name: Yup.string().required(),
-		sessionId: Yup.number().required(),
-		urlServiceStatus: Yup.string().url().nullable(),
-		urlMessageStatus: Yup.string().url().nullable(),
-		userId: Yup.number().required(),
-		tenantId: Yup.number().required(),
-		isActive: Yup.boolean().required(),
-	});
-
+export const update: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	try {
-		await schema.validate(apiData);
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { tenantId, id } = req.user;
+		const { apiId } = req.params;
+
+		const apiData: ApiData = { ...req.body, userId: id, tenantId };
+
+		const schema = Yup.object().shape({
+			name: Yup.string().required(),
+			sessionId: Yup.number().required(),
+			urlServiceStatus: Yup.string().url().nullable(),
+			urlMessageStatus: Yup.string().url().nullable(),
+			userId: Yup.number().required(),
+			tenantId: Yup.number().required(),
+			isActive: Yup.boolean().required(),
+		});
+
+		try {
+			await schema.validate(apiData);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		const api = await UpdateApiConfigService({
+			apiData,
+			apiId,
+			tenantId,
+		});
+
+		res.status(200).json(api);
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	const api = await UpdateApiConfigService({
-		apiData,
-		apiId,
-		tenantId,
-	});
-
-	res.status(200).json(api);
 };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { tenantId } = req.user;
-	const { apiId } = req.params;
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { tenantId } = req.user;
+		const { apiId } = req.params;
 
-	await DeleteApiConfigService({ apiId, tenantId });
-	res.status(200).json({ message: "API Config Deleted" });
+		await DeleteApiConfigService({ apiId, tenantId });
+		res.status(200).json({ message: "API Config Deleted" });
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const renewTokenApi: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-
-	const { tenantId, id } = req.user;
-	const { apiId } = req.params;
-	const api: RenewData = { ...req.body, userId: id, tenantId };
-
-	const schema = Yup.object().shape({
-		sessionId: Yup.number().required(),
-		userId: Yup.number().required(),
-		tenantId: Yup.number().required(),
-	});
-
 	try {
-		await schema.validate(api);
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+
+		const { tenantId, id } = req.user;
+		const { apiId } = req.params;
+		const api: RenewData = { ...req.body, userId: id, tenantId };
+
+		const schema = Yup.object().shape({
+			sessionId: Yup.number().required(),
+			userId: Yup.number().required(),
+			tenantId: Yup.number().required(),
+		});
+
+		try {
+			await schema.validate(api);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		const newApi = await RenewApiConfigTokenService({
+			apiId,
+			userId: api.userId,
+			sessionId: api.sessionId,
+			tenantId: api.tenantId,
+		});
+
+		res.status(200).json(newApi);
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	const newApi = await RenewApiConfigTokenService({
-		apiId,
-		userId: api.userId,
-		sessionId: api.sessionId,
-		tenantId: api.tenantId,
-	});
-
-	res.status(200).json(newApi);
 };

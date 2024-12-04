@@ -62,87 +62,115 @@ export const indexUsers: RequestHandler = async (
 export const updateUser: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const userData = req.body;
 	const { userId } = req.params;
+	try {
+		const user = await AdminUpdateUserService({ userData, userId });
 
-	const user = await AdminUpdateUserService({ userData, userId });
+		const io = getIO();
+		if (user) {
+			io.emit(`${user.tenantId}:user`, {
+				action: "update",
+				user,
+			});
+		}
 
-	const io = getIO();
-	if (user) {
-		io.emit(`${user.tenantId}:user`, {
-			action: "update",
-			user,
-		});
+		res.status(200).json(user);
+	} catch (error) {
+		next(error);
 	}
-
-	res.status(200).json(user);
 };
 
 export const indexTenants: RequestHandler = async (
 	_req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
-	const tenants = await AdminListTenantsService();
-	res.status(200).json(tenants);
+	try {
+		const tenants = await AdminListTenantsService();
+		res.status(200).json(tenants);
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const indexChatFlow: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
-	const { tenantId } = req.params;
-	const chatFlow = await AdminListChatFlowService({ tenantId });
-	res.status(200).json(chatFlow);
+	try {
+		const { tenantId } = req.params;
+		const chatFlow = await AdminListChatFlowService({ tenantId });
+		res.status(200).json(chatFlow);
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const indexSettings: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { tenantId } = req.params as IndexQuerySettings;
+	try {
+		const settings = await AdminListSettingsService(tenantId);
 
-	const settings = await AdminListSettingsService(tenantId);
-
-	res.status(200).json(settings);
+		res.status(200).json(settings);
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const updateSettings: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { tenantId } = req.params;
 	const { value, key } = req.body;
+	try {
+		const setting = await UpdateSettingService({
+			key,
+			value,
+			tenantId,
+		});
 
-	const setting = await UpdateSettingService({
-		key,
-		value,
-		tenantId,
-	});
+		const io = getIO();
+		io.emit(`${tenantId}:settings`, {
+			action: "update",
+			setting,
+		});
 
-	const io = getIO();
-	io.emit(`${tenantId}:settings`, {
-		action: "update",
-		setting,
-	});
-
-	res.status(200).json(setting);
+		res.status(200).json(setting);
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const indexChannels: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	const { tenantId } = req.query as any;
-	const channels = await AdminListChannelsService({ tenantId });
+	try {
+		const channels = await AdminListChannelsService({ tenantId });
 
-	res.status(200).json(channels);
+		res.status(200).json(channels);
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const storeChannel: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const {
 		name,
@@ -154,19 +182,22 @@ export const storeChannel: RequestHandler = async (
 		wabaBSP,
 		tokenAPI,
 	} = req.body;
+	try {
+		const data: ChannelData = {
+			name,
+			status: "DISCONNECTED",
+			tenantId,
+			tokenTelegram,
+			instagramUser,
+			instagramKey,
+			type,
+			wabaBSP,
+			tokenAPI,
+		};
 
-	const data: ChannelData = {
-		name,
-		status: "DISCONNECTED",
-		tenantId,
-		tokenTelegram,
-		instagramUser,
-		instagramKey,
-		type,
-		wabaBSP,
-		tokenAPI,
-	};
-
-	const channels = await CreateWhatsAppService(data);
-	res.status(200).json(channels);
+		const channels = await CreateWhatsAppService(data);
+		res.status(200).json(channels);
+	} catch (error) {
+		next(error);
+	}
 };

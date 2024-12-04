@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 
 import AppError from "../errors/AppError";
@@ -67,135 +67,148 @@ interface MessageDataRequest {
 export const sendMessageConfirmacao = async (
 	_req: Request,
 	res: Response,
+	next: NextFunction,
 ): Promise<Response> => {
-	// const { contatos }: Configuracao = req.body;
-	// const { apiId, authToken, idWbot } = req.params;
+	try {
+		// const { contatos }: Configuracao = req.body;
+		// const { apiId, authToken, idWbot } = req.params;
 
-	// const apiConfig = await ApiConfig.findOne({
-	// 	where: {
-	// 		id: apiId,
-	// 		authToken,
-	// 	},
-	// });
+		// const apiConfig = await ApiConfig.findOne({
+		// 	where: {
+		// 		id: apiId,
+		// 		authToken,
+		// 	},
+		// });
 
-	// if (apiConfig === null) {
-	// 	throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
-	// }
+		// if (apiConfig === null) {
+		// 	throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
+		// }
 
-	// const newMessage: MessageDataRequest = {
-	// 	externalKey: authToken,
-	// 	body: contatos[0],
-	// 	apiId,
-	// 	sessionId: apiConfig.sessionId,
-	// 	tenantId: apiConfig.tenantId,
-	// 	apiConfig: apiConfig,
-	// 	idWbot,
-	// };
+		// const newMessage: MessageDataRequest = {
+		// 	externalKey: authToken,
+		// 	body: contatos[0],
+		// 	apiId,
+		// 	sessionId: apiConfig.sessionId,
+		// 	tenantId: apiConfig.tenantId,
+		// 	apiConfig: apiConfig,
+		// 	idWbot,
+		// };
 
-	// Queue.add("SendMessageConfirmar", newMessage);
+		// Queue.add("SendMessageConfirmar", newMessage);
 
-	return res.status(200).json({ message: "Message add queue" });
+		return res.status(200).json({ message: "Message add queue" });
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const sendMessageAPI: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { tenantId, sessionId } = req.APIAuth;
 	const { apiId } = req.params;
 	const media = req.file as Express.Multer.File;
-
-	// eslint-disable-next-line eqeqeq
-	// if (!apiIdParam || apiId != apiIdParam) {
-	//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
-	// }
-
-	const apiConfig = await ApiConfig.findOne({
-		where: {
-			id: apiId,
-			tenantId,
-		},
-	});
-
-	if (apiConfig?.sessionId !== Number(sessionId)) {
-		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
-	}
-
-	const newMessage: MessageDataRequest = {
-		...req.body,
-		apiId,
-		sessionId,
-		tenantId,
-		apiConfig: apiConfig,
-		media,
-	};
-
-	const schema = Yup.object().shape({
-		apiId: Yup.string(),
-		sessionId: Yup.number(),
-		body: Yup.string().required(),
-		number: Yup.string().required(),
-		mediaUrl:
-			Yup.string().url().nullable() ||
-			Yup.object().shape({
-				destination: Yup.string().required(),
-				encoding: Yup.string().required(),
-				fieldname: Yup.string().required(),
-				filename: Yup.string().required(),
-				mimetype: Yup.string().required(),
-				originalname: Yup.string().required(),
-				path: Yup.string().required(),
-				size: Yup.number().required(),
-			}),
-		externalKey: Yup.string().required(),
-		tenantId: Yup.number().required(),
-	});
-
 	try {
-		await schema.validate(newMessage);
+		// eslint-disable-next-line eqeqeq
+		// if (!apiIdParam || apiId != apiIdParam) {
+		//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
+		// }
+
+		const apiConfig = await ApiConfig.findOne({
+			where: {
+				id: apiId,
+				tenantId,
+			},
+		});
+
+		if (apiConfig?.sessionId !== Number(sessionId)) {
+			throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
+		}
+
+		const newMessage: MessageDataRequest = {
+			...req.body,
+			apiId,
+			sessionId,
+			tenantId,
+			apiConfig: apiConfig,
+			media,
+		};
+
+		const schema = Yup.object().shape({
+			apiId: Yup.string(),
+			sessionId: Yup.number(),
+			body: Yup.string().required(),
+			number: Yup.string().required(),
+			mediaUrl:
+				Yup.string().url().nullable() ||
+				Yup.object().shape({
+					destination: Yup.string().required(),
+					encoding: Yup.string().required(),
+					fieldname: Yup.string().required(),
+					filename: Yup.string().required(),
+					mimetype: Yup.string().required(),
+					originalname: Yup.string().required(),
+					path: Yup.string().required(),
+					size: Yup.number().required(),
+				}),
+			externalKey: Yup.string().required(),
+			tenantId: Yup.number().required(),
+		});
+
+		try {
+			await schema.validate(newMessage);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		// Queue.add("SendMessageAPI", newMessage);
+
+		res.status(200).json({ message: "Message add queue" });
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	// Queue.add("SendMessageAPI", newMessage);
-
-	res.status(200).json({ message: "Message add queue" });
 };
 
 export const startSession: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { tenantId, sessionId } = req.APIAuth;
 	const { apiId } = req.params;
-
-	const apiConfig = await ApiConfig.findOne({
-		where: {
-			id: apiId,
-			tenantId,
-		},
-	});
-
-	if (apiConfig?.sessionId !== Number(sessionId)) {
-		throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
-	}
-
-	const whatsapp = await ShowWhatsAppService({
-		id: apiConfig.sessionId,
-		tenantId: apiConfig.tenantId,
-		isInternal: true,
-	});
 	try {
-		const wbot = getWbot(apiConfig.sessionId);
-		const isConnectStatus = await wbot.isConnected();
-		if (!isConnectStatus) {
-			throw new Error("Necessário iniciar sessão");
-		}
-	} catch (_error) {
-		StartWhatsAppSession(whatsapp);
-	}
+		const apiConfig = await ApiConfig.findOne({
+			where: {
+				id: apiId,
+				tenantId,
+			},
+		});
 
-	res.status(200).json(whatsapp);
+		if (apiConfig?.sessionId !== Number(sessionId)) {
+			throw new AppError("ERR_SESSION_NOT_AUTH_TOKEN", 403);
+		}
+
+		const whatsapp = await ShowWhatsAppService({
+			id: apiConfig.sessionId,
+			tenantId: apiConfig.tenantId,
+			isInternal: true,
+		});
+		try {
+			const wbot = getWbot(apiConfig.sessionId);
+			const isConnectStatus = await wbot.isConnected();
+			if (!isConnectStatus) {
+				throw new Error("Necessário iniciar sessão");
+			}
+		} catch (_error) {
+			StartWhatsAppSession(whatsapp);
+		}
+
+		res.status(200).json(whatsapp);
+	} catch (error) {
+		next(error);
+	}
 };
 
 // export const TESTEAPIWEBHOOKS = async (
