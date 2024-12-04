@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
@@ -14,82 +14,113 @@ interface FastReplyData {
 	tenantId: number;
 }
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-
-	const newReply: FastReplyData = {
-		...req.body,
-		userId: req.user.id,
-		tenantId,
-	};
-
-	const schema = Yup.object().shape({
-		key: Yup.string().required(),
-		message: Yup.string().required(),
-		userId: Yup.number().required(),
-		tenantId: Yup.number().required(),
-	});
-
 	try {
-		await schema.validate(newReply);
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+
+		const newReply: FastReplyData = {
+			...req.body,
+			userId: req.user.id,
+			tenantId,
+		};
+
+		const schema = Yup.object().shape({
+			key: Yup.string().required(),
+			message: Yup.string().required(),
+			userId: Yup.number().required(),
+			tenantId: Yup.number().required(),
+		});
+
+		try {
+			await schema.validate(newReply);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		const reply = await CreateFastReplyService(newReply);
+
+		res.status(200).json(reply);
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	const reply = await CreateFastReplyService(newReply);
-
-	res.status(200).json(reply);
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	const queues = await ListFastReplyService({ tenantId });
-	res.status(200).json(queues);
-};
-
-export const update: RequestHandler = async (req: Request, res: Response) => {
-	const { tenantId } = req.user;
-
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const fastReplyData: FastReplyData = {
-		...req.body,
-		userId: req.user.id,
-		tenantId,
-	};
-
-	const schema = Yup.object().shape({
-		key: Yup.string().required(),
-		message: Yup.string().required(),
-		userId: Yup.number().required(),
-	});
-
 	try {
-		await schema.validate(fastReplyData);
+		const queues = await ListFastReplyService({ tenantId });
+		res.status(200).json(queues);
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	const { fastReplyId } = req.params;
-	const queueObj = await UpdateFastReplyService({
-		fastReplyData,
-		fastReplyId,
-	});
-
-	res.status(200).json(queueObj);
 };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+export const update: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { fastReplyId } = req.params;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const fastReplyData: FastReplyData = {
+			...req.body,
+			userId: req.user.id,
+			tenantId,
+		};
 
-	await DeleteFastReplyService({ id: fastReplyId, tenantId });
-	res.status(200).json({ message: "Fast Reply deleted" });
+		const schema = Yup.object().shape({
+			key: Yup.string().required(),
+			message: Yup.string().required(),
+			userId: Yup.number().required(),
+		});
+
+		try {
+			await schema.validate(fastReplyData);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		const { fastReplyId } = req.params;
+		const queueObj = await UpdateFastReplyService({
+			fastReplyData,
+			fastReplyId,
+		});
+
+		res.status(200).json(queueObj);
+	} catch (error) {
+		next(error);
+	}
+};
+
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	const { tenantId } = req.user;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { fastReplyId } = req.params;
+
+		await DeleteFastReplyService({ id: fastReplyId, tenantId });
+		res.status(200).json({ message: "Fast Reply deleted" });
+	} catch (error) {
+		next(error);
+	}
 };

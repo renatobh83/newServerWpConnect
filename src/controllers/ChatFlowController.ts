@@ -1,5 +1,5 @@
 // import * as Yup from "yup";
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 
 import AppError from "../errors/AppError";
 import CreateChatFlowService from "../services/ChatFlowServices/CreateChatFlowService";
@@ -64,86 +64,118 @@ interface ChatFlowData {
 	tenantId: number;
 }
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
+
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+
+		const newFlow: ChatFlowData = {
+			flow: { ...req.body },
+			name: req.body.name,
+			isActive: true,
+			userId: +req.user.id,
+			tenantId,
+		};
+
+		// const schema = Yup.object().shape({
+		//   name: Yup.string().required(),
+		//   action: Yup.number().required(),
+		//   tenantId: Yup.number().required(),
+		//   userId: Yup.number().required()
+		// });
+
+		// try {
+		//   await schema.validate(newAutoReply);
+		// } catch (error) {
+		//   throw new AppError(error.message);
+		// }
+
+		const chatFlow = await CreateChatFlowService(newFlow);
+
+		res.status(200).json(chatFlow);
+	} catch (error) {
+		next(error);
 	}
-
-	const newFlow: ChatFlowData = {
-		flow: { ...req.body },
-		name: req.body.name,
-		isActive: true,
-		userId: +req.user.id,
-		tenantId,
-	};
-
-	// const schema = Yup.object().shape({
-	//   name: Yup.string().required(),
-	//   action: Yup.number().required(),
-	//   tenantId: Yup.number().required(),
-	//   userId: Yup.number().required()
-	// });
-
-	// try {
-	//   await schema.validate(newAutoReply);
-	// } catch (error) {
-	//   throw new AppError(error.message);
-	// }
-
-	const chatFlow = await CreateChatFlowService(newFlow);
-
-	res.status(200).json(chatFlow);
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	const chatFlow = await ListChatFlowService({ tenantId });
-	res.status(200).json(chatFlow);
-};
-
-export const update: RequestHandler = async (req: Request, res: Response) => {
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
+	try {
+		const chatFlow = await ListChatFlowService({ tenantId });
+		res.status(200).json(chatFlow);
+	} catch (error) {
+		next(error);
 	}
-	const { tenantId } = req.user;
-
-	const newFlow: ChatFlowData = {
-		flow: { ...req.body },
-		name: req.body.name,
-		isActive: req.body.isReactive,
-		userId: +req.user.id,
-		tenantId,
-	};
-
-	// const schema = Yup.object().shape({
-	//   name: Yup.string().required(),
-	//   action: Yup.number().required(),
-	//   userId: Yup.number().required()
-	// });
-
-	// try {
-	//   await schema.validate(autoReplyData);
-	// } catch (error) {
-	//   throw new AppError(error.message);
-	// }
-
-	const { chatFlowId } = req.params;
-	const chatFlow = await UpdateChatFlowService({
-		chatFlowData: newFlow,
-		chatFlowId,
-		tenantId,
-	});
-
-	res.status(200).json(chatFlow);
 };
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+
+export const update: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { tenantId } = req.user;
+
+		const newFlow: ChatFlowData = {
+			flow: { ...req.body },
+			name: req.body.name,
+			isActive: req.body.isReactive,
+			userId: +req.user.id,
+			tenantId,
+		};
+
+		// const schema = Yup.object().shape({
+		//   name: Yup.string().required(),
+		//   action: Yup.number().required(),
+		//   userId: Yup.number().required()
+		// });
+
+		// try {
+		//   await schema.validate(autoReplyData);
+		// } catch (error) {
+		//   throw new AppError(error.message);
+		// }
+
+		const { chatFlowId } = req.params;
+		const chatFlow = await UpdateChatFlowService({
+			chatFlowData: newFlow,
+			chatFlowId,
+			tenantId,
+		});
+
+		res.status(200).json(chatFlow);
+	} catch (error) {
+		next(error);
+	}
+};
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { chatFlowId } = req.params;
 	const { tenantId } = req.user;
+	try {
+		await DeleteChatFlowService({ id: chatFlowId, tenantId });
 
-	await DeleteChatFlowService({ id: chatFlowId, tenantId });
-
-	res.status(200).json({ message: "Flow deleted" });
+		res.status(200).json({ message: "Flow deleted" });
+	} catch (error) {
+		next(error);
+	}
 };
 
 // export const remove: RequestHandler = async (
