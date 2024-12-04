@@ -19,7 +19,12 @@ export const queues = Object.values(jobs).map((job: any) => {
 	// Adiciona os listeners
 	bullQueue.on("waiting", QueueListener.onWaiting);
 	bullQueue.on("removed", QueueListener.onRemoved);
-
+	bullQueue.on("error", (err) => {
+		logger.error(`Erro na conexão com o Redis: ${err.message}`);
+	});
+	bullQueue.on("ioredis:close", () => {
+		logger.warn("close ");
+	});
 	return {
 		bull: bullQueue,
 		name: job.key,
@@ -42,9 +47,9 @@ export async function addJob(
 
 	try {
 		await queue.bull.add(queueName, data, {
-			...queue.options,
-			...data.options,
-			...options,
+			...queue.options, // Opções padrão da fila
+			...options, // Opções passadas diretamente
+			...data.options, // Opções específicas do job
 		});
 		logger.info(`Job adicionado à fila ${queueName}`);
 	} catch (error) {
@@ -55,12 +60,12 @@ export async function addJob(
 		throw error;
 	}
 }
-
+const workers: Worker[] = [];
 // Função para configurar o processamento
 export function processQueues(concurrency = 60) {
 	// biome-ignore lint/complexity/noForEach: <explanation>
 	queues.forEach(({ name, handle }) => {
-		new Worker(
+		const worker = new Worker(
 			name,
 			async (job: Job) => {
 				try {
@@ -77,6 +82,44 @@ export function processQueues(concurrency = 60) {
 				concurrency,
 			},
 		);
+		worker.on("stalled", (job) => {
+			logger.warn(`Job em espera detectado: ${job.id}`);
+		});
+
+		worker.on("completed", (job) => {
+			logger.info(`Job ${job.id} na fila ${name} concluído com sucesso.`);
+		});
+
+		worker.on("failed", (job, error) => {
+			logger.error(
+				`Job ${job?.id || "unknown"} na fila ${name} falhou: ${error.message}`,
+			);
+		});
+		workers.push(worker);
 	});
 	logger.info("Workers configurados e prontos para processar jobs.");
+}
+
+export async function closeWorkers() {
+	for (const worker of workers) {
+		try {
+			await worker.close();
+			logger.info(`Worker para a fila ${worker.name} foi fechado.`);
+		} catch (error) {
+			logger.error(
+				`Erro ao fechar o worker para a fila ${worker.name}: ${error.message}`,
+			);
+		}
+	}
+}
+
+export async function closeQueues() {
+	for (const { bull, name } of queues) {
+		try {
+			await bull.close();
+			logger.info(`Fila ${name} foi fechada.`);
+		} catch (error) {
+			logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
+		}
+	}
 }

@@ -4,6 +4,7 @@ import { initIO } from "../libs/scoket";
 import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
 import { logger } from "../utils/logger";
 import bootstrap from "./boot";
+import { closeQueues, closeWorkers } from "../libs/Queue";
 
 export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -23,18 +24,36 @@ export default async function application() {
 		initIO(app.server);
 	}
 	async function close() {
-		return new Promise<void>((resolve, reject) => {
-			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-			httpServer.close((err: any) => {
-				if (err) {
-					reject(err);
-				}
+		try {
+			logger.info("Iniciando encerramento da aplicação...");
 
-				resolve();
+			// Fechar o servidor HTTP
+			await new Promise<void>((resolve, reject) => {
+				httpServer.close((err: any) => {
+					if (err) {
+						logger.error("Erro ao encerrar o servidor HTTP:", err);
+						return reject(err);
+					}
+					logger.info("Servidor HTTP encerrado com sucesso.");
+					resolve();
+				});
 			});
-		});
+
+			// Fechar os workers e filas
+			await closeWorkers();
+			logger.info("Workers encerrados com sucesso.");
+			await closeQueues();
+			logger.info("Filas encerradas com sucesso.");
+
+			logger.info("Encerramento da aplicação concluído com sucesso.");
+			process.exit(0); // Encerrar o processo após o fechamento completo
+		} catch (error) {
+			logger.error("Erro durante o encerramento da aplicação:", error);
+			process.exit(1); // Sinalizar falha no encerramento
+		}
 	}
-	process.on("SIGTERM", close);
+	process.on("SIGTERM", close); // Para encerramento via SIGTERM (ex.: Docker, Kubernetes)
+	process.on("SIGINT", close);
 
 	app.start = start;
 	app.close = close;
