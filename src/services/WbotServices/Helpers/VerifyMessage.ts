@@ -10,7 +10,8 @@ const VerifyMessage = async (
 	contact: Contact,
 ) => {
 	const quotedMsg = await VerifyQuotedMessage(msg);
-
+	const delay = (ms: number) =>
+		new Promise((resolve) => setTimeout(resolve, ms));
 	const messageData = {
 		messageId: msg.id,
 		ticketId: ticket.id,
@@ -29,6 +30,7 @@ const VerifyMessage = async (
 		lastMessageAt: new Date().getTime(),
 		answered: msg.fromMe || false,
 	});
+	await delay(2000);
 	await CreateMessageService({ messageData, tenantId: ticket.tenantId });
 };
 
