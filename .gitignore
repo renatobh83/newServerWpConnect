@@ -4,3 +4,4 @@ tokens
 .env
 dist
 userDataDir
+logs

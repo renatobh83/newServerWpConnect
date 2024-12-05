@@ -27,25 +27,22 @@ export const updateBusinessHours: RequestHandler = async (
 				type: Yup.string().required(),
 				hr1: Yup.string()
 					.required()
-					// eslint-disable-next-line no-template-curly-in-string
 					.test("isHoursValid", "${path} is not valid", (value) =>
 						isMatch(value || "", "HH:mm"),
 					),
+
 				hr2: Yup.string()
 					.required()
-					// eslint-disable-next-line no-template-curly-in-string
-					.test("isHoursValid", "${path} is not valid", (value) => {
-						isMatch(value || "", "HH:mm");
-					}),
+					.test("isHoursValid", "${path} is not valid", (value) =>
+						isMatch(value || "", "HH:mm"),
+					),
 				hr3: Yup.string()
 					.required()
-					// eslint-disable-next-line no-template-curly-in-string
 					.test("isHoursValid", "${path} is not valid", (value) =>
 						isMatch(value || "", "HH:mm"),
 					),
 				hr4: Yup.string()
 					.required()
-					// eslint-disable-next-line no-template-curly-in-string
 					.test("isHoursValid", "${path} is not valid", (value) =>
 						isMatch(value || "", "HH:mm"),
 					),
