@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import AppError from "../errors/AppError";
 import DeleteMessageSystem from "../helpers/DeleteMessageSystem";
 
@@ -26,78 +26,102 @@ type MessageData = {
 	idFront?: string;
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { ticketId } = req.params;
 	const { pageNumber } = req.query as IndexQuery;
 	const { tenantId } = req.user;
-
-	const { count, messages, messagesOffLine, ticket, hasMore } =
-		await ListMessagesService({
-			pageNumber,
-			ticketId,
-			tenantId,
-		});
-
 	try {
-		SetTicketMessagesAsRead(ticket);
-	} catch (_error) {}
+		const { count, messages, messagesOffLine, ticket, hasMore } =
+			await ListMessagesService({
+				pageNumber,
+				ticketId,
+				tenantId,
+			});
 
-	res.json({ count, messages, messagesOffLine, ticket, hasMore });
+		try {
+			SetTicketMessagesAsRead(ticket);
+		} catch (_error) {}
+
+		res.json({ count, messages, messagesOffLine, ticket, hasMore });
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { ticketId } = req.params;
 	const { tenantId, id: userId } = req.user;
 	const messageData: MessageData = req.body;
 	const medias = req.files as Express.Multer.File[];
-	const ticket = await ShowTicketService({ id: ticketId, tenantId });
-	// console.log(ticket)
 	try {
-		SetTicketMessagesAsRead(ticket);
-	} catch (_error) {}
+		const ticket = await ShowTicketService({ id: ticketId, tenantId });
+		// console.log(ticket)
+		try {
+			SetTicketMessagesAsRead(ticket);
+		} catch (_error) {}
 
-	await CreateMessageSystemService({
-		msg: messageData,
-		tenantId,
-		medias,
-		ticket,
-		userId,
-		scheduleDate: messageData.scheduleDate,
-		sendType: messageData.sendType || "chat",
-		status: "pending",
-		idFront: messageData.idFront,
-	});
+		await CreateMessageSystemService({
+			msg: messageData,
+			tenantId,
+			medias,
+			ticket,
+			userId,
+			scheduleDate: messageData.scheduleDate,
+			sendType: messageData.sendType || "chat",
+			status: "pending",
+			idFront: messageData.idFront,
+		});
 
-	res.send();
+		res.send();
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { messageId } = req.params;
 	const { tenantId } = req.user;
 	try {
 		await DeleteMessageSystem(req.body.id, messageId, tenantId);
+		res.send();
 	} catch (error) {
-		logger.error(`ERR_DELETE_SYSTEM_MSG: ${error}`);
-		throw new AppError("ERR_DELETE_SYSTEM_MSG");
+		next(error);
 	}
-
-	res.send();
 };
 
-export const forward: RequestHandler = async (req: Request, res: Response) => {
+export const forward: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const data = req.body;
 	const { user } = req;
 	const userIdNumber = Number(user.id);
+	try {
+		for (const message of data.messages) {
+			await CreateForwardMessageService({
+				userId: userIdNumber,
+				tenantId: user.tenantId,
+				message,
+				contact: data.contact,
+				ticketIdOrigin: message.ticketId,
+			});
+		}
 
-	for (const message of data.messages) {
-		await CreateForwardMessageService({
-			userId: userIdNumber,
-			tenantId: user.tenantId,
-			message,
-			contact: data.contact,
-			ticketIdOrigin: message.ticketId,
-		});
+		res.send();
+	} catch (error) {
+		next(error);
 	}
-
-	res.send();
 };

@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 import AppError from "../errors/AppError";
 
@@ -15,7 +15,11 @@ interface TagData {
 	tenantId: number;
 }
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
 	if (req.user.profile !== "admin") {
 		throw new AppError("ERR_NO_PERMISSION", 403);
@@ -41,54 +45,78 @@ export const store: RequestHandler = async (req: Request, res: Response) => {
 	res.status(200).json(tag);
 };
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
 	const { isActive } = req.query;
-	const tags = await ListTagService({
-		tenantId,
-		// eslint-disable-next-line eqeqeq
-		isActive: isActive ? isActive === "true" : false,
-	});
-	res.status(200).json(tags);
-};
-
-export const update: RequestHandler = async (req: Request, res: Response) => {
-	const { tenantId } = req.user;
-
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const tagData: TagData = { ...req.body, userId: req.user.id, tenantId };
-
-	const schema = Yup.object().shape({
-		tag: Yup.string().required(),
-		color: Yup.string().required(),
-		isActive: Yup.boolean().required(),
-		userId: Yup.number().required(),
-	});
 
 	try {
-		await schema.validate(tagData);
+		const tags = await ListTagService({
+			tenantId,
+			// eslint-disable-next-line eqeqeq
+			isActive: isActive ? isActive === "true" : false,
+		});
+		res.status(200).json(tags);
 	} catch (error) {
-		throw new AppError(error.message);
+		next(error);
 	}
-
-	const { tagId } = req.params;
-	const tagObj = await UpdateTagService({
-		tagData,
-		tagId,
-	});
-
-	res.status(200).json(tagObj);
 };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+export const update: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
-	if (req.user.profile !== "admin") {
-		throw new AppError("ERR_NO_PERMISSION", 403);
-	}
-	const { tagId } = req.params;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const tagData: TagData = { ...req.body, userId: req.user.id, tenantId };
 
-	await DeleteTagService({ id: tagId, tenantId });
-	res.status(200).json({ message: "Tag deleted" });
+		const schema = Yup.object().shape({
+			tag: Yup.string().required(),
+			color: Yup.string().required(),
+			isActive: Yup.boolean().required(),
+			userId: Yup.number().required(),
+		});
+
+		try {
+			await schema.validate(tagData);
+		} catch (error) {
+			throw new AppError(error.message);
+		}
+
+		const { tagId } = req.params;
+		const tagObj = await UpdateTagService({
+			tagData,
+			tagId,
+		});
+
+		res.status(200).json(tagObj);
+	} catch (error) {
+		next(error);
+	}
+};
+
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	const { tenantId } = req.user;
+	try {
+		if (req.user.profile !== "admin") {
+			throw new AppError("ERR_NO_PERMISSION", 403);
+		}
+		const { tagId } = req.params;
+
+		await DeleteTagService({ id: tagId, tenantId });
+		res.status(200).json({ message: "Tag deleted" });
+	} catch (error) {
+		next(error);
+	}
 };

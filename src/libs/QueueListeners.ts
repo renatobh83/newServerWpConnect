@@ -1,7 +1,7 @@
 import type { Job } from "bull";
 import { logger } from "../utils/logger";
 import { number } from "yup";
-import { queues } from "./Queue";
+import { getJobById, queues } from "./Queue";
 
 export enum ExecutionType {
 	DELAY = "delay",
@@ -58,26 +58,6 @@ export default class QueueListener {
 
 	static onIoredis(): void {
 		QueueListener.log("Conexao com o redis foi fechada", "INFO");
-	}
-
-	static async onClean(jobIds: string[], type: string): void {
-		// Obter os objetos Job a partir das strings
-		const jobs: Array<Job<JobConfig>> = await Promise.all(
-			jobIds.map((jobId) => console.log(jobId, "listener Onclean")), // Exemplo de função para resolver o Job
-		);
-
-		// // Filtrar jobs mais antigos que 1 dia
-		// const filteredJobs = jobs.filter(
-		// 	(job) =>
-		// 		job.finishedOn && Date.now() - job.finishedOn > 24 * 60 * 60 * 1000,
-		// );
-
-		// // Exemplo: limpar jobs
-		// await Promise.all(filteredJobs.map((job) => job.remove()));
-		// QueueListener.log(
-		// 	`Cleaned ${filteredJobs.length} jobs of type ${type}`,
-		// 	"INFO",
-		// );
 	}
 
 	static onRemoved(job: Job<JobConfig>): void {

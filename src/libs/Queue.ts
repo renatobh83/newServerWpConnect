@@ -2,20 +2,26 @@ import { type Job, Queue, Worker } from "bullmq";
 import * as jobs from "../jobs/Index";
 import { logger } from "../utils/logger";
 import QueueListener from "./QueueListeners"; // Classe de listeners
+import { Redis } from "ioredis";
 
 // Redis connection options
-const redisConfig = {
+const redis = new Redis({
 	host: process.env.IO_REDIS_SERVER,
 	port: +(process.env.IO_REDIS_PORT || "6379"),
 	password: process.env.IO_REDIS_PASSWORD || undefined,
 	db: 3,
 	maxRetriesPerRequest: null,
 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
-};
+});
+
+redis.on("connect", () => {
+	logger.info("Redis connect");
+});
+redis.on("error", QueueListener.onError);
 
 // Cria as filas
 export const queues = Object.values(jobs).map((job: any) => {
-	const bullQueue = new Queue(job.key, { connection: redisConfig });
+	const bullQueue = new Queue(job.key, { connection: redis });
 
 	// Adiciona os listeners
 
@@ -24,7 +30,6 @@ export const queues = Object.values(jobs).map((job: any) => {
 	bullQueue.on("error", QueueListener.onError);
 	bullQueue.on("progress", QueueListener.onProgress);
 	bullQueue.on("ioredis:close", QueueListener.onIoredis);
-	bullQueue.on("cleaned", QueueListener.onClean);
 
 	return {
 		bull: bullQueue,
@@ -79,7 +84,7 @@ export function processQueues(concurrency = 60) {
 				}
 			},
 			{
-				connection: redisConfig,
+				connection: redis,
 				concurrency,
 			},
 		);

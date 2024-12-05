@@ -1,4 +1,4 @@
-import type { Request, RequestHandler, Response } from "express";
+import type { NextFunction, Request, RequestHandler, Response } from "express";
 import { Op } from "sequelize";
 import Message from "../models/Message";
 import CreateLogTicketService from "../services/TicketServices/CreateLogTicketService";
@@ -37,7 +37,11 @@ interface TicketData {
 	channelId?: number;
 }
 
-export const index: RequestHandler = async (req: Request, res: Response) => {
+export const index: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId, profile } = req.user;
 	const {
 		searchParam,
@@ -52,83 +56,104 @@ export const index: RequestHandler = async (req: Request, res: Response) => {
 	} = req.query as IndexQuery;
 
 	const userId = req.user.id;
+	try {
+		const { tickets, count, hasMore } = await ListTicketsService({
+			searchParam,
+			pageNumber,
+			status,
+			date,
+			showAll,
+			userId,
+			withUnreadMessages,
+			queuesIds,
+			isNotAssignedUser,
+			includeNotQueueDefined,
+			tenantId,
+			profile,
+		});
 
-	const { tickets, count, hasMore } = await ListTicketsService({
-		searchParam,
-		pageNumber,
-		status,
-		date,
-		showAll,
-		userId,
-		withUnreadMessages,
-		queuesIds,
-		isNotAssignedUser,
-		includeNotQueueDefined,
-		tenantId,
-		profile,
-	});
-
-	res.status(200).json({ tickets, count, hasMore });
+		res.status(200).json({ tickets, count, hasMore });
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const store: RequestHandler = async (req: Request, res: Response) => {
+export const store: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { tenantId } = req.user;
 	const { contactId, status, userId, channel, channelId }: TicketData =
 		req.body;
-
-	const ticket = await CreateTicketService({
-		contactId,
-		status,
-		userId,
-		tenantId,
-		channel,
-		channelId,
-	});
-
-	// se ticket criado pelo próprio usuário, não emitir socket.
-	if (!userId) {
-		const io = getIO();
-		io.to(`${tenantId}:${ticket.status}`).emit(`${tenantId}:ticket`, {
-			action: "create",
-			ticket,
+	try {
+		const ticket = await CreateTicketService({
+			contactId,
+			status,
+			userId,
+			tenantId,
+			channel,
+			channelId,
 		});
-	}
 
-	res.status(200).json(ticket);
+		// se ticket criado pelo próprio usuário, não emitir socket.
+		if (!userId) {
+			const io = getIO();
+			io.to(`${tenantId}:${ticket.status}`).emit(`${tenantId}:ticket`, {
+				action: "create",
+				ticket,
+			});
+		}
+
+		res.status(200).json(ticket);
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const show: RequestHandler = async (req: Request, res: Response) => {
+export const show: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { ticketId: tickerP } = req.params;
 	const { tenantId } = req.user;
 
 	const userId = Number(req.user.id);
 
 	const ticketId = Number(tickerP);
+	try {
+		const ticket = await ShowTicketService({ id: ticketId, tenantId });
 
-	const ticket = await ShowTicketService({ id: ticketId, tenantId });
+		const where = {
+			contactId: ticket.contactId,
+			scheduleDate: { [Op.not]: null },
+			status: "pending",
+		};
+		const scheduledMessages = await Message.findAll({
+			where,
+			// logging: console.log
+		});
 
-	const where = {
-		contactId: ticket.contactId,
-		scheduleDate: { [Op.not]: null },
-		status: "pending",
-	};
-	const scheduledMessages = await Message.findAll({
-		where,
-		// logging: console.log
-	});
+		ticket.setDataValue("scheduledMessages", scheduledMessages);
 
-	ticket.setDataValue("scheduledMessages", scheduledMessages);
+		await CreateLogTicketService({
+			userId,
+			ticketId,
+			type: "access",
+		});
 
-	await CreateLogTicketService({
-		userId,
-		ticketId,
-		type: "access",
-	});
-
-	res.status(200).json(ticket);
+		res.status(200).json(ticket);
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const update: RequestHandler = async (req: Request, res: Response) => {
+export const update: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { ticketId: tickerP } = req.params;
 	const { tenantId } = req.user;
 	const userIdRequest = Number(req.user.id);
@@ -136,67 +161,85 @@ export const update: RequestHandler = async (req: Request, res: Response) => {
 
 	const ticketId = Number(tickerP);
 	const ticketData: TicketData = { ...req.body, tenantId };
-
-	const { ticket } = await UpdateTicketService({
-		ticketData,
-		ticketId,
-		isTransference,
-		userIdRequest,
-	});
-
-	if (ticket.status === "closed") {
-		const whatsapp = await Whatsapp.findOne({
-			where: { id: ticket.whatsappId, tenantId },
+	try {
+		const { ticket } = await UpdateTicketService({
+			ticketData,
+			ticketId,
+			isTransference,
+			userIdRequest,
 		});
-		if (whatsapp?.farewellMessage) {
-			const body = pupa(whatsapp.farewellMessage || "", {
-				protocol: ticket.protocol,
-				name: ticket.contact.name,
-			});
-			const messageData = {
-				msg: { body, fromMe: true, read: true },
-				tenantId,
-				ticket,
-				userId: req.user.id,
-				sendType: "bot",
-				status: "pending",
-				isTransfer: false,
-				note: false,
-			};
-			await CreateMessageSystemService(messageData);
-			ticket.update({ isFarewellMessage: true });
-		}
-	}
 
-	res.status(200).json(ticket);
+		if (ticket.status === "closed") {
+			const whatsapp = await Whatsapp.findOne({
+				where: { id: ticket.whatsappId, tenantId },
+			});
+			if (whatsapp?.farewellMessage) {
+				const body = pupa(whatsapp.farewellMessage || "", {
+					protocol: ticket.protocol,
+					name: ticket.contact.name,
+				});
+				const messageData = {
+					msg: { body, fromMe: true, read: true },
+					tenantId,
+					ticket,
+					userId: req.user.id,
+					sendType: "bot",
+					status: "pending",
+					isTransfer: false,
+					note: false,
+				};
+				await CreateMessageSystemService(messageData);
+				ticket.update({ isFarewellMessage: true });
+			}
+		}
+
+		res.status(200).json(ticket);
+	} catch (error) {
+		next(error);
+	}
 };
 
-export const remove: RequestHandler = async (req: Request, res: Response) => {
+export const remove: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
 	const { ticketId } = req.params;
 	const { tenantId } = req.user;
 	const userId = Number(req.user.id);
-
-	const ticket = await DeleteTicketService({ id: ticketId, tenantId, userId });
-
-	const io = getIO();
-	io.to(`${tenantId}:${ticket.status}`)
-		.to(`${tenantId}:${ticketId}`)
-		.to(`${tenantId}:notification`)
-		.emit(`${tenantId}:ticket`, {
-			action: "delete",
-			ticketId: +ticketId,
+	try {
+		const ticket = await DeleteTicketService({
+			id: ticketId,
+			tenantId,
+			userId,
 		});
 
-	res.status(200).json({ message: "ticket deleted" });
+		const io = getIO();
+		io.to(`${tenantId}:${ticket.status}`)
+			.to(`${tenantId}:${ticketId}`)
+			.to(`${tenantId}:notification`)
+			.emit(`${tenantId}:ticket`, {
+				action: "delete",
+				ticketId: +ticketId,
+			});
+
+		res.status(200).json({ message: "ticket deleted" });
+	} catch (error) {
+		next(error);
+	}
 };
 
 export const showLogsTicket: RequestHandler = async (
 	req: Request,
 	res: Response,
+	next: NextFunction,
 ) => {
 	const { ticketId } = req.params;
+	try {
+		const logsTicket = await ShowLogTicketService({ ticketId });
 
-	const logsTicket = await ShowLogTicketService({ ticketId });
-
-	res.status(200).json(logsTicket);
+		res.status(200).json(logsTicket);
+	} catch (error) {
+		next(error);
+	}
 };
