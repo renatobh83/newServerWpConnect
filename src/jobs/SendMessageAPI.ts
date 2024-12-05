@@ -24,7 +24,6 @@ export default {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	async handle({ data }: any) {
 		try {
-			console.log(data);
 			// 	const wbot = getWbot(data.sessionId);
 			// 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 			// 	const message: any = {} as WbotMessage;
@@ -42,12 +41,10 @@ export default {
 			// 				type: "hookMessageStatus",
 			// 				authToken: data.authToken,
 			// 			};
-
 			// 			if (data.media) {
 			// 				// excluir o arquivo se o número não existir
 			// 				fs.unlinkSync(data.media.path);
 			// 			}
-
 			// 			if (data?.apiConfig?.urlMessageStatus) {
 			// 				addJob("WebHooksAPI", {
 			// 					url: data.apiConfig.urlMessageStatus,
@@ -57,7 +54,6 @@ export default {
 			// 			}
 			// 			return payload;
 			// 		}
-
 			// 		// '559891191708@c.us'
 			// 		const msgContact = await wbot.getContact(idNumber._serialized);
 			// 		const contact = await VerifyContact(msgContact, data.tenantId);
@@ -71,7 +67,6 @@ export default {
 			// 			msg: data,
 			// 			channel: "whatsapp",
 			// 		});
-
 			// 		await CreateMessageSystemService({
 			// 			msg: data,
 			// 			tenantId: data.tenantId,
@@ -79,7 +74,6 @@ export default {
 			// 			sendType: "API",
 			// 			status: "pending",
 			// 		});
-
 			// 		await ticket.update({
 			// 			apiConfig: {
 			// 				...data.apiConfig,
@@ -97,7 +91,6 @@ export default {
 			// 			type: "hookMessageStatus",
 			// 			authToken: data.authToken,
 			// 		};
-
 			// 		if (data?.apiConfig?.urlMessageStatus) {
 			// 			addJob("WebHooksAPI", {
 			// 				url: data.apiConfig.urlMessageStatus,
@@ -107,7 +100,6 @@ export default {
 			// 		}
 			// 		throw new Error(error);
 			// 	}
-
 			// const apiMessage = await UpsertMessageAPIService({
 			//   sessionId: data.sessionId,
 			//   messageId: message.id.id,

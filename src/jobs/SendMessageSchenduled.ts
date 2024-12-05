@@ -4,7 +4,6 @@ import { logger } from "../utils/logger";
 export default {
 	key: "SendMessageSchenduled",
 	options: {
-		// attempts: 0,
 		removeOnComplete: false,
 		removeOnFail: false,
 		jobId: "SendMessageSchenduled",
@@ -12,7 +11,6 @@ export default {
 			every: 1 * 60 * 1000,
 		},
 	},
-	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 	async handle() {
 		try {
 			logger.info("SendMessageSchenduled Initiated");
