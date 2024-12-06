@@ -206,11 +206,11 @@ class Whatsapp extends Model<Whatsapp> {
 					if (api.authToken) {
 						payload.authToken = api.authToken;
 					}
-					return Queue.add("WebHooksAPI", {
-						url: api.urlServiceStatus,
-						type: payload.type,
-						payload
-					  });
+					// return Queue.add("WebHooksAPI", {
+					// 	url: api.urlServiceStatus,
+					// 	type: payload.type,
+					// 	payload
+					//   });
 				}
 			}),
 		);
