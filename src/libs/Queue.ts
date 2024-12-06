@@ -2,19 +2,22 @@ import Queue from "bull";
 import QueueListeners from "./QueueListeners";
 import * as jobs from "../jobs/Index";
 import { logger } from "../utils/logger";
+ import { Redis } from "ioredis";
 
+// // Redis connection options
+ const redis = new Redis({
+ 	host: process.env.IO_REDIS_SERVER,
+ 	port: +(process.env.IO_REDIS_PORT || "6379"),
+ 	password: process.env.IO_REDIS_PASSWORD || undefined,
+ 	maxRetriesPerRequest: null,
+ 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
+});
 
+redis.on("connect", () => {
+	logger.info("Redis connect");
+ });
 const queues = Object.values(jobs).map((job: any) => ({
-  bull: new Queue(job.key, {
-    redis: {
-      host: process.env.IO_REDIS_SERVER,
-      port: +(process.env.IO_REDIS_PORT || "6379"),
-      password: process.env.IO_REDIS_PASSWORD || undefined,
-      db: 3,
-	  maxRetriesPerRequest: null,
-	retryStrategy: (times: number) => Math.min(times * 50, 2000),
-    }
-  }),
+  bull: new Queue(job.key, redis),
   name: job.key,
   handle: job.handle,
   options: job.options
