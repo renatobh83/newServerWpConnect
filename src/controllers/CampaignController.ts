@@ -35,12 +35,15 @@ export const store: RequestHandler = async (
 			throw new AppError("ERR_NO_PERMISSION", 403);
 		}
 
+
 		const campaign: CampaignData = {
 			...req.body,
 			userId: req.user.id,
+			message1: req.body.messages[0],
+			message2: req.body.messages[1],
+			message3: req.body.messages[2],
 			tenantId,
 		};
-
 		const schema = Yup.object().shape({
 			name: Yup.string().required(),
 			start: Yup.string().required(),
@@ -96,8 +99,12 @@ export const update: RequestHandler = async (
 		if (req.user.profile !== "admin") {
 			throw new AppError("ERR_NO_PERMISSION", 403);
 		}
+
 		const campaignData: CampaignData = {
 			...req.body,
+			message1: req.body.messages[0],
+			message2: req.body.messages[1],
+			message3: req.body.messages[2],
 			userId: req.user.id,
 			tenantId,
 		};
@@ -108,7 +115,7 @@ export const update: RequestHandler = async (
 			message1: Yup.string().required(),
 			message2: Yup.string().required(),
 			message3: Yup.string().required(),
-			mediaUrl: Yup.string(),
+
 			userId: Yup.string().required(),
 			sessionId: Yup.string().required(),
 			tenantId: Yup.number().required(),
@@ -141,7 +148,7 @@ export const remove: RequestHandler = async (
 ) => {
 	const { tenantId } = req.user;
 	try {
-		if (req.user.profile === "admin") {
+		if (req.user.profile !== "admin") {
 			throw new AppError("ERR_NO_PERMISSION", 403);
 		}
 		const { campaignId } = req.params;

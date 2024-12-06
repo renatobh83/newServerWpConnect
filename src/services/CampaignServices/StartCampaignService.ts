@@ -23,7 +23,7 @@ import AppError from "../../errors/AppError";
 import socketEmit from "../../helpers/socketEmit";
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
-import { addJob } from "../../libs/Queue";
+import Queue, { addJob } from "../../libs/Queue";
 
 interface Request {
 	campaignId: string | number;
@@ -187,7 +187,7 @@ const StartCampaignService = async ({
 		});
 	})[0];
 
-	addJob("SendMessageWhatsappCampaign", data);
+	await Queue.add("SendMessageWhatsappCampaign", data);
 
 	await campaign.update({
 		status: "scheduled",

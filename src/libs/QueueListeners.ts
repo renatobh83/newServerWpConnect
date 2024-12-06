@@ -1,7 +1,7 @@
 import type { Job } from "bull";
 import { logger } from "../utils/logger";
 import { number } from "yup";
-import { getJobById, queues } from "./Queue";
+
 
 export enum ExecutionType {
 	DELAY = "delay",
@@ -44,10 +44,25 @@ export default class QueueListener {
 			logger.info(`Messagem from QueueListener ${message}`);
 		}
 	}
+	static onActive(job:Job<JobConfig>) {
+		// QueueListener.log()
+		QueueListener.log(`A ${job.id} has started.`, "INFO" )
+	}
+	static onCompleted(job:Job<JobConfig>, result:string) {
+		QueueListener.log(`${job.id} successfully completed with a ${result}`,"INFO" )
+	}
 	static onError(err: Error): void {
 		QueueListener.log(`Job with ID ${err} is waiting`, "ERROR");
 	}
-
+	static onStalled(job:Job<JobConfig>) {
+		QueueListener.log(`${job.id} has been marked as stalled.`,"INFO" )
+	}
+	static onFailed (job: Job<JobConfig>, err: string) {
+		QueueListener.log(`${job.id} failed with reason ${err}`, "ERROR");
+	}
+	static onClean(jobs:Job<JobConfig>, type: string) {
+		QueueListener.log(`Old jobs have been cleaned from the queue. ${jobs} is an array of cleaned and ${type}`,"INFO" )
+	}
 	static onWaiting(jobId: string): void {
 		QueueListener.log(`Job with ID ${jobId} is waiting`, "DEBUG");
 	}

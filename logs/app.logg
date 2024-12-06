@@ -3853,3 +3853,184 @@
   level: 'error',
   timestamp: '2024-12-05T10:47:44.717Z'
 }
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:81:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Queue.handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:17:4)',
+  timestamp: '2024-12-06T09:41:02.949Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:336:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:81:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Queue.handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:17:4)',
+  timestamp: '2024-12-06T09:43:51.597Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T10:19:59.576Z'
+}
+{
+  level: 'error',
+  message: '(0 , Queue_1.addJob) is not a function',
+  stack: 'TypeError: (0 , Queue_1.addJob) is not a function\n' +
+    '    at StartCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\StartCampaignService.ts:190:8)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at startCampaign (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:168:3)',
+  timestamp: '2024-12-06T10:20:17.469Z'
+}
+{
+  message: 'ERR_NO_UPDATE_CAMPAIGN_NOT_IN_CANCELED_PENDING',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-06T10:24:32.940Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T10:25:21.014Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T10:25:29.416Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T11:06:00.147Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T11:22:23.198Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T11:33:24.720Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T11:33:42.182Z'
+}
+{
+  message: 'sessionId is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T12:22:22.367Z'
+}
+{
+  message: 'message3 is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T12:53:22.559Z'
+}
+{
+  message: 'message3 is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:07:55.328Z'
+}
+{
+  message: 'message3 is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:11:46.253Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:41:30)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at multerMiddleware (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\multer\\lib\\make-middleware.js:13:41)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)',
+  timestamp: '2024-12-06T13:13:12.428Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:41:30)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at multerMiddleware (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\multer\\lib\\make-middleware.js:13:41)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)',
+  timestamp: '2024-12-06T13:13:20.220Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:42:30)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at multerMiddleware (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\multer\\lib\\make-middleware.js:13:41)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)',
+  timestamp: '2024-12-06T13:13:46.959Z'
+}
+{
+  message: 'mediaUrl cannot be null',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:14:44.165Z'
+}
+{
+  message: 'mediaUrl cannot be null',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:15:21.755Z'
+}
+{
+  message: 'mediaUrl cannot be null',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:15:50.084Z'
+}
+{
+  message: 'mediaUrl cannot be null',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:15:57.169Z'
+}
+{
+  message: 'mediaUrl cannot be null',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T13:16:54.091Z'
+}
