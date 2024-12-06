@@ -4,23 +4,37 @@ import * as jobs from "../jobs/Index";
 import { logger } from "../utils/logger";
  import { Redis } from "ioredis";
 
-// // Redis connection options
- const redis = new Redis({
- 	host: process.env.IO_REDIS_SERVER,
- 	port: +(process.env.IO_REDIS_PORT || "6379"),
- 	password: process.env.IO_REDIS_PASSWORD || undefined,
- 	maxRetriesPerRequest: null,
- 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
+const redis = new Redis({
+  host: process.env.IO_REDIS_SERVER,
+  port: +(process.env.IO_REDIS_PORT || "6379"),
+  password: process.env.IO_REDIS_PASSWORD || undefined,
+  maxRetriesPerRequest: 10, // Limite razoável para evitar loops infinitos
+  retryStrategy: (times: number) => Math.min(times * 50, 2000), // Atraso progressivo
 });
 
+// Monitoramento de eventos
 redis.on("connect", () => {
-	logger.info("Redis connect");
- });
+  logger.info("Redis conectado com sucesso.");
+});
+redis.on("error", (err) => {
+  logger.error("Erro ao conectar ao Redis:", err);
+});
+redis.on("end", () => {
+  logger.warn("Conexão com Redis encerrada.");
+});
+
+// Configuração das filas
 const queues = Object.values(jobs).map((job: any) => ({
-  bull: new Queue(job.key, redis),
+  bull: new Queue(job.key, {
+    redis: {
+      host: process.env.IO_REDIS_SERVER,
+      port: +(process.env.IO_REDIS_PORT || "6379"),
+      password: process.env.IO_REDIS_PASSWORD || undefined,
+    },
+  }),
   name: job.key,
   handle: job.handle,
-  options: job.options
+  options: job.options,
 }));
 
 export default {
