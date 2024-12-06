@@ -4,8 +4,8 @@ import { logger } from "../utils/logger";
 export default {
 	key: "SendMessageSchenduled",
 	options: {
-		removeOnComplete: false,
-		removeOnFail: false,
+		removeOnComplete: true,
+		removeOnFail: true,
 		jobId: "SendMessageSchenduled",
 		repeat: {
 			every: 1 * 60 * 1000,
