@@ -8,8 +8,8 @@ const redis = new Redis({
   host: process.env.IO_REDIS_SERVER,
   port: +(process.env.IO_REDIS_PORT || "6379"),
   password: process.env.IO_REDIS_PASSWORD || undefined,
-  maxRetriesPerRequest: null, // Limite razoável para evitar loops infinitos
-enableReadyCheck=false,
+  maxRetriesPerRequest: 10, // Limite razoável para evitar loops infinitos
+//enableReadyCheck=false,
   retryStrategy: (times: number) => Math.min(times * 50, 2000), // Atraso progressivo
 });
 
