@@ -41,8 +41,13 @@ export default class QueueListener {
 			QueueListener.logLevel === level ||
 			QueueListener.logLevel === "DEBUG"
 		) {
-			logger.info(`Messagem from QueueListener ${message}`);
-		}
+			logger.debug(`Messagem from QueueListener ${message}`);
+		} else if (QueueListener.logLevel === "INFO") {
+logger.info(`Messagem from info ${message}`);
+}
+  else {
+logger.error(`Error ${message}`);}
+
 	}
 	static onActive(job:Job<JobConfig>) {
 		// QueueListener.log()
