@@ -1,12 +1,12 @@
 import { type Server, createServer } from "node:http";
-import express, { NextFunction, type Express } from "express";
+import express, {  type Express } from "express";
 import { initIO } from "../libs/scoket";
 import { StartAllWhatsAppsSessions } from "../services/WbotServices/StartAllWhatsAppsSessions";
 import { logger } from "../utils/logger";
 import bootstrap from "./boot";
-import { closeQueues, closeWorkers } from "../libs/Queue";
+
 import GracefulShutdown from "http-graceful-shutdown";
-import AppError from "../errors/AppError";
+
 
 export default async function application() {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
@@ -43,11 +43,6 @@ export default async function application() {
 				});
 			});
 
-			// Fechar os workers e filas
-			await closeWorkers();
-			logger.info("Workers encerrados com sucesso.");
-			await closeQueues();
-			logger.info("Filas encerradas com sucesso.");
 
 			logger.info("Encerramento da aplicação concluído com sucesso.");
 			process.exit(0); // Encerrar o processo após o fechamento completo

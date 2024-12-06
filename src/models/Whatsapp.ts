@@ -1,5 +1,3 @@
-import { Queue } from "bullmq";
-import { env } from "../config/env";
 import { sign } from "jsonwebtoken";
 import {
 	AfterUpdate,
@@ -26,14 +24,10 @@ import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
+import Queue from "../libs/Queue";
 
-const queue = new Queue("WebHooksAPI", {
-	connection: {
-		host: env.IO_REDIS_SERVER,
-		port: +(process.env.IO_REDIS_PORT || "6379"),
-		password: process.env.IO_REDIS_PASSWORD || undefined,
-	},
-});
+
+
 @Table
 class Whatsapp extends Model<Whatsapp> {
 	@PrimaryKey
@@ -212,11 +206,11 @@ class Whatsapp extends Model<Whatsapp> {
 					if (api.authToken) {
 						payload.authToken = api.authToken;
 					}
-					return queue.add("WebHooksAPI", {
+					return Queue.add("WebHooksAPI", {
 						url: api.urlServiceStatus,
 						type: payload.type,
-						payload,
-					});
+						payload
+					  });
 				}
 			}),
 		);

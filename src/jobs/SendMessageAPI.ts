@@ -7,7 +7,6 @@ import FindOrCreateTicketService from "../services/TicketServices/FindOrCreateTi
 
 // import mime from "mime-types";
 import { logger } from "../utils/logger";
-import { addJob } from "../libs/Queue";
 
 export default {
 	key: "SendMessageAPI",

@@ -1,21 +1,20 @@
 import type { JobOptions } from "bull";
 import {
 	addDays,
-	addHours,
+
 	addSeconds,
 	differenceInDays,
 	differenceInSeconds,
-	format,
-	getDay,
+
 	isAfter,
 	isBefore,
 	isWeekend,
 	isWithinInterval,
 	parse,
-	parseISO,
+
 	setHours,
 	setMinutes,
-	startOfDay,
+
 } from "date-fns";
 
 import { formatInTimeZone, toZonedTime } from "date-fns-tz";
@@ -23,7 +22,8 @@ import AppError from "../../errors/AppError";
 import socketEmit from "../../helpers/socketEmit";
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
-import Queue, { addJob } from "../../libs/Queue";
+import Queue from "../../libs/Queue";
+
 
 interface Request {
 	campaignId: string | number;

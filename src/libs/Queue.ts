@@ -1,6 +1,7 @@
 import Queue from "bull";
 import QueueListeners from "./QueueListeners";
 import * as jobs from "../jobs/Index";
+import { logger } from "../utils/logger";
 
 
 const queues = Object.values(jobs).map((job: any) => ({
@@ -42,8 +43,16 @@ export default {
   },
   process() {
     return this.queues.forEach(queue => {
-      queue.bull.process(200, queue.handle);
-
+      queue.bull.process(10, queue.handle);
+      queue.bull.on("paused", () => {
+        logger.warn(`Queue ${queue.name} foi pausada.`);
+    })
+    queue.bull.on("resumed", () => {
+      logger.info(`Queue ${queue.name} foi retomada.`);
+  });
+    queue.bull.on("delayed", (jobId) => {
+      logger.info(`Job ${jobId} foi adicionado como atrasado na fila ${queue.name}.`);
+  })
       queue.bull
         .on("active", QueueListeners.onActive)
         .on("error", QueueListeners.onError)
