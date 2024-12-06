@@ -15,8 +15,25 @@ import Tenant from "./Tenant";
 import User from "./User";
 import Whatsapp from "./Whatsapp";
 
+interface ApiConfigAttributes {
+	id: string;
+	sessionId: number;
+	name: string;
+	isActive: boolean;
+	token?: string;
+	authToken?: string;
+	urlServiceStatus?: string;
+	urlMessageStatus?: string;
+	userId: number;
+	tenantId: number;
+	createdAt: Date;
+	updatedAt: Date;
+}
+
+
+
 @Table({ freezeTableName: true, tableName: "ApiConfigs" }) // Adicionado o decorador @Table
-class ApiConfig extends Model<ApiConfig> {
+class ApiConfig extends Model<ApiConfigAttributes> {
 	@PrimaryKey
 	@Default(uuidV4)
 	@Column(DataType.UUID)
@@ -24,33 +41,33 @@ class ApiConfig extends Model<ApiConfig> {
 
 	@ForeignKey(() => Whatsapp)
 	@Column(DataType.INTEGER) // Definido o tipo INTEGER para sessionId
-	sessionId: number;
+	declare sessionId: number;
 
 	@BelongsTo(() => Whatsapp)
 	session: Whatsapp;
 
 	@Column(DataType.STRING) // Adicionado DataType.STRING para name
-	name: string;
+	declare name: string;
 
 	@Default(true)
 	@Column(DataType.BOOLEAN) // Definido o tipo BOOLEAN para isActive
-	isActive: boolean;
+	declare isActive: boolean;
 
 	@Column(DataType.STRING) // Adicionado DataType.STRING para token
-	token: string;
+	declare token: string;
 
 	@Column(DataType.STRING) // Adicionado DataType.STRING para authToken
-	authToken: string;
+	declare authToken: string;
 
 	@Column(DataType.STRING) // Adicionado DataType.STRING para urlServiceStatus
-	urlServiceStatus: string;
+	declare urlServiceStatus: string;
 
 	@Column(DataType.STRING) // Adicionado DataType.STRING para urlMessageStatus
-	urlMessageStatus: string;
+	declare urlMessageStatus: string;
 
 	@ForeignKey(() => User)
 	@Column(DataType.INTEGER) // Definido o tipo INTEGER para userId
-	userId: number;
+	declare userId: number;
 
 	@BelongsTo(() => User)
 	user: User;
@@ -65,7 +82,7 @@ class ApiConfig extends Model<ApiConfig> {
 
 	@ForeignKey(() => Tenant)
 	@Column(DataType.INTEGER) // Definido o tipo INTEGER para tenantId
-	tenantId: number;
+	declare tenantId: number;
 
 	@BelongsTo(() => Tenant)
 	tenant: Tenant;

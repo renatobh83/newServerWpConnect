@@ -18,36 +18,36 @@ class AutoReplyLogs extends Model<AutoReplyLogs> {
 	@PrimaryKey
 	@AutoIncrement
 	@Column(DataType.INTEGER) // Definido como INTEGER, já que é um identificador numérico
-	declare id: number;
+	declare declare id: number;
 
 	@Column(DataType.INTEGER) // Definido como INTEGER, pois é um identificador numérico
-	autoReplyId: number;
+	declare autoReplyId: number;
 
 	@Column(DataType.STRING) // Usado STRING para textos curtos, como o nome do autoReply
-	autoReplyName: string;
+	declare autoReplyName: string;
 
 	@Column(DataType.STRING) // Usado STRING para identificar o stepsReply
-	stepsReplyId: string;
+	declare stepsReplyId: string;
 
 	@Column(DataType.STRING) // Usado STRING para armazenar a mensagem de resposta
-	stepsReplyMessage: string;
+	declare stepsReplyMessage: string;
 
 	@Column(DataType.STRING) // Usado STRING para armazenar as palavras de resposta
-	wordsReply: string;
+	declare wordsReply: string;
 
 	@ForeignKey(() => Ticket)
 	@Column(DataType.INTEGER) // Relacionamento com Ticket, identificado por um número
-	ticketId: number;
+	declare ticketId: number;
 
 	@BelongsTo(() => Ticket)
-	ticket: Ticket;
+	declare ticket: Ticket;
 
 	@ForeignKey(() => Contact)
 	@Column(DataType.INTEGER) // Relacionamento com Contact, identificado por um número
-	contactId: number;
+	declare contactId: number;
 
 	@BelongsTo(() => Contact, "contactId")
-	contact: Contact;
+	declare contact: Contact;
 
 	@CreatedAt
 	@Column(DataType.DATE(6)) // Utilizando DATE com precisão de até 6 dígitos

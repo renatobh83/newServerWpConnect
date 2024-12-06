@@ -24,42 +24,42 @@ class ApiConfirmacao extends Model<ApiConfirmacao> {
 	@Default(null)
 	@AllowNull(true) // Permitindo null
 	@Column(DataType.STRING) // Definido como STRING
-	token: string | null;
+	declare token: string | null;
 
 	@Default(null)
 	@AllowNull(true) // Permitindo null
 	@Column(DataType.STRING) // Definido como STRING
-	status: string | null;
+	declare status: string | null;
 
 	@Default(null)
 	@AllowNull(true) // Permitindo null
 	@Column(DataType.STRING) // Definido como STRING
-	token2: string | null;
+	declare token2: string | null;
 
 	@Column(DataType.STRING) // Definido como STRING
-	usuario: string;
+	declare usuario: string;
 
 	@ForeignKey(() => Tenant)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	tenantId: number;
+	declare tenantId: number;
 
 	@Column(DataType.STRING) // Definido como STRING
-	senha: string;
+	declare senha: string;
 
 	@AllowNull(true)
 	@Column(DataType.JSONB) // Definido como JSONB
-	action: string[] | null;
+	declare action: string[] | null;
 
 	@AllowNull(true)
 	@Column(DataType.STRING) // Definido como STRING
-	nomeApi: string | null;
+	declare nomeApi: string | null;
 
 	@AllowNull(true)
 	@Column(DataType.STRING) // Definido como STRING
-	baseURl: string | null;
+	declare baseURl: string | null;
 
 	@Column(DataType.DATE(6)) // Definido DataType.DATE(6)
-	expDate: Date | null;
+	declare expDate: Date | null;
 
 	@CreatedAt
 	@Column(DataType.DATE(6)) // Definido DataType.DATE(6)

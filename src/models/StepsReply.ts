@@ -24,22 +24,22 @@ class StepsReply extends Model<StepsReply> {
 	declare id: number; // Alterado para number
 
 	@Column(DataType.TEXT)
-	reply: string;
+	declare reply: string;
 
 	@Default(false)
 	@Column(DataType.BOOLEAN)
-	initialStep: boolean;
+	declare initialStep: boolean;
 
 	@ForeignKey(() => AutoReply)
 	@Column(DataType.INTEGER) // Alterado para INTEGER
-	idAutoReply: number;
+	declare idAutoReply: number;
 
 	@BelongsTo(() => AutoReply, "idAutoReply")
 	autoReply: AutoReply;
 
 	@ForeignKey(() => User)
 	@Column(DataType.INTEGER) // Alterado para INTEGER
-	userId: number;
+	declare userId: number;
 
 	@BelongsTo(() => User)
 	user: User;

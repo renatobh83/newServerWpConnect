@@ -34,49 +34,49 @@ class ApiMessage extends Model<ApiMessage> {
 
 	@ForeignKey(() => Whatsapp)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	sessionId: number;
+	declare sessionId: number;
 
 	@BelongsTo(() => Whatsapp)
-	session: Whatsapp;
+	declare session: Whatsapp;
 
 	@Default(0)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	ack: number;
+	declare ack: number;
 
 	@PrimaryKey
 	@Column(DataType.STRING) // Definido como STRING
-	messageId: string;
+	declare messageId: string;
 
 	@Column(DataType.TEXT) // Definido como TEXT
-	body: string;
+	declare body: string;
 
 	@AllowNull(false)
 	@Column(DataType.STRING) // Definido como STRING
-	number: string; // Alterado para STRING caso o número tenha algum formato específico como e.g., +55...
+	declare number: string; // Alterado para STRING caso o número tenha algum formato específico como e.g., +55...
 
 	@Column(DataType.STRING) // Definido como STRING
-	mediaName: string;
+	declare mediaName: string;
 
 	@Column(DataType.STRING) // Definido como STRING
-	mediaUrl: string;
+	declare mediaUrl: string;
 
 	@Column(DataType.STRING) // Definido como STRING
-	externalKey: string;
+	declare externalKey: string;
 
 	@Default(null)
 	@AllowNull(true)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	timestamp: number | null;
+	declare timestamp: number | null;
 
 	@Default(null)
 	@AllowNull(true)
 	@Column(DataType.JSONB) // Definido como JSONB
-	messageWA: object | null;
+	declare messageWA: object | null;
 
 	@Default(null)
 	@AllowNull(true)
 	@Column(DataType.JSONB) // Definido como JSONB
-	apiConfig: object | null;
+	declare apiConfig: object | null;
 
 	@CreatedAt
 	@Column(DataType.DATE(6)) // Definido como DATE(6)
@@ -88,7 +88,7 @@ class ApiMessage extends Model<ApiMessage> {
 
 	@ForeignKey(() => Tenant)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	tenantId: number;
+	declare tenantId: number;
 
 	@BelongsTo(() => Tenant)
 	tenant: Tenant;

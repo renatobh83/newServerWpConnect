@@ -24,24 +24,24 @@ class StepsReplyActions extends Model<StepsReplyActions> {
 
 	@ForeignKey(() => StepsReply)
 	@Column(DataType.INTEGER) // Definido tipo INTEGER para chave estrangeira
-	stepReplyId: number;
+	declare stepReplyId: number;
 
 	@BelongsTo(() => StepsReply, "stepReplyId")
-	stepsReply: StepsReply;
+	 stepsReply: StepsReply;
 
 	@Column(DataType.STRING)
-	words: string;
+	declare words: string;
 
 	@Default(null)
 	@Column(DataType.TEXT)
-	replyDefinition: string;
+	declare replyDefinition: string;
 
 	@Column(DataType.INTEGER) // Ação como número (INTEGER)
-	action: number;
+	declare action: number;
 
 	@ForeignKey(() => User)
 	@Column(DataType.INTEGER) // Definido como INTEGER
-	userId: number; // Representa o usuário associado
+	declare userId: number; // Representa o usuário associado
 
 	@BelongsTo(() => User)
 	user: User;
@@ -56,7 +56,7 @@ class StepsReplyActions extends Model<StepsReplyActions> {
 
 	@ForeignKey(() => Queue)
 	@Column(DataType.INTEGER) // Chave estrangeira para a Queue
-	queueId: number;
+	declare queueId: number;
 
 	@BelongsTo(() => Queue)
 	queue: Queue;
@@ -70,7 +70,7 @@ class StepsReplyActions extends Model<StepsReplyActions> {
 
 	@ForeignKey(() => StepsReply)
 	@Column(DataType.INTEGER) // Chave estrangeira para o próximo passo
-	nextStepId: number;
+	declare nextStepId: number;
 
 	@BelongsTo(() => StepsReply, "nextStepId")
 	nextStep: StepsReply; // Relacionamento com o próximo passo

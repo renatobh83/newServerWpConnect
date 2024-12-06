@@ -12,9 +12,9 @@ export const index: RequestHandler = async (
 	next: NextFunction,
 ) => {
 	try {
-		if (req.user.profile !== "admin") {
-			throw new AppError("ERR_NO_PERMISSION", 403);
-		}
+		// if (req.user.profile !== "admin") {
+		// 	throw new AppError("ERR_NO_PERMISSION", 403);
+		// }
 		const { tenantId } = req.user;
 
 		const settings = await ListSettingsService(tenantId);

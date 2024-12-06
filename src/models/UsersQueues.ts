@@ -22,17 +22,17 @@ class UsersQueues extends Model<UsersQueues> {
 
 	@ForeignKey(() => Queue)
 	@Column(DataType.INTEGER) // Correct data type for foreign key
-	queueId: number;
+	declare queueId: number;
 
 	@BelongsTo(() => Queue)
-	queue: Queue;
+	declare queue: Queue;
 
 	@ForeignKey(() => User)
 	@Column(DataType.INTEGER) // Correct data type for foreign key
-	userId: number;
+	declare userId: number;
 
 	@BelongsTo(() => User)
-	user: User;
+	declare user: User;
 
 	@CreatedAt
 	@Column(DataType.DATE) // Correct data type for timestamps

@@ -4034,3 +4034,239 @@
   level: 'error',
   timestamp: '2024-12-06T13:16:54.091Z'
 }
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2024-11-29T10:34:25.000Z,
+  level: 'error',
+  stack: 'TokenExpiredError: jwt expired\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-06T16:34:22.755Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-06T16:34:23.091Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-06T16:34:23.101Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-06T16:34:23.105Z'
+}
+{
+  error: TypeError: sequelize.addModels is not a function
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\database\index.ts:74:11)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-9091652008413824.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-9091652008413824.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-9091652008413824.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: sequelize.addModels is not a function\n' +
+    'TypeError: sequelize.addModels is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'TypeError: sequelize.addModels is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts:74:11)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Fri Dec 06 2024 14:07:58 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 16784,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 148381696,
+      heapTotal: 99782656,
+      heapUsed: 77504888,
+      external: 3519674,
+      arrayBuffers: 462577
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 802057.671 },
+  trace: [
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\database\\index.ts',
+      function: null,
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-9091652008413824.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-06T17:07:58.533Z'
+}
+{
+  message: 'ERR_NO_WAPP_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-06T17:16:44.228Z'
+}
+{
+  message: 'ERR_NO_WAPP_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-06T17:16:52.867Z'
+}
+{
+  message: 'ERR_NO_WAPP_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-06T17:17:30.579Z'
+}
+{
+  message: 'ERR_NO_WAPP_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-06T17:17:46.746Z'
+}
+{
+  session: 1,
+  type: 'browser',
+  level: 'error',
+  message: 'Error no open browser',
+  timestamp: '2024-12-06T17:18:30.545Z'
+}
+{
+  session: 1,
+  type: 'browser',
+  level: 'error',
+  message: 'Failed to launch the browser process! undefined\n' +
+    '\n' +
+    '\n' +
+    'TROUBLESHOOTING: https://pptr.dev/troubleshooting\n',
+  timestamp: '2024-12-06T17:18:30.546Z'
+}
+{
+  message: 'externalKey is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T17:26:01.267Z'
+}
+{
+  message: 'number is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T17:26:53.972Z'
+}
+{
+  message: 'number is a required field',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-06T17:27:18.007Z'
+}

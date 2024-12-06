@@ -22,11 +22,11 @@ class Queue extends Model<Queue> {
 	declare id: number;
 
 	@Column(DataType.STRING) // Definindo explicitamente o tipo de dado para 'queue'
-	queue: string;
+	declare queue: string;
 
 	@Default(true)
 	@Column(DataType.BOOLEAN) // Especificando o tipo booleano para 'isActive'
-	isActive: boolean;
+	declare isActive: boolean;
 
 	@Column(DataType.DATE) // Definindo explicitamente o tipo de dado para 'createdAt'
 	@CreatedAt
