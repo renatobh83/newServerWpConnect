@@ -130,10 +130,7 @@ export async function closeQueues() {
 	}
 }
 // Função para recuperar um job pelo ID
-export async function getJobById(
-	queueName: string,
-	jobId: string,
-): Promise<Job | null> {
+export async function getJobByName(queueName: string): Promise<void> {
 	try {
 		// Encontra a fila correspondente pelo nome
 		const queue = queues.find((q) => q.name === queueName);
@@ -142,21 +139,13 @@ export async function getJobById(
 			throw new Error(`Queue "${queueName}" not found.`);
 		}
 
-		// Usa o método `getJob` para obter o job pelo ID
-		const job = await queue.bull.getJob(jobId);
-
-		if (!job) {
-			throw new Error(
-				`Job with ID "${jobId}" not found in queue "${queueName}".`,
-			);
+		if (queue) {
+			queue.bull.close();
 		}
-
-		return job; // Retorna o objeto do job
 	} catch (error) {
 		logger.error({
-			message: `Erro ao buscar job ${jobId} na fila ${queueName}`,
+			message: `Erro ao buscar job  na fila ${queueName}`,
 			error,
 		});
-		return null; // Retorna null em caso de erro
 	}
 }
