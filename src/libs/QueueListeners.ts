@@ -2,7 +2,6 @@ import type { Job } from "bull";
 import { logger } from "../utils/logger";
 import { number } from "yup";
 
-
 export enum ExecutionType {
 	DELAY = "delay",
 	REPEAT = "repeat",
@@ -43,30 +42,35 @@ export default class QueueListener {
 		) {
 			logger.debug(`Messagem from QueueListener ${message}`);
 		} else if (QueueListener.logLevel === "INFO") {
-logger.info(`Messagem from info ${message}`);
-}
-  else {
-logger.error(`Error ${message}`);}
-
+			logger.info(`Messagem from info ${message}`);
+		} else {
+			logger.error(`Error ${message}`);
+		}
 	}
-	static onActive(job:Job<JobConfig>) {
+	static onActive(job: Job<JobConfig>) {
 		// QueueListener.log()
-		QueueListener.log(`A ${job.id} has started.`, "INFO" )
+		QueueListener.log(`A ${job.id} has started.`, "INFO");
 	}
-	static onCompleted(job:Job<JobConfig>, result:string) {
-		QueueListener.log(`${job.id} successfully completed with a ${result}`,"INFO" )
+	static onCompleted(job: Job<JobConfig>, result: string) {
+		QueueListener.log(
+			`${job.id} successfully completed with a ${result}`,
+			"INFO",
+		);
 	}
 	static onError(err: Error): void {
 		QueueListener.log(`Job with ID ${err} is waiting`, "ERROR");
 	}
-	static onStalled(job:Job<JobConfig>) {
-		QueueListener.log(`${job.id} has been marked as stalled.`,"INFO" )
+	static onStalled(job: Job<JobConfig>) {
+		QueueListener.log(`${job.id} has been marked as stalled.`, "INFO");
 	}
-	static onFailed (job: Job<JobConfig>, err: string) {
+	static onFailed(job: Job<JobConfig>, err: string) {
 		QueueListener.log(`${job.id} failed with reason ${err}`, "ERROR");
 	}
-	static onClean(jobs:Job<JobConfig>, type: string) {
-		QueueListener.log(`Old jobs have been cleaned from the queue. ${jobs} is an array of cleaned and ${type}`,"INFO" )
+	static onClean(jobs: Job<JobConfig>, type: string) {
+		QueueListener.log(
+			`Old jobs have been cleaned from the queue. ${jobs} is an array of cleaned and ${type}`,
+			"INFO",
+		);
 	}
 	static onWaiting(jobId: string): void {
 		QueueListener.log(`Job with ID ${jobId} is waiting`, "DEBUG");

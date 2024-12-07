@@ -1,29 +1,24 @@
 import type { JobOptions } from "bull";
 import {
 	addDays,
-
 	addSeconds,
 	differenceInDays,
 	differenceInSeconds,
-
 	isAfter,
 	isBefore,
 	isWeekend,
 	isWithinInterval,
 	parse,
-
 	setHours,
 	setMinutes,
-
 } from "date-fns";
 
-import { formatInTimeZone, toZonedTime } from "date-fns-tz";
+import { toZonedTime } from "date-fns-tz";
 import AppError from "../../errors/AppError";
 import socketEmit from "../../helpers/socketEmit";
 import Campaign from "../../models/Campaign";
 import CampaignContacts from "../../models/CampaignContacts";
-import Queue from "../../libs/Queue";
-
+import { addJob } from "../../libs/Queue";
 
 interface Request {
 	campaignId: string | number;
@@ -187,7 +182,7 @@ const StartCampaignService = async ({
 		});
 	})[0];
 
-	await Queue.add("SendMessageWhatsappCampaign", data);
+	await addJob("SendMessageWhatsappCampaign", data);
 
 	await campaign.update({
 		status: "scheduled",

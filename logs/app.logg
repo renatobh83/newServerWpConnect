@@ -4270,3 +4270,166 @@
   level: 'error',
   timestamp: '2024-12-06T17:27:18.007Z'
 }
+{
+  error: Error: Cannot find module 'http-graceful-shutdown'
+  Require stack:
+  - /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts
+  - /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)
+      at Function._load (node:internal/modules/cjs/loader:1064:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1325:12)
+      at require (node:internal/modules/helpers:136:16)
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts:8:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-11329823430318431.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts',
+      '/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module 'http-graceful-shutdown'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/server.ts\n' +
+    "Error: Cannot find module 'http-graceful-shutdown'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts:8:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-11329823430318431.js:69:33)',
+  stack: "Error: Cannot find module 'http-graceful-shutdown'\n" +
+    'Require stack:\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts\n' +
+    '- /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1239:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1064:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1325:12)\n' +
+    '    at require (node:internal/modules/helpers:136:16)\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts:8:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-11329823430318431.js:69:33)',
+  exception: true,
+  date: 'Fri Dec 06 2024 21:23:33 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 13090,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/newServerWpConnect',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 190316544,
+      heapTotal: 115933184,
+      heapUsed: 84916464,
+      external: 3421622,
+      arrayBuffers: 105614
+    }
+  },
+  os: {
+    loadavg: [ 1.43408203125, 1.72265625, 2.19873046875 ],
+    uptime: 90065
+  },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1239,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1064,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 322,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1325,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 136,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: '/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/app/index.ts',
+      function: null,
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-11329823430318431.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-07T00:23:33.379Z'
+}

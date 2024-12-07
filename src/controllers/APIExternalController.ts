@@ -8,6 +8,7 @@ import ApiConfig from "../models/ApiConfig";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
 import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
 import Queue from "../libs/Queue";
+import { addJob } from "../libs/Queue";
 
 // import { find, result } from "lodash";
 // import ShowApiListService from "../services/ApiConfirmacaoServices/ShowApiListService";
@@ -112,7 +113,6 @@ export const sendMessageAPI: RequestHandler = async (
 	const { apiId } = req.params;
 	const media = req.file as Express.Multer.File;
 	try {
-
 		// if (!apiIdParam || apiId != apiIdParam) {
 		//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
 		// }
@@ -164,7 +164,7 @@ export const sendMessageAPI: RequestHandler = async (
 			throw new AppError(error.message);
 		}
 
-		Queue.add("SendMessageAPI", newMessage);
+		addJob("SendMessageAPI", newMessage);
 
 		res.status(200).json({ message: "Message add queue" });
 	} catch (error) {
@@ -192,18 +192,18 @@ export const startSession: RequestHandler = async (
 		}
 
 		const whatsapp = await ShowWhatsAppService({
-			id: apiConfig.get('sessionId'),
-			tenantId: apiConfig.get('tenantId'),
+			id: apiConfig.get("sessionId"),
+			tenantId: apiConfig.get("tenantId"),
 			isInternal: true,
 		});
 		try {
-			const wbot = getWbot(apiConfig.get('sessionId'));
+			const wbot = getWbot(apiConfig.get("sessionId"));
 			const isConnectStatus = await wbot.isConnected();
 			if (!isConnectStatus) {
 				throw new Error("Necessário iniciar sessão");
 			}
 		} catch (_error) {
-			console.log('isConnectStatus')
+			console.log("isConnectStatus");
 			// StartWhatsAppSession(whatsapp);
 		}
 
