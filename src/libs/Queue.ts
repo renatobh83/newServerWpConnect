@@ -138,8 +138,7 @@ export async function getJobByName(queueName: string): Promise<void> {
 		if (!queue) {
 			throw new Error(`Queue "${queueName}" not found.`);
 		}
-
-		queue.bull.close();
+		await queue.bull.close;
 		logger.info(`Fila ${queueName} foi fechada.`);
 	} catch (error) {
 		logger.error({

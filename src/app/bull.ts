@@ -2,7 +2,7 @@ import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
 import type { Application } from "express";
-import { processQueues, queues } from "../libs/Queue";
+import { addJob, processQueues, queues } from "../libs/Queue";
 import { logger } from "../utils/logger";
 
 import "../utils/jobSync";
@@ -13,7 +13,6 @@ export default async function bullMQ(app: Application) {
 
 	processQueues();
 	await addJobInterval();
-
 	// Inicialize o painel do Bull
 	const serverAdapter = new ExpressAdapter();
 	serverAdapter.setBasePath("/admin/queues");
