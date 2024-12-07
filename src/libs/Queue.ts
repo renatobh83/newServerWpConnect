@@ -88,7 +88,7 @@ export function processQueues(concurrency = 60) {
 				concurrency,
 			},
 		);
-		worker.on("stalled", (job) => {
+		worker.on("stalled", (job: any) => {
 			logger.warn(`Job em espera detectado: ${job.id}`);
 		});
 
@@ -129,7 +129,7 @@ export async function closeQueues() {
 		}
 	}
 }
-// Função para recuperar um job pelo ID
+// Close queue by name
 export async function getJobByName(queueName: string): Promise<void> {
 	try {
 		// Encontra a fila correspondente pelo nome
@@ -140,9 +140,10 @@ export async function getJobByName(queueName: string): Promise<void> {
 		}
 
 		queue.bull.close();
+		logger.info(`Fila ${queueName} foi fechada.`);
 	} catch (error) {
 		logger.error({
-			// message: `Erro ao buscar job  na fila ${queueName}`,
+			message: `Erro ao buscar job  na fila ${queueName}`,
 			error,
 		});
 	}
