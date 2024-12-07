@@ -1,19 +1,17 @@
 import { addJob, getJobByName } from "../libs/Queue";
-const {
+import {
 	isAfter,
 	isBefore,
-
 	setHours,
 	setMinutes,
 	setSeconds,
-
 	getDay,
-} = require("date-fns");
+} from "date-fns";
 
 // Função para adicionar o job dinamicamente
-const addJobInterval = async () => {
+export const addJobInterval = async () => {
 	const now = new Date();
-	const startTime = setSeconds(setMinutes(setHours(now, 7), 0), 0); // 07:00:00
+	const startTime = setSeconds(setMinutes(setHours(now, 4), 0), 0); // 07:00:00
 	const endTime = setSeconds(setMinutes(setHours(now, 23), 0), 0); // 20:00:00
 	const currentDay = getDay(now); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
 
@@ -22,7 +20,7 @@ const addJobInterval = async () => {
 		isAfter(now, startTime) &&
 		isBefore(now, endTime) &&
 		currentDay >= 1 &&
-		currentDay <= 5
+		currentDay <= 6
 	) {
 		await addJob("VerifyTicketsChatBotInactives", {});
 		await addJob("SendMessageSchenduled", {});
@@ -32,7 +30,7 @@ const addJobInterval = async () => {
 // Função para remover o job dinamicamente
 const removeJob = async () => {
 	const now = new Date();
-	const startTime = setSeconds(setMinutes(setHours(now, 7), 0), 0); // 07:00:00
+	const startTime = setSeconds(setMinutes(setHours(now, 4), 0), 0); // 07:00:00
 	const endTime = setSeconds(setMinutes(setHours(now, 23), 0), 0); // 20:00:00
 	const currentDay = getDay(now); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
 
@@ -42,7 +40,7 @@ const removeJob = async () => {
 			isAfter(now, startTime) &&
 			isBefore(now, endTime) &&
 			currentDay >= 1 &&
-			currentDay <= 5
+			currentDay <= 6
 		)
 	) {
 		await getJobByName("VerifyTicketsChatBotInactives");

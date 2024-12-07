@@ -139,12 +139,10 @@ export async function getJobByName(queueName: string): Promise<void> {
 			throw new Error(`Queue "${queueName}" not found.`);
 		}
 
-		if (queue) {
-			queue.bull.close();
-		}
+		queue.bull.close();
 	} catch (error) {
 		logger.error({
-			message: `Erro ao buscar job  na fila ${queueName}`,
+			// message: `Erro ao buscar job  na fila ${queueName}`,
 			error,
 		});
 	}

@@ -5,12 +5,14 @@ import type { Application } from "express";
 import { processQueues, queues } from "../libs/Queue";
 import { logger } from "../utils/logger";
 
-// import "../utils/jobSync";
+import "../utils/jobSync";
+import { addJobInterval } from "../utils/jobSync";
 
 export default async function bullMQ(app: Application) {
 	logger.info("bullMQ started");
 
 	processQueues();
+	await addJobInterval();
 
 	// Inicialize o painel do Bull
 	const serverAdapter = new ExpressAdapter();
