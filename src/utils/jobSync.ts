@@ -7,6 +7,7 @@ import {
 	setSeconds,
 	getDay,
 } from "date-fns";
+import { logger } from "./logger";
 
 // Função para adicionar o job dinamicamente
 export const addJobInterval = async () => {
@@ -22,6 +23,7 @@ export const addJobInterval = async () => {
 		currentDay >= 1 &&
 		currentDay <= 5
 	) {
+		logger.info("Queue iniciada");
 		await addJob("VerifyTicketsChatBotInactives", {});
 		await addJob("SendMessageSchenduled", {});
 	}
