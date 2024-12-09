@@ -15,6 +15,7 @@ import verifyBusinessHours from "./VerifyBusinessHours";
 import VerifyContact from "./VerifyContact";
 import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
+import { addJob } from "../../../libs/Queue";
 
 interface Session extends Whatsapp {
 	id: number;
@@ -75,7 +76,6 @@ export const HandleMessage = async (
 
 			const ticket = await FindOrCreateTicketService({
 				contact,
-				// biome-ignore lint/style/noNonNullAssertion: <explanation>
 				whatsappId: wbot.id!,
 				unreadMessages,
 				tenantId,
@@ -119,20 +119,20 @@ export const HandleMessage = async (
 				apiConfig?.externalKey &&
 				apiConfig?.urlMessageStatus
 			) {
-				// const payload = {
-				// 	timestamp: Date.now(),
-				// 	msg,
-				// 	messageId: msg.id.id,
-				// 	ticketId: ticket.id,
-				// 	externalKey: apiConfig?.externalKey,
-				// 	authToken: apiConfig?.authToken,
-				// 	type: "hookMessage",
-				// };
-				//   Queue.add("WebHooksAPI", {
-				// 	url: apiConfig.urlMessageStatus,
-				// 	type: payload.type,
-				// 	payload,
-				//   });
+				const payload = {
+					timestamp: Date.now(),
+					msg,
+					messageId: msg.id,
+					ticketId: ticket.id,
+					externalKey: apiConfig?.externalKey,
+					authToken: apiConfig?.authToken,
+					type: "hookMessage",
+				};
+				  addJob("WebHooksAPI", {
+					url: apiConfig.urlMessageStatus,
+					type: payload.type,
+					payload,
+				  });
 			}
 
 			resolve();

@@ -37,8 +37,7 @@ const FindOrCreateTicketService = async ({
 	isSync,
 	channel,
 }: Data): Promise<Ticket | any> => {
-	// se for uma mensagem de campanha, não abrir tícket
-
+	// se for uma mensagem de campanha, não abrir tícke
 	try {
 		if (msg?.fromMe) {
 			const msgCampaign = await CampaignContacts.findOne({

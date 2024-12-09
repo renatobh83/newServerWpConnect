@@ -6,6 +6,7 @@ import Message from "../../../models/Message";
 import Ticket from "../../../models/Ticket";
 import { logger } from "../../../utils/logger";
 import { getId } from "../../../utils/normalize";
+import { addJob } from "../../../libs/Queue";
 
 const HandleMsgAck = async (msg: Ack) => {
 	await new Promise((r) => setTimeout(r, 500));
@@ -48,12 +49,12 @@ const HandleMsgAck = async (msg: Ack) => {
 					authToken: apiConfig?.authToken,
 					type: "hookMessageStatus",
 				};
-				console.log(payload);
-				// Queue.add("WebHooksAPI", {
-				// 	url: apiConfig.urlMessageStatus,
-				// 	type: payload.type,
-				// 	payload,
-				// });
+
+				addJob("WebHooksAPI", {
+					url: apiConfig.urlMessageStatus,
+					type: payload.type,
+					payload,
+				});
 			}
 		}
 
