@@ -1,5 +1,4 @@
 import fs from "node:fs";
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Message as WbotMessage } from "@wppconnect-team/wppconnect";
 import { getWbot } from "../libs/wbot";
 import CreateMessageSystemService from "../services/MessageServices/CreateMessageSystemService";
@@ -22,15 +21,16 @@ export default {
 			delay: 60000 * 3, // 3 min
 		},
 	},
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	async handle({ data }: any) {
+	async handle( data : any) {
 		try {
-				const wbot = getWbot(data.sessionId);
+			const wbot = getWbot(data.sessionId);
+
 
 				const message: any = {} as WbotMessage;
 				try {
 
 					const idNumber = getNumberId(data.number)
+
 					if (!idNumber) {
 						const payload = {
 							ack: -1,
@@ -42,7 +42,6 @@ export default {
 							type: "hookMessageStatus",
 							authToken: data.authToken,
 						};
-						console.log(payload, data)
 						if (data.media) {
 							// excluir o arquivo se o número não existir
 							fs.unlinkSync(data.media.path);
@@ -93,6 +92,7 @@ export default {
 						type: "hookMessageStatus",
 						authToken: data.authToken,
 					};
+					console.log(payload)
 					if (data?.apiConfig?.urlMessageStatus) {
 						// addJob("WebHooksAPI", {
 						// 	url: data.apiConfig.urlMessageStatus,
