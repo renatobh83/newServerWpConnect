@@ -38,7 +38,6 @@ export default {
 					type: data.type,
 				};
 			}
-			console.log(data)
 			if (data.type === "hookMessage") {
 				payload = {
 					timestamp: data.payload.timestamp,
@@ -60,7 +59,7 @@ export default {
 					type: data.type,
 				};
 			}
-			console.log
+
 			if (data.payload.authToken) {
 				await axios.post(data.url, payload, {
 					headers: { authorization: data.payload.authToken },
