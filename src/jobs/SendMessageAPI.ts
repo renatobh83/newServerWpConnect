@@ -8,6 +8,7 @@ import FindOrCreateTicketService from "../services/TicketServices/FindOrCreateTi
 import { logger } from "../utils/logger";
 import { getNumberId } from "../utils/wbot/getNumberId";
 import VerifyContact from "../services/WbotServices/Helpers/VerifyContact";
+import { addJob } from "../libs/Queue";
 
 export default {
 	key: "SendMessageAPI",
@@ -47,11 +48,11 @@ export default {
 							fs.unlinkSync(data.media.path);
 						}
 						if (data?.apiConfig?.urlMessageStatus) {
-							// addJob("WebHooksAPI", {
-							// 	url: data.apiConfig.urlMessageStatus,
-							// 	type: payload.type,
-							// 	payload,
-							// });
+							addJob("WebHooksAPI", {
+								url: data.apiConfig.urlMessageStatus,
+								type: payload.type,
+								payload,
+							});
 						}
 						return payload;
 					}
@@ -94,11 +95,11 @@ export default {
 					};
 					console.log(payload)
 					if (data?.apiConfig?.urlMessageStatus) {
-						// addJob("WebHooksAPI", {
-						// 	url: data.apiConfig.urlMessageStatus,
-						// 	type: payload.type,
-						// 	payload,
-						// });
+						addJob("WebHooksAPI", {
+							url: data.apiConfig.urlMessageStatus,
+							type: payload.type,
+							payload,
+						});
 					}
 					throw new Error(error);
 				}

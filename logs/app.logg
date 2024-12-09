@@ -4657,3 +4657,1177 @@
   level: 'error',
   timestamp: '2024-12-09T14:31:33.685Z'
 }
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.033Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.120Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.228Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.385Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.599Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:41.874Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T14:52:42.185Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:01.196Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:01.262Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:01.372Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:01.542Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:01.746Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:02.005Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:02.318Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:02.676Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:03.082Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:03.548Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:04.061Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:04.620Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:05.237Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:05.907Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:06.621Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:03:07.384Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:23.738Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:23.802Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:23.915Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:24.081Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:24.296Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:24.561Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:24:24.864Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:46.518Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:46.584Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:46.708Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:46.876Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:47.092Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:47.358Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:47.668Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:48.029Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:48.444Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:48.909Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:49.419Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:49.982Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:50.589Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:51.255Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:51.973Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:52.734Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:53.547Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:25:54.416Z'
+}
+{
+  error: Error: Cannot find module '../app/config-env'
+  Require stack:
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\HandleMsgAck.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\wbotMessageListener.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\wbot.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartWhatsAppSession.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\StartAllWhatsAppsSessions.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+      at Function._load (node:internal/modules/cjs/loader:1075:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1340:12)
+      at require (node:internal/modules/helpers:141:16)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\HandleMsgAck.ts:10:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-4647557791121111.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module '../app/config-env'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    "Error: Cannot find module '../app/config-env'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts:10:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4647557791121111.js:69:33)',
+  stack: "Error: Cannot find module '../app/config-env'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\wbotMessageListener.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartWhatsAppSession.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\StartAllWhatsAppsSessions.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts:10:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4647557791121111.js:69:33)',
+  exception: true,
+  date: 'Mon Dec 09 2024 12:27:05 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 15240,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 151371776,
+      heapTotal: 100814848,
+      heapUsed: 78223448,
+      external: 3486835,
+      arrayBuffers: 437625
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1055207.562 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1249,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1075,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1340,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 141,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMsgAck.ts',
+      function: null,
+      line: 10,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4647557791121111.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-09T15:27:05.167Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.127Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.213Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.322Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.477Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.695Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:51.961Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:52.273Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:52.630Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:27:53.036Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:14.683Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:14.760Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:14.867Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:15.037Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:15.253Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:15.519Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:15.831Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.115Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.203Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.313Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.483Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.701Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:58.963Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:59.273Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:29:59.630Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:30:00.051Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:30:00.515Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:30:01.027Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:16.304Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:16.391Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:16.508Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:16.670Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:16.874Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:17.138Z'
+}
+{
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 6379,
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ECONNREFUSED 127.0.0.1:6379',
+  stack: 'Error: connect ECONNREFUSED 127.0.0.1:6379\n' +
+    '    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1610:16)',
+  timestamp: '2024-12-09T15:31:17.451Z'
+}
+{
+  message: 'Job unknown na fila SendMessageSchenduled falhou: job stalled more than allowable limit',
+  level: 'error',
+  timestamp: '2024-12-09T15:35:36.700Z'
+}

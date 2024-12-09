@@ -1,10 +1,11 @@
+import "../app/config-env";
 import { type Job, Queue, Worker } from "bullmq";
 import * as jobs from "../jobs/Index";
 import { logger } from "../utils/logger";
 import QueueListener from "./QueueListeners"; // Classe de listeners
 import { Redis } from "ioredis";
-
 // Redis connection options
+
 const redis = new Redis({
 	host: process.env.IO_REDIS_SERVER,
 	port: +(process.env.IO_REDIS_PORT || "6379"),
@@ -12,7 +13,6 @@ const redis = new Redis({
 	maxRetriesPerRequest: null,
 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
 });
-
 // Monitoramento de eventos
 redis.on("connect", () => {
 	logger.info("Redis conectado com sucesso.");

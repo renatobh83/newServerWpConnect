@@ -16,7 +16,6 @@ import VerifyContact from "./VerifyContact";
 import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
 import { addJob } from "../../../libs/Queue";
-
 interface Session extends Whatsapp {
 	id: number;
 }
