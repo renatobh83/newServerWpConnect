@@ -113,6 +113,7 @@ export const sendMessageAPI: RequestHandler = async (
 	const { apiId } = req.params;
 	const media = req.file as Express.Multer.File;
 	try {
+
 		// if (!apiIdParam || apiId != apiIdParam) {
 		//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
 		// }
@@ -121,6 +122,7 @@ export const sendMessageAPI: RequestHandler = async (
 			where: {
 				id: apiId,
 				tenantId,
+				authToken: req.body.externalKey
 			},
 		});
 
