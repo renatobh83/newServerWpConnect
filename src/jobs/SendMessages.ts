@@ -16,7 +16,7 @@ export default {
 		// }
 	},
 	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-	async handle({ data }: any) {
+	async handle( data : any) {
 		try {
 			logger.info(`Sending Tenant Initiated: ${data.tenantId}`);
 			if (sending[data.tenantId]) return;

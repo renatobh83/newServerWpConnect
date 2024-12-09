@@ -5831,3 +5831,299 @@
   level: 'error',
   timestamp: '2024-12-09T15:35:36.700Z'
 }
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:50:37.210Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:50:37.219Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:51:11.166Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:51:11.172Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:51:42.913Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T15:51:42.926Z'
+}
+{
+  message: 'urlMessageStatus must be a valid URL',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-09T16:15:18.354Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:16:28.342Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:16:28.347Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:19:34.258Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:19:34.278Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:20:27.853Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:20:27.866Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:21:25.007Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:21:25.027Z'
+}
+{
+  message: 'Error send message api: AxiosError: Request failed with status code 405',
+  level: 'error',
+  timestamp: '2024-12-09T16:21:32.360Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:22:53.861Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:22:53.869Z'
+}
+{
+  message: 'Error send message api: AxiosError: Request failed with status code 405',
+  level: 'error',
+  timestamp: '2024-12-09T16:23:01.261Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:27:09.723Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:27:09.743Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:39:42.526Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:39:42.540Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:42:20.033Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:42:20.048Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:43:10.630Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:43:10.636Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:44:30.948Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:44:30.956Z'
+}
+{
+  message: 'Error send message api',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:104:12)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:45:08.876Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageAPI',
+  error: Error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageAPI.ts:122:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:80:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-09T16:45:08.886Z'
+}

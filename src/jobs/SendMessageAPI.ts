@@ -93,7 +93,7 @@ export default {
 						type: "hookMessageStatus",
 						authToken: data.authToken,
 					};
-					console.log(payload)
+
 					if (data?.apiConfig?.urlMessageStatus) {
 						addJob("WebHooksAPI", {
 							url: data.apiConfig.urlMessageStatus,

@@ -2,15 +2,13 @@
 import axios from "axios";
 import { logger } from "../utils/logger";
 
-interface Data {
+interface HandlerPayload {
 	url: string;
 	type: string;
 	payload: any;
 }
 
-interface HandlerPayload {
-	data: Data;
-}
+
 
 export default {
 	key: "WebHooksAPI",
@@ -23,7 +21,7 @@ export default {
 		},
 	},
 	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-	async handle({ data }: HandlerPayload) {
+	async handle(data: HandlerPayload) {
 		try {
 			let payload = {};
 
@@ -40,7 +38,7 @@ export default {
 					type: data.type,
 				};
 			}
-
+			console.log(data)
 			if (data.type === "hookMessage") {
 				payload = {
 					timestamp: data.payload.timestamp,
@@ -62,13 +60,13 @@ export default {
 					type: data.type,
 				};
 			}
-
+			console.log
 			if (data.payload.authToken) {
 				await axios.post(data.url, payload, {
 					headers: { authorization: data.payload.authToken },
 				});
 			} else {
-				await axios.post(data.url, payload);
+				await axios.post(data.url, data.payload)
 			}
 
 			logger.info(

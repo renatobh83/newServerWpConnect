@@ -12,7 +12,7 @@ export default {
 		},
 	},
 	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-	async handle({ data }: any) {
+	async handle(data : any) {
 		try {
 			const wbot = getWbot(data.ticket.whatsappId);
 			const message = await wbot.sendText(
