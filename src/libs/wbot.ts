@@ -252,14 +252,16 @@ const start = async (client: Session) => {
 
 			const wbotVersion = await client.getWAVersion();
 			const profileSession = await client.getProfileName();
+			const number = await client.getWid()
 			await whatsappSession.update({
 				status: "CONNECTED",
 				qrcode: "",
 				retries: 0,
-				// number: wbot?.info?.wid?.user, // || wbot?.info?.me?.user,
+				number: number, // || wbot?.info?.me?.user,
 				phone: {
 					wbotVersion,
 					profileSession,
+					number
 				},
 				session: sessionName,
 			});

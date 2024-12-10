@@ -6,6 +6,7 @@ import { logger } from "../utils/logger";
 import bootstrap from "./boot";
 
 import GracefulShutdown from "http-graceful-shutdown";
+import { closeQueues, closeWorkers } from "../libs/Queue";
 
 
 export default async function application() {
@@ -43,7 +44,8 @@ export default async function application() {
 				});
 			});
 
-
+			await closeQueues()
+			await closeWorkers()
 			logger.info("Encerramento da aplicação concluído com sucesso.");
 			process.exit(0); // Encerrar o processo após o fechamento completo
 		} catch (error) {

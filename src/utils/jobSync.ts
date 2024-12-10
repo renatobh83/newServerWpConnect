@@ -9,34 +9,43 @@ import {
 } from "date-fns";
 import { logger } from "./logger";
 
-// Função para adicionar o job dinamicamente
+const jobStatus = {
+	VerifyTicketsChatBotInactives: false,
+	SendMessageSchenduled: false,
+};
+
 export const addJobInterval = async () => {
 	const now = new Date();
-	const startTime = setSeconds(setMinutes(setHours(now, 8), 0), 0); // 08:00:00
-	const endTime = setSeconds(setMinutes(setHours(now, 19), 0), 0); // 19:00:00
-	const currentDay = getDay(now); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+	const startTime = setSeconds(setMinutes(setHours(now, 5), 0), 0); // 05:00:00
+	const endTime = setSeconds(setMinutes(setHours(now, 18), 0), 0); // 19:00:00
+	const currentDay = getDay(now); // 0 = Domingo, ..., 6 = Sábado
 
-	// Verifica se está no horário e dia útil (segunda a sexta)
 	if (
 		isAfter(now, startTime) &&
 		isBefore(now, endTime) &&
 		currentDay >= 1 &&
 		currentDay <= 5
 	) {
-		logger.info("Queue iniciada");
-		await addJob("VerifyTicketsChatBotInactives", {});
-		await addJob("SendMessageSchenduled", {});
+		if (!jobStatus.VerifyTicketsChatBotInactives) {
+
+			await addJob("VerifyTicketsChatBotInactives", {});
+			jobStatus.VerifyTicketsChatBotInactives = true;
+		}
+
+		if (!jobStatus.SendMessageSchenduled) {
+
+			await addJob("SendMessageSchenduled", {});
+			jobStatus.SendMessageSchenduled = true;
+		}
 	}
 };
 
-// Função para remover o job dinamicamente
 const removeJob = async () => {
 	const now = new Date();
-	const startTime = setSeconds(setMinutes(setHours(now, 8), 0), 0); // 08:00:00
-	const endTime = setSeconds(setMinutes(setHours(now, 19), 0), 0); // 19:00:00
-	const currentDay = getDay(now); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+	const startTime = setSeconds(setMinutes(setHours(now, 5), 0), 0); // 05:00:00
+	const endTime = setSeconds(setMinutes(setHours(now, 18), 0), 0); // 19:00:00
+	const currentDay = getDay(now);
 
-	// Verifica se está fora do horário ou em finais de semana
 	if (
 		!(
 			isAfter(now, startTime) &&
@@ -45,16 +54,28 @@ const removeJob = async () => {
 			currentDay <= 5
 		)
 	) {
-		await getJobByName("VerifyTicketsChatBotInactives");
-		await getJobByName("SendMessageSchenduled");
+		if (jobStatus.VerifyTicketsChatBotInactives) {
+
+			await getJobByName("VerifyTicketsChatBotInactives");
+			jobStatus.VerifyTicketsChatBotInactives = false;
+		}
+
+		if (jobStatus.SendMessageSchenduled) {
+
+			await getJobByName("SendMessageSchenduled");
+			jobStatus.SendMessageSchenduled = false;
+		}
 	}
 };
 
 // Intervalo para verificar a lógica
-setInterval(
-	async () => {
-		await addJobInterval();
+setInterval(async () => {
+	try {
 		await removeJob();
-	},
-	60 * 60 * 1000,
-); // Verifica a cada minuto
+	} catch (error) {
+		logger.error({
+			message: "Erro no intervalo de execução de jobs",
+			error,
+		});
+	}
+}, 60 * 1000); // Verifica a cada minuto

@@ -24,7 +24,7 @@ import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
-import Queue from "../libs/Queue";
+import  { addJob } from "../libs/Queue";
 
 
 
@@ -206,11 +206,11 @@ class Whatsapp extends Model<Whatsapp> {
 					if (api.authToken) {
 						payload.authToken = api.authToken;
 					}
-					// return Queue.add("WebHooksAPI", {
-					// 	url: api.urlServiceStatus,
-					// 	type: payload.type,
-					// 	payload
-					//   });
+					return addJob("WebHooksAPI", {
+						url: api.urlServiceStatus,
+						type: payload.type,
+						payload
+					  });
 				}
 			}),
 		);

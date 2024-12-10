@@ -129,6 +129,7 @@ export async function closeQueues() {
 		}
 	}
 }
+
 // Close queue by name
 export async function getJobByName(queueName: string): Promise<void> {
 	try {
@@ -138,8 +139,11 @@ export async function getJobByName(queueName: string): Promise<void> {
 		if (!queue) {
 			throw new Error(`Queue "${queueName}" not found.`);
 		}
-		await queue.bull.close;
-		logger.info(`Fila ${queueName} foi fechada.`);
+		for (const worker of workers || []) {
+			await worker.close(); // Feche o worker corretamente
+
+		}
+		queue.bull.close(); // Feche a fila
 	} catch (error) {
 		logger.error({
 			message: `Erro ao buscar job  na fila ${queueName}`,

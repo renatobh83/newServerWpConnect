@@ -1,5 +1,8 @@
 import {
 	AckType,
+	InterfaceMode,
+	InterfaceState,
+	PresenceEvent,
 	type Ack,
 	type IncomingCall,
 	type Message,
@@ -24,7 +27,7 @@ export interface MessageReaction {
 	orphanReason: any;
 	timestamp: number;
 }
-export const wbotMessageListener = (wbot: Session): void => {
+export const wbotMessageListener =async (wbot: Session): Promise<void> => {
 	wbot.onAnyMessage(async (msg: Message) => {
 		if (msg.chatId === "status@broadcast") return;
 		await HandleMessage(msg, wbot);
@@ -40,5 +43,7 @@ export const wbotMessageListener = (wbot: Session): void => {
 	wbot.onAck((ack: Ack) => {
 		HandleMsgAck(ack);
 	});
+
 	// wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
+
 };
