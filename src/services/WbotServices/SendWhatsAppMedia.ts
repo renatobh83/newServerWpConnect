@@ -27,13 +27,13 @@ const SendWhatsAppMedia = async ({
 			throw new AppError("ERR_SENDING_WAPP_MSG");
 		}
 
+
 		const sendMessage = await wbot.sendFile(
 			`${ticket.contact.number}@${ticket.isGroup ? "g" : "c"}.us`,
 			pathFile,
-			{
-				filename: media.originalName,
-			},
+
 		);
+
 
 		await ticket.update({
 			lastMessage: media.filename,
@@ -50,8 +50,7 @@ const SendWhatsAppMedia = async ({
 		} catch (error) {
 			logger.error(`Error criar log mensagem ${error}`);
 		}
-		// fs.unlinkSync(pathFile);
-
+		fs.unlinkSync(pathFile);
 		return sendMessage;
 	} catch (err) {
 		logger.error(`SendWhatsAppMedia | Error: ${JSON.stringify(err)}`);

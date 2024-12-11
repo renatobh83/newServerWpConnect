@@ -155,6 +155,7 @@ const CreateMessageSystemService = async ({
 				name: ticket.contact.name,
 			});
 		}
+
 		if (sendType === "API" && msg.mediaUrl) {
 			medias = [];
 			const mediaData = await downloadMedia(msg);
@@ -193,7 +194,6 @@ const CreateMessageSystemService = async ({
 							userId,
 						});
 					}
-
 					const msgCreated = await Message.create({
 						...messageData,
 						...message,
@@ -205,6 +205,8 @@ const CreateMessageSystemService = async ({
 							media.mediaType ||
 							media.mimetype.substr(0, media.mimetype.indexOf("/")),
 					});
+
+
 					const messageCreated = await Message.findByPk(msgCreated.id, {
 						include: [
 							{

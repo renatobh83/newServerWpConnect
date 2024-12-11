@@ -21,6 +21,7 @@ const SendMessageSystemProxy = async ({
 	let message: CustomMessage | null = null; // Inicializa com um valor padrão
 
 	if (messageData.mediaName) {
+
 		message = await SendWhatsAppMedia({ media, ticket, userId });
 	}
 
@@ -31,6 +32,7 @@ const SendMessageSystemProxy = async ({
 			quotedMsg: messageData?.quotedMsg,
 		});
 	}
+
 	if (message.ack === 0) return;
 	return message;
 };

@@ -454,3 +454,180 @@
   type: 'client',
   timestamp: '2024-12-11T00:02:25.684Z'
 }
+{
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ETIMEDOUT',
+  stack: 'Error: connect ETIMEDOUT\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\Redis.js:170:41)\n' +
+    '    at Object.onceWrapper (node:events:632:28)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at Socket._onTimeout (node:net:595:8)\n' +
+    '    at listOnTimeout (node:internal/timers:594:17)\n' +
+    '    at processTimers (node:internal/timers:529:7)',
+  timestamp: '2024-12-11T10:45:50.997Z'
+}
+{
+  level: 'error',
+  message: "CreateMessageSystemService Cannot read properties of null (reading 'ack')",
+  stack: "TypeError: Cannot read properties of null (reading 'ack')\n" +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:35:14)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:190:45\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:172:12)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:35)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-11T10:49:35.068Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'ack')",
+  stack: "TypeError: Cannot read properties of null (reading 'ack')\n" +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:35:14)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:190:45\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:172:12)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:35)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-11T10:49:35.075Z'
+}
+{
+  level: 'error',
+  message: "CreateMessageSystemService Cannot read properties of undefined (reading 'ack')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'ack')\n" +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:35:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:190:17\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:171:4)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:3)',
+  timestamp: '2024-12-11T10:50:32.222Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'ack')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'ack')\n" +
+    '    at SendMessageSystemProxy (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\SendMessageSystemProxy.ts:35:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:190:17\n' +
+    '    at async Promise.all (index 0)\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:171:4)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:3)',
+  timestamp: '2024-12-11T10:50:32.239Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: {}',
+  level: 'error',
+  timestamp: '2024-12-11T11:16:10.771Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-11T11:16:10.773Z'
+}
+{
+  message: 'ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-11T11:16:10.777Z'
+}
+{
+  message: 'SendWhatsAppMedia | Error: {}',
+  level: 'error',
+  timestamp: '2024-12-11T11:19:38.237Z'
+}
+{
+  message: 'CreateMessageSystemService ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-11T11:19:38.240Z'
+}
+{
+  message: 'ERR_SENDING_WAPP_MSG',
+  statusCode: 400,
+  level: 'error',
+  timestamp: '2024-12-11T11:19:38.246Z'
+}
+{
+  message: 'Job unknown na fila SendMessageSchenduled falhou: job stalled more than allowable limit',
+  level: 'error',
+  timestamp: '2024-12-11T11:38:28.767Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:55:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T11:57:45.968Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'mediaUrl')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'mediaUrl')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:55:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T11:59:44.196Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:50:23)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T12:04:37.669Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:50:23)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T12:07:37.273Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:55:19)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T12:08:43.222Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:55:19)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T12:09:50.962Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:19)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T12:11:47.397Z'
+}

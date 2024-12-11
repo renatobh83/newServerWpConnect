@@ -5,15 +5,13 @@ import type { Application } from "express";
 import { addJob, processQueues, queues } from "../libs/Queue";
 import { logger } from "../utils/logger";
 
-import "../utils/jobSync";
-import { addJobInterval } from "../utils/jobSync";
 
 export default async function bullMQ(app: Application) {
 	logger.info("bullMQ started");
 
 	processQueues();
 	await addJob("VerifyTicketsChatBotInactives", {});
-  await addJob("SendMessageSchenduled", {});
+   	await addJob("SendMessageSchenduled", {});
 	// Inicialize o painel do Bull
 	const serverAdapter = new ExpressAdapter();
 	serverAdapter.setBasePath("/admin/queues");

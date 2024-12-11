@@ -6,7 +6,7 @@ import type {
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import type Contact from "../../../models/Contact";
-import type Message from "../../../models/Message";
+import Message from "../../../models/Message";
 import type Ticket from "../../../models/Ticket";
 import { logger } from "../../../utils/logger";
 import CreateMessageService from "../../MessageServices/CreateMessageService";
@@ -22,8 +22,10 @@ const VerifyMediaMessage = async (
 	// biome-ignore lint/suspicious/noConfusingVoidType: <explanation>
 ): Promise<Message | void> => {
 	const quotedMsg = await VerifyQuotedMessage(msg);
-
+	const delay = (ms: number) =>
+		new Promise((resolve) => setTimeout(resolve, ms));
 	const media = await wbot.downloadMedia(msg);
+
 	const matches = media.match(/^data:(.+);base64,(.+)$/);
 	const base64Data = matches ? matches[2] : media;
 	if (!base64Data) {
@@ -35,21 +37,26 @@ const VerifyMediaMessage = async (
 
 	try {
 		await writeFileAsync(
-			join(__dirname, "..", "..", "..", "..", "public", `${msg.id}.jpeg`),
+			join(__dirname, "..", "..", "..", "..", "public", `${msg.id}.png`),
 			fileData,
 		);
 	} catch (err) {
 		logger.error(err);
 	}
 
+	await delay(1500);
+	const msgFound = await Message.findOne({
+		where: { messageId: msg.id, tenantId: ticket.tenantId },
+	});
+
 	const messageData = {
 		messageId: msg.id,
 		ticketId: ticket.id,
 		contactId: msg.fromMe ? undefined : contact.id,
-		body: msg.id,
+		body:  msgFound.body ||msg.id,
 		fromMe: msg.fromMe,
 		read: msg.fromMe,
-		mediaUrl: msg.id,
+		mediaUrl: `${msg.id}.png`,
 		mediaType: msg.mimetype.split("/")[0],
 		quotedMsgId: quotedMsg?.messageId,
 		timestamp: msg.timestamp,
@@ -61,6 +68,9 @@ const VerifyMediaMessage = async (
 		lastMessageAt: new Date().getTime(),
 		answered: msg.fromMe || false,
 	});
+
+
+
 	const newMessage = await CreateMessageService({
 		messageData,
 		tenantId: ticket.tenantId,
