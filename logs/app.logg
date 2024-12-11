@@ -631,3 +631,959 @@
     '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
   timestamp: '2024-12-11T12:11:47.397Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:19)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:108:5',
+  timestamp: '2024-12-11T16:48:52.099Z'
+}
+{
+  message: 'ERR_NO_UPDATE_CAMPAIGN_NOT_IN_CANCELED_PENDING',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-11T16:51:36.213Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:19:36.838 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:19:36.838 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+  parameters: [ 'Invalid date', '2024-12-11 14:19:36.838 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:19:37.843Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:20:00.232 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:20:00.232 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+  parameters: [ 'Invalid date', '2024-12-11 14:20:00.232 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:20:01.287Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:20:04.766 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+    parameters: [ 'Invalid date', '2024-12-11 14:20:04.766 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"updatedAt"=$2 WHERE "id" = $3',
+  parameters: [ 'Invalid date', '2024-12-11 14:20:04.766 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:20:05.718Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:38.682 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:38.682 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:38.682 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:20:39.629Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:44.414 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:44.414 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:20:44.414 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:20:45.366Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:04.866 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:04.866 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:04.866 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:21:05.853Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:12.390 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:12.390 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:12.390 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:21:13.368Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:22.481 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:22.481 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:21:22.481 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:21:23.471Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:07.645 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:07.645 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:07.645 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:22:08.549Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:28.439 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:28.439 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:28.439 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:22:29.406Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:42.733 -03:00', 51 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $1 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:42.733 -03:00', 51 ]
+  },
+  sql: 'UPDATE "Campaigns" SET "start"=$1,"sessionId"=$2,"delay"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ 'Invalid date', '1', '20', '2024-12-11 14:22:42.733 -03:00', 51 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:22:43.711Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "mediaUrl"=$1,"start"=$2,"sessionId"=$3,"delay"=$4,"updatedAt"=$5 WHERE "id" = $6',
+    parameters: [
+      'Captura de tela 2024-11-26 093944_11122024142439704.png',
+      'Invalid date',
+      '1',
+      '20',
+      '2024-12-11 14:24:41.082 -03:00',
+      51
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Campaigns" SET "mediaUrl"=$1,"start"=$2,"sessionId"=$3,"delay"=$4,"updatedAt"=$5 WHERE "id" = $6',
+    parameters: [
+      'Captura de tela 2024-11-26 093944_11122024142439704.png',
+      'Invalid date',
+      '1',
+      '20',
+      '2024-12-11 14:24:41.082 -03:00',
+      51
+    ]
+  },
+  sql: 'UPDATE "Campaigns" SET "mediaUrl"=$1,"start"=$2,"sessionId"=$3,"delay"=$4,"updatedAt"=$5 WHERE "id" = $6',
+  parameters: [
+    'Captura de tela 2024-11-26 093944_11122024142439704.png',
+    'Invalid date',
+    '1',
+    '20',
+    '2024-12-11 14:24:41.082 -03:00',
+    51
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Campaign.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Campaign.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateCampaignService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\CampaignServices\\UpdateCampaignService.ts:87:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\CampaignController.ts:131:23)',
+  timestamp: '2024-12-11T17:24:42.009Z'
+}
+{
+  message: 'ERR_NO_UPDATE_CAMPAIGN_NOT_IN_CANCELED_PENDING',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-11T18:18:45.263Z'
+}

@@ -44,7 +44,7 @@ const VerifyMediaMessage = async (
 		logger.error(err);
 	}
 
-	await delay(1500);
+	await delay(2000);
 	const msgFound = await Message.findOne({
 		where: { messageId: msg.id, tenantId: ticket.tenantId },
 	});
