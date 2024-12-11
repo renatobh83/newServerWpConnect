@@ -12,7 +12,8 @@ export default async function bullMQ(app: Application) {
 	logger.info("bullMQ started");
 
 	processQueues();
-	await addJobInterval();
+	await addJob("VerifyTicketsChatBotInactives", {});
+  await addJob("SendMessageSchenduled", {});
 	// Inicialize o painel do Bull
 	const serverAdapter = new ExpressAdapter();
 	serverAdapter.setBasePath("/admin/queues");
