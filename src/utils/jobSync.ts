@@ -69,7 +69,7 @@ const removeJob = async () => {
 };
 
 // Intervalo para verificar a lógica
-setInterval(async () => {
+/*setInterval(async () => {
 	try {
 		await removeJob();
 	} catch (error) {
@@ -78,4 +78,4 @@ setInterval(async () => {
 			error,
 		});
 	}
-}, 60 * 1000); // Verifica a cada minuto
+}, 60 * 1000);*/
