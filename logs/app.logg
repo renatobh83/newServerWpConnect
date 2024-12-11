@@ -4,3 +4,453 @@
   level: 'error',
   timestamp: '2024-12-10T15:36:28.321Z'
 }
+{
+  level: 'error',
+  message: 'Auto Close Called',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:21:28.633Z'
+}
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2024-12-03T09:13:55.000Z,
+  level: 'error',
+  stack: 'TokenExpiredError: jwt expired\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/jsonwebtoken/verify.js:190:21\n' +
+    '    at getSecret (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/jsonwebtoken/verify.js:97:14)\n' +
+    '    at module.exports (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/jsonwebtoken/verify.js:101:10)\n' +
+    '    at decode (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/libs/decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/libs/scoket.ts:43:36)\n' +
+    '    at run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/socket.io/dist/namespace.js:130:19)\n' +
+    '    at Namespace.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/socket.io/dist/namespace.js:141:9)\n' +
+    '    at Namespace._add (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/socket.io/dist/namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-10T23:26:43.042Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-10T23:26:43.056Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-10T23:26:43.061Z'
+}
+{
+  message: 'ERR_SESSION_EXPIRED',
+  statusCode: 401,
+  level: 'error',
+  timestamp: '2024-12-10T23:26:43.069Z'
+}
+{
+  level: 'error',
+  message: 'null value in column "name" of relation "Contacts" violates not-null constraint',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (18, null, 5585683733, null, 2024-12-10 20:50:33.464-03, 2024-12-10 20:50:33.464-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:50:33.464 -03:00',
+      '2024-12-10 20:50:33.464 -03:00',
+      1
+    ]
+  },
+  original: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (18, null, 5585683733, null, 2024-12-10 20:50:33.464-03, 2024-12-10 20:50:33.464-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:50:33.464 -03:00',
+      '2024-12-10 20:50:33.464 -03:00',
+      1
+    ]
+  },
+  sql: 'INSERT INTO "Contacts" ("id","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  parameters: [
+    '5585683733',
+    '',
+    null,
+    null,
+    null,
+    null,
+    null,
+    true,
+    true,
+    false,
+    '2024-12-10 20:50:33.464 -03:00',
+    '2024-12-10 20:50:33.464 -03:00',
+    1
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Function.create (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/VerifyContact.ts:33:18)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:76:20',
+  timestamp: '2024-12-10T23:50:34.487Z'
+}
+{
+  level: 'error',
+  message: 'null value in column "name" of relation "Contacts" violates not-null constraint',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (21, null, 5585683733, null, 2024-12-10 20:51:46.247-03, 2024-12-10 20:51:46.247-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:51:46.247 -03:00',
+      '2024-12-10 20:51:46.247 -03:00',
+      1
+    ]
+  },
+  original: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (21, null, 5585683733, null, 2024-12-10 20:51:46.247-03, 2024-12-10 20:51:46.247-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:51:46.247 -03:00',
+      '2024-12-10 20:51:46.247 -03:00',
+      1
+    ]
+  },
+  sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  parameters: [
+    '5585683733',
+    '',
+    null,
+    null,
+    null,
+    null,
+    true,
+    true,
+    false,
+    '2024-12-10 20:51:46.247 -03:00',
+    '2024-12-10 20:51:46.247 -03:00',
+    1
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at PostgresQueryInterface.insert (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Function.create (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/VerifyContact.ts:33:18)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:76:20',
+  timestamp: '2024-12-10T23:51:47.558Z'
+}
+{
+  level: 'error',
+  message: 'null value in column "name" of relation "Contacts" violates not-null constraint',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (24, null, 5585683733, null, 2024-12-10 20:52:45.736-03, 2024-12-10 20:52:45.736-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:52:45.736 -03:00',
+      '2024-12-10 20:52:45.736 -03:00',
+      1
+    ]
+  },
+  original: error: null value in column "name" of relation "Contacts" violates not-null constraint
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 312,
+    severity: 'ERROR',
+    code: '23502',
+    detail: 'Failing row contains (24, null, 5585683733, null, 2024-12-10 20:52:45.736-03, 2024-12-10 20:52:45.736-03, , f, 1, t, null, t, null, null, null).',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: 'name',
+    dataType: undefined,
+    constraint: undefined,
+    file: 'execMain.c',
+    line: '1987',
+    routine: 'ExecConstraints',
+    sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      '5585683733',
+      '',
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-10 20:52:45.736 -03:00',
+      '2024-12-10 20:52:45.736 -03:00',
+      1
+    ]
+  },
+  sql: 'INSERT INTO "Contacts" ("id","number","email","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  parameters: [
+    '5585683733',
+    '',
+    null,
+    null,
+    null,
+    null,
+    true,
+    true,
+    false,
+    '2024-12-10 20:52:45.736 -03:00',
+    '2024-12-10 20:52:45.736 -03:00',
+    1
+  ],
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at PostgresQueryInterface.insert (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:795:21)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Function.create (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/VerifyContact.ts:33:18)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:76:20',
+  timestamp: '2024-12-10T23:52:46.989Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.1018730478-alpha , using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:57:03.462Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.1018730478-alpha, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:57:33.317Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.1018730478, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:57:55.138Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.101877x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:58:54.714Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.1018775059, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-10T23:59:14.912Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.10186x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-11T00:02:13.219Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.10185x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-11T00:02:25.684Z'
+}

@@ -42,14 +42,16 @@ export const HandleMessage = async (
 			const Settingdb = await Setting.findOne({
 				where: { key: "ignoreGroupMsg", tenantId },
 			});
+
 			if (
 				Settingdb?.value === "enabled" &&
-				(chat.isGroup || msg.from === "status@broadcast")
+				(msg.isGroupMsg || msg.from === "status@broadcast")
 			) {
 				return;
 			}
 			if (msg.fromMe) {
-				if (!msg.isMedia && msg.type !== "chat" && msg.type !== "vcard") return;
+				if (!msg.filehash && msg.type !== "chat" && msg.type !== "vcard")
+					return;
 				msgContact = await wbot.getContact(msg.to);
 			} else {
 				msgContact = msg.sender;
@@ -127,11 +129,11 @@ export const HandleMessage = async (
 					authToken: apiConfig?.authToken,
 					type: "hookMessage",
 				};
-				  addJob("WebHooksAPI", {
+				addJob("WebHooksAPI", {
 					url: apiConfig.urlMessageStatus,
 					type: payload.type,
 					payload,
-				  });
+				});
 			}
 
 			resolve();

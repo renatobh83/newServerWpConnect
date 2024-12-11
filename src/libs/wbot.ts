@@ -72,7 +72,8 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 		wbot = (await create(
 			Object.assign({}, { headless: true }, config.createOptions, {
 				logger: logger,
-				// whatsappVersion: "2.3000.10184x",
+				// whatsappVersion: "2.3000.1018775059",
+				whatsappVersion: "2.3000.10184x",
 				disableWelcome: true,
 				disableGoogleAnalytics: true,
 				session: whatsapp.id,
@@ -252,7 +253,7 @@ const start = async (client: Session) => {
 
 			const wbotVersion = await client.getWAVersion();
 			const profileSession = await client.getProfileName();
-			const number = await client.getWid()
+			const number = await client.getWid();
 			await whatsappSession.update({
 				status: "CONNECTED",
 				qrcode: "",
@@ -261,7 +262,7 @@ const start = async (client: Session) => {
 				phone: {
 					wbotVersion,
 					profileSession,
-					number
+					number,
 				},
 				session: sessionName,
 			});

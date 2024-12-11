@@ -27,7 +27,7 @@ export interface MessageReaction {
 	orphanReason: any;
 	timestamp: number;
 }
-export const wbotMessageListener =async (wbot: Session): Promise<void> => {
+export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 	wbot.onAnyMessage(async (msg: Message) => {
 		if (msg.chatId === "status@broadcast") return;
 		await HandleMessage(msg, wbot);
@@ -45,5 +45,4 @@ export const wbotMessageListener =async (wbot: Session): Promise<void> => {
 	});
 
 	// wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
-
 };
