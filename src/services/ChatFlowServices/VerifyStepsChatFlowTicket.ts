@@ -347,6 +347,7 @@ const VerifyStepsChatFlowTicket = async (
 		!ticket.isGroup &&
 		!ticket.answered
 	) {
+
 		if (ticket.chatFlowId) {
 			const chatFlow = await ticket.getChatFlow();
 
