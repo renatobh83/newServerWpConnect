@@ -53,6 +53,7 @@ export const HandleMessage = async (
 				if (!msg.filehash && msg.type !== "chat" && msg.type !== "vcard")
 					return;
 				msgContact = await wbot.getContact(msg.to);
+
 			} else {
 				msgContact = msg.sender;
 			}

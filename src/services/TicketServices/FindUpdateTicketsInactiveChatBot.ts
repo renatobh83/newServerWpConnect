@@ -12,9 +12,9 @@ const FindUpdateTicketsInactiveChatBot = async (): Promise<void> => {
     --t."lastInteractionBot",
     --t.status,
     --config->'configurations',
-    --concat(config->'configurations'->'notResponseMessage'->'time', ' MINUTES')::interval as time_action,
-    config->'configurations'->'notResponseMessage'->'type' as type_action,
-    config->'configurations'->'notResponseMessage'->'destiny' as destiny
+    --concat(config->'data'->'notResponseMessage'->'time', ' MINUTES')::interval as time_action,
+    config->'data'->'notResponseMessage'->'type' as type_action,
+    config->'data'->'notResponseMessage'->'destiny' as destiny
     from "Tickets" t
     inner join "ChatFlow" cf on t."tenantId" = cf."tenantId" and cf.id = t."chatFlowId"
     inner join "Settings" s on s."tenantId" = cf."tenantId" and s."key" = 'botTicketActive'
@@ -22,12 +22,13 @@ const FindUpdateTicketsInactiveChatBot = async (): Promise<void> => {
     where t."chatFlowId"::text = s.value
     and t.status = 'pending'
     and config->>'type' = 'configurations'
-    and t."lastInteractionBot" < CURRENT_TIMESTAMP - (config->'configurations'->'notResponseMessage'->>'time')::int * interval '1 minute'
+    and t."lastInteractionBot" < CURRENT_TIMESTAMP - (config->'data'->'notResponseMessage'->>'time')::int * interval '1 minute'
     and (t."queueId" is null and t."userId" is null)
   `;
 
 	const tickets: any = await Ticket.sequelize?.query(query, {
 		type: QueryTypes.SELECT,
+		logging: true
 	});
 	Promise.all(
 		tickets.map(async (item: any) => {
@@ -41,6 +42,9 @@ const FindUpdateTicketsInactiveChatBot = async (): Promise<void> => {
 					botRetries: 0,
 					lastInteractionBot: new Date(),
 				};
+				if(item.type_action == 3) {
+
+				}
 				// instance.type_action: 1 = fila | 2 = usuario
 				if (item.type_action == 1) {
 					values.queueId = item.destiny;

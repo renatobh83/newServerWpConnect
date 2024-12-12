@@ -13,6 +13,7 @@ import { logger } from "../../utils/logger";
 
 import SendMessageSystemProxy from "../../helpers/SendMessageSystemProxy";
 import { pupa } from "../../utils/pupa";
+import { addJob } from "../../libs/Queue";
 
 interface MessageData {
 	ticketId: number;
@@ -148,6 +149,7 @@ const CreateMessageSystemService = async ({
 
 	try {
 		// Alter template message
+
 		if (msg.body && !Array.isArray(msg.body)) {
 			messageData.body = pupa(msg.body || "", {
 				// greeting: será considerado conforme data/hora da mensagem internamente na função pupa
@@ -155,7 +157,14 @@ const CreateMessageSystemService = async ({
 				name: ticket.contact.name,
 			});
 		}
+		if(msg.fromMe && msg.scheduleDate) {
+			const options = {options: {
+				delay: new Date(msg.scheduleDate).getTime() - Date.now(),
+				jobId: `SendMessageSchenduled-${msg.id || Date.now()}`, // ID único
 
+			}}
+			addJob('SendMessageSchenduled', options)
+		}
 		if (sendType === "API" && msg.mediaUrl) {
 			medias = [];
 			const mediaData = await downloadMedia(msg);

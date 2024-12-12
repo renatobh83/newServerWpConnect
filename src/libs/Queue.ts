@@ -6,27 +6,36 @@ import QueueListener from "./QueueListeners"; // Classe de listeners
 import { Redis } from "ioredis";
 // Redis connection options
 
-const redis = new Redis({
+const redisForQueues = new Redis({
 	host: process.env.IO_REDIS_SERVER,
 	port: +(process.env.IO_REDIS_PORT || "6379"),
 	password: process.env.IO_REDIS_PASSWORD || undefined,
 	maxRetriesPerRequest: null,
 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
-});
+  });
+
+  const redisForWorkers = new Redis({
+	host: process.env.IO_REDIS_SERVER,
+	port: +(process.env.IO_REDIS_PORT || "6379"),
+	password: process.env.IO_REDIS_PASSWORD || undefined,
+	maxRetriesPerRequest: null,
+	retryStrategy: (times: number) => Math.min(times * 50, 2000),
+  });
+
 // Monitoramento de eventos
-redis.on("connect", () => {
+redisForWorkers.on("connect", () => {
 	logger.info("Redis conectado com sucesso.");
 });
-redis.on("error", (err) => {
+redisForWorkers.on("error", (err) => {
 	logger.error("Erro ao conectar ao Redis:", err);
 });
-redis.on("end", () => {
+redisForWorkers.on("end", () => {
 	logger.warn("Conexão com Redis encerrada.");
 });
 
 // Cria as filas
 export const queues = Object.values(jobs).map((job: any) => {
-	const bullQueue = new Queue(job.key, { connection: redis });
+	const bullQueue = new Queue(job.key, { connection: redisForQueues });
 
 	// Adiciona os listeners
 
@@ -57,6 +66,7 @@ export async function addJob(queueName: string, data: Record<string, any>) {
 			...queue.options, // Opções padrão da fila
 			...data.options, // Opções específicas do job
 		});
+		console.log(data)
 		logger.info(`Job adicionado à fila ${queueName}`);
 	} catch (error) {
 		logger.error({
@@ -84,7 +94,7 @@ export function processQueues(concurrency = 60) {
 				}
 			},
 			{
-				connection: redis,
+				connection: redisForWorkers,
 				concurrency,
 			},
 		);
@@ -106,29 +116,29 @@ export function processQueues(concurrency = 60) {
 	logger.info("Workers configurados e prontos para processar jobs.");
 }
 
-export async function closeWorkers() {
+export async function shutdown() {
+	// Fecha todos os workers
 	for (const worker of workers) {
-		try {
-			await worker.close();
-			logger.info(`Worker para a fila ${worker.name} foi fechado.`);
-		} catch (error) {
-			logger.error(
-				`Erro ao fechar o worker para a fila ${worker.name}: ${error.message}`,
-			);
-		}
+	  try {
+		await worker.close();
+		logger.info(`Worker para a fila ${worker.name} foi fechado.`);
+	  } catch (error) {
+		logger.error(`Erro ao fechar o worker para a fila ${worker.name}: ${error.message}`);
+	  }
 	}
-}
 
-export async function closeQueues() {
+	// Fecha todas as filas
 	for (const { bull, name } of queues) {
-		try {
-			await bull.close();
-			logger.info(`Fila ${name} foi fechada.`);
-		} catch (error) {
-			logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
-		}
+	  try {
+		await bull.close();
+		logger.info(`Fila ${name} foi fechada.`);
+	  } catch (error) {
+		logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
+	  }
 	}
-}
+	logger.info("Sistema de filas encerrado com sucesso.");
+  }
+
 
 // Close queue by name
 export async function getJobByName(queueName: string): Promise<void> {

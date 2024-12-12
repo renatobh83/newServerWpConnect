@@ -1587,3 +1587,21 @@
   level: 'error',
   timestamp: '2024-12-11T18:18:45.263Z'
 }
+{
+  level: 'error',
+  message: 'CreateMessageSystemService msg.scheduleDate.getTime is not a function',
+  stack: 'TypeError: msg.scheduleDate.getTime is not a function\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:160:35)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:35)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-12T09:44:51.652Z'
+}
+{
+  level: 'error',
+  message: 'msg.scheduleDate.getTime is not a function',
+  stack: 'TypeError: msg.scheduleDate.getTime is not a function\n' +
+    '    at CreateMessageSystemService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\MessageServices\\CreateMessageSystemService.ts:160:35)\n' +
+    '    at store (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\MessageController.ts:71:35)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-12T09:44:51.660Z'
+}

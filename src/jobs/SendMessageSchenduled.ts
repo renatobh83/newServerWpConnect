@@ -6,10 +6,6 @@ export default {
 	options: {
 		removeOnComplete: true,
 		removeOnFail: true,
-		jobId: "SendMessageSchenduled",
-		repeat: {
-			every: 1 * 60 * 1000,
-		},
 	},
 	async handle() {
 		try {
