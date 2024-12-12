@@ -1605,3 +1605,654 @@
     '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
   timestamp: '2024-12-12T09:44:51.660Z'
 }
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2024-12-12T12:11:55.000Z,
+  level: 'error',
+  stack: 'TokenExpiredError: jwt expired\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-12T14:27:12.676Z'
+}
+{
+  name: 'TokenExpiredError',
+  message: 'jwt expired',
+  expiredAt: 2024-12-12T12:11:55.000Z,
+  level: 'error',
+  stack: 'TokenExpiredError: jwt expired\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:190:21\n' +
+    '    at getSecret (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:97:14)\n' +
+    '    at module.exports (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\jsonwebtoken\\verify.js:101:10)\n' +
+    '    at decode (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\decodeTokenSocket.ts:34:25)\n' +
+    '    at Array.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts:43:36)\n' +
+    '    at run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:130:19)\n' +
+    '    at Namespace.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:141:9)\n' +
+    '    at Namespace._add (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\socket.io\\dist\\namespace.js:218:14)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2024-12-12T14:27:14.147Z'
+}
+{
+  message: '{"protocol":"2024121207374430","id":30,"status":"pending","unreadMessages":0,"lastMessage":"Ola! Que bom ter voce aqui Renato Mendonca! Aguarde só um instante que daremos inicio.","channel":"whatsapp","answered":true,"isGroup":false,"isActiveDemand":false,"isFarewellMessage":false,"createdAt":"2024-12-12T10:37:44.530Z","updatedAt":"2024-12-12T11:40:58.151Z","lastInteractionBot":"2024-12-12T11:40:58.151Z","botRetries":0,"closedAt":null,"lastMessageAt":"1733999885328","startedAttendanceAt":null,"userId":1,"contactId":4,"whatsappId":1,"autoReplyId":null,"stepAutoReplyId":null,"chatFlowId":null,"stepChatFlow":null,"queueId":null,"tenantId":1,"apiConfig":null}',
+  statusCode: 409,
+  level: 'error',
+  timestamp: '2024-12-12T14:27:26.031Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:339:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:81:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:13:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:90:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-12-12T15:28:24.215Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:339:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:81:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:13:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:90:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-12-12T15:37:35.630Z'
+}
+{
+  level: 'error',
+  message: 'SendMessagesSchenduleWbot > SendMessage ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:339:9)\n' +
+    '    at SendMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessage.ts:9:22)\n' +
+    '    at SendMessagesSchenduleWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\SendMessagesSchenduleWbot.ts:81:21)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at handle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\SendMessageSchenduled.ts:13:4)\n' +
+    '    at Worker.bullmq_1.Worker.connection [as processFn] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:90:6)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:904:26\n' +
+    '    at Worker.retryIfFailed (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\worker.ts:1175:16)',
+  timestamp: '2024-12-12T15:38:11.647Z'
+}
+{
+  message: 'Error send messages',
+  error: Error: 
+      at Query.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize\src\dialects\postgres\query.js:76:25)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize\src\sequelize.js:650:28
+      at PostgresQueryInterface.select (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize\src\dialects\abstract\query-interface.js:1001:12)
+      at Function.findAll (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\sequelize\src\model.js:1824:21)
+      at SendMessagesSchenduleWbot (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\SendMessagesSchenduleWbot.ts:29:19)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageSchenduled.ts:13:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:90:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16) {
+    name: 'SequelizeDatabaseError',
+    parent: error: column contact.empresa does not exist
+        at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+        at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+        at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+        at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+        at Socket.emit (node:events:518:28)
+        at addChunk (node:internal/streams/readable:561:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+        at Socket.Readable.push (node:internal/streams/readable:392:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+      length: 114,
+      severity: 'ERROR',
+      code: '42703',
+      detail: undefined,
+      hint: undefined,
+      position: '875',
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: undefined,
+      table: undefined,
+      column: undefined,
+      dataType: undefined,
+      constraint: undefined,
+      file: 'parse_relation.c',
+      line: '3716',
+      routine: 'errorMissingColumn',
+      sql: `SELECT "Message"."id", "Message"."messageId", "Message"."ack", "Message"."status", "Message"."wabaMediaId", "Message"."read", "Message"."fromMe", "Message"."body", "Message"."mediaUrl", "Message"."mediaType", "Message"."isDeleted", "Message"."createdAt", "Message"."updatedAt", "Message"."quotedMsgId", "Message"."ticketId", "Message"."contactId", "Message"."timestamp", "Message"."userId", "Message"."scheduleDate", "Message"."reaction", "Message"."reactionFromMe", "Message"."sendType", "Message"."tenantId", "Message"."idFront", "contact"."id" AS "contact.id", "contact"."name" AS "contact.name", "contact"."number" AS "contact.number", "contact"."email" AS "contact.email", "contact"."profilePicUrl" AS "contact.profilePicUrl", "contact"."pushname" AS "contact.pushname", "contact"."telegramId" AS "contact.telegramId", "contact"."messengerId" AS "contact.messengerId", "contact"."empresa" AS "contact.empresa", "contact"."dtaniversario" AS "contact.dtaniversario", "contact"."instagramPK" AS "contact.instagramPK", "contact"."isUser" AS "contact.isUser", "contact"."isWAContact" AS "contact.isWAContact", "contact"."isGroup" AS "contact.isGroup", "contact"."createdAt" AS "contact.createdAt", "contact"."updatedAt" AS "contact.updatedAt", "contact"."tenantId" AS "contact.tenantId", "ticket"."id" AS "ticket.id", "ticket"."status" AS "ticket.status", "ticket"."unreadMessages" AS "ticket.unreadMessages", "ticket"."lastMessage" AS "ticket.lastMessage", "ticket"."channel" AS "ticket.channel", "ticket"."answered" AS "ticket.answered", "ticket"."isGroup" AS "ticket.isGroup", "ticket"."isActiveDemand" AS "ticket.isActiveDemand", "ticket"."isFarewellMessage" AS "ticket.isFarewellMessage", "ticket"."createdAt" AS "ticket.createdAt", "ticket"."updatedAt" AS "ticket.updatedAt", "ticket"."lastInteractionBot" AS "ticket.lastInteractionBot", "ticket"."botRetries" AS "ticket.botRetries", "ticket"."closedAt" AS "ticket.closedAt", "ticket"."lastMessageAt" AS "ticket.lastMessageAt", "ticket"."startedAttendanceAt" AS "ticket.startedAttendanceAt", "ticket"."userId" AS "ticket.userId", "ticket"."contactId" AS "ticket.contactId", "ticket"."whatsappId" AS "ticket.whatsappId", "ticket"."autoReplyId" AS "ticket.autoReplyId", "ticket"."stepAutoReplyId" AS "ticket.stepAutoReplyId", "ticket"."chatFlowId" AS "ticket.chatFlowId", "ticket"."stepChatFlow" AS "ticket.stepChatFlow", "ticket"."queueId" AS "ticket.queueId", "ticket"."tenantId" AS "ticket.tenantId", "ticket"."apiConfig" AS "ticket.apiConfig", "ticket->contact"."id" AS "ticket.contact.id", "ticket->contact"."name" AS "ticket.contact.name", "ticket->contact"."number" AS "ticket.contact.number", "ticket->contact"."email" AS "ticket.contact.email", "ticket->contact"."profilePicUrl" AS "ticket.contact.profilePicUrl", "ticket->contact"."pushname" AS "ticket.contact.pushname", "ticket->contact"."telegramId" AS "ticket.contact.telegramId", "ticket->contact"."messengerId" AS "ticket.contact.messengerId", "ticket->contact"."empresa" AS "ticket.contact.empresa", "ticket->contact"."dtaniversario" AS "ticket.contact.dtaniversario", "ticket->contact"."instagramPK" AS "ticket.contact.instagramPK", "ticket->contact"."isUser" AS "ticket.contact.isUser", "ticket->contact"."isWAContact" AS "ticket.contact.isWAContact", "ticket->contact"."isGroup" AS "ticket.contact.isGroup", "ticket->contact"."createdAt" AS "ticket.contact.createdAt", "ticket->contact"."updatedAt" AS "ticket.contact.updatedAt", "ticket->contact"."tenantId" AS "ticket.contact.tenantId", "quotedMsg"."id" AS "quotedMsg.id", "quotedMsg"."messageId" AS "quotedMsg.messageId", "quotedMsg"."ack" AS "quotedMsg.ack", "quotedMsg"."status" AS "quotedMsg.status", "quotedMsg"."wabaMediaId" AS "quotedMsg.wabaMediaId", "quotedMsg"."read" AS "quotedMsg.read", "quotedMsg"."fromMe" AS "quotedMsg.fromMe", "quotedMsg"."body" AS "quotedMsg.body", "quotedMsg"."mediaUrl" AS "quotedMsg.mediaUrl", "quotedMsg"."mediaType" AS "quotedMsg.mediaType", "quotedMsg"."isDeleted" AS "quotedMsg.isDeleted", "quotedMsg"."createdAt" AS "quotedMsg.createdAt", "quotedMsg"."updatedAt" AS "quotedMsg.updatedAt", "quotedMsg"."quotedMsgId" AS "quotedMsg.quotedMsgId", "quotedMsg"."ticketId" AS "quotedMsg.ticketId", "quotedMsg"."contactId" AS "quotedMsg.contactId", "quotedMsg"."timestamp" AS "quotedMsg.timestamp", "quotedMsg"."userId" AS "quotedMsg.userId", "quotedMsg"."scheduleDate" AS "quotedMsg.scheduleDate", "quotedMsg"."reaction" AS "quotedMsg.reaction", "quotedMsg"."reactionFromMe" AS "quotedMsg.reactionFromMe", "quotedMsg"."sendType" AS "quotedMsg.sendType", "quotedMsg"."tenantId" AS "quotedMsg.tenantId", "quotedMsg"."idFront" AS "quotedMsg.idFront", "quotedMsg->contact"."id" AS "quotedMsg.contact.id", "quotedMsg->contact"."name" AS "quotedMsg.contact.name", "quotedMsg->contact"."number" AS "quotedMsg.contact.number", "quotedMsg->contact"."email" AS "quotedMsg.contact.email", "quotedMsg->contact"."profilePicUrl" AS "quotedMsg.contact.profilePicUrl", "quotedMsg->contact"."pushname" AS "quotedMsg.contact.pushname", "quotedMsg->contact"."telegramId" AS "quotedMsg.contact.telegramId", "quotedMsg->contact"."messengerId" AS "quotedMsg.contact.messengerId", "quotedMsg->contact"."empresa" AS "quotedMsg.contact.empresa", "quotedMsg->contact"."dtaniversario" AS "quotedMsg.contact.dtaniversario", "quotedMsg->contact"."instagramPK" AS "quotedMsg.contact.instagramPK", "quotedMsg->contact"."isUser" AS "quotedMsg.contact.isUser", "quotedMsg->contact"."isWAContact" AS "quotedMsg.contact.isWAContact", "quotedMsg->contact"."isGroup" AS "quotedMsg.contact.isGroup", "quotedMsg->contact"."createdAt" AS "quotedMsg.contact.createdAt", "quotedMsg->contact"."updatedAt" AS "quotedMsg.contact.updatedAt", "quotedMsg->contact"."tenantId" AS "quotedMsg.contact.tenantId" FROM "Messages" AS "Message" LEFT OUTER JOIN "Contacts" AS "contact" ON "Message"."contactId" = "contact"."id" INNER JOIN "Tickets" AS "ticket" ON "Message"."ticketId" = "ticket"."id" AND "ticket"."status" IN ('open', 'pending') LEFT OUTER JOIN "Contacts" AS "ticket->contact" ON "ticket"."contactId" = "ticket->contact"."id" LEFT OUTER JOIN "Messages" AS "quotedMsg" ON "Message"."quotedMsgId" = "quotedMsg"."messageId" LEFT OUTER JOIN "Contacts" AS "quotedMsg->contact" ON "quotedMsg"."contactId" = "quotedMsg->contact"."id" WHERE "Message"."fromMe" = true AND "Message"."messageId" IS NULL AND "Message"."status" = 'pending' AND ("Message"."scheduleDate" <= '2024-12-12 12:49:13.000 -03:00' AND "Message"."scheduleDate" >= '2024-12-11 12:49:13.000 -03:00') ORDER BY "Message"."createdAt" ASC;`,
+      parameters: undefined
+    },
+    original: error: column contact.empresa does not exist
+        at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+        at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+        at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+        at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+        at Socket.emit (node:events:518:28)
+        at addChunk (node:internal/streams/readable:561:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+        at Socket.Readable.push (node:internal/streams/readable:392:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+      length: 114,
+      severity: 'ERROR',
+      code: '42703',
+      detail: undefined,
+      hint: undefined,
+      position: '875',
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: undefined,
+      table: undefined,
+      column: undefined,
+      dataType: undefined,
+      constraint: undefined,
+      file: 'parse_relation.c',
+      line: '3716',
+      routine: 'errorMissingColumn',
+      sql: `SELECT "Message"."id", "Message"."messageId", "Message"."ack", "Message"."status", "Message"."wabaMediaId", "Message"."read", "Message"."fromMe", "Message"."body", "Message"."mediaUrl", "Message"."mediaType", "Message"."isDeleted", "Message"."createdAt", "Message"."updatedAt", "Message"."quotedMsgId", "Message"."ticketId", "Message"."contactId", "Message"."timestamp", "Message"."userId", "Message"."scheduleDate", "Message"."reaction", "Message"."reactionFromMe", "Message"."sendType", "Message"."tenantId", "Message"."idFront", "contact"."id" AS "contact.id", "contact"."name" AS "contact.name", "contact"."number" AS "contact.number", "contact"."email" AS "contact.email", "contact"."profilePicUrl" AS "contact.profilePicUrl", "contact"."pushname" AS "contact.pushname", "contact"."telegramId" AS "contact.telegramId", "contact"."messengerId" AS "contact.messengerId", "contact"."empresa" AS "contact.empresa", "contact"."dtaniversario" AS "contact.dtaniversario", "contact"."instagramPK" AS "contact.instagramPK", "contact"."isUser" AS "contact.isUser", "contact"."isWAContact" AS "contact.isWAContact", "contact"."isGroup" AS "contact.isGroup", "contact"."createdAt" AS "contact.createdAt", "contact"."updatedAt" AS "contact.updatedAt", "contact"."tenantId" AS "contact.tenantId", "ticket"."id" AS "ticket.id", "ticket"."status" AS "ticket.status", "ticket"."unreadMessages" AS "ticket.unreadMessages", "ticket"."lastMessage" AS "ticket.lastMessage", "ticket"."channel" AS "ticket.channel", "ticket"."answered" AS "ticket.answered", "ticket"."isGroup" AS "ticket.isGroup", "ticket"."isActiveDemand" AS "ticket.isActiveDemand", "ticket"."isFarewellMessage" AS "ticket.isFarewellMessage", "ticket"."createdAt" AS "ticket.createdAt", "ticket"."updatedAt" AS "ticket.updatedAt", "ticket"."lastInteractionBot" AS "ticket.lastInteractionBot", "ticket"."botRetries" AS "ticket.botRetries", "ticket"."closedAt" AS "ticket.closedAt", "ticket"."lastMessageAt" AS "ticket.lastMessageAt", "ticket"."startedAttendanceAt" AS "ticket.startedAttendanceAt", "ticket"."userId" AS "ticket.userId", "ticket"."contactId" AS "ticket.contactId", "ticket"."whatsappId" AS "ticket.whatsappId", "ticket"."autoReplyId" AS "ticket.autoReplyId", "ticket"."stepAutoReplyId" AS "ticket.stepAutoReplyId", "ticket"."chatFlowId" AS "ticket.chatFlowId", "ticket"."stepChatFlow" AS "ticket.stepChatFlow", "ticket"."queueId" AS "ticket.queueId", "ticket"."tenantId" AS "ticket.tenantId", "ticket"."apiConfig" AS "ticket.apiConfig", "ticket->contact"."id" AS "ticket.contact.id", "ticket->contact"."name" AS "ticket.contact.name", "ticket->contact"."number" AS "ticket.contact.number", "ticket->contact"."email" AS "ticket.contact.email", "ticket->contact"."profilePicUrl" AS "ticket.contact.profilePicUrl", "ticket->contact"."pushname" AS "ticket.contact.pushname", "ticket->contact"."telegramId" AS "ticket.contact.telegramId", "ticket->contact"."messengerId" AS "ticket.contact.messengerId", "ticket->contact"."empresa" AS "ticket.contact.empresa", "ticket->contact"."dtaniversario" AS "ticket.contact.dtaniversario", "ticket->contact"."instagramPK" AS "ticket.contact.instagramPK", "ticket->contact"."isUser" AS "ticket.contact.isUser", "ticket->contact"."isWAContact" AS "ticket.contact.isWAContact", "ticket->contact"."isGroup" AS "ticket.contact.isGroup", "ticket->contact"."createdAt" AS "ticket.contact.createdAt", "ticket->contact"."updatedAt" AS "ticket.contact.updatedAt", "ticket->contact"."tenantId" AS "ticket.contact.tenantId", "quotedMsg"."id" AS "quotedMsg.id", "quotedMsg"."messageId" AS "quotedMsg.messageId", "quotedMsg"."ack" AS "quotedMsg.ack", "quotedMsg"."status" AS "quotedMsg.status", "quotedMsg"."wabaMediaId" AS "quotedMsg.wabaMediaId", "quotedMsg"."read" AS "quotedMsg.read", "quotedMsg"."fromMe" AS "quotedMsg.fromMe", "quotedMsg"."body" AS "quotedMsg.body", "quotedMsg"."mediaUrl" AS "quotedMsg.mediaUrl", "quotedMsg"."mediaType" AS "quotedMsg.mediaType", "quotedMsg"."isDeleted" AS "quotedMsg.isDeleted", "quotedMsg"."createdAt" AS "quotedMsg.createdAt", "quotedMsg"."updatedAt" AS "quotedMsg.updatedAt", "quotedMsg"."quotedMsgId" AS "quotedMsg.quotedMsgId", "quotedMsg"."ticketId" AS "quotedMsg.ticketId", "quotedMsg"."contactId" AS "quotedMsg.contactId", "quotedMsg"."timestamp" AS "quotedMsg.timestamp", "quotedMsg"."userId" AS "quotedMsg.userId", "quotedMsg"."scheduleDate" AS "quotedMsg.scheduleDate", "quotedMsg"."reaction" AS "quotedMsg.reaction", "quotedMsg"."reactionFromMe" AS "quotedMsg.reactionFromMe", "quotedMsg"."sendType" AS "quotedMsg.sendType", "quotedMsg"."tenantId" AS "quotedMsg.tenantId", "quotedMsg"."idFront" AS "quotedMsg.idFront", "quotedMsg->contact"."id" AS "quotedMsg.contact.id", "quotedMsg->contact"."name" AS "quotedMsg.contact.name", "quotedMsg->contact"."number" AS "quotedMsg.contact.number", "quotedMsg->contact"."email" AS "quotedMsg.contact.email", "quotedMsg->contact"."profilePicUrl" AS "quotedMsg.contact.profilePicUrl", "quotedMsg->contact"."pushname" AS "quotedMsg.contact.pushname", "quotedMsg->contact"."telegramId" AS "quotedMsg.contact.telegramId", "quotedMsg->contact"."messengerId" AS "quotedMsg.contact.messengerId", "quotedMsg->contact"."empresa" AS "quotedMsg.contact.empresa", "quotedMsg->contact"."dtaniversario" AS "quotedMsg.contact.dtaniversario", "quotedMsg->contact"."instagramPK" AS "quotedMsg.contact.instagramPK", "quotedMsg->contact"."isUser" AS "quotedMsg.contact.isUser", "quotedMsg->contact"."isWAContact" AS "quotedMsg.contact.isWAContact", "quotedMsg->contact"."isGroup" AS "quotedMsg.contact.isGroup", "quotedMsg->contact"."createdAt" AS "quotedMsg.contact.createdAt", "quotedMsg->contact"."updatedAt" AS "quotedMsg.contact.updatedAt", "quotedMsg->contact"."tenantId" AS "quotedMsg.contact.tenantId" FROM "Messages" AS "Message" LEFT OUTER JOIN "Contacts" AS "contact" ON "Message"."contactId" = "contact"."id" INNER JOIN "Tickets" AS "ticket" ON "Message"."ticketId" = "ticket"."id" AND "ticket"."status" IN ('open', 'pending') LEFT OUTER JOIN "Contacts" AS "ticket->contact" ON "ticket"."contactId" = "ticket->contact"."id" LEFT OUTER JOIN "Messages" AS "quotedMsg" ON "Message"."quotedMsgId" = "quotedMsg"."messageId" LEFT OUTER JOIN "Contacts" AS "quotedMsg->contact" ON "quotedMsg"."contactId" = "quotedMsg->contact"."id" WHERE "Message"."fromMe" = true AND "Message"."messageId" IS NULL AND "Message"."status" = 'pending' AND ("Message"."scheduleDate" <= '2024-12-12 12:49:13.000 -03:00' AND "Message"."scheduleDate" >= '2024-12-11 12:49:13.000 -03:00') ORDER BY "Message"."createdAt" ASC;`,
+      parameters: undefined
+    },
+    sql: `SELECT "Message"."id", "Message"."messageId", "Message"."ack", "Message"."status", "Message"."wabaMediaId", "Message"."read", "Message"."fromMe", "Message"."body", "Message"."mediaUrl", "Message"."mediaType", "Message"."isDeleted", "Message"."createdAt", "Message"."updatedAt", "Message"."quotedMsgId", "Message"."ticketId", "Message"."contactId", "Message"."timestamp", "Message"."userId", "Message"."scheduleDate", "Message"."reaction", "Message"."reactionFromMe", "Message"."sendType", "Message"."tenantId", "Message"."idFront", "contact"."id" AS "contact.id", "contact"."name" AS "contact.name", "contact"."number" AS "contact.number", "contact"."email" AS "contact.email", "contact"."profilePicUrl" AS "contact.profilePicUrl", "contact"."pushname" AS "contact.pushname", "contact"."telegramId" AS "contact.telegramId", "contact"."messengerId" AS "contact.messengerId", "contact"."empresa" AS "contact.empresa", "contact"."dtaniversario" AS "contact.dtaniversario", "contact"."instagramPK" AS "contact.instagramPK", "contact"."isUser" AS "contact.isUser", "contact"."isWAContact" AS "contact.isWAContact", "contact"."isGroup" AS "contact.isGroup", "contact"."createdAt" AS "contact.createdAt", "contact"."updatedAt" AS "contact.updatedAt", "contact"."tenantId" AS "contact.tenantId", "ticket"."id" AS "ticket.id", "ticket"."status" AS "ticket.status", "ticket"."unreadMessages" AS "ticket.unreadMessages", "ticket"."lastMessage" AS "ticket.lastMessage", "ticket"."channel" AS "ticket.channel", "ticket"."answered" AS "ticket.answered", "ticket"."isGroup" AS "ticket.isGroup", "ticket"."isActiveDemand" AS "ticket.isActiveDemand", "ticket"."isFarewellMessage" AS "ticket.isFarewellMessage", "ticket"."createdAt" AS "ticket.createdAt", "ticket"."updatedAt" AS "ticket.updatedAt", "ticket"."lastInteractionBot" AS "ticket.lastInteractionBot", "ticket"."botRetries" AS "ticket.botRetries", "ticket"."closedAt" AS "ticket.closedAt", "ticket"."lastMessageAt" AS "ticket.lastMessageAt", "ticket"."startedAttendanceAt" AS "ticket.startedAttendanceAt", "ticket"."userId" AS "ticket.userId", "ticket"."contactId" AS "ticket.contactId", "ticket"."whatsappId" AS "ticket.whatsappId", "ticket"."autoReplyId" AS "ticket.autoReplyId", "ticket"."stepAutoReplyId" AS "ticket.stepAutoReplyId", "ticket"."chatFlowId" AS "ticket.chatFlowId", "ticket"."stepChatFlow" AS "ticket.stepChatFlow", "ticket"."queueId" AS "ticket.queueId", "ticket"."tenantId" AS "ticket.tenantId", "ticket"."apiConfig" AS "ticket.apiConfig", "ticket->contact"."id" AS "ticket.contact.id", "ticket->contact"."name" AS "ticket.contact.name", "ticket->contact"."number" AS "ticket.contact.number", "ticket->contact"."email" AS "ticket.contact.email", "ticket->contact"."profilePicUrl" AS "ticket.contact.profilePicUrl", "ticket->contact"."pushname" AS "ticket.contact.pushname", "ticket->contact"."telegramId" AS "ticket.contact.telegramId", "ticket->contact"."messengerId" AS "ticket.contact.messengerId", "ticket->contact"."empresa" AS "ticket.contact.empresa", "ticket->contact"."dtaniversario" AS "ticket.contact.dtaniversario", "ticket->contact"."instagramPK" AS "ticket.contact.instagramPK", "ticket->contact"."isUser" AS "ticket.contact.isUser", "ticket->contact"."isWAContact" AS "ticket.contact.isWAContact", "ticket->contact"."isGroup" AS "ticket.contact.isGroup", "ticket->contact"."createdAt" AS "ticket.contact.createdAt", "ticket->contact"."updatedAt" AS "ticket.contact.updatedAt", "ticket->contact"."tenantId" AS "ticket.contact.tenantId", "quotedMsg"."id" AS "quotedMsg.id", "quotedMsg"."messageId" AS "quotedMsg.messageId", "quotedMsg"."ack" AS "quotedMsg.ack", "quotedMsg"."status" AS "quotedMsg.status", "quotedMsg"."wabaMediaId" AS "quotedMsg.wabaMediaId", "quotedMsg"."read" AS "quotedMsg.read", "quotedMsg"."fromMe" AS "quotedMsg.fromMe", "quotedMsg"."body" AS "quotedMsg.body", "quotedMsg"."mediaUrl" AS "quotedMsg.mediaUrl", "quotedMsg"."mediaType" AS "quotedMsg.mediaType", "quotedMsg"."isDeleted" AS "quotedMsg.isDeleted", "quotedMsg"."createdAt" AS "quotedMsg.createdAt", "quotedMsg"."updatedAt" AS "quotedMsg.updatedAt", "quotedMsg"."quotedMsgId" AS "quotedMsg.quotedMsgId", "quotedMsg"."ticketId" AS "quotedMsg.ticketId", "quotedMsg"."contactId" AS "quotedMsg.contactId", "quotedMsg"."timestamp" AS "quotedMsg.timestamp", "quotedMsg"."userId" AS "quotedMsg.userId", "quotedMsg"."scheduleDate" AS "quotedMsg.scheduleDate", "quotedMsg"."reaction" AS "quotedMsg.reaction", "quotedMsg"."reactionFromMe" AS "quotedMsg.reactionFromMe", "quotedMsg"."sendType" AS "quotedMsg.sendType", "quotedMsg"."tenantId" AS "quotedMsg.tenantId", "quotedMsg"."idFront" AS "quotedMsg.idFront", "quotedMsg->contact"."id" AS "quotedMsg.contact.id", "quotedMsg->contact"."name" AS "quotedMsg.contact.name", "quotedMsg->contact"."number" AS "quotedMsg.contact.number", "quotedMsg->contact"."email" AS "quotedMsg.contact.email", "quotedMsg->contact"."profilePicUrl" AS "quotedMsg.contact.profilePicUrl", "quotedMsg->contact"."pushname" AS "quotedMsg.contact.pushname", "quotedMsg->contact"."telegramId" AS "quotedMsg.contact.telegramId", "quotedMsg->contact"."messengerId" AS "quotedMsg.contact.messengerId", "quotedMsg->contact"."empresa" AS "quotedMsg.contact.empresa", "quotedMsg->contact"."dtaniversario" AS "quotedMsg.contact.dtaniversario", "quotedMsg->contact"."instagramPK" AS "quotedMsg.contact.instagramPK", "quotedMsg->contact"."isUser" AS "quotedMsg.contact.isUser", "quotedMsg->contact"."isWAContact" AS "quotedMsg.contact.isWAContact", "quotedMsg->contact"."isGroup" AS "quotedMsg.contact.isGroup", "quotedMsg->contact"."createdAt" AS "quotedMsg.contact.createdAt", "quotedMsg->contact"."updatedAt" AS "quotedMsg.contact.updatedAt", "quotedMsg->contact"."tenantId" AS "quotedMsg.contact.tenantId" FROM "Messages" AS "Message" LEFT OUTER JOIN "Contacts" AS "contact" ON "Message"."contactId" = "contact"."id" INNER JOIN "Tickets" AS "ticket" ON "Message"."ticketId" = "ticket"."id" AND "ticket"."status" IN ('open', 'pending') LEFT OUTER JOIN "Contacts" AS "ticket->contact" ON "ticket"."contactId" = "ticket->contact"."id" LEFT OUTER JOIN "Messages" AS "quotedMsg" ON "Message"."quotedMsgId" = "quotedMsg"."messageId" LEFT OUTER JOIN "Contacts" AS "quotedMsg->contact" ON "quotedMsg"."contactId" = "quotedMsg->contact"."id" WHERE "Message"."fromMe" = true AND "Message"."messageId" IS NULL AND "Message"."status" = 'pending' AND ("Message"."scheduleDate" <= '2024-12-12 12:49:13.000 -03:00' AND "Message"."scheduleDate" >= '2024-12-11 12:49:13.000 -03:00') ORDER BY "Message"."createdAt" ASC;`,
+    parameters: {}
+  },
+  level: 'error',
+  timestamp: '2024-12-12T15:49:14.676Z'
+}
+{
+  level: 'error',
+  message: 'ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:339:9)\n' +
+    '    at CheckIsValidContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\CheckIsValidContact.ts:14:22)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:189:20)',
+  timestamp: '2024-12-12T15:58:54.913Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:06:47.019 -03:00',
+      14
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:06:47.019 -03:00',
+      14
+    ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Expert',
+    'Invalid date',
+    '',
+    '2024-12-12 13:06:47.019 -03:00',
+    14
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Contact.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\UpdateContactService.ts:101:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
+  timestamp: '2024-12-12T16:06:47.968Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:07:07.838 -03:00',
+      14
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:07:07.838 -03:00',
+      14
+    ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Expert',
+    'Invalid date',
+    '',
+    '2024-12-12 13:07:07.838 -03:00',
+    14
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Contact.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\UpdateContactService.ts:101:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
+  timestamp: '2024-12-12T16:07:08.729Z'
+}
+{
+  level: 'error',
+  message: 'ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\wbot.ts:339:9)\n' +
+    '    at CheckIsValidContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\CheckIsValidContact.ts:14:22)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:190:20)',
+  timestamp: '2024-12-12T16:07:57.778Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:08:09.550 -03:00',
+      14
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:08:09.550 -03:00',
+      14
+    ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Expert',
+    'Invalid date',
+    '',
+    '2024-12-12 13:08:09.550 -03:00',
+    14
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Contact.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\UpdateContactService.ts:101:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
+  timestamp: '2024-12-12T16:08:10.508Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:09:02.151 -03:00',
+      14
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:09:02.151 -03:00',
+      14
+    ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Expert',
+    'Invalid date',
+    '',
+    '2024-12-12 13:09:02.151 -03:00',
+    14
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Contact.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\UpdateContactService.ts:101:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
+  timestamp: '2024-12-12T16:09:03.082Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:09:37.915 -03:00',
+      14
+    ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [
+      'Expert',
+      'Invalid date',
+      '',
+      '2024-12-12 13:09:37.915 -03:00',
+      14
+    ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [
+    'Expert',
+    'Invalid date',
+    '',
+    '2024-12-12 13:09:37.915 -03:00',
+    14
+  ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:898:12)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Contact.update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4343:12)\n' +
+    '    at UpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\UpdateContactService.ts:101:2)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
+  timestamp: '2024-12-12T16:09:38.843Z'
+}

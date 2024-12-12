@@ -22,6 +22,9 @@ interface ContactData {
 	name?: string;
 	extraInfo?: ExtraInfo[];
 	wallets?: null | number[] | string[];
+	dtaniversario?: Date | null
+	empresa?: string
+	identifier?: string
 }
 
 interface Request {
@@ -35,7 +38,7 @@ const UpdateContactService = async ({
 	contactId,
 	tenantId,
 }: Request): Promise<Contact> => {
-	const { email, name, number, extraInfo, wallets } = contactData;
+	const { email, name, number, extraInfo, wallets ,empresa ,dtaniversario ,identifier} = contactData;
 
 	const contact = await Contact.findOne({
 		where: { id: contactId, tenantId },
@@ -94,11 +97,14 @@ const UpdateContactService = async ({
 
 		await ContactWallet.bulkCreate(contactWallets);
 	}
-
+	console.log(dtaniversario)
 	await contact.update({
 		name,
 		number,
 		email,
+		empresa,
+		dtaniversario,
+		identifier
 	});
 
 	await contact.reload({

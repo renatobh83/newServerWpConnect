@@ -66,7 +66,7 @@ export async function addJob(queueName: string, data: Record<string, any>) {
 			...queue.options, // Opções padrão da fila
 			...data.options, // Opções específicas do job
 		});
-		console.log(data)
+
 		logger.info(`Job adicionado à fila ${queueName}`);
 	} catch (error) {
 		logger.error({

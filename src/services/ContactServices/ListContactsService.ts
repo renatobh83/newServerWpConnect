@@ -56,6 +56,9 @@ const ListContactsService = async ({
       "Contact"."isUser",
       "Contact"."isWAContact",
       "Contact"."isGroup",
+      "Contact"."empresa",
+      "Contact"."dtaniversario",
+      "Contact"."identifier",
       "Contact"."tenantId",
       "Contact"."createdAt",
       "Contact"."updatedAt",
@@ -71,6 +74,7 @@ const ListContactsService = async ({
   `;
 	const contacts: Contact[] = await sequelize.query(query, {
 		type: QueryTypes.SELECT,
+    logging: false
 	});
 
 	const data: any = await sequelize.query(queryCount, {

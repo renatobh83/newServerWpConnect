@@ -24,15 +24,15 @@ type IndexQuery = {
 	pageNumber: string;
 };
 
-interface ExtraInfo {
-	name: string;
-	value: string;
-}
+
 interface ContactData {
 	name: string;
 	number: string;
 	email?: string;
 	extraInfo?: [];
+	dtaniversario?: Date | null
+	identifier? :string
+	empresa?: string
 	wallets?: null | number[] | string[];
 }
 
@@ -172,6 +172,7 @@ export const update: RequestHandler = async (
 	const contactData: ContactData = req.body;
 	const { tenantId } = req.user;
 	try {
+		console.log(req.body)
 		const schema = Yup.object().shape({
 			name: Yup.string(),
 			number: Yup.string().matches(

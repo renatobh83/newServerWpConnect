@@ -64,6 +64,21 @@ class Contact extends Model<Contact> {
 
 	@AllowNull(true)
 	@Default(null)
+	@Column(DataType.STRING)
+	declare empresa: string;
+
+	@AllowNull(true)
+	@Default(null)
+	@Column(DataType.DATE(6))
+	declare dtaniversario: Date;
+
+	@AllowNull(true)
+	@Default(null)
+	@Column(DataType.STRING)
+	declare identifier: string;
+
+	@AllowNull(true)
+	@Default(null)
 	@Column(DataType.INTEGER)
 	declare instagramPK: number;
 
