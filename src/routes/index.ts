@@ -22,7 +22,7 @@ import ticketRoutes from "./ticketRoutes";
 import userRoutes from "./userRoutes";
 import whatsappRoutes from "./whatsappRoutes";
 import whatsappSessionRoutes from "./whatsappSessionRoutes";
-
+import redisRouter from "./redis";
 const routes = Router();
 routes.get("/metrics", prometheusRegister.metricsHtml);
 routes.use(userRoutes);
@@ -45,7 +45,7 @@ routes.use(apiExternalRoutes);
 routes.use(chatFlowRoutes);
 routes.use(tenantRoutes);
 routes.use(WebHooksRoutes);
-
+routes.use(redisRouter)
 // routes.use(apiConfirmacaoRoutes);
 
 export default routes;

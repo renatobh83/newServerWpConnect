@@ -349,7 +349,7 @@ const VerifyStepsChatFlowTicket = async (
 	) {
 		if (ticket.chatFlowId) {
 			const chatFlow = await ticket.getChatFlow();
-			console.log(chatFlow)
+
 			if (chatFlow.celularTeste) {
 				celularTeste = chatFlow.celularTeste.replace(/\s/g, ""); // retirar espaços
 			}

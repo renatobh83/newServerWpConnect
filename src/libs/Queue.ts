@@ -161,3 +161,25 @@ export async function getJobByName(queueName: string): Promise<void> {
 		});
 	}
 }
+export async function getQueueStats(queueName: string) {
+	const queue = queues.find((q) => q.name === queueName);
+
+	if (!queue) {
+	  throw new Error(`Queue "${queueName}" not found.`);
+	}
+
+	const waiting = await queue.bull.getWaitingCount();
+	const active = await queue.bull.getActiveCount();
+	const completed = await queue.bull.getCompletedCount();
+	const failed = await queue.bull.getFailedCount();
+	const delay = await queue.bull.getDelayed()
+
+
+	return { waiting, active, completed, failed , delay};
+  }
+
+  export function logQueueStats(queueName: string) {
+	getQueueStats(queueName).then((stats) => {
+	  logger.info(`Estatísticas da fila ${queueName}:`, stats);
+	});
+  }

@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import { QueryTypes } from "sequelize";
 
 import Ticket from "../../models/Ticket";
@@ -28,7 +27,7 @@ const FindUpdateTicketsInactiveChatBot = async (): Promise<void> => {
 
 	const tickets: any = await Ticket.sequelize?.query(query, {
 		type: QueryTypes.SELECT,
-		logging: true
+		logging: false
 	});
 	Promise.all(
 		tickets.map(async (item: any) => {
@@ -42,9 +41,7 @@ const FindUpdateTicketsInactiveChatBot = async (): Promise<void> => {
 					botRetries: 0,
 					lastInteractionBot: new Date(),
 				};
-				if(item.type_action == 3) {
 
-				}
 				// instance.type_action: 1 = fila | 2 = usuario
 				if (item.type_action == 1) {
 					values.queueId = item.destiny;
