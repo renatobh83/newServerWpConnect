@@ -27,7 +27,7 @@ const UpdateContactService = async ({
 	});
 
 	const contactTags: Tag[] = [];
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	// biome-ignore lint/complexity/noForEach: <explanation>
 	tags.forEach((tag: any) => {
 		contactTags.push({
 			tagId: !tag.id ? tag : tag.id,
