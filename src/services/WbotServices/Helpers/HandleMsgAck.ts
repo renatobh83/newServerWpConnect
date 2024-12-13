@@ -8,11 +8,9 @@ import { logger } from "../../../utils/logger";
 import { getId } from "../../../utils/normalize";
 import { addJob } from "../../../libs/Queue";
 
-
-
 const HandleMsgAck = async (msg: Ack) => {
 	await new Promise((r) => setTimeout(r, 500));
-
+	logger.info(msg);
 	try {
 		const messageToUpdate = await Message.findOne({
 			where: { messageId: getId(msg) },

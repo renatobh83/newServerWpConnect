@@ -24,6 +24,7 @@ import whatsappRoutes from "./whatsappRoutes";
 import whatsappSessionRoutes from "./whatsappSessionRoutes";
 import redisRouter from "./redis";
 import farewellMessageRoutes from "./farewellMessageRoutes";
+import kanbanRoutes from "./kanbanRoutes";
 
 const routes = Router();
 
@@ -50,6 +51,7 @@ routes.use(tenantRoutes);
 routes.use(WebHooksRoutes);
 routes.use(redisRouter);
 routes.use(farewellMessageRoutes);
+routes.use(kanbanRoutes);
 // routes.use(apiConfirmacaoRoutes);
 
 export default routes;

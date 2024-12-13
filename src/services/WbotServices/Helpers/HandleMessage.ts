@@ -70,7 +70,7 @@ export const HandleMessage = (msg: Message, wbot: Session): Promise<void> => {
 					profilePicUrl,
 				)) as unknown as Contact;
 			}
-			const unreadMessages = msg.fromMe ? 0 : chat.unreadCount;
+			const unreadMessages = msg.fromMe ? 0 : chat.unreadCount + 1;
 			const contact = await VerifyContact(msgContact, tenantId, profilePicUrl);
 
 			const ticket = await FindOrCreateTicketService({
