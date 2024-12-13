@@ -44,5 +44,9 @@ export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 		HandleMsgAck(ack);
 	});
 
+	wbot.onRevokedMessage((msg) => {
+		// biome-ignore lint/suspicious/noConsoleLog: <explanation>
+		console.log(msg);
+	});
 	// wbot.onLiveLocation((liveLocationEvent: LiveLocation) => {});
 };

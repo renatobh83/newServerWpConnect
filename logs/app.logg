@@ -2256,3 +2256,787 @@
     '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\ContactController.ts:197:19)',
   timestamp: '2024-12-12T16:09:38.843Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'm')",
+  stack: "Error: Cannot read properties of undefined (reading 'm')\n" +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect-team/wppconnect/dist/api/helpers/evaluate-and-return.js:107:31\n' +
+    '    at step (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect-team/wppconnect/dist/api/helpers/evaluate-and-return.js:49:23)\n' +
+    '    at Object.next (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect-team/wppconnect/dist/api/helpers/evaluate-and-return.js:30:53)\n' +
+    '    at fulfilled (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect-team/wppconnect/dist/api/helpers/evaluate-and-return.js:21:58)\n' +
+    "JS Stack: TypeError: Cannot read properties of undefined (reading 'm')\n" +
+    '    at Object.p [as searchId] (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect/wa-js/dist/wppconnect-wa.js:2:339558)\n' +
+    '    at Object.get [as Socket] (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect/wa-js/dist/wppconnect-wa.js:2:358073)\n' +
+    '    at t.logout (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/@wppconnect/wa-js/dist/wppconnect-wa.js:2:239448)\n' +
+    '    at pptr:evaluate;%2FUsers%2Frenatomendonca%2FDesktop%2FNode%2FnewServerWpConnect%2Fnode_modules%2F%40wppconnect-team%2Fwppconnect%2Fdist%2Fapi%2Fhelpers%2Fevaluate-and-return.js%3A99%3A56:56:63\n' +
+    '    at pptr:evaluate;%2FUsers%2Frenatomendonca%2FDesktop%2FNode%2FnewServerWpConnect%2Fnode_modules%2F%40wppconnect-team%2Fwppconnect%2Fdist%2Fapi%2Fhelpers%2Fevaluate-and-return.js%3A99%3A56:56:76\n' +
+    '    at new Promise (<anonymous>)\n' +
+    '    at anonymous (pptr:evaluate;%2FUsers%2Frenatomendonca%2FDesktop%2FNode%2FnewServerWpConnect%2Fnode_modules%2F%40wppconnect-team%2Fwppconnect%2Fdist%2Fapi%2Fhelpers%2Fevaluate-and-return.js%3A99%3A56:54:14)\n' +
+    'Function: function () { return WPP.conn.logout(); }',
+  timestamp: '2024-12-13T01:04:52.266Z'
+}
+{
+  level: 'error',
+  message: 'WHERE parameter "id" has invalid "undefined" value',
+  session: 1,
+  type: 'client',
+  stack: 'Error: WHERE parameter "id" has invalid "undefined" value\n' +
+    '    at PostgresQueryGenerator.whereItemQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2451:13)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2440:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at PostgresQueryGenerator.whereItemsQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2438:35)\n' +
+    '    at PostgresQueryGenerator.getWhereConditions (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2866:19)\n' +
+    '    at PostgresQueryGenerator.selectQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:1466:28)\n' +
+    '    at PostgresQueryInterface.select (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:1002:27)\n' +
+    '    at Function.findAll (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1824:47)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Function.findOne (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1998:12)',
+  timestamp: '2024-12-13T10:01:56.900Z'
+}
+{
+  level: 'error',
+  message: 'WHERE parameter "id" has invalid "undefined" value',
+  session: 1,
+  type: 'client',
+  stack: 'Error: WHERE parameter "id" has invalid "undefined" value\n' +
+    '    at PostgresQueryGenerator.whereItemQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2451:13)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2440:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at PostgresQueryGenerator.whereItemsQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2438:35)\n' +
+    '    at PostgresQueryGenerator.getWhereConditions (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:2866:19)\n' +
+    '    at PostgresQueryGenerator.selectQuery (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-generator.js:1466:28)\n' +
+    '    at PostgresQueryInterface.select (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:1002:27)\n' +
+    '    at Function.findAll (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1824:47)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Function.findOne (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1998:12)',
+  timestamp: '2024-12-13T10:01:57.067Z'
+}
+{
+  level: 'error',
+  message: 'column "cpf" does not exist',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: column "cpf" does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '41',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "cpf", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  original: error: column "cpf" does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '41',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "cpf", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  sql: 'SELECT "id", "name", "number", "email", "cpf", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+  parameters: {},
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.select (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)\n' +
+    '    at Function.findAll (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1824:21)\n' +
+    '    at SendMessageBirthday (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/SendMessageBirthday.ts:53:20)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:33:4',
+  timestamp: '2024-12-13T10:04:10.595Z'
+}
+{
+  level: 'error',
+  message: 'column "birthdayDate" does not exist',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: column "birthdayDate" does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 112,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '55',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "identifier", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  original: error: column "birthdayDate" does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 112,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '55',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "identifier", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  sql: 'SELECT "id", "name", "number", "email", "identifier", "birthdayDate" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+  parameters: {},
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.select (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)\n' +
+    '    at Function.findAll (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1824:21)\n' +
+    '    at SendMessageBirthday (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/SendMessageBirthday.ts:60:20)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:33:4',
+  timestamp: '2024-12-13T10:05:10.416Z'
+}
+{
+  level: 'error',
+  message: 'column Contact.birthdayDate does not exist',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: column Contact.birthdayDate does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 119,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '135',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "identifier", "dtaniversario" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  original: error: column Contact.birthdayDate does not exist
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 119,
+    severity: 'ERROR',
+    code: '42703',
+    detail: undefined,
+    hint: undefined,
+    position: '135',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '3716',
+    routine: 'errorMissingColumn',
+    sql: 'SELECT "id", "name", "number", "email", "identifier", "dtaniversario" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+    parameters: undefined
+  },
+  sql: 'SELECT "id", "name", "number", "email", "identifier", "dtaniversario" FROM "Contacts" AS "Contact" WHERE "Contact"."tenantId" = 1 AND "Contact"."birthdayDate" IS NOT NULL;',
+  parameters: {},
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.select (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)\n' +
+    '    at Function.findAll (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:1824:21)\n' +
+    '    at SendMessageBirthday (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/SendMessageBirthday.ts:60:20)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:33:4',
+  timestamp: '2024-12-13T10:06:03.029Z'
+}
+{
+  level: 'error',
+  message: 'birthday.split is not a function',
+  session: 1,
+  type: 'client',
+  stack: 'TypeError: birthday.split is not a function\n' +
+    '    at checkBirthday (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/SendMessageBirthday.ts:11:32)\n' +
+    '    at SendMessageBirthday (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/SendMessageBirthday.ts:64:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/Helpers/HandleMessage.ts:33:4',
+  timestamp: '2024-12-13T10:09:36.741Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:13.784 -03:00', 4 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:13.784 -03:00', 4 ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:13.784 -03:00', 4 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:898:12)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Contact.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4343:12)\n' +
+    '    at UpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:101:2)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:197:19)',
+  timestamp: '2024-12-13T10:18:14.732Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:40.487 -03:00', 4 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:40.487 -03:00', 4 ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ '', 'Invalid date', '', '2024-12-13 07:18:40.487 -03:00', 4 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:898:12)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Contact.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4343:12)\n' +
+    '    at UpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:101:2)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:197:19)',
+  timestamp: '2024-12-13T10:18:41.347Z'
+}
+{
+  level: 'error',
+  message: 'ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/libs/wbot.ts:339:9)\n' +
+    '    at CheckIsValidContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/CheckIsValidContact.ts:14:22)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:190:20)',
+  timestamp: '2024-12-13T10:20:01.281Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:20:10.444 -03:00', 4 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:20:10.444 -03:00', 4 ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ '', 'Invalid date', '', '2024-12-13 07:20:10.444 -03:00', 4 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:898:12)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Contact.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4343:12)\n' +
+    '    at UpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:101:2)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:197:19)',
+  timestamp: '2024-12-13T10:20:11.377Z'
+}
+{
+  level: 'error',
+  message: 'ERR_WAPP_NOT_INITIALIZED',
+  stack: 'Error: ERR_WAPP_NOT_INITIALIZED\n' +
+    '    at getWbot (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/libs/wbot.ts:339:9)\n' +
+    '    at CheckIsValidContact (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/WbotServices/CheckIsValidContact.ts:14:22)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:190:20)',
+  timestamp: '2024-12-13T10:20:54.635Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:21:03.337 -03:00', 4 ]
+  },
+  original: error: invalid input syntax for type timestamp with time zone: "Invalid date"
+      at Parser.parseErrorMessage (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:368:69)
+      at Parser.handlePacket (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:187:21)
+      at Parser.parse (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/parser.ts:102:30)
+      at Socket.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/pg-protocol/src/index.ts:7:48)
+      at Socket.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Socket.Readable.push (node:internal/streams/readable:390:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 173,
+    severity: 'ERROR',
+    code: '22007',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: "unnamed portal parameter $2 = '...'",
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'datetime.c',
+    line: '4140',
+    routine: 'DateTimeParseError',
+    sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+    parameters: [ '', 'Invalid date', '', '2024-12-13 07:21:03.337 -03:00', 4 ]
+  },
+  sql: 'UPDATE "Contacts" SET "empresa"=$1,"dtaniversario"=$2,"identifier"=$3,"updatedAt"=$4 WHERE "id" = $5',
+  parameters: [ '', 'Invalid date', '', '2024-12-13 07:21:03.337 -03:00', 4 ],
+  level: 'error',
+  message: 'invalid input syntax for type timestamp with time zone: "Invalid date"',
+  stack: 'Error: \n' +
+    '    at Query.run (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/postgres/query.js:76:25)\n' +
+    '    at /Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/dialects/abstract/query-interface.js:898:12)\n' +
+    '    at Contact.save (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4154:35)\n' +
+    '    at Contact.update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/sequelize/src/model.js:4343:12)\n' +
+    '    at UpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:110:2)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:197:19)',
+  timestamp: '2024-12-13T10:21:04.372Z'
+}
+{
+  level: 'error',
+  message: 'dtaniversario.toISOString is not a function',
+  stack: 'TypeError: dtaniversario.toISOString is not a function\n' +
+    '    at UpdateContactService (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:113:28)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/controllers/ContactController.ts:197:19)',
+  timestamp: '2024-12-13T10:24:55.476Z'
+}
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/services/ContactServices/UpdateContactService.ts(119,27): error TS1005: '{' expected.
+  
+      at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)
+      at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:69:33)
+      at node:internal/modules/cjs/loader:1698:10
+      at require.extensions..jsx.require.extensions..js (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:114:20)
+      at require.extensions.<computed> (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:71:20)
+      at Object.nodeDevHook [as .ts] (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/ts-node-dev/lib/hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1303:32)
+      at Function._load (node:internal/modules/cjs/loader:1117:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/services/ContactServices/UpdateContactService.ts(119,27): error TS1005: '{' expected.\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/services/ContactServices/UpdateContactService.ts(119,27): error TS1005: '{' expected.\n" +
+    '\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1698:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1303:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1117:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/services/ContactServices/UpdateContactService.ts(119,27): error TS1005: '{' expected.\n" +
+    '\n' +
+    '    at Object.<anonymous> (/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1698:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:114:20)\n' +
+    '    at require.extensions.<computed> (/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/ts-node-dev/lib/hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1303:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1117:12)',
+  exception: true,
+  date: 'Fri Dec 13 2024 07:31:36 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 12840,
+    uid: 501,
+    gid: 20,
+    cwd: '/Users/renatomendonca/Desktop/Node/newServerWpConnect',
+    execPath: '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+    version: 'v23.3.0',
+    argv: [
+      '/Users/renatomendonca/.nvm/versions/node/v23.3.0/bin/node',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 186236928,
+      heapTotal: 112852992,
+      heapUsed: 84482104,
+      external: 3417720,
+      arrayBuffers: 101712
+    }
+  },
+  os: {
+    loadavg: [ 2.1552734375, 2.7509765625, 2.59912109375 ],
+    uptime: 213278
+  },
+  trace: [
+    {
+      column: 7,
+      file: '/Users/renatomendonca/Desktop/Node/newServerWpConnect/src/services/ContactServices/UpdateContactService.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: '/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/source-map-support/source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1698,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: '/private/var/folders/fl/vyfbwjv544d6tk51w30mh1p40000gn/T/ts-node-dev-hook-9954816603052465.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: '/Users/renatomendonca/Desktop/Node/newServerWpConnect/node_modules/ts-node-dev/lib/hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1303,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1117,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-13T10:31:36.882Z'
+}

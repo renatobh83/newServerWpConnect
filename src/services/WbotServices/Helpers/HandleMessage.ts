@@ -16,14 +16,12 @@ import VerifyContact from "./VerifyContact";
 import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
 import { addJob } from "../../../libs/Queue";
+import { SendMessageBirthday } from "./SendMessageBirthday";
 interface Session extends Whatsapp {
 	id: number;
 }
 
-export const HandleMessage = async (
-	msg: Message,
-	wbot: Session,
-): Promise<void> => {
+export const HandleMessage = (msg: Message, wbot: Session): Promise<void> => {
 	// biome-ignore lint/suspicious/noAsyncPromiseExecutor: <explanation>
 	return new Promise(async (resolve, reject) => {
 		try {
@@ -53,7 +51,6 @@ export const HandleMessage = async (
 				if (!msg.filehash && msg.type !== "chat" && msg.type !== "vcard")
 					return;
 				msgContact = await wbot.getContact(msg.to);
-
 			} else {
 				msgContact = msg.sender;
 			}

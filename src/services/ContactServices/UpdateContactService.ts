@@ -1,3 +1,4 @@
+import { format, formatISO, parse } from "date-fns";
 import AppError from "../../errors/AppError";
 import socketEmit from "../../helpers/socketEmit";
 import Contact from "../../models/Contact";
@@ -22,9 +23,9 @@ interface ContactData {
 	name?: string;
 	extraInfo?: ExtraInfo[];
 	wallets?: null | number[] | string[];
-	dtaniversario?: Date | null
-	empresa?: string
-	identifier?: string
+	dtaniversario?: Date | null;
+	empresa?: string;
+	identifier?: string;
 }
 
 interface Request {
@@ -38,7 +39,16 @@ const UpdateContactService = async ({
 	contactId,
 	tenantId,
 }: Request): Promise<Contact> => {
-	const { email, name, number, extraInfo, wallets ,empresa ,dtaniversario ,identifier} = contactData;
+	const {
+		email,
+		name,
+		number,
+		extraInfo,
+		wallets,
+		empresa,
+		dtaniversario,
+		identifier,
+	} = contactData;
 
 	const contact = await Contact.findOne({
 		where: { id: contactId, tenantId },
@@ -52,7 +62,6 @@ const UpdateContactService = async ({
 			},
 		],
 	});
-
 	if (!contact) {
 		throw new AppError("ERR_NO_CONTACT_FOUND", 404);
 	}
@@ -97,14 +106,14 @@ const UpdateContactService = async ({
 
 		await ContactWallet.bulkCreate(contactWallets);
 	}
-	console.log(dtaniversario)
+
 	await contact.update({
 		name,
 		number,
 		email,
 		empresa,
-		dtaniversario,
-		identifier
+		dtaniversario: new Date(formatISO(dtaniversario)),
+		identifier,
 	});
 
 	await contact.reload({

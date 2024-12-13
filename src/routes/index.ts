@@ -23,7 +23,10 @@ import userRoutes from "./userRoutes";
 import whatsappRoutes from "./whatsappRoutes";
 import whatsappSessionRoutes from "./whatsappSessionRoutes";
 import redisRouter from "./redis";
+import farewellMessageRoutes from "./farewellMessageRoutes";
+
 const routes = Router();
+
 routes.get("/metrics", prometheusRegister.metricsHtml);
 routes.use(userRoutes);
 routes.use("/auth", authRoutes);
@@ -45,7 +48,8 @@ routes.use(apiExternalRoutes);
 routes.use(chatFlowRoutes);
 routes.use(tenantRoutes);
 routes.use(WebHooksRoutes);
-routes.use(redisRouter)
+routes.use(redisRouter);
+routes.use(farewellMessageRoutes);
 // routes.use(apiConfirmacaoRoutes);
 
 export default routes;

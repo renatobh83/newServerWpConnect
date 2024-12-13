@@ -12,15 +12,23 @@ const redisForQueues = new Redis({
 	password: process.env.IO_REDIS_PASSWORD || undefined,
 	maxRetriesPerRequest: null,
 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
-  });
+	reconnectOnError(err) {
+		logger.error(`Redis Queues ${err}`);
+		return true;
+	},
+});
 
-  const redisForWorkers = new Redis({
+const redisForWorkers = new Redis({
 	host: process.env.IO_REDIS_SERVER,
 	port: +(process.env.IO_REDIS_PORT || "6379"),
 	password: process.env.IO_REDIS_PASSWORD || undefined,
 	maxRetriesPerRequest: null,
 	retryStrategy: (times: number) => Math.min(times * 50, 2000),
-  });
+	reconnectOnError(err) {
+		logger.error(`Redis Queues ${err}`);
+		return true;
+	},
+});
 
 // Monitoramento de eventos
 redisForWorkers.on("connect", () => {
@@ -78,7 +86,7 @@ export async function addJob(queueName: string, data: Record<string, any>) {
 }
 const workers: Worker[] = [];
 // Função para configurar o processamento
-export function processQueues(concurrency = 60) {
+export function processQueues(concurrency = 100) {
 	// biome-ignore lint/complexity/noForEach: <explanation>
 	queues.forEach(({ name, handle }) => {
 		const worker = new Worker(
@@ -119,26 +127,27 @@ export function processQueues(concurrency = 60) {
 export async function shutdown() {
 	// Fecha todos os workers
 	for (const worker of workers) {
-	  try {
-		await worker.close();
-		logger.info(`Worker para a fila ${worker.name} foi fechado.`);
-	  } catch (error) {
-		logger.error(`Erro ao fechar o worker para a fila ${worker.name}: ${error.message}`);
-	  }
+		try {
+			await worker.close();
+			logger.info(`Worker para a fila ${worker.name} foi fechado.`);
+		} catch (error) {
+			logger.error(
+				`Erro ao fechar o worker para a fila ${worker.name}: ${error.message}`,
+			);
+		}
 	}
 
 	// Fecha todas as filas
 	for (const { bull, name } of queues) {
-	  try {
-		await bull.close();
-		logger.info(`Fila ${name} foi fechada.`);
-	  } catch (error) {
-		logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
-	  }
+		try {
+			await bull.close();
+			logger.info(`Fila ${name} foi fechada.`);
+		} catch (error) {
+			logger.error(`Erro ao fechar a fila ${name}: ${error.message}`);
+		}
 	}
 	logger.info("Sistema de filas encerrado com sucesso.");
-  }
-
+}
 
 // Close queue by name
 export async function getJobByName(queueName: string): Promise<void> {
@@ -151,7 +160,6 @@ export async function getJobByName(queueName: string): Promise<void> {
 		}
 		for (const worker of workers || []) {
 			await worker.close(); // Feche o worker corretamente
-
 		}
 		queue.bull.close(); // Feche a fila
 	} catch (error) {
@@ -165,21 +173,20 @@ export async function getQueueStats(queueName: string) {
 	const queue = queues.find((q) => q.name === queueName);
 
 	if (!queue) {
-	  throw new Error(`Queue "${queueName}" not found.`);
+		throw new Error(`Queue "${queueName}" not found.`);
 	}
 
 	const waiting = await queue.bull.getWaitingCount();
 	const active = await queue.bull.getActiveCount();
 	const completed = await queue.bull.getCompletedCount();
 	const failed = await queue.bull.getFailedCount();
-	const delay = await queue.bull.getDelayed()
+	const delay = await queue.bull.getDelayed();
 
+	return { waiting, active, completed, failed, delay };
+}
 
-	return { waiting, active, completed, failed , delay};
-  }
-
-  export function logQueueStats(queueName: string) {
+export function logQueueStats(queueName: string) {
 	getQueueStats(queueName).then((stats) => {
-	  logger.info(`Estatísticas da fila ${queueName}:`, stats);
+		logger.info(`Estatísticas da fila ${queueName}:`, stats);
 	});
-  }
+}

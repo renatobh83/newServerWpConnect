@@ -2,12 +2,12 @@ import type { NextFunction, Request, RequestHandler, Response } from "express";
 import * as Yup from "yup";
 
 import AppError from "../errors/AppError";
-// import Queue from "../libs/Queue";
+
 import { getWbot } from "../libs/wbot";
 import ApiConfig from "../models/ApiConfig";
 import { StartWhatsAppSession } from "../services/WbotServices/StartWhatsAppSession";
 import ShowWhatsAppService from "../services/WhatsappService/ShowWhatsAppService";
-import Queue from "../libs/Queue";
+
 import { addJob } from "../libs/Queue";
 
 // import { find, result } from "lodash";
@@ -113,7 +113,6 @@ export const sendMessageAPI: RequestHandler = async (
 	const { apiId } = req.params;
 	const media = req.file as Express.Multer.File;
 	try {
-
 		// if (!apiIdParam || apiId != apiIdParam) {
 		//   throw new AppError("ERR_APIID_NO_PERMISSION", 403);
 		// }
@@ -122,7 +121,7 @@ export const sendMessageAPI: RequestHandler = async (
 			where: {
 				id: apiId,
 				tenantId,
-				authToken: req.body.externalKey
+				authToken: req.body.externalKey,
 			},
 		});
 
