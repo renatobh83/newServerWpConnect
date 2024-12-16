@@ -3189,3 +3189,487 @@
   ],
   timestamp: '2024-12-13T17:10:01.012Z'
 }
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 1,
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-12-16T10:32:12.413Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.101853x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-16T10:43:46.627Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.10185x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-16T10:44:00.372Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.10185x, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-16T10:57:43.770Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.174Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.180Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.183Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.187Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.188Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.188Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.189Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.193Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.194Z'
+}
+{
+  message: 'Redis Queues ReplyError: UNBLOCKED force unblock from blocking operation, instance state changed (master -> replica?)',
+  level: 'error',
+  timestamp: '2024-12-16T11:01:21.196Z'
+}
+{
+  level: 'error',
+  message: 'Version not available for 2.3000.1018775059, using latest as fallback',
+  session: 1,
+  type: 'client',
+  timestamp: '2024-12-16T11:25:29.915Z'
+}
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 1,
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-12-16T11:42:05.409Z'
+}
+{
+  level: 'error',
+  message: "Cannot destructure property 'link' of '(intermediate value)' as it is null.",
+  stack: "TypeError: Cannot destructure property 'link' of '(intermediate value)' as it is null.\n" +
+    '    at ListSettingsWebhookServices (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\SettingsWebhookServices\\ListSettingsWebhookServices.ts:15:16)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at index (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:14:22)',
+  timestamp: '2024-12-16T12:56:18.631Z'
+}
+{
+  level: 'error',
+  message: "Cannot destructure property 'link' of '(intermediate value)' as it is null.",
+  stack: "TypeError: Cannot destructure property 'link' of '(intermediate value)' as it is null.\n" +
+    '    at ListSettingsWebhookServices (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\SettingsWebhookServices\\ListSettingsWebhookServices.ts:15:16)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at index (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:14:22)',
+  timestamp: '2024-12-16T12:56:24.217Z'
+}
+{
+  level: 'error',
+  message: "Cannot destructure property 'link' of '(intermediate value)' as it is null.",
+  stack: "TypeError: Cannot destructure property 'link' of '(intermediate value)' as it is null.\n" +
+    '    at ListSettingsWebhookServices (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\SettingsWebhookServices\\ListSettingsWebhookServices.ts:15:16)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at index (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:14:22)',
+  timestamp: '2024-12-16T12:57:12.049Z'
+}
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/controllers/SettingsWebhookController.ts(37,13): error TS2809: Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the whole assignment in parentheses.
+  
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\controllers\SettingsWebhookController.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-8661078217543523.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-8661078217543523.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-8661078217543523.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/SettingsWebhookController.ts(37,13): error TS2809: Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the whole assignment in parentheses.\r\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/SettingsWebhookController.ts(37,13): error TS2809: Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the whole assignment in parentheses.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/controllers/SettingsWebhookController.ts(37,13): error TS2809: Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the whole assignment in parentheses.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Mon Dec 16 2024 10:44:05 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 17824,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 166924288,
+      heapTotal: 113315840,
+      heapUsed: 91184968,
+      external: 3513206,
+      arrayBuffers: 553673
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 342751.906 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-8661078217543523.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-16T13:44:05.134Z'
+}
+{
+  message: 'ERR_NAME_API_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:08:17.387Z'
+}
+{
+  message: 'ERR_NO_API_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:24:46.494Z'
+}
+{
+  message: 'ERR_NO_API_FOUND',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:24:52.065Z'
+}
+{
+  level: 'error',
+  message: 'Já existe um registro com o nomeApi "TE" para o tenantId "1".',
+  stack: 'Error: Já existe um registro com o nomeApi "TE" para o tenantId "1".\n' +
+    '    at UpdateSettingsWebhookServices (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\SettingsWebhookServices\\UpdateSettingsWebhookServices.ts:32:15)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:45:21)',
+  timestamp: '2024-12-16T14:37:47.656Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:39:17.835Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:39:22.086Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:41:59.173Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:42:27.012Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:43:24.332Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:44:10.411Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:44:19.211Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:45:38.922Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:45:54.123Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:46:03.314Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:48:00.605Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:48:46.961Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:49:31.255Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:50:00.760Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:50:22.586Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:50:25.160Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:51:01.935Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:51:11.540Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:52:27.855Z'
+}
+{
+  message: 'ERR_API_NAME_EXISTS',
+  statusCode: 404,
+  level: 'error',
+  timestamp: '2024-12-16T14:52:35.408Z'
+}
+{
+  level: 'error',
+  message: '(0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function',
+  stack: 'TypeError: (0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:45:56)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  timestamp: '2024-12-16T15:09:53.790Z'
+}
+{
+  level: 'error',
+  message: '(0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function',
+  stack: 'TypeError: (0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:45:56)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  timestamp: '2024-12-16T15:10:22.984Z'
+}
+{
+  level: 'error',
+  message: '(0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function',
+  stack: 'TypeError: (0 , DeleteSettingsWebhookServices_1.UpdateSettingsWebhookServices) is not a function\n' +
+    '    at update (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\controllers\\SettingsWebhookController.ts:45:56)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at isAuth (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\middleware\\isAuth.ts:39:9)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  timestamp: '2024-12-16T15:10:56.054Z'
+}

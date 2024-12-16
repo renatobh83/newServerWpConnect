@@ -73,7 +73,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 			Object.assign({}, { headless: true }, config.createOptions, {
 				logger: logger,
 				// whatsappVersion: "2.3000.1018775059",
-				whatsappVersion: "2.3000.10184x",
+				// whatsappVersion: "2.3000.10147x",
 				disableWelcome: true,
 				disableGoogleAnalytics: true,
 				session: whatsapp.id,

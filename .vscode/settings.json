@@ -22,6 +22,6 @@
     "commandCenter.border": "#15202b99"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
