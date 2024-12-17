@@ -21,7 +21,7 @@ const VerifyMediaMessage = async (
 	wbot: Whatsapp,
 	// biome-ignore lint/suspicious/noConfusingVoidType: <explanation>
 ): Promise<Message | void> => {
-	console.log(msg)
+
 	const quotedMsg = await VerifyQuotedMessage(msg);
 
 	const delay = (ms: number) =>
@@ -69,7 +69,6 @@ const VerifyMediaMessage = async (
 		lastMessageAt: new Date().getTime(),
 		answered: msg.fromMe || false,
 	});
-
 
 	const newMessage = await CreateMessageService({
 		messageData,
