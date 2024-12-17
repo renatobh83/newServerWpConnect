@@ -27,8 +27,11 @@ export interface MessageReaction {
 	orphanReason: any;
 	timestamp: number;
 }
+interface MessageChange extends Message {
+	filename: string
+}
 export const wbotMessageListener = async (wbot: Session): Promise<void> => {
-	wbot.onAnyMessage(async (msg: Message) => {
+	wbot.onAnyMessage(async (msg: MessageChange) => {
 		if (msg.chatId === "status@broadcast") return;
 		await HandleMessage(msg, wbot);
 	});

@@ -6786,3 +6786,102 @@
     '                        }',
   timestamp: '2024-12-17T17:37:46.797Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:03:43.261Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:03:43.709Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:03:43.945Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:03:43.964Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:04:32.748Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:58:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:05:18.409Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:58:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:05:45.098Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:58:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:07:56.792Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:58:18)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
+  timestamp: '2024-12-17T19:10:04.383Z'
+}

@@ -21,9 +21,12 @@ const VerifyMediaMessage = async (
 	wbot: Whatsapp,
 	// biome-ignore lint/suspicious/noConfusingVoidType: <explanation>
 ): Promise<Message | void> => {
+	console.log(msg)
 	const quotedMsg = await VerifyQuotedMessage(msg);
+
 	const delay = (ms: number) =>
 		new Promise((resolve) => setTimeout(resolve, ms));
+
 	const media = await wbot.downloadMedia(msg);
 
 	const matches = media.match(/^data:(.+);base64,(.+)$/);
@@ -45,15 +48,13 @@ const VerifyMediaMessage = async (
 	}
 
 	await delay(2000);
-	const msgFound = await Message.findOne({
-		where: { messageId: msg.id, tenantId: ticket.tenantId },
-	});
+
 
 	const messageData = {
 		messageId: msg.id,
 		ticketId: ticket.id,
 		contactId: msg.fromMe ? undefined : contact.id,
-		body: msgFound.body || msg.id,
+		body: msg.caption || msg.id,
 		fromMe: msg.fromMe,
 		read: msg.fromMe,
 		mediaUrl: `${msg.id}.png`,
@@ -68,7 +69,6 @@ const VerifyMediaMessage = async (
 		lastMessageAt: new Date().getTime(),
 		answered: msg.fromMe || false,
 	});
-
 
 
 	const newMessage = await CreateMessageService({
