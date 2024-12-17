@@ -3673,3 +3673,1281 @@
     '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)',
   timestamp: '2024-12-16T15:10:56.054Z'
 }
+{
+  error: Error: ⨯ Unable to compile TypeScript:
+  src/app/express.ts(44,38): error TS1005: ':' expected.
+  src/app/express.ts(44,41): error TS1005: ':' expected.
+  src/app/express.ts(44,47): error TS1005: ':' expected.
+  
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\express.ts:1:7)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7817890979076474.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7817890979076474.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7817890979076474.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32)
+      at Function._load (node:internal/modules/cjs/loader:1128:12),
+  level: 'error',
+  message: 'uncaughtException: ⨯ Unable to compile TypeScript:\n' +
+    "src/app/express.ts(44,38): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,41): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,47): error TS1005: ':' expected.\r\n" +
+    '\n' +
+    'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/app/express.ts(44,38): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,41): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,47): error TS1005: ':' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\express.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  stack: 'Error: ⨯ Unable to compile TypeScript:\n' +
+    "src/app/express.ts(44,38): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,41): error TS1005: ':' expected.\r\n" +
+    "src/app/express.ts(44,47): error TS1005: ':' expected.\r\n" +
+    '\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\express.ts:1:7)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1128:12)',
+  exception: true,
+  date: 'Mon Dec 16 2024 12:50:58 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 18244,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 151867392,
+      heapTotal: 105811968,
+      heapUsed: 78338416,
+      external: 3512934,
+      arrayBuffers: 449015
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 350365.187 },
+  trace: [
+    {
+      column: 7,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\express.ts',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7817890979076474.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1128,
+      method: '_load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-16T15:50:58.477Z'
+}
+{
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ETIMEDOUT',
+  stack: 'Error: connect ETIMEDOUT\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\Redis.js:170:41)\n' +
+    '    at Object.onceWrapper (node:events:632:28)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at Socket._onTimeout (node:net:595:8)\n' +
+    '    at listOnTimeout (node:internal/timers:594:17)\n' +
+    '    at processTimers (node:internal/timers:529:7)',
+  timestamp: '2024-12-16T16:09:00.696Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:56:19)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:106:5',
+  timestamp: '2024-12-16T19:43:36.521Z'
+}
+{
+  level: 'error',
+  message: 'WHERE parameter "authToken" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "authToken" has invalid "undefined" value\n' +
+    '    at PostgresQueryGenerator.whereItemQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2451:13)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2440:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at PostgresQueryGenerator.whereItemsQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2438:35)\n' +
+    '    at PostgresQueryGenerator.getWhereConditions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2866:19)\n' +
+    '    at PostgresQueryGenerator.selectQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:1466:28)\n' +
+    '    at PostgresQueryInterface.select (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:1002:27)\n' +
+    '    at Function.findAll (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1824:47)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Function.findOne (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1998:12)',
+  timestamp: '2024-12-16T19:48:24.370Z'
+}
+{
+  error: TypeError: Router.use() requires a middleware function
+      at Function.use (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\express\lib\router\index.js:462:11)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\routes\index.ts:58:8)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7054366240130512.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7054366240130512.js:114:20)
+      at require.extensions.<computed> (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-7054366240130512.js:71:20)
+      at Object.nodeDevHook [as .ts] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\ts-node-dev\lib\hook.js:63:13)
+      at Module.load (node:internal/modules/cjs/loader:1318:32),
+  level: 'error',
+  message: 'uncaughtException: Router.use() requires a middleware function\n' +
+    'TypeError: Router.use() requires a middleware function\n' +
+    '    at Function.use (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:462:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\routes\\index.ts:58:8)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  stack: 'TypeError: Router.use() requires a middleware function\n' +
+    '    at Function.use (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:462:11)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\routes\\index.ts:58:8)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:114:20)\n' +
+    '    at require.extensions.<computed> (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js:71:20)\n' +
+    '    at Object.nodeDevHook [as .ts] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js:63:13)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1318:32)',
+  exception: true,
+  date: 'Mon Dec 16 2024 16:49:06 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 6256,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 170725376,
+      heapTotal: 113840128,
+      heapUsed: 92006232,
+      external: 3517553,
+      arrayBuffers: 561343
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 364653 },
+  trace: [
+    {
+      column: 11,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js',
+      function: 'Function.use',
+      line: 462,
+      method: 'use',
+      native: false
+    },
+    {
+      column: 8,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\routes\\index.ts',
+      function: null,
+      line: 58,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-7054366240130512.js',
+      function: 'require.extensions.<computed>',
+      line: 71,
+      method: '<computed>',
+      native: false
+    },
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ts-node-dev\\lib\\hook.js',
+      function: 'Object.nodeDevHook [as .ts]',
+      line: 63,
+      method: 'ts]',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1318,
+      method: 'load',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-16T19:49:06.405Z'
+}
+{
+  level: 'error',
+  message: 'WHERE parameter "authToken" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "authToken" has invalid "undefined" value\n' +
+    '    at PostgresQueryGenerator.whereItemQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2451:13)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2440:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at PostgresQueryGenerator.whereItemsQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2438:35)\n' +
+    '    at PostgresQueryGenerator.getWhereConditions (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:2866:19)\n' +
+    '    at PostgresQueryGenerator.selectQuery (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-generator.js:1466:28)\n' +
+    '    at PostgresQueryInterface.select (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:1002:27)\n' +
+    '    at Function.findAll (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1824:47)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at Function.findOne (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1998:12)',
+  timestamp: '2024-12-16T19:49:40.432Z'
+}
+{
+  level: 'error',
+  message: 'Queue is not defined',
+  stack: 'ReferenceError: Queue is not defined\n' +
+    '    at MensagemConfirmacaoService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\services\\MensagemConfirmacaoService.ts:41:2)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at sendMessageConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:13:3)',
+  timestamp: '2024-12-16T19:53:15.635Z'
+}
+{
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  level: 'error',
+  message: 'Erro ao conectar ao Redis: connect ETIMEDOUT',
+  stack: 'Error: connect ETIMEDOUT\n' +
+    '    at Socket.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\ioredis\\built\\Redis.js:170:41)\n' +
+    '    at Object.onceWrapper (node:events:632:28)\n' +
+    '    at Socket.emit (node:events:518:28)\n' +
+    '    at Socket._onTimeout (node:net:595:8)\n' +
+    '    at listOnTimeout (node:internal/timers:594:17)\n' +
+    '    at processTimers (node:internal/timers:529:7)',
+  timestamp: '2024-12-16T19:53:19.711Z'
+}
+{
+  level: 'error',
+  message: 'Queue is not defined',
+  stack: 'ReferenceError: Queue is not defined\n' +
+    '    at MensagemConfirmacaoService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\services\\MensagemConfirmacaoService.ts:41:2)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at sendMessageConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:13:3)',
+  timestamp: '2024-12-16T19:54:17.354Z'
+}
+{
+  level: 'error',
+  message: 'Queue is not defined',
+  stack: 'ReferenceError: Queue is not defined\n' +
+    '    at MensagemConfirmacaoService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\services\\MensagemConfirmacaoService.ts:41:2)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at sendMessageConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:13:3)',
+  timestamp: '2024-12-16T19:55:36.774Z'
+}
+{
+  level: 'error',
+  message: 'object is not iterable (cannot read property Symbol(Symbol.iterator))',
+  stack: 'TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator))\n' +
+    '    at sendMessageConfirmacao (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:12:58)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:376:14)',
+  timestamp: '2024-12-16T20:02:13.993Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot read properties of undefined (reading 'notificacao')
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:3:36)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:14:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:52:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:17:54.621Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'notificacao')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:57:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:17:54.645Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot read properties of undefined (reading 'notificacao')
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:3:36)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:14:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:52:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:20:12.670Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot read properties of undefined (reading 'notificacao')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:57:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:20:12.683Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:50:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:52:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:20:45.667Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:57:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:20:45.681Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: SyntaxError: "[object Object]" is not valid JSON
+      at JSON.parse (<anonymous>)
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:3:25)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:15:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:52:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:23:46.138Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: SyntaxError: "[object Object]" is not valid JSON
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:57:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:23:46.145Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: SyntaxError: "[object Object]" is not valid JSON
+      at JSON.parse (<anonymous>)
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:4:25)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:15:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:52:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:24:13.138Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: SyntaxError: "[object Object]" is not valid JSON
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:57:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:24:13.154Z'
+}
+{
+  level: 'error',
+  message: `Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'`,
+  stack: `TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'\n` +
+    '    at ProcessBodyData (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\helpers\\ProcessBodyData.ts:31:26)\n' +
+    '    at actionsApiGenesis (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:15:43)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:149:13)\n' +
+    '    at Route.dispatch (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at param (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\express\\lib\\router\\index.js:376:14)',
+  timestamp: '2024-12-17T10:31:50.520Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:51:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:53:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:36:16.680Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:36:16.693Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:31:26)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:15:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:53:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:39:19.719Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:39:19.738Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: Contato não informado
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:35:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-17T10:40:50.361Z'
+}
+{
+  message: 'Cotnato nao informado',
+  level: 'error',
+  timestamp: '2024-12-17T10:41:53.267Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: Contato não informado
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:37:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:12)
+      at Worker.callProcessJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:363:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:37
+      at trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\utils.ts:312:12)
+      at Worker.trace (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:201:17)
+      at Worker.processJob (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:826:17)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:524:22
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:22)
+      at Worker.run (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:522:18),
+  level: 'error',
+  timestamp: '2024-12-17T10:41:53.269Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:31:26)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:15:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:42:13.120Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:42:13.125Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at ProcessBodyData (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\helpers\ProcessBodyData.ts:31:26)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:15:42)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:43:22.824Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot create property 'notificacao' on string '{"paciente_nome":"Renato Mendonca","atendimento_data":"17/12/2024","atendimento_endereco":"R Jose de Almeida Reboucas 35  salas 501 a 505  Mata da Praia, Vitoria  ES 29066150","dados_agendamentos":"[(229481,56,08:00:00,MAM)]","bot":"agenda"}'
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:43:22.851Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:51:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:44:02.025Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:44:02.040Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:51:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:38)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:45:33.120Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:45:33.137Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:52:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:47:43.466Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:47:43.477Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:48:46.620Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:48:46.633Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:50:27.771Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:50:27.785Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:51:50.951Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:51:50.970Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:58:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:54:10.654Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:63:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:54:10.673Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:56:37.872Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:64:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:56:37.883Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:59:51.786Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:64:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T10:59:51.798Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:54:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:01:29.701Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:64:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:01:29.714Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:55:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:03:42.406Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:64:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:03:42.417Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:55:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:05:28.498Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:64:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:05:28.514Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:55:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:06:08.358Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:06:08.375Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:55:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:4)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:06:18.881Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:10)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:06:18.882Z'
+}
+{
+  error: Error: Queue name must be provided
+      at new QueueBase (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue-base.ts:58:13)
+      at new Queue (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\queue.ts:163:5)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:46:20
+      at Array.map (<anonymous>)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:45:43)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-787080944989037.js:69:33)
+      at node:internal/modules/cjs/loader:1689:10
+      at require.extensions..jsx.require.extensions..js (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-787080944989037.js:114:20),
+  level: 'error',
+  message: 'uncaughtException: Queue name must be provided\n' +
+    'Error: Queue name must be provided\n' +
+    '    at new QueueBase (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue-base.ts:58:13)\n' +
+    '    at new Queue (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue.ts:163:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:46:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:45:43)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js:114:20)',
+  stack: 'Error: Queue name must be provided\n' +
+    '    at new QueueBase (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue-base.ts:58:13)\n' +
+    '    at new Queue (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue.ts:163:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:46:20\n' +
+    '    at Array.map (<anonymous>)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts:45:43)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js:69:33)\n' +
+    '    at node:internal/modules/cjs/loader:1689:10\n' +
+    '    at require.extensions..jsx.require.extensions..js (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js:114:20)',
+  exception: true,
+  date: 'Tue Dec 17 2024 08:07:02 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 8132,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 150388736,
+      heapTotal: 101412864,
+      heapUsed: 71048520,
+      external: 3494768,
+      arrayBuffers: 441971
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 419729.812 },
+  trace: [
+    {
+      column: 13,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue-base.ts',
+      function: 'new QueueBase',
+      line: 58,
+      method: null,
+      native: false
+    },
+    {
+      column: 5,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\bullmq\\src\\classes\\queue.ts',
+      function: 'new Queue',
+      line: 163,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 46,
+      method: null,
+      native: false
+    },
+    {
+      column: null,
+      file: null,
+      function: 'Array.map',
+      line: null,
+      method: 'map',
+      native: false
+    },
+    {
+      column: 43,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      function: null,
+      line: 45,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1689,
+      method: null,
+      native: false
+    },
+    {
+      column: 20,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-787080944989037.js',
+      function: 'require.extensions..jsx.require.extensions..js',
+      line: 114,
+      method: '.js',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-17T11:07:02.599Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot read properties of null (reading 'id')
+      at getId (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\utils\normalize.ts:3:17)
+      at VerifyContact (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\VerifyContact.ts:16:22)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:23:40)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:08:57.087Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:08:57.094Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot read properties of null (reading 'id')
+      at getId (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\utils\normalize.ts:3:17)
+      at VerifyContact (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\VerifyContact.ts:16:22)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:23:40)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:09:35.267Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:09:35.282Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: TypeError: Cannot read properties of null (reading 'id')
+      at getId (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\utils\normalize.ts:3:17)
+      at VerifyContact (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\services\WbotServices\Helpers\VerifyContact.ts:16:22)
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:23:40)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:10:07.788Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: TypeError: Cannot read properties of null (reading 'id')
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:10:07.795Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:56:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:12:16.312Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:12:16.323Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:56:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:12:44.005Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:12:44.007Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:56:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:13:09.059Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:13:09.060Z'
+}
+{
+  message: 'Error send message confirmacao',
+  error: ReferenceError: logger is not defined
+      at SendMessageSystemConfirmacao (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\api\Genesis\services\wbot\SendMessageSystemConfirmacao.ts:56:5)
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:59:13)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:14:36.093Z'
+}
+{
+  message: 'Erro ao processar o job SendMessageConfirmar',
+  error: Error: ReferenceError: logger is not defined
+      at handle (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\SendMessageConfirmar.ts:65:19)
+      at Worker.bullmq_1.Worker.connection [as processFn] (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts:99:6)
+      at C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:904:26
+      at Worker.retryIfFailed (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\bullmq\src\classes\worker.ts:1175:16),
+  level: 'error',
+  timestamp: '2024-12-17T11:14:36.095Z'
+}

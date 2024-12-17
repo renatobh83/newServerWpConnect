@@ -26,6 +26,7 @@ import redisRouter from "./redis";
 import farewellMessageRoutes from "./farewellMessageRoutes";
 import kanbanRoutes from "./kanbanRoutes";
 import settingsWebhookRoutes from "./settingsWebhookRoutes";
+import ApiGenesisRouter from "./genesisApiRoutes";
 
 const routes = Router();
 
@@ -54,6 +55,7 @@ routes.use(redisRouter);
 routes.use(farewellMessageRoutes);
 routes.use(kanbanRoutes);
 routes.use(settingsWebhookRoutes)
+routes.use(ApiGenesisRouter)
 // routes.use(apiConfirmacaoRoutes);
 
 export default routes;

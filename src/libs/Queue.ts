@@ -89,6 +89,7 @@ const workers: Worker[] = [];
 export function processQueues(concurrency = 100) {
 	// biome-ignore lint/complexity/noForEach: <explanation>
 	queues.forEach(({ name, handle }) => {
+
 		const worker = new Worker(
 			name,
 			async (job: Job) => {

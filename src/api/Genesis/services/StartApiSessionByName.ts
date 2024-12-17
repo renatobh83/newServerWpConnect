@@ -1,7 +1,7 @@
 import axios, { type AxiosInstance } from "axios";
-import AppError from "../../errors/AppError";
-import ApiConfirmacao from "../../models/ApiConfirmacao";
-import { logger } from "../../utils/logger";
+import ApiConfirmacao from "../../../models/ApiConfirmacao";
+import AppError from "../../../errors/AppError";
+
 
 interface ApiConfig {
 	nomeApi: string;
@@ -9,6 +9,8 @@ interface ApiConfig {
 	jwt: boolean;
 }
 export let sessionApiDados: ApiConfirmacao | null = null;
+
+
 export const createApiSessionInstance = async ({
 	nomeApi,
 	tenantId,
@@ -23,7 +25,6 @@ export const createApiSessionInstance = async ({
 	}
 	sessionApiDados = dadosApi;
 	const { usuario, senha, baseURl, token, expDate, token2 } = dadosApi;
-
 	// Check if token is valid, otherwise generate a new one
 	let currentToken = token;
 	if (!token || new Date() >= new Date(expDate)) {

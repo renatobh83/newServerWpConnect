@@ -1,14 +1,31 @@
-import { NextFunction,Request , Response } from "express";
+import { NextFunction, Request, RequestHandler, Response } from "express";
+import { MensagemConfirmacaoService } from "../services/MensagemConfirmacaoService";
+import ProcessBodyData from "../../../helpers/ProcessBodyData";
 
-export const sendMessageConfirmacao = async (
-	_req: Request,
+export const actionsApiGenesis: RequestHandler = async (
+	req: Request,
 	res: Response,
 	next: NextFunction,
-): Promise<Response> => {
+) => {
 	try {
-		// const { contatos }: Configuracao = req.body;
-		// const { apiId, authToken, idWbot } = req.params;
+		const { contatos } = req.body;
+		const { apiId, authToken, idWbot } = req.params;
+		if (contatos && contatos.length > 0) {
+			const { notificacao } = contatos[0];
 
+			if (JSON.parse(notificacao).bot) {
+				const bot = JSON.parse(notificacao).bot;
+				switch (bot) {
+					case "agenda":
+						await MensagemConfirmacaoService({ apiId, authToken, idWbot, ...req.body })
+						break
+					default:
+						break
+				}
+			}
+
+		}
+		// await MensagemConfirmacaoService({ apiId, authToken, idWbot, ...req.body })
 		// const apiConfig = await ApiConfig.findOne({
 		// 	where: {
 		// 		id: apiId,
@@ -32,7 +49,7 @@ export const sendMessageConfirmacao = async (
 
 		// Queue.add("SendMessageConfirmar", newMessage);
 
-		return res.status(200).json({ message: "Message add queue" });
+		res.status(200).json({ message: "Message add queue" });
 	} catch (error) {
 		next(error);
 	}
