@@ -48,13 +48,15 @@ const VerifyMediaMessage = async (
 	}
 
 	await delay(2000);
-
+	const msgFound = await Message.findOne({
+		where: { messageId: msg.id, tenantId: ticket.tenantId },
+	});
 
 	const messageData = {
 		messageId: msg.id,
 		ticketId: ticket.id,
 		contactId: msg.fromMe ? undefined : contact.id,
-		body: msg.caption || msg.id,
+		body: msg.caption || msgFound.body,
 		fromMe: msg.fromMe,
 		read: msg.fromMe,
 		mediaUrl: `${msg.id}.png`,
