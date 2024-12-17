@@ -1,6 +1,7 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
 import { MensagemConfirmacaoService } from "../services/MensagemConfirmacaoService";
 import ProcessBodyData from "../../../helpers/ProcessBodyData";
+import CheckConfirmationResponse from "../helpers/CheckResponseConfirmacao";
 
 export const actionsApiGenesis: RequestHandler = async (
 	req: Request,
@@ -54,3 +55,16 @@ export const actionsApiGenesis: RequestHandler = async (
 		next(error);
 	}
 };
+
+export const ROTADETESTES: RequestHandler = async (
+	req: Request,
+	res: Response,
+	next: NextFunction,
+) => {
+	try {
+		await CheckConfirmationResponse({ tenantId: 1, data: req.body })
+		res.status(200).json('')
+	} catch (error) {
+
+	}
+}

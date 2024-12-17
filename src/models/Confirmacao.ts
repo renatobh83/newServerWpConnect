@@ -57,9 +57,6 @@ class Confirmacao extends Model<Confirmacao> {
 	@Column(DataType.BOOLEAN)
 	declare preparoEnviado: boolean;
 
-	@ForeignKey(() => Contact)
-	@Column(DataType.INTEGER)
-	declare contactId: number;
 
 	@Column(DataType.BLOB)
 	declare preparo: Buffer;

@@ -12,11 +12,10 @@ const VerifyContact = async (
 	profilePicThumbObj?: ProfilePicThumbObj,
 ): Promise<Contact> => {
 	let profilePicUrl = "";
-	console.log(msgContact)
+
 	const number = getId(msgContact);
 
-	console.log(number)
-	return
+
 	if (profilePicThumbObj) {
 		profilePicUrl = profilePicThumbObj.imgFull;
 	}

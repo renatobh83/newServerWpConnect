@@ -29,7 +29,7 @@ export default {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async handle(data: any) {
         try {
-            console.log("Data in SendMessageConfirmar")
+
             const [{ contato }] = data.contatos;
             const wbot = getWbot(data.sessionId);
 
@@ -38,19 +38,19 @@ export default {
                 throw new Error("Contato não informado");
 
             }
-            // const phoneNumber = contato; // Assumindo que 'phoneNumber' é parte do objeto 'data'
-            // const lockKey = `lock:${phoneNumber}`;
+            const phoneNumber = contato; // Assumindo que 'phoneNumber' é parte do objeto 'data'
+            const lockKey = `lock:${phoneNumber}`;
 
-            // const isLocked = await redis.exists(lockKey);
-            // if (isLocked) {
-            // 	// Se o lock existe, ignora a nova adição à fila
-            // 	logger.info(
-            // 		`Mensagem para ${phoneNumber} não foi adicionada à fila (lock ativo).`,
-            // 	);
-            // 	return;
-            // }
+            const isLocked = await redis.exists(lockKey);
+            if (isLocked) {
+                // Se o lock existe, ignora a nova adição à fila
+                logger.info(
+                    `Mensagem para ${phoneNumber} não foi adicionada à fila (lock ativo).`,
+                );
+                return;
+            }
             // Se não existe lock, cria um lock temporário
-            // await redis.set(lockKey, "locked", "EX", LOCK_TIMEOUT);
+            await redis.set(lockKey, "locked", "EX", LOCK_TIMEOUT);
 
 
             if (sending[data.tenantId]) return;
@@ -60,8 +60,6 @@ export default {
             sending[data.tenantId] = false;
 
         } catch (error) {
-            sending[data.tenantId] = false;
-            logger.error({ message: "Error send message confirmacao", error });
             throw new Error(error);
         }
     },

@@ -24,10 +24,6 @@ Nós, da Diagnóstico Por Imagem, temos um importante lembrete pra você:
     - Trazer todos os exames anteriores realizados da área a ser examinada.
 
 Podemos confirmar sua presença?
-
-✅ Para confirmar, digite 1.
-🚫 Para cancelar, 2.
-🔁 Se quiser reagendar, digite 3
 `,
 	};
 
@@ -51,10 +47,6 @@ O seu proximo agendamento conosco esta marcado para o dia ${atendimentoData} às
     - Trazer todos os exames anteriores realizados da área a ser examinada.
 
 Podemos confirmar sua presença?
-
-✅ Para confirmar, digite 1.
-🚫 Para cancelar, 2.
-🔁 Se quiser reagendar, digite 3
 `,
 	};
 

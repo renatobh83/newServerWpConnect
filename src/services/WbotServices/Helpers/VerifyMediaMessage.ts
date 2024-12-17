@@ -53,7 +53,7 @@ const VerifyMediaMessage = async (
 		messageId: msg.id,
 		ticketId: ticket.id,
 		contactId: msg.fromMe ? undefined : contact.id,
-		body:  msgFound.body ||msg.id,
+		body: msgFound.body || msg.id,
 		fromMe: msg.fromMe,
 		read: msg.fromMe,
 		mediaUrl: `${msg.id}.png`,

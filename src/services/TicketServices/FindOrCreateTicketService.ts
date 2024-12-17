@@ -6,7 +6,6 @@ import type { Message } from "@wppconnect-team/wppconnect";
 
 import socketEmit from "../../helpers/socketEmit";
 import CampaignContacts from "../../models/CampaignContacts";
-import Confirmacao from "../../models/Confirmacao";
 import Contact from "../../models/Contact";
 import MessageModel from "../../models/Message";
 import Ticket from "../../models/Ticket";
@@ -38,6 +37,7 @@ const FindOrCreateTicketService = async ({
 	channel,
 }: Data): Promise<Ticket | any> => {
 	// se for uma mensagem de campanha, não abrir tícke
+
 	try {
 		if (msg?.fromMe) {
 			const msgCampaign = await CampaignContacts.findOne({
@@ -50,17 +50,7 @@ const FindOrCreateTicketService = async ({
 			if (msgCampaign?.id) {
 				return { isCampaignMessage: true };
 			}
-			const msgConfirmacao = await Confirmacao.findOne({
-				where: {
-					contactId: contact.id,
-					answered: false,
-					closedAt: null,
-				},
-			});
 
-			if (msgConfirmacao?.id) {
-				return { isConfirmacaoMessage: true };
-			}
 		}
 
 		if (msg?.fromMe) {
@@ -78,19 +68,7 @@ const FindOrCreateTicketService = async ({
 				return ticket;
 			}
 		}
-		if (msg && !msg.fromMe) {
-			const msgConfirmacao = await Confirmacao.findOne({
-				where: {
-					contactId: contact.id,
-					answered: false,
-					closedAt: null,
-				},
-			});
 
-			if (msgConfirmacao?.id) {
-				return { isConfirmacaoMessage: true };
-			}
-		}
 		let ticket = await Ticket.findOne({
 			where: {
 				status: {
@@ -128,7 +106,7 @@ const FindOrCreateTicketService = async ({
 		if (ticket) {
 			unreadMessages =
 				["telegram", "waba", "instagram", "messenger"].includes(channel) &&
-				unreadMessages > 0
+					unreadMessages > 0
 					? (unreadMessages += ticket.unreadMessages)
 					: unreadMessages;
 			await ticket.update({ unreadMessages });

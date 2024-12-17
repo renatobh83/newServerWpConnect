@@ -7,6 +7,7 @@ import GetDefaultWhatsApp from "./GetDefaultWhatsApp";
 const GetTicketWbot = async (
 	ticket: Ticket | Confirmacao,
 ): Promise<Whatsapp> => {
+
 	if (!ticket.whatsappId) {
 		const defaultWhatsapp = await GetDefaultWhatsApp(ticket.tenantId);
 

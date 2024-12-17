@@ -1,6 +1,9 @@
 import { Whatsapp, Message as WbotMessage } from "@wppconnect-team/wppconnect"
 import ProcessBodyData from "../../../../helpers/ProcessBodyData";
-import VerifyContact from "../../../../services/WbotServices/Helpers/VerifyContact";
+import FindOrCreateConfirmacao from "../FindOrCreateConfirmacaoTicket";
+import CreateTemplateMessageService from "../../../../services/MessageServices/CreateTemplateMessageService";
+import Confirmacao from "../../../../models/Confirmacao";
+import { logger } from "../../../../utils/logger";
 
 
 interface Session extends Whatsapp {
@@ -18,44 +21,67 @@ const SendMessageSystemConfirmacao = async (
 
     const idNumber = await wbot.checkNumberStatus(contato)
 
+    if (idNumber.status !== 200) return
 
-    console.log(idNumber)
-    const msgContact = await wbot.getContact(idNumber.id._serialized);
-    console.log(msgContact)
-    // const contact = await VerifyContact(idNumber, data.tenantId);
 
-    // let ticket = await FindorCreateConfirmacaoTicket({
-    //   contact: contact.id,
-    //   tenantId: data.tenantId,
-    //   channel: "Whatsapp",
-    //   data,
-    //   contatoSend: msgContact.id._serialized
-    // });
 
-    // if (ticket.confirmacaoJaEnviada) {
-    //   logger.info('Mensagem ja enviada para esse atendimento')
-    //   return
-    // }
+    let ticket = await FindOrCreateConfirmacao({
+        tenantId: data.tenantId,
+        channel: "Whatsapp",
+        data: notificacao,
+        contatoSend: idNumber.id._serialized,
+        idExterno
+    });
 
-    // const template = CreateTemplateMessageService({
-    //   msg: bodyProcessed.notificacao,
-    //   hora: ticket.atendimentoHora
-    // });
 
-    // message = await wbot.sendMessage(msgContact.id._serialized,template.body, {
-    //   linkPreview: false
-    // });
-    // if(message ){
-    //  await Confirmacao.update({
-    //     enviada: new Date(message.timestamp * 1000)
-    //   },{
-    //     where: {
-    //       id: ticket.id
-    //     }
-    //   })
-    // }
+    if (ticket.confirmacaoJaEnviada) {
+        logger.info('Mensagem ja enviada para esse atendimento')
+        return
+    }
+
+    const template = CreateTemplateMessageService({
+        msg: notificacao,
+        hora: ticket.atendimentoHora
+    });
+
+    message = await wbot.sendListMessage(idNumber.id._serialized, {
+        buttonText: 'Clique aqui para processeguir',
+        description: template.body,
+        sections: [
+            {
+                title: 'Confirmação',
+                rows: [
+                    {
+                        rowId: '1',
+                        title: 'Confirmar',
+                        description: 'Desejo confirma o agendamento',
+                    },
+                    {
+                        rowId: '2',
+                        title: 'Cancelar',
+                        description: 'Desejo cancelar o agendamento.',
+                    },
+                ],
+            },
+        ],
+    })
+
+
+    if (message) {
+        await Confirmacao.update({
+            enviada: new Date(message.timestamp * 1000),
+            status: 'ENVIADA',
+            lastMessage: template.body,
+            whatsappId: wbot.id
+        }, {
+            where: {
+                id: ticket.id
+            }
+        })
+    }
+
     logger.info("sendMessage", message.id);
-    return true
+
 }
 
 

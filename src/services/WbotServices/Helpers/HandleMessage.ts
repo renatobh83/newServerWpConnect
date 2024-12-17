@@ -17,21 +17,42 @@ import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
 import { addJob } from "../../../libs/Queue";
 import { SendMessageBirthday } from "./SendMessageBirthday";
+import { isMsgConfirmacao } from "./isMsgConfirmacao";
+import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
 interface Session extends Whatsapp {
 	id: number;
 }
-
-export const HandleMessage = (msg: Message, wbot: Session): Promise<void> => {
+interface MessageFile extends Message {
+	filename: string
+}
+export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
 	// biome-ignore lint/suspicious/noAsyncPromiseExecutor: <explanation>
 	return new Promise(async (resolve, reject) => {
+
 		try {
-			if (!isValidMsg(msg)) {
-				return;
-			}
 
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;
+			if (msg.type === 'list_response') {
+				await CheckConfirmationResponse({ data: msg, tenantId })
+				return
+			}
+			if (!isValidMsg(msg)) {
+				resolve()
+				return;
+			}
+			if (msg.filename === 'Preparo de exame') {
+				resolve()
+				return
+			}
+			if (await isMsgConfirmacao(msg) && msg.body !== 'Favor responder pela lista') {
+				await wbot.sendText(msg.from, 'Favor responder pela lista', {
+					quotedMsg: msg.id
+				})
+				resolve()
+				return
+			}
 			let msgContact: WbotContact;
 			let groupContact: Contact | undefined;
 
@@ -82,16 +103,6 @@ export const HandleMessage = (msg: Message, wbot: Session): Promise<void> => {
 				msg,
 				channel: "whatsapp",
 			});
-
-			if (ticket?.isConfirmacaoMessage && !msg.fromMe) {
-				// await CheckResponseConfirmacao({ data: msg, tenantId });
-				resolve();
-				return;
-			}
-			if (ticket?.isConfirmacaoMessage) {
-				resolve();
-				return;
-			}
 			if (ticket?.isCampaignMessage) {
 				resolve();
 				return;
