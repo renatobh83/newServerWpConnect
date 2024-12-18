@@ -6885,3 +6885,1026 @@
     '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:117:5',
   timestamp: '2024-12-17T19:10:04.383Z'
 }
+{
+  message: 'Error send message confirmacao response: TypeError: msgConfirmacao.save is not a function',
+  level: 'error',
+  timestamp: '2024-12-18T10:57:13.233Z'
+}
+{
+  level: 'error',
+  message: 'msgConfirmacao.save is not a function',
+  stack: 'TypeError: msgConfirmacao.save is not a function\n' +
+    '    at SendPreparoExame (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\services\\wbot\\SendPreparoExame.ts:37:34)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\WebHookConfirma.ts:73:14',
+  timestamp: '2024-12-18T11:02:09.952Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:59:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:103:5',
+  timestamp: '2024-12-18T14:02:55.990Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of null (reading 'body')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of null (reading 'body')\n" +
+    '    at VerifyMediaMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMediaMessage.ts:59:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:103:5',
+  timestamp: '2024-12-18T14:02:56.205Z'
+}
+{
+  level: 'error',
+  message: 'Validation error',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'number must be unique',
+      type: 'unique violation',
+      path: 'number',
+      value: '553175414498',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.515Z,
+          createdAt: 2024-12-18T17:16:28.515Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'tenantId must be unique',
+      type: 'unique violation',
+      path: 'tenantId',
+      value: '1',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.515Z,
+          createdAt: 2024-12-18T17:16:28.515Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.515 -03:00',
+      '2024-12-18 14:16:28.515 -03:00',
+      1
+    ]
+  },
+  original: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.515 -03:00',
+      '2024-12-18 14:16:28.515 -03:00',
+      1
+    ]
+  },
+  fields: { number: '553175414498', tenantId: '1' },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:795:21)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Function.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyContact.ts:35:18)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:81:20',
+  timestamp: '2024-12-18T17:16:30.005Z'
+}
+{
+  level: 'error',
+  message: 'Validation error',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'number must be unique',
+      type: 'unique violation',
+      path: 'number',
+      value: '553175414498',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.545Z,
+          createdAt: 2024-12-18T17:16:28.545Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'tenantId must be unique',
+      type: 'unique violation',
+      path: 'tenantId',
+      value: '1',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.545Z,
+          createdAt: 2024-12-18T17:16:28.545Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.545 -03:00',
+      '2024-12-18 14:16:28.545 -03:00',
+      1
+    ]
+  },
+  original: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.545 -03:00',
+      '2024-12-18 14:16:28.545 -03:00',
+      1
+    ]
+  },
+  fields: { number: '553175414498', tenantId: '1' },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:795:21)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Function.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyContact.ts:35:18)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:81:20',
+  timestamp: '2024-12-18T17:16:30.041Z'
+}
+{
+  level: 'error',
+  message: 'Validation error',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'number must be unique',
+      type: 'unique violation',
+      path: 'number',
+      value: '553175414498',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.890Z,
+          createdAt: 2024-12-18T17:16:28.890Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'tenantId must be unique',
+      type: 'unique violation',
+      path: 'tenantId',
+      value: '1',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.890Z,
+          createdAt: 2024-12-18T17:16:28.890Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.890 -03:00',
+      '2024-12-18 14:16:28.890 -03:00',
+      1
+    ]
+  },
+  original: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.890 -03:00',
+      '2024-12-18 14:16:28.890 -03:00',
+      1
+    ]
+  },
+  fields: { number: '553175414498', tenantId: '1' },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:795:21)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Function.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyContact.ts:35:18)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:81:20',
+  timestamp: '2024-12-18T17:16:30.109Z'
+}
+{
+  level: 'error',
+  message: 'Validation error',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeUniqueConstraintError',
+  errors: [
+    ValidationErrorItem {
+      message: 'number must be unique',
+      type: 'unique violation',
+      path: 'number',
+      value: '553175414498',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.983Z,
+          createdAt: 2024-12-18T17:16:28.983Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'tenantId must be unique',
+      type: 'unique violation',
+      path: 'tenantId',
+      value: '1',
+      origin: 'DB',
+      instance: Contact {
+        dataValues: {
+          telegramId: null,
+          messengerId: null,
+          empresa: null,
+          dtaniversario: null,
+          identifier: null,
+          instagramPK: null,
+          id: null,
+          name: 'Tiago Cardoso',
+          number: '553175414498',
+          profilePicUrl: 'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+          email: '',
+          isGroup: false,
+          pushname: 'Tiago Cardoso',
+          isUser: true,
+          isWAContact: true,
+          tenantId: 1,
+          updatedAt: 2024-12-18T17:16:28.983Z,
+          createdAt: 2024-12-18T17:16:28.983Z
+        },
+        _previousDataValues: {
+          name: undefined,
+          number: undefined,
+          profilePicUrl: undefined,
+          email: undefined,
+          isGroup: undefined,
+          pushname: undefined,
+          isUser: undefined,
+          isWAContact: undefined,
+          tenantId: undefined
+        },
+        uniqno: 1,
+        _changed: Set(9) {
+          'name',
+          'number',
+          'profilePicUrl',
+          'email',
+          'isGroup',
+          'pushname',
+          'isUser',
+          'isWAContact',
+          'tenantId'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'not_unique',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  parent: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.983 -03:00',
+      '2024-12-18 14:16:28.983 -03:00',
+      1
+    ]
+  },
+  original: error: duplicate key value violates unique constraint "contacts_number_tenantid"
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 241,
+    severity: 'ERROR',
+    code: '23505',
+    detail: 'Key (number, "tenantId")=(553175414498, 1) already exists.',
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: 'public',
+    table: 'Contacts',
+    column: undefined,
+    dataType: undefined,
+    constraint: 'contacts_number_tenantid',
+    file: 'nbtinsert.c',
+    line: '666',
+    routine: '_bt_check_unique',
+    sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+    parameters: [
+      'Tiago Cardoso',
+      '553175414498',
+      '',
+      'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/420629139_772130684833203_9138929790182626879_n.jpg?stp=dst-jpg_tt6&ccb=11-4&oh=01_Q5AaIDbWw802OK5NylGB_48K4yC9VQmYt2l3hZK2ZR7PY6fs&oe=676D2B2C&_nc_sid=5e03e0&_nc_cat=110',
+      'Tiago Cardoso',
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      false,
+      '2024-12-18 14:16:28.983 -03:00',
+      '2024-12-18 14:16:28.983 -03:00',
+      1
+    ]
+  },
+  fields: { number: '553175414498', tenantId: '1' },
+  sql: 'INSERT INTO "Contacts" ("id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING "id","name","number","email","profilePicUrl","pushname","telegramId","messengerId","empresa","dtaniversario","identifier","instagramPK","isUser","isWAContact","isGroup","createdAt","updatedAt","tenantId";',
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.insert (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:795:21)\n' +
+    '    at Contact.save (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:4154:35)\n' +
+    '    at Function.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:2305:12)\n' +
+    '    at CreateOrUpdateContactService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ContactServices\\CreateOrUpdateContactService.ts:70:13)\n' +
+    '    at VerifyContact (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyContact.ts:35:18)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:81:20',
+  timestamp: '2024-12-18T17:16:30.195Z'
+}

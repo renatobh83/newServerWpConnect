@@ -1,16 +1,35 @@
-import { Message } from "@wppconnect-team/wppconnect";
-import Confirmacao from "../../../models/Confirmacao";
 
-export const isMsgConfirmacao = async (msg: Message): Promise<boolean> => {
+import Confirmacao from "../../../models/Confirmacao";
+import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
+import { RequestIsValid } from "./IsValidMsg";
+import { logger } from "../../../utils/logger";
+
+
+
+export const isMsgConfirmacao = async ({ msg, tenantId }: RequestIsValid): Promise<boolean> => {
+
     const msgConfirmacao = await Confirmacao.findOne({
         where: {
             contatoSend: msg.from,
-            answered: false,
             closedAt: null,
+            tenantId
         },
     });
-    if (msgConfirmacao) {
-        return true
+
+    if (!msgConfirmacao) {
+        return false
     }
-    return false
+
+    if (msg.type === 'list_response') {
+        await CheckConfirmationResponse({ data: msg, msgConfirmacao, tenantId })
+        return
+    }
+    if (msg.body !== 'Favor responder pela lista') {
+        // Descrever uma logica para enviar uma msg que deve usar a lista
+        logger.warn('Falta Colocar a logica para informar ao usuario')
+        return
+    }
+    return true
+
+
 }

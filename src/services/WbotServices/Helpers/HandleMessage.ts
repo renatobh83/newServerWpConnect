@@ -26,7 +26,6 @@ interface MessageFile extends Message {
 	filename: string
 }
 export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
-	// biome-ignore lint/suspicious/noAsyncPromiseExecutor: <explanation>
 	return new Promise(async (resolve, reject) => {
 
 		try {
@@ -34,25 +33,12 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;
-			if (msg.type === 'list_response') {
-				await CheckConfirmationResponse({ data: msg, tenantId })
-				return
-			}
+
 			if (!isValidMsg(msg)) {
-				resolve()
 				return;
 			}
-			if (msg.filename === 'Preparo de exame') {
-				resolve()
-				return
-			}
-			if (await isMsgConfirmacao(msg) && msg.body !== 'Favor responder pela lista') {
-				await wbot.sendText(msg.from, 'Favor responder pela lista', {
-					quotedMsg: msg.id
-				})
-				resolve()
-				return
-			}
+
+
 			let msgContact: WbotContact;
 			let groupContact: Contact | undefined;
 
@@ -104,12 +90,12 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 				channel: "whatsapp",
 			});
 			if (ticket?.isCampaignMessage) {
-				resolve();
+
 				return;
 			}
 
 			if (ticket?.isFarewellMessage) {
-				resolve();
+
 				return;
 			}
 

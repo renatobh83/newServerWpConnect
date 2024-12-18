@@ -33,6 +33,11 @@ interface MessageChange extends Message {
 export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 	wbot.onAnyMessage(async (msg: MessageChange) => {
 		if (msg.chatId === "status@broadcast") return;
+		if (msg.fromMe) {
+			console.log("Eu Enviei", msg)
+		} else {
+			console.log("Eu Recebi", msg)
+		}
 		await HandleMessage(msg, wbot);
 	});
 

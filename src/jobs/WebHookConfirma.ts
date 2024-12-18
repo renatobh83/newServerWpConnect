@@ -6,12 +6,17 @@ import { confirmaExame, getPreparos } from "../api/Genesis/helpers/ActionsApi";
 import SendPreparoExame from "../api/Genesis/services/wbot/SendPreparoExame";
 
 interface Data {
-	idexterno: number[];
-	procedimentos: number[];
+	msgConfirmacao: Confirmacao,
 	tenantId: string;
 	contatoSend: string;
 }
 
+function isBase64Meaningful(base64) {
+	// Decodifica e mede o tamanho do conteúdo base64
+	const decodedContent = Buffer.from(base64, "base64");
+	const minSize = 200; // Define 200 bytes como tamanho mínimo para conteúdo relevante
+	return decodedContent.length >= minSize;
+}
 
 export default {
 	key: "WebHookConfirma",
@@ -23,28 +28,17 @@ export default {
 		//   delay: 60000 * 3 // 3 min
 		// }
 	},
-	async handle(data: Data) {
+	async handle({ contatoSend, msgConfirmacao, tenantId }: Data) {
 		try {
-			const msgConfirmacao = await Confirmacao.findOne({
-				where: {
-					tenantId: Number(data.tenantId),
-					contatoSend: data.contatoSend,
-				},
-			});
 
-			function isBase64Meaningful(base64) {
-				// Decodifica e mede o tamanho do conteúdo base64
-				const decodedContent = Buffer.from(base64, "base64");
-				const minSize = 200; // Define 200 bytes como tamanho mínimo para conteúdo relevante
-				return decodedContent.length >= minSize;
-			}
+
 
 			let responseSendMessage: any;
 
-			const confirmacao = data.idexterno.map(async id => {
+			const confirmacao = msgConfirmacao.idexterno.map(async id => {
 				try {
 					// Aguarda a confirmação do exame
-					const result = await confirmaExame(Number(data.tenantId), id);
+					const result = await confirmaExame(Number(tenantId), id);
 
 					return result
 				} catch (error) {
@@ -52,9 +46,9 @@ export default {
 					return error
 				}
 			});
-			const preparos = data.procedimentos.map(async (id) => {
+			const preparos = msgConfirmacao.procedimentos.map(async (id) => {
 				try {
-					const result = await getPreparos({ tenantId: +data.tenantId, procedimento: id })
+					const result = await getPreparos({ tenantId, procedimento: id })
 
 					return result
 				} catch (error) {
@@ -69,8 +63,16 @@ export default {
 				(result) => result.status === "fulfilled",
 			);
 			if (allFulfilled) {
-				msgConfirmacao.status = "CONFIRMADO";
-				await msgConfirmacao.save();
+				await Confirmacao.update(
+					{
+						status: 'CONFIRMADO',
+
+					},
+					{
+						where: { id: msgConfirmacao.id }
+					}
+				);
+
 				// Extraia os valores dos preparos
 				responseSendMessage = retornoPreparo
 					.filter((result) => result.status === "fulfilled")
@@ -79,13 +81,13 @@ export default {
 						return await SendPreparoExame({
 							msgConfirmacao,
 							base64Html: result.value,
-							sendTo: data.contatoSend,
+							sendTo: contatoSend,
 						});
 					});
 			}
 
 			logger.info(`Queue WebHooksAPI success: Data: ${responseSendMessage}`);
-			return true;
+
 		} catch (error) {
 			logger.error(`Error send message confirmacao response: ${error}`);
 		}

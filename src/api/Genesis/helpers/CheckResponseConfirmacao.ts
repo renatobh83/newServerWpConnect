@@ -5,25 +5,16 @@ import Confirmacao from "../../../models/Confirmacao";
 
 interface Data {
   data: any;
-  tenantId: number;
+  msgConfirmacao?: Confirmacao;
+  tenantId: number
 }
 
 const CheckConfirmationResponse = async ({
-  tenantId,
+  msgConfirmacao,
   data,
+  tenantId
 }: Data): Promise<void> => {
   const listResponse = data.listResponse
-  const msgConfirmacao = await Confirmacao.findOne({
-    where: {
-      tenantId: tenantId,
-      contatoSend: data.from,
-      closedAt: null,
-      preparoEnviado: false
-    },
-  });
-  if (!msgConfirmacao) {
-    throw new Error('Mensagem processada')
-  }
 
   msgConfirmacao.status = "RESPONDIDA";
   msgConfirmacao.lastMessage = listResponse.description;
@@ -35,8 +26,7 @@ const CheckConfirmationResponse = async ({
     case "1":
 
       addJob("WebHookConfirma", {
-        idexterno: msgConfirmacao.idexterno,
-        procedimentos: msgConfirmacao.procedimentos,
+        msgConfirmacao,
         tenantId,
         contatoSend: data.from,
       });
