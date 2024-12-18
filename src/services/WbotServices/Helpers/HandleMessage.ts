@@ -1,7 +1,7 @@
 import type {
 	Message,
 	ProfilePicThumbObj,
-	Contact as WbotContact,
+
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import type Contact from "../../../models/Contact";
@@ -25,6 +25,7 @@ interface Session extends Whatsapp {
 interface MessageFile extends Message {
 	filename: string
 }
+
 export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
 	return new Promise(async (resolve, reject) => {
 
@@ -39,7 +40,7 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 			}
 
 
-			let msgContact: WbotContact;
+			let msgContact: any;
 			let groupContact: Contact | undefined;
 
 			const chat = await wbot.getChatById(msg.to);
@@ -61,15 +62,45 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 			} else {
 				msgContact = msg.sender;
 			}
+
+			if (!msgContact) {
+				const wid = await wbot.checkNumberStatus(msg.to)
+				if (wid.status !== 200) {
+					return
+				}
+				msgContact = {
+					id: wid.id,
+					name: wid.id.user,
+					isUser: !wid.isBusiness,
+					isWAContact: true,
+
+				}
+			}
+
+
+
 			const profilePicUrl: ProfilePicThumbObj | undefined =
 				await wbot.getProfilePicFromServer(getId(msgContact));
 			if (msg.isGroupMsg) {
-				let msgGroupContact: WbotContact;
+				let msgGroupContact: any;
 
 				if (msg.fromMe) {
 					msgGroupContact = await wbot.getContact(msg.to);
 				} else {
 					msgGroupContact = await wbot.getContact(msg.from);
+				}
+				if (!msgGroupContact) {
+					const wid = await wbot.checkNumberStatus(msg.to)
+					if (wid.status !== 200) {
+						return
+					}
+					msgGroupContact = {
+						id: wid.id,
+						name: wid.id.user,
+						isUser: !wid.isBusiness,
+						isWAContact: true,
+
+					}
 				}
 				groupContact = (await VerifyContact(
 					msgGroupContact,

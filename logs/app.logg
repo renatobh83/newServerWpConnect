@@ -7908,3 +7908,33 @@
     '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:81:20',
   timestamp: '2024-12-18T17:16:30.195Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:17:20)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:105:5',
+  timestamp: '2024-12-18T18:33:17.900Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:17:20)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:105:5',
+  timestamp: '2024-12-18T18:33:33.371Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'id')",
+  session: 1,
+  type: 'client',
+  stack: "TypeError: Cannot read properties of undefined (reading 'id')\n" +
+    '    at VerifyMessage (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\VerifyMessage.ts:17:20)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:105:5',
+  timestamp: '2024-12-18T18:33:42.660Z'
+}

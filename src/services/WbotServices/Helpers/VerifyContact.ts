@@ -2,7 +2,7 @@ import type {
 	ProfilePicThumbObj,
 	Contact as WbotContact,
 } from "@wppconnect-team/wppconnect";
-import type Contact from "../../../models/Contact";
+import Contact from "../../../models/Contact";
 import { getId } from "../../../utils/normalize";
 import CreateOrUpdateContactService from "../../ContactServices/CreateOrUpdateContactService";
 
@@ -14,7 +14,6 @@ const VerifyContact = async (
 	let profilePicUrl = "";
 
 	const number = getId(msgContact);
-
 
 	if (profilePicThumbObj) {
 		profilePicUrl = profilePicThumbObj.imgFull;

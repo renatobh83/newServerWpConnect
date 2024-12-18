@@ -19,12 +19,12 @@ import {
 	UpdatedAt,
 } from "sequelize-typescript";
 import authConfig from "../config/auth";
-import webHooks from "../config/webHooks.dev.json";
+import webHooks from "../config/webHooks.dev.json"
 import ApiConfig from "./ApiConfig";
 import ChatFlow from "./ChatFlow";
 import Tenant from "./Tenant";
 import Ticket from "./Ticket";
-import  { addJob } from "../libs/Queue";
+import { addJob } from "../libs/Queue";
 
 
 
@@ -210,7 +210,7 @@ class Whatsapp extends Model<Whatsapp> {
 						url: api.urlServiceStatus,
 						type: payload.type,
 						payload
-					  });
+					});
 				}
 			}),
 		);
