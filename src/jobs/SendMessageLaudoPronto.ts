@@ -36,14 +36,14 @@ export default {
 
             const templateMessage = `Olá ${paciente_nome}, gostaria de informar que o laudo do seu exame de ${procedimento_nome} já está pronto.\nPara acessá-lo, por favor, clique no link abaixo:\n${link_la}`
 
-            const a: Message = await wbot.sendText(idNumber.id._serialized, templateMessage)
+            const sendMessage: Message = await wbot.sendText(idNumber.id._serialized, templateMessage)
             const messageData: ApiMessage = {
-                messageId: a.id,
+                messageId: sendMessage.id,
                 externalKey: externalKey,
-                body: a.body,
-                ack: a.ack,
+                body: sendMessage.body,
+                ack: sendMessage.ack,
                 number: idNumber.id._serialized,
-                timestamp: a.timestamp,
+                timestamp: sendMessage.timestamp,
                 sessionId: sessionId,
                 tenantId: tenantId,
                 apiConfig,
