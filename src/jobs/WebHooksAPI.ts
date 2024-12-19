@@ -14,13 +14,14 @@ export default {
 	key: "WebHooksAPI",
 	options: {
 		delay: 6000,
+		removeOnComplete: true,
+		removeOnFail: true,
 		attempts: 50,
 		backoff: {
 			type: "fixed",
 			delay: 60000 * 3, // 3 min
 		},
 	},
-	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 	async handle(data: HandlerPayload) {
 		try {
 			let payload = {};

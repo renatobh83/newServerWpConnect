@@ -86,7 +86,7 @@ export default {
 					});
 			}
 
-			logger.info(`Queue WebHooksAPI success: Data: ${responseSendMessage}`);
+			logger.info("WebHookConfirma success");
 
 		} catch (error) {
 			logger.error(`Error send message confirmacao response: ${error}`);

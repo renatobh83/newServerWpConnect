@@ -20,6 +20,8 @@ export default {
 
     async handle(data: any) {
         try {
+            logger.info("SendMessageLaudoPronto Initiated");
+
             const { externalKey, apiConfig, tenantId, sessionId } = data
 
             const [{ contato }] = data.contatos;
@@ -52,6 +54,7 @@ export default {
 
             await ApiMessage.create(messageData)
 
+            logger.info("Finalized SendMessageLaudoPronto");
 
         } catch (error) {
             throw new Error(error);

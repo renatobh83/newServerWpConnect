@@ -29,7 +29,7 @@ export default {
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async handle(data: any) {
         try {
-
+            logger.info("SendMessageConfirmar Initiated");
             const [{ contato }] = data.contatos;
             const wbot = getWbot(data.sessionId);
 
@@ -58,7 +58,7 @@ export default {
             sending[data.tenantId] = true;
             await SendMessageSystemConfirmacao(wbot, data);
             sending[data.tenantId] = false;
-
+            logger.info("Finalized SendMessageConfirmar");
         } catch (error) {
             throw new Error(error);
         }
