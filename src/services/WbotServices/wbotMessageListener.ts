@@ -40,14 +40,14 @@ export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 	});
 
 	wbot.onIncomingCall(async (call: IncomingCall) => {
-		VerifyCall(call, wbot);
+		await VerifyCall(call, wbot);
 	});
 
-	wbot.onReactionMessage((msg: MessageReaction) => {
-		HandleMsgReaction(msg);
+	wbot.onReactionMessage(async (msg: MessageReaction) => {
+		await HandleMsgReaction(msg);
 	});
-	wbot.onAck((ack: Ack) => {
-		HandleMsgAck(ack);
+	wbot.onAck(async (ack: Ack) => {
+		// await HandleMsgAck(ack);
 	});
 
 	wbot.onRevokedMessage((msg) => {

@@ -1,5 +1,6 @@
 import { Sequelize, Op } from "sequelize";
 import Confirmacao from "../../../models/Confirmacao";
+import { logger } from "../../../utils/logger";
 
 
 interface Data {
@@ -115,7 +116,7 @@ const FindOrCreateConfirmacao = async ({
   };
 
   confirmacaoReturn = await Confirmacao.create(confirmacaoObj);
-
+  logger.warn('Create Confirmacao ')
   return confirmacaoReturn.dataValues;
 };
 

@@ -8390,3 +8390,176 @@
   ],
   timestamp: '2024-12-19T16:41:46.171Z'
 }
+{
+  level: 'error',
+  message: 'Protocol error (DOM.describeNode): Cannot find context with specified id',
+  session: 1,
+  type: 'client',
+  name: 'ProtocolError',
+  stack: 'ProtocolError: Protocol error (DOM.describeNode): Cannot find context with specified id\n' +
+    '    at Callback.<instance_members_initializer> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:117:12)\n' +
+    '    at new Callback (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:122:3)\n' +
+    '    at CallbackRegistry.create (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\common\\CallbackRegistry.ts:28:22)\n' +
+    '    at Connection._rawSend (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\Connection.ts:125:22)\n' +
+    '    at CdpCDPSession.send (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\CDPSession.ts:95:29)\n' +
+    '    at IsolatedWorld.transferHandle (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\cdp\\IsolatedWorld.ts:238:36)\n' +
+    '    at CdpFrame.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Frame.ts:910:35)\n' +
+    '    at CdpPage.addScriptTag (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\puppeteer-core\\src\\api\\Page.ts:1430:12)',
+  timestamp: '2024-12-19T18:38:25.996Z'
+}
+{
+  level: 'error',
+  message: 'operator does not exist: character varying = boolean',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: operator does not exist: character varying = boolean
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 213,
+    severity: 'ERROR',
+    code: '42883',
+    detail: undefined,
+    hint: 'No operator matches the given name and argument types. You might need to add explicit type casts.',
+    position: '408',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_oper.c',
+    line: '635',
+    routine: 'op_error',
+    sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553185683733@c.us' OR "Confirmacao"."contatoSend" = false) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+    parameters: undefined
+  },
+  original: error: operator does not exist: character varying = boolean
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 213,
+    severity: 'ERROR',
+    code: '42883',
+    detail: undefined,
+    hint: 'No operator matches the given name and argument types. You might need to add explicit type casts.',
+    position: '408',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_oper.c',
+    line: '635',
+    routine: 'op_error',
+    sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553185683733@c.us' OR "Confirmacao"."contatoSend" = false) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+    parameters: undefined
+  },
+  sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553185683733@c.us' OR "Confirmacao"."contatoSend" = false) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+  parameters: {},
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.select (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:1001:12)\n' +
+    '    at Function.findAll (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1824:21)\n' +
+    '    at Function.findOne (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1998:12)\n' +
+    '    at isConfirmacaoMessageExistsService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ApiConfirmacaoServices\\isConfirmacaoMessageExistsService.ts:6:21)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:55:8',
+  timestamp: '2024-12-19T19:30:10.154Z'
+}
+{
+  level: 'error',
+  message: 'operator does not exist: character varying = boolean',
+  session: 1,
+  type: 'client',
+  name: 'SequelizeDatabaseError',
+  parent: error: operator does not exist: character varying = boolean
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 213,
+    severity: 'ERROR',
+    code: '42883',
+    detail: undefined,
+    hint: 'No operator matches the given name and argument types. You might need to add explicit type casts.',
+    position: '408',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_oper.c',
+    line: '635',
+    routine: 'op_error',
+    sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553184251692@c.us' OR "Confirmacao"."contatoSend" = true) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+    parameters: undefined
+  },
+  original: error: operator does not exist: character varying = boolean
+      at Parser.parseErrorMessage (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:368:69)
+      at Parser.handlePacket (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:187:21)
+      at Parser.parse (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\parser.ts:102:30)
+      at Socket.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\pg-protocol\src\index.ts:7:48)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Socket.Readable.push (node:internal/streams/readable:392:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+    length: 213,
+    severity: 'ERROR',
+    code: '42883',
+    detail: undefined,
+    hint: 'No operator matches the given name and argument types. You might need to add explicit type casts.',
+    position: '408',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_oper.c',
+    line: '635',
+    routine: 'op_error',
+    sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553184251692@c.us' OR "Confirmacao"."contatoSend" = true) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+    parameters: undefined
+  },
+  sql: `SELECT "id", "status", "contatoSend", "lastMessage", "procedimentos", "idexterno", "atendimentoData", "atendimentoHora", "answered", "lastMessageAt", "messageResponse", "preparoEnviado", "preparo", "closedAt", "tenantId", "whatsappId", "channel", "enviada", "createdAt", "updatedAt" FROM "Confirmacao" AS "Confirmacao" WHERE ("Confirmacao"."contatoSend" = '553184251692@c.us' OR "Confirmacao"."contatoSend" = true) AND "Confirmacao"."closedAt" IS NULL AND "Confirmacao"."tenantId" = 1 LIMIT 1;`,
+  parameters: {},
+  stack: 'Error: \n' +
+    '    at Query.run (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\postgres\\query.js:76:25)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\sequelize.js:650:28\n' +
+    '    at PostgresQueryInterface.select (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\dialects\\abstract\\query-interface.js:1001:12)\n' +
+    '    at Function.findAll (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1824:21)\n' +
+    '    at Function.findOne (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\sequelize\\src\\model.js:1998:12)\n' +
+    '    at isConfirmacaoMessageExistsService (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\ApiConfirmacaoServices\\isConfirmacaoMessageExistsService.ts:6:21)\n' +
+    '    at C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\services\\WbotServices\\Helpers\\HandleMessage.ts:55:8',
+  timestamp: '2024-12-19T19:32:37.836Z'
+}

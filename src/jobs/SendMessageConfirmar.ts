@@ -26,7 +26,6 @@ export default {
             delay: 60000 * 3, // 3 min
         },
     },
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     async handle(data: any) {
         try {
             logger.info("SendMessageConfirmar Initiated");

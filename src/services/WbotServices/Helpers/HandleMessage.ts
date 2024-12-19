@@ -21,62 +21,43 @@ import { SendMessageBirthday } from "./SendMessageBirthday";
 import { isMsgConfirmacao } from "./isMsgConfirmacao";
 import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
 import Confirmacao from "../../../models/Confirmacao";
-import ApiMessage from "../../../models/ApiMessage";
+
+import { isApiMessageExistsService } from "../../ApiMessageServices/isApiMessageExistsService";
+import { isConfirmacaoMessageExistsService } from "../../ApiConfirmacaoServices/isConfirmacaoMessageExistsService";
+import { invalidResponseConfirmacaoService } from "../../ApiConfirmacaoServices/invalidResponseConfirmacaoService";
 interface Session extends Whatsapp {
 	id: number;
 }
 interface MessageFile extends Message {
 	filename: string
 }
-let attemps: number = 0
+
 export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
 	return new Promise(async (resolve, reject) => {
 
-		try {
+		const delay = (ms: number) =>
+			new Promise((resolve) => setTimeout(resolve, ms));
 
+
+		try {
+			await delay(2000);
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
-			const apiMessages = await ApiMessage.findOne({
-				where: {
-					messageId: msg.id
-				}
-			})
-			if (apiMessages) {
+
+			const { tenantId } = whatsapp;
+
+			if (await isApiMessageExistsService(msg)) {
 				return
 			}
-			const { tenantId } = whatsapp;
 
 			if (!isValidMsg(msg)) {
 				return;
 			}
-			const msgConfirmacao = await Confirmacao.findOne({
-				where: {
-					contatoSend: msg.from,
-					closedAt: null,
-					tenantId
-				},
-			});
-
-			if (msgConfirmacao) {
-				if (attemps === 0) {
-					await wbot.sendText(msg.from, 'Favor responder pela lista', {
-						markIsRead: true
-					})
-				}
-				attemps += 1
-				if (attemps >= 3) {
-					await wbot.sendText(msg.from, 'Atendimento sendo finalizado.\nFavor entrar em contato com nossa central para confirmar ou cancelar o seu agendamento.', {
-						quotedMsg: msg.id
-					})
-					msgConfirmacao.closedAt = Math.floor(Date.now() / 1000)
-					msgConfirmacao.status = "SEM RESPOSTA"
-					msgConfirmacao.lastMessage = "Não selecionado na lista"
-					await msgConfirmacao.save()
-				}
-				return
-			}
-
 			// Filtra a mensagem, para que nao seja aberto ticket  indevidos
 			if (msg.fromMe && msg.body === 'Favor responder pela lista' || msg.body === "Preparo de exame") {
+				return
+			}
+			if (await isConfirmacaoMessageExistsService(msg, tenantId)) {
+				await invalidResponseConfirmacaoService(msg, wbot, tenantId)
 				return
 			}
 
