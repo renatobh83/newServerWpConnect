@@ -103,6 +103,7 @@ const FindOrCreateConfirmacao = async ({
       novosProcedimentos.push(Procedimento);
     }
   }
+
   const confirmacaoObj: any = {
     contatoSend,
     procedimentos: novosProcedimentos,

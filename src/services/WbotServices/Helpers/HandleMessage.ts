@@ -1,4 +1,5 @@
 import type {
+	Chat,
 	Message,
 	ProfilePicThumbObj,
 
@@ -19,13 +20,14 @@ import { addJob } from "../../../libs/Queue";
 import { SendMessageBirthday } from "./SendMessageBirthday";
 import { isMsgConfirmacao } from "./isMsgConfirmacao";
 import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
+import Confirmacao from "../../../models/Confirmacao";
 interface Session extends Whatsapp {
 	id: number;
 }
 interface MessageFile extends Message {
 	filename: string
 }
-
+let attemps: number = 0
 export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
 	return new Promise(async (resolve, reject) => {
 
@@ -38,12 +40,32 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 			if (!isValidMsg(msg)) {
 				return;
 			}
+			const msgConfirmacao = await Confirmacao.findOne({
+				where: {
+					contatoSend: msg.from,
+					closedAt: null,
+					tenantId
+				},
+			});
 
+			if (msgConfirmacao) {
+				if (attemps === 0) {
+					await wbot.sendText(msg.from, 'Favor responder pela lista', {
+						markIsRead: true
+					})
+				}
+				attemps += 1
+
+				return
+			}
+			if (msg.body === 'Favor responder pela lista') {
+				return
+			}
 
 			let msgContact: any;
 			let groupContact: Contact | undefined;
 
-			const chat = await wbot.getChatById(msg.to);
+			const chat: Chat = await wbot.getChatById(msg.to);
 
 			const Settingdb = await Setting.findOne({
 				where: { key: "ignoreGroupMsg", tenantId },
@@ -65,7 +87,7 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 
 			if (!msgContact) {
 				const wid = await wbot.checkNumberStatus(msg.to)
-				if (wid.status !== 200) {
+				if (wid.canReceiveMessage === false) {
 					return
 				}
 				msgContact = {
@@ -91,7 +113,7 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 				}
 				if (!msgGroupContact) {
 					const wid = await wbot.checkNumberStatus(msg.to)
-					if (wid.status !== 200) {
+					if (wid.canReceiveMessage === false) {
 						return
 					}
 					msgGroupContact = {

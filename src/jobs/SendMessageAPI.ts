@@ -22,78 +22,31 @@ export default {
 			delay: 60000 * 3, // 3 min
 		},
 	},
-	async handle( data : any) {
+	async handle(data: any) {
 		try {
 			const wbot = getWbot(data.sessionId);
 
 
-				const message: any = {} as WbotMessage;
-				try {
+			const message: any = {} as WbotMessage;
+			try {
 
-					const idNumber = getNumberId(data.number)
+				const idNumber = getNumberId(data.number)
 
-					if (!idNumber) {
-						const payload = {
-							ack: -1,
-							body: data.body,
-							messageId: "",
-							number: data.number,
-							externalKey: data.externalKey,
-							error: "number invalid in whatsapp",
-							type: "hookMessageStatus",
-							authToken: data.authToken,
-						};
-						if (data.media) {
-							// excluir o arquivo se o número não existir
-							fs.unlinkSync(data.media.path);
-						}
-						if (data?.apiConfig?.urlMessageStatus) {
-							addJob("WebHooksAPI", {
-								url: data.apiConfig.urlMessageStatus,
-								type: payload.type,
-								payload,
-							});
-						}
-						return payload;
-					}
-					// '559891191708@c.us'
-					const msgContact = await wbot.getContact(idNumber);
-					const contact = await VerifyContact(msgContact, data.tenantId);
-
-					const ticket = await FindOrCreateTicketService({
-						contact,
-						whatsappId: wbot.id!,
-						unreadMessages: 0,
-						tenantId: data.tenantId,
-						groupContact: undefined,
-						msg: data,
-						channel: "whatsapp",
-					});
-					await CreateMessageSystemService({
-						msg: data,
-						tenantId: data.tenantId,
-						ticket,
-						sendType: "API",
-						status: "pending",
-					});
-					await ticket.update({
-						apiConfig: {
-							...data.apiConfig,
-							externalKey: data.externalKey,
-						},
-					});
-				} catch (error) {
+				if (!idNumber) {
 					const payload = {
-						ack: -2,
+						ack: -1,
 						body: data.body,
 						messageId: "",
 						number: data.number,
 						externalKey: data.externalKey,
-						error: "error session",
+						error: "number invalid in whatsapp",
 						type: "hookMessageStatus",
 						authToken: data.authToken,
 					};
-
+					if (data.media) {
+						// excluir o arquivo se o número não existir
+						fs.unlinkSync(data.media.path);
+					}
 					if (data?.apiConfig?.urlMessageStatus) {
 						addJob("WebHooksAPI", {
 							url: data.apiConfig.urlMessageStatus,
@@ -101,8 +54,69 @@ export default {
 							payload,
 						});
 					}
-					throw new Error(error);
+					return payload;
 				}
+				// '559891191708@c.us'
+				let msgContact = await wbot.getContact(idNumber) as any;
+
+				if (!msgContact) {
+					const wid = await wbot.checkNumberStatus(idNumber)
+					if (wid.canReceiveMessage === false) {
+						return
+					}
+					msgContact = {
+						id: wid.id,
+						name: wid.id.user,
+						isUser: !wid.isBusiness,
+						isWAContact: true,
+
+					}
+				}
+				const contact = await VerifyContact(msgContact, data.tenantId);
+
+				const ticket = await FindOrCreateTicketService({
+					contact,
+					whatsappId: wbot.id!,
+					unreadMessages: 0,
+					tenantId: data.tenantId,
+					groupContact: undefined,
+					msg: data,
+					channel: "whatsapp",
+				});
+				await CreateMessageSystemService({
+					msg: data,
+					tenantId: data.tenantId,
+					ticket,
+					sendType: "API",
+					status: "pending",
+				});
+				await ticket.update({
+					apiConfig: {
+						...data.apiConfig,
+						externalKey: data.externalKey,
+					},
+				});
+			} catch (error) {
+				const payload = {
+					ack: -2,
+					body: data.body,
+					messageId: "",
+					number: data.number,
+					externalKey: data.externalKey,
+					error: "error session",
+					type: "hookMessageStatus",
+					authToken: data.authToken,
+				};
+
+				if (data?.apiConfig?.urlMessageStatus) {
+					addJob("WebHooksAPI", {
+						url: data.apiConfig.urlMessageStatus,
+						type: payload.type,
+						payload,
+					});
+				}
+				throw new Error(error);
+			}
 			// const apiMessage = await UpsertMessageAPIService({
 			//   sessionId: data.sessionId,
 			//   messageId: message.id.id,

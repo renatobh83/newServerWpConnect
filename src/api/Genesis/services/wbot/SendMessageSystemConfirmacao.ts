@@ -17,8 +17,8 @@ const SendMessageSystemConfirmacao = async (
 
     let message: any = {} as WbotMessage;
 
-    const { contato, idExterno, notificacao } = ProcessBodyData(data.contatos[0])
 
+    const { contato, idExterno, notificacao } = ProcessBodyData(data.contatos[0])
     const idNumber = await wbot.checkNumberStatus(contato)
 
     if (idNumber.status !== 200) return
@@ -45,7 +45,7 @@ const SendMessageSystemConfirmacao = async (
     });
 
     message = await wbot.sendListMessage(idNumber.id._serialized, {
-        buttonText: 'Clique aqui para processeguir',
+        buttonText: 'Clique para confirmar',
         description: template.body,
         sections: [
             {

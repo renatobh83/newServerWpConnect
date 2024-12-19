@@ -174,7 +174,7 @@ export const initWbot = async (whatsapp: any): Promise<Session> => {
 					}
 					if (statusSession === "inChat") {
 						if (fs.existsSync(qrCodePath)) {
-							fs.unlink(qrCodePath, () => {});
+							fs.unlink(qrCodePath, () => { });
 						}
 					}
 				},
@@ -276,7 +276,7 @@ const start = async (client: Session) => {
 			});
 			wbotMessageListener(client);
 		}
-	} catch (_error) {}
+	} catch (_error) { }
 };
 async function removeSession(session: string) {
 	try {

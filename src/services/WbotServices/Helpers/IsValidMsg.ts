@@ -3,14 +3,9 @@ import { isMsgConfirmacao } from "./isMsgConfirmacao";
 
 
 
-export const isValidMsg = async (msg: Message): Promise<boolean> => {
+export const isValidMsg = (msg: Message): boolean => {
 
 	if (msg.from === "status@broadcast") return false;
-
-	// if (await isMsgConfirmacao({ msg, tenantId })) {
-	// 	return false
-	// }
-
 	if (
 		msg.type === "chat" ||
 		msg.type === "audio" ||

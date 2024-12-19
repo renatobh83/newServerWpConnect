@@ -57,10 +57,22 @@ export const VerifyCall = async (
 			if (!call.peerJid) return;
 
 			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-			const callContact: WbotContact | any = await wbot.getChatById(
+			let callContact: WbotContact | any = await wbot.getChatById(
 				call.peerJid,
 			);
+			if (!callContact) {
+				const wid = await wbot.checkNumberStatus(call.peerJid)
+				if (wid.canReceiveMessage === false) {
+					return
+				}
+				callContact = {
+					id: wid.id,
+					name: wid.id.user,
+					isUser: !wid.isBusiness,
+					isWAContact: true,
 
+				}
+			}
 			const contact = await VerifyContact(callContact, tenantId);
 
 			const ticket = await FindOrCreateTicketService({
