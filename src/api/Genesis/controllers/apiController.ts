@@ -2,6 +2,7 @@ import { NextFunction, Request, RequestHandler, Response } from "express";
 import { MensagemConfirmacaoService } from "../services/MensagemConfirmacaoService";
 import ProcessBodyData from "../../../helpers/ProcessBodyData";
 import CheckConfirmationResponse from "../helpers/CheckResponseConfirmacao";
+import { MensagemLaudoPronto } from "../services/MensagemLaudoPronto";
 
 export const actionsApiGenesis: RequestHandler = async (
 	req: Request,
@@ -16,9 +17,13 @@ export const actionsApiGenesis: RequestHandler = async (
 
 			if (JSON.parse(notificacao).bot) {
 				const bot = JSON.parse(notificacao).bot;
+
 				switch (bot) {
 					case "agenda":
 						await MensagemConfirmacaoService({ apiId, authToken, idWbot, ...req.body })
+						break
+					case "laudo_pronto":
+						await MensagemLaudoPronto({ apiId, authToken, idWbot, ...req.body })
 						break
 					default:
 						break

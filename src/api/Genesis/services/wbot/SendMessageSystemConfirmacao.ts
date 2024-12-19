@@ -21,7 +21,7 @@ const SendMessageSystemConfirmacao = async (
     const { contato, idExterno, notificacao } = ProcessBodyData(data.contatos[0])
     const idNumber = await wbot.checkNumberStatus(contato)
 
-    if (idNumber.status !== 200) return
+    if (idNumber.canReceiveMessage === false) return
 
 
 

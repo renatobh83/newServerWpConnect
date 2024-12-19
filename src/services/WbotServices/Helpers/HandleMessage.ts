@@ -21,6 +21,7 @@ import { SendMessageBirthday } from "./SendMessageBirthday";
 import { isMsgConfirmacao } from "./isMsgConfirmacao";
 import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
 import Confirmacao from "../../../models/Confirmacao";
+import ApiMessage from "../../../models/ApiMessage";
 interface Session extends Whatsapp {
 	id: number;
 }
@@ -34,7 +35,14 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 		try {
 
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
-
+			const apiMessages = await ApiMessage.findOne({
+				where: {
+					messageId: msg.id
+				}
+			})
+			if (apiMessages) {
+				return
+			}
 			const { tenantId } = whatsapp;
 
 			if (!isValidMsg(msg)) {
