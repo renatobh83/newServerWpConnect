@@ -55,10 +55,20 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 					})
 				}
 				attemps += 1
-
+				if (attemps >= 3) {
+					await wbot.sendText(msg.from, 'Atendimento sendo finalizado.\nFavor entrar em contato com nossa central para confirmar ou cancelar o seu agendamento.', {
+						quotedMsg: msg.id
+					})
+					msgConfirmacao.closedAt = Math.floor(Date.now() / 1000)
+					msgConfirmacao.status = "SEM RESPOSTA"
+					msgConfirmacao.lastMessage = "Não selecionado na lista"
+					await msgConfirmacao.save()
+				}
 				return
 			}
-			if (msg.body === 'Favor responder pela lista') {
+
+			// Filtra a mensagem, para que nao seja aberto ticket  indevidos
+			if (msg.fromMe && msg.body === 'Favor responder pela lista' || msg.body === "Preparo de exame") {
 				return
 			}
 

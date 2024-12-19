@@ -17,8 +17,6 @@ export const isListMsg = async ({ msg, wbot }: RequestIsValid): Promise<boolean>
 	) {
 		if (await isMsgConfirmacao({ msg, wbot })) return false
 
-
-		console.log('Continua.....')
 		return false
 	}
 

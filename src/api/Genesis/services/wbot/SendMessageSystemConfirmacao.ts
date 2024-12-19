@@ -45,11 +45,11 @@ const SendMessageSystemConfirmacao = async (
     });
 
     message = await wbot.sendListMessage(idNumber.id._serialized, {
-        buttonText: 'Clique para confirmar',
+        buttonText: 'Clique aqui para confirmar',
         description: template.body,
         sections: [
             {
-                title: 'Confirmação',
+                title: 'Seleciona uma opção abaixo.',
                 rows: [
                     {
                         rowId: '1',
