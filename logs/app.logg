@@ -8180,3 +8180,213 @@
     '    at actionsApiGenesis (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\api\\Genesis\\controllers\\apiController.ts:26:7)',
   timestamp: '2024-12-19T14:25:01.880Z'
 }
+{
+  error: Error: Cannot find module './SendMessageLaudoPronto.'
+  Require stack:
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\Index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\Queue.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Whatsapp.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Ticket.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Message.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\CampaignContacts.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Campaign.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\Contact.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\models\User.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\libs\scoket.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\app\index.ts
+  - C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\server.ts
+      at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+      at Function._load (node:internal/modules/cjs/loader:1075:27)
+      at TracingChannel.traceSync (node:diagnostics_channel:315:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)
+      at Module.require (node:internal/modules/cjs/loader:1340:12)
+      at require (node:internal/modules/helpers:141:16)
+      at Object.<anonymous> (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\src\jobs\Index.ts:11:1)
+      at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)
+      at Module._compile (C:\Users\suporte2\Documents\Programacao\Nodejs\Wpconnect\node_modules\source-map-support\source-map-support.js:568:25)
+      at Module.m._compile (C:\Users\suporte2\AppData\Local\Temp\ts-node-dev-hook-4880698777017687.js:69:33) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts',
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts'
+    ]
+  },
+  level: 'error',
+  message: "uncaughtException: Cannot find module './SendMessageLaudoPronto.'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    "Error: Cannot find module './SendMessageLaudoPronto.'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts:11:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4880698777017687.js:69:33)',
+  stack: "Error: Cannot find module './SendMessageLaudoPronto.'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\Queue.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Whatsapp.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Ticket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Message.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\CampaignContacts.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Campaign.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\Contact.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\models\\User.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\libs\\scoket.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\app\\index.ts\n' +
+    '- C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\server.ts\n' +
+    '    at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)\n' +
+    '    at Function._load (node:internal/modules/cjs/loader:1075:27)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:315:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:218:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1340:12)\n' +
+    '    at require (node:internal/modules/helpers:141:16)\n' +
+    '    at Object.<anonymous> (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts:11:1)\n' +
+    '    at Module.<anonymous> (node:internal/modules/cjs/loader:1546:14)\n' +
+    '    at Module._compile (C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js:568:25)\n' +
+    '    at Module.m._compile (C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4880698777017687.js:69:33)',
+  exception: true,
+  date: 'Thu Dec 19 2024 13:41:46 GMT-0300 (Horário Padrão de Brasília)',
+  process: {
+    pid: 24556,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect',
+    execPath: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+    version: 'v22.11.0',
+    argv: [
+      'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Port\\app\\node.exe',
+      'src/server.ts'
+    ],
+    memoryUsage: {
+      rss: 151019520,
+      heapTotal: 100683776,
+      heapUsed: 69996640,
+      external: 3480274,
+      arrayBuffers: 435147
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 612610.593 },
+  trace: [
+    {
+      column: 15,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._resolveFilename',
+      line: 1249,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Function._load',
+      line: 1075,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 315,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 218,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1340,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 16,
+      file: 'node:internal/modules/helpers',
+      function: 'require',
+      line: 141,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\src\\jobs\\Index.ts',
+      function: null,
+      line: 11,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: null,
+      line: 1546,
+      method: null,
+      native: false
+    },
+    {
+      column: 25,
+      file: 'C:\\Users\\suporte2\\Documents\\Programacao\\Nodejs\\Wpconnect\\node_modules\\source-map-support\\source-map-support.js',
+      function: 'Module._compile',
+      line: 568,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 33,
+      file: 'C:\\Users\\suporte2\\AppData\\Local\\Temp\\ts-node-dev-hook-4880698777017687.js',
+      function: 'Module.m._compile',
+      line: 69,
+      method: '_compile',
+      native: false
+    }
+  ],
+  timestamp: '2024-12-19T16:41:46.171Z'
+}

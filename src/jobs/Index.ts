@@ -8,3 +8,4 @@ export { default as VerifyTicketsChatBotInactives } from "./VerifyTicketsChatBot
 export { default as SendMessageSchenduled } from "./SendMessageSchenduled";
 export { default as WebHooksAPIConfirmacao } from "./WebHooksAPIConfirmacao";
 export { default as WebHookConfirma } from "./WebHookConfirma";
+export { default as SendMessageLaudoPronto } from "./SendMessageLaudoPronto"
