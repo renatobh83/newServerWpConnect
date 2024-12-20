@@ -3,8 +3,6 @@ import Confirmacao from "../../models/Confirmacao";
 
 let attemps: number = 0
 export const invalidResponseConfirmacaoService = async (msg: Message, wbot: Whatsapp, tenantId: number) => {
-
-
     if (attemps === 0) {
         await wbot.sendText(msg.from, 'Favor responder pela lista', {
             markIsRead: true
@@ -12,7 +10,7 @@ export const invalidResponseConfirmacaoService = async (msg: Message, wbot: What
     }
     attemps += 1
     if (attemps >= 3) {
-        await wbot.sendText(msg.from, 'Atendimento sendo finalizado.\nFavor entrar em contato com nossa central para confirmar ou cancelar o seu agendamento.', {
+        const sendMessage = await wbot.sendText(msg.from, 'Atendimento sendo finalizado.\nFavor entrar em contato com nossa central para confirmar ou cancelar o seu agendamento.', {
             quotedMsg: msg.id
         })
         const msgConfirmacao = await Confirmacao.findOne({
@@ -22,6 +20,7 @@ export const invalidResponseConfirmacaoService = async (msg: Message, wbot: What
                 tenantId
             },
         });
+        msgConfirmacao.enviada = new Date(sendMessage.timestamp * 1000)
         msgConfirmacao.closedAt = Math.floor(Date.now() / 1000)
         msgConfirmacao.status = "SEM RESPOSTA"
         msgConfirmacao.lastMessage = "Não selecionado na lista"

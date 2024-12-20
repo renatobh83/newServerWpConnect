@@ -8,7 +8,7 @@ export const isConfirmacaoMessageExistsService = async (msg: WbotMessage, tenant
             contatoSend: msg.fromMe ? msg.to : msg.from,
             closedAt: null,
             tenantId
-        }, logging: console.log
+        }
     });
 
     if (!message) {

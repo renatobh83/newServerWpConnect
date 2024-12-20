@@ -23,6 +23,8 @@ export const isMsgConfirmacao = async ({ msg, wbot }: any): Promise<boolean> => 
 
         if (msg.type === 'list_response') {
             await CheckConfirmationResponse({ data: msg, msgConfirmacao, tenantId })
+
+
             return
         }
 

@@ -14,6 +14,7 @@ import { HandleMsgReaction } from "./Helpers/HandleMsgReaction";
 import { VerifyCall } from "./VerifyCall";
 import HandleMsgAck from "./Helpers/HandleMsgAck";
 import { isListMsg } from "./Helpers/IsListMsg";
+import { blockedMessages } from "../../helpers/BlockedMessages";
 
 interface Session extends Whatsapp {
 	id: number;
@@ -34,7 +35,7 @@ interface MessageChange extends Message {
 export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 	wbot.onAnyMessage(async (msg: MessageChange) => {
 		if (msg.chatId === "status@broadcast") return;
-		if (msg.body === "Preparo de exame") return
+		if (msg.fromMe && blockedMessages.includes(msg.body)) return
 		if (!isListMsg({ msg, wbot })) return
 		await HandleMessage(msg, wbot);
 	});
@@ -47,7 +48,7 @@ export const wbotMessageListener = async (wbot: Session): Promise<void> => {
 		await HandleMsgReaction(msg);
 	});
 	wbot.onAck(async (ack: Ack) => {
-		// await HandleMsgAck(ack);
+		await HandleMsgAck(ack);
 	});
 
 	wbot.onRevokedMessage((msg) => {

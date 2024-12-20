@@ -2,7 +2,6 @@ import type {
 	Chat,
 	Message,
 	ProfilePicThumbObj,
-
 	Whatsapp,
 } from "@wppconnect-team/wppconnect";
 import type Contact from "../../../models/Contact";
@@ -17,30 +16,23 @@ import VerifyContact from "./VerifyContact";
 import VerifyMediaMessage from "./VerifyMediaMessage";
 import VerifyMessage from "./VerifyMessage";
 import { addJob } from "../../../libs/Queue";
-import { SendMessageBirthday } from "./SendMessageBirthday";
-import { isMsgConfirmacao } from "./isMsgConfirmacao";
-import CheckConfirmationResponse from "../../../api/Genesis/helpers/CheckResponseConfirmacao";
-import Confirmacao from "../../../models/Confirmacao";
 
 import { isApiMessageExistsService } from "../../ApiMessageServices/isApiMessageExistsService";
 import { isConfirmacaoMessageExistsService } from "../../ApiConfirmacaoServices/isConfirmacaoMessageExistsService";
 import { invalidResponseConfirmacaoService } from "../../ApiConfirmacaoServices/invalidResponseConfirmacaoService";
+
 interface Session extends Whatsapp {
 	id: number;
 }
 interface MessageFile extends Message {
 	filename: string
 }
-
+const delay = (ms: number) =>
+	new Promise((resolve) => setTimeout(resolve, ms));
 export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> => {
 	return new Promise(async (resolve, reject) => {
-
-		const delay = (ms: number) =>
-			new Promise((resolve) => setTimeout(resolve, ms));
-
-
 		try {
-			await delay(2000);
+
 			const whatsapp = await ShowWhatsAppService({ id: wbot.id });
 
 			const { tenantId } = whatsapp;
@@ -52,15 +44,12 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 			if (!isValidMsg(msg)) {
 				return;
 			}
-			// Filtra a mensagem, para que nao seja aberto ticket  indevidos
-			if (msg.fromMe && msg.body === 'Favor responder pela lista' || msg.body === "Preparo de exame") {
-				return
-			}
+
 			if (await isConfirmacaoMessageExistsService(msg, tenantId)) {
 				await invalidResponseConfirmacaoService(msg, wbot, tenantId)
 				return
 			}
-
+			await delay(2000);
 			let msgContact: any;
 			let groupContact: Contact | undefined;
 
