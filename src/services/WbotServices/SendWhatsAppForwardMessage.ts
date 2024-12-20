@@ -17,7 +17,7 @@ export const SendWhatsAppForwardMessage = async ({
 	ticket,
 	userId,
 	contact
-}: Request): Promise<boolean> => {
+}: Request): Promise<void> => {
 	try {
 		const wbot = await GetTicketWbot(ticket);
 
@@ -25,19 +25,10 @@ export const SendWhatsAppForwardMessage = async ({
 
 		const media = await wbot.downloadMedia(message.messageId);
 
-		if (!media) {
-			return
-		}
 
 		await wbot.forwardMessage(wppContact.id._serialized, message.messageId).catch(
 			er => console.log(er)
 		)
-
-
-
-
-
-
 
 		await ticket.update({
 			lastMessage: message.body,
