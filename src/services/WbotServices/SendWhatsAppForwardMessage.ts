@@ -1,3 +1,4 @@
+import { Message } from "@wppconnect-team/wppconnect";
 import AppError from "../../errors/AppError";
 import GetTicketWbot from "../../helpers/GetTicketWbot";
 import type Ticket from "../../models/Ticket";
@@ -22,8 +23,8 @@ export const SendWhatsAppForwardMessage = async ({
 		const wbot = await GetTicketWbot(ticket);
 
 		const wppContact = await wbot.checkNumberStatus(contact.number)
-
-		const media = await wbot.downloadMedia(message.messageId);
+		message.filehash
+		const media = message.filehash ? await wbot.downloadMedia(message.messageId) : '';
 
 
 		await wbot.forwardMessage(wppContact.id._serialized, message.messageId).catch(
