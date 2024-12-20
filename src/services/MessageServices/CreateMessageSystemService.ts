@@ -126,6 +126,7 @@ const CreateMessageSystemService = async ({
 	status,
 	idFront,
 }: Request): Promise<void> => {
+
 	const messageData: MessageData = {
 		ticketId: ticket.id,
 		body: Array.isArray(msg.body) ? undefined : msg.body,
@@ -157,12 +158,14 @@ const CreateMessageSystemService = async ({
 				name: ticket.contact.name,
 			});
 		}
-		if(msg.fromMe && msg.scheduleDate) {
-			const options = {options: {
-				delay: new Date(msg.scheduleDate).getTime() - Date.now(),
-				jobId: `SendMessageSchenduled-${msg.id || Date.now()}`, // ID único
+		if (msg.fromMe && msg.scheduleDate) {
+			const options = {
+				options: {
+					delay: new Date(msg.scheduleDate).getTime() - Date.now(),
+					jobId: `SendMessageSchenduled-${msg.id || Date.now()}`, // ID único
 
-			}}
+				}
+			}
 			addJob('SendMessageSchenduled', options)
 		}
 		if (sendType === "API" && msg.mediaUrl) {
@@ -175,6 +178,7 @@ const CreateMessageSystemService = async ({
 			medias = [];
 			medias.push(msg.media);
 		}
+
 
 		if (medias) {
 			await Promise.all(

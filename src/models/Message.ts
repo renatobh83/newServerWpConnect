@@ -51,6 +51,7 @@ class Message extends Model<Message> {
 	@Column(DataType.BOOLEAN) // Usando BOOLEAN para verificar se a mensagem é enviada de nossa parte
 	declare fromMe: boolean;
 
+	@AllowNull
 	@Column(DataType.TEXT) // Usando TEXT para armazenar o conteúdo da mensagem
 	declare body: string;
 

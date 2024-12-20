@@ -4,7 +4,9 @@ import type Contact from "../../models/Contact";
 import Message from "../../models/Message";
 import Ticket from "../../models/Ticket";
 import ShowTicketService from "../TicketServices/ShowTicketService";
-
+import { pupa } from "../../utils/pupa";
+import { SendForwardMessage } from "../../helpers/SendForwardMessage";
+import { SendWhatsAppForwardMessage } from "../WbotServices/SendWhatsAppForwardMessage";
 interface Request {
 	message: Message;
 	contact: Contact;
@@ -20,6 +22,8 @@ const CreateForwardMessageService = async ({
 	contact,
 	ticketIdOrigin,
 }: Request): Promise<void> => {
+
+
 	const ticketOrigin = await ShowTicketService({
 		id: ticketIdOrigin,
 		tenantId,
@@ -51,13 +55,14 @@ const CreateForwardMessageService = async ({
 			answered: true,
 		});
 	}
+	SendWhatsAppForwardMessage({ message, ticket, userId, contact })
 
-	// preparar dados para criação da mensagem
 	const msgData = {
 		body: message.body,
 		contactId: contact.id,
 		fromMe: true,
 		read: true,
+		messageId: message.messageId,
 		mediaType: message?.mediaType,
 		mediaUrl: message?.mediaName,
 		mediaName: message?.mediaName,
@@ -69,6 +74,13 @@ const CreateForwardMessageService = async ({
 		ticketId: ticket.id,
 		tenantId,
 	};
+	if (message.body && !Array.isArray(message.body)) {
+		msgData.body = pupa(message.body || "", {
+			// greeting: será considerado conforme data/hora da mensagem internamente na função pupa
+			protocol: ticket.protocol,
+		});
+	}
+
 
 	const msgCreated = await Message.create(msgData);
 

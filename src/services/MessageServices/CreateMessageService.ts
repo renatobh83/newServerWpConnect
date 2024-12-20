@@ -23,6 +23,9 @@ const CreateMessageService = async ({
 	messageData,
 	tenantId,
 }: Request): Promise<Message> => {
+
+
+
 	const msg = await Message.findOne({
 		where: { messageId: messageData.messageId, tenantId },
 	});

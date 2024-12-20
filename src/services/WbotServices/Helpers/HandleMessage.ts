@@ -49,7 +49,8 @@ export const HandleMessage = (msg: MessageFile, wbot: Session): Promise<void> =>
 				await invalidResponseConfirmacaoService(msg, wbot, tenantId)
 				return
 			}
-			await delay(2000);
+
+			await delay(600);
 			let msgContact: any;
 			let groupContact: Contact | undefined;
 

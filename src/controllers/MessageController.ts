@@ -44,7 +44,7 @@ export const index: RequestHandler = async (
 
 		try {
 			SetTicketMessagesAsRead(ticket);
-		} catch (_error) {}
+		} catch (_error) { }
 
 		res.json({ count, messages, messagesOffLine, ticket, hasMore });
 	} catch (error) {
@@ -63,10 +63,11 @@ export const store: RequestHandler = async (
 	const medias = req.files as Express.Multer.File[];
 	try {
 		const ticket = await ShowTicketService({ id: ticketId, tenantId });
-		// console.log(ticket)
+
+
 		try {
 			SetTicketMessagesAsRead(ticket);
-		} catch (_error) {}
+		} catch (_error) { }
 
 		await CreateMessageSystemService({
 			msg: messageData,

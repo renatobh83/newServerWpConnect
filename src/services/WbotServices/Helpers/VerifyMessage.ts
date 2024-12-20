@@ -30,7 +30,7 @@ const VerifyMessage = async (
 		lastMessageAt: new Date().getTime(),
 		answered: msg.fromMe || false,
 	});
-	await delay(2000);
+	await delay(200);
 	await CreateMessageService({ messageData, tenantId: ticket.tenantId });
 };
 
